@@ -1,0 +1,77 @@
+1) Zacznijmy od prostego programu wypisujacego "Hello World" na ekran.
+class MyClass
+{
+  public static void main(String[ ] args)
+  {
+    System.out.println("Hello World");
+  }
+}
+W java-ie kazdy wiersz kodu zna uruchomic, musi znajdowac sie w klasie. W naszym przykladzie nazwalismy nasza klase MyClass. Wiecej o klasach dowiesz sie w dalaszych modulach.
+W Java-ie kazda aplikacja ma punkt wejscia lub punkt poczatkowy, ktory jest metoda o nazwie main. Oprocz main slowa kluczowe public i static zostana rowniez wyjasnione pozniej.
+Reasumujac kazdy program w javie musi posiadac klase, dodatkowo kazdy program zaczyna sie od metody main.
+
+2) Jaka metoda jest punktem wejscia dla programu w javie?
+Odpowiedz: main
+
+3) W celu uruchomienia programu metoda main musi byc identyczna z podana:
+public static void main(String[ ] args)
+- public - kazdy moze zobaczyc
+- static - metoda moze byc uruchamiana bez podania instancji klasy zawierajacej metode main.
+- void - metoda nie zwraca zadnej wartosci.
+- main - nazwa metody, punktu poczatkowego.
+Dla przykladu podany kod tworzy metode o nazwie tekst, ktory nic nie zwraca i nie ma parametrow zadnych.
+Parametry metody - funkcji deklarowane sa wewnatrz nawiasu tej funckji zaraz po nazwie w nawiasach. W przypadku main jest to tablica ciagow zwanych args. Uzyjemy go w nasteonej lekcji, gdzie dokladniej wyjasnimy jego dzialanie.
+
+4) Wypelnij zakropkowane miejsce tak zeby zadeklarowac metode o nazwie "hello":
+void...()
+Odpowiedz:
+void hello()
+
+5) Nastepne jest cialo funkcji/ metody (od teraz bede sie posulgiwal nazwa "funkcja") zamkniete w nawiasach klamrowych.
+{
+  System.out.println("Hello World");
+}
+Funckja println sluzy do wypisywania lini tekstu na ekran, natomaist klasa System i jej strumien out sluzy do uzyskania dostepu do funckji println().
+
+6) W klasach funkcjach i innych strukturach kontroli przeplywu kod jest zawsze ujety w nawiasy klamrowe.
+
+7) Podaj nazwe metody wypisujacej na ekran tekst.
+Odpowiedz: System.out.println()
+
+8) Mozesz przekazac inny tekst jako parametr do funkcji println(), aby go wypisac.
+class MyClass
+{
+  public static void main(String[ ] args)
+  {
+    System.out.println("I am learning Java");
+  }
+}
+W jezyku Java kazda instrukcja musi sie konczyc srednikiem. Zapamietaj ze nie powinienes dawac srednikow po deklaracji klasy czy metody ktora ma swoje cialo w postaci nawiasow klamrowych.
+
+9) Zadanie "Twoj Pierwszy Program"
+Java is cool let everyone know about it! Tzn napisz program w jezyku Java wypisujacy na ekran "Java is cool!", pamietaj o uzyciu intsrukcji println() i srednikach :)
+1) Rozwiazanie:
+class MyClass
+{
+  public static void main(String[ ] args)
+  {
+    System.out.println("Java is cool!")
+  }
+}
+
+10) Wypelnij luki tak zeby stworzy prawidlowy program w Java-ie.
+... Apples
+{
+  public static void ...(String[] args)
+  {
+    System.out....("Hello Apples!")...
+  }
+}
+Rozwiazanie:
+class Apples
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Hello Apples!");
+  }
+}

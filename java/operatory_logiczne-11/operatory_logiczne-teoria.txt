@@ -1,0 +1,60 @@
+1) Operatory logiczne sluza do laczenia wielu warunkow. zalozmy ze chcesz aby twoj program wyswietlal komunikat "Witamy", tylko wtedy, kiedy zmienny wiek jest wiekszy niz 18 lat, a zmienny pieniadz jest wiekszy od 500. Jednym ze sposobow na osiagniecie tego jest uzycie zagniezdzonych instrukcji if.
+if(age > 18)
+{
+  if(money > 500)
+  {
+    System.ot.println("Welcome");
+  }
+}
+Jednakowoz uzycie w tym wypadku operatora logicznego AND, tzn &&, jest znacznie lepszym pomyslem.
+if(age > 18 && money > 500) {
+  System.out.println("Welcome");
+}
+zauwazyles ze napisalismy duzo mniej przy dokladnie tym samym efekcie? ;)
+Jezeli tylko oba operandy operatora AND sa prawdziwe, wowczas cale wyrazenie staje sie prawdziwe.
+
+2) Zadanie "Eksplorujmy" (tresc po angielsku)
+You're a tour manager and need a program that will identify small countries.
+
+3) Uzupelnij luki by przetestowac oba warunki w podanych instrukcjach.
+int age = 23;
+int money = 4000;
+if(age > 21 && money > 500) {
+  System.out.println("Welcome");
+}
+
+4) Operator OR. Operator OR, czyli || sprawdza czy ktorykolwiek z warunkow jest prawdziwy. Caly warunek wowczas staje sie prawdziwy, jezeli tylko ktorykolwiek z operandow staje sie prawdziwy.
+Dla przykladu:
+int age = 25;
+int money = 100;
+if(age > 18 || money > 500) {
+  System.out.println("Welcome");
+}
+Kod powyzszy wyswietli "Welcome" jezeli wiek jest wiekszy od 18 lub jezelipieniadze sa wieksze od 500.
+Operator NOT czyli ! jest operator logiczny sluzacym do odwrocenia stanu logicznego swoich operandow, jezeli warunek jest prawdziwy, operator NOT zrobi z niego falszywy.
+int age = 25;
+if(!(age > 18))
+{
+  System.out.println("To young");
+}
+else
+{
+  System.out.println("Welcome");
+}
+Czytamy warunek nasteoujaco: Jezeli age jest NIE wiekszy niz 18. 
+
+zadanie "Szczesliwy zwyciestwa"
+Napisz program do zdefiniowana zwyciezcow loterii, bilet ktorego zyciezcy pokrywa sie z postawionymi warunkami loterii.
+
+5) What is the output of the following code?
+int a = 11; int b = 12;
+int c = 40;
+if(a > 100 || b > 3)
+{
+  System.out.println(a);
+}
+else
+{
+  System.out.println(c);
+}
+Rezultat: Rezultatem ponizszego kodu bedzie liczba 11 = a.

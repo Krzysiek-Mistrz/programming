@@ -1,0 +1,8 @@
+1) API dla Java to zbior klas, interfejsow, ktore zostaly napisane do uzytkowania w API. Dokumentacje Java API mozna znalezc na stronie Oracle pod adresem: http://docs.oracle.com/javase/8/api/ Po zlokalizowaniu pakietu ktorego chcesz uzyc, musisz go zaimportowac do swojego kodu. Pakiet mozna zaimportowac za pomoca slowa kluczowego import, ktore juz przeciez poznawalismy, pamietasz moze import java.util.Scanner;? Przyklad:
+import java.awt.*;
+Pakiety awt zawiera wszystkie klasy do tworzenia interfejsow uzytkownika i do malowania grafik i obrazow. Symbol wieloznaczny (*) sluzy natomiast do importowania wszystkich klas w pakiecie.
+
+2) Zadanie (teoria + praktyka)
+Uzupelnij luke w kodzie tak by zaimportowac wszystkie klasy w pakiecie awt.
+(1)... java.awt. (2)...;
+Odpowiedz: (1)import, (2)*

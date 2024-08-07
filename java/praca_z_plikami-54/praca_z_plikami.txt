@@ -1,0 +1,94 @@
+1) Pakiet java.io zawiera klase File, ktora umozliwia prace z plikami. Aby rozpoczac prace z plikami nalezy utworzyc 
+obiekt klasy File i okreslic sciezke dostepu do pliku w konstruktorze.
+Przyklad:
+import java.io.File;
+File file = new File("C:\\data\\input-file.txt");
+
+2) Za pomoca metody exist() mozna okreslic czy plik istnieje. Moze sobie nawet przypominasz metode good() z C++? ;)
+Zrobimy sobie teraz nowy obiekt klasy File i sprawdzimy czy plik wogole istnieje... Przyklad: 
+import java.io.File;
+public class Main { 
+	public static void main(String[] args) { 
+		File x = new File("C:\\sololearn\\test.txt"); 
+		if(x.exists()) 
+		{ 
+			System.out.println(x.getName() + " exists!"); 
+		} 
+		else { 
+			System.out.println(x.getName() + " doesn't exist!"); 
+		} 
+	} 
+}
+Powyzszy kod wyswietla komunikat informujacvy zczy plik istnieje po okrelsona sciezka. Jesli tak zwraca: "x exists!",
+jesli nie: "x doesnt exist!". Metoda getName zawarta w pakiecie java.io.File zwarac nazwe pliku o ktory sie w tym
+momencie pytamy (file_name).getName() wyswietla w typie String nazwe naszego pliku. Zauwaz ze w sciezce uzylismy
+podwojnych ukosnikow, odwrotnych poniewaz jeden ukosnik odwrotny powinien zostac zastapiony w sciezce String. (\ oznacza 
+znak specjalny).
+
+3) Zadanie (praktyka)
+Uzupelnij luki by okreslic, czy dany plik istnieje, jesli istnieje wypisz "Yes":
+class A {
+	public static void main(String[] args) {
+	  (1)... file = (2)... File("a.txt");
+	  if(file.(3)...) {
+	    System.out.println((4)...);
+	  }
+	}
+}
+Odpowiedz: (1) - File; (2) - new; (3) - exists(); (4) - "Yes"
+
+4) Plik w trybie do odczytu
+Pliki sa przydatne do przechowywania i pobierania danych, a istneije wiele sposobow odczytywania z pliku. Jednym z 
+najprostszych sposobow jest uzycioe do tego gotowej juz znanej Ci klasy Scanner zpakietu java.util. Konstruktor klasy 
+Scanner moze jako dane wejsciowe przyjac obiekt klasy File. Aby odczytac zawartosc pliku tekstowegho w sciezce 
+"C:\\sololearn\\test.txt", musielibysmy utworzyc obiekt klasy File z odpowiednia sciezka i przekazac go do obiektu 
+Scanner.
+Przyklad:
+try {
+	File x = new File("C:\\sololearn\\test.txt");
+	Scanner sc = new Scanner(x);
+} catch (FileNotFoundException e){}
+Otoczylismy nasz kod blokami try i catch, poniewaz istneije pewne znikome prawdopodbienstwo ze nasz plik bedzie nie 
+istnial, oczywiscie pomijam metode z exists() poniewaz przestawilismy ja przed chwileczka.
+
+5)zadanie (teoria)
+Ktora klasa moze byc uzyta do odczytu danych z pliku? Wybierz odpowiedz sposrod podanych:
+a) HashMap
+b) Scanner
+c) ArrayList
+d) Set
+Odpowiedz: Scanner.
+
+6) Klasa Scanner dziedziczy z klasy Iterator, wiec takze zachowuje sie jak obiekt tej klasy. Do odczytania zawartosci 
+pliku mozemy uzyc metody next() obiektu klasy Scanner (poniewaz dziedziczy z klasy Iterator). Przyklad:
+try {
+	File x = new File("C:\\sololearn\\test.txt");
+	Scanner sc = new Scanner(x);
+	while(sc.hasNext()) {
+		System.out.println(sc.next());
+	}
+	sc.close();
+} catch (FileNotFoundException e) {
+	System.out.println("File not found!");
+}
+Zawartosc pliku jest wyprowadzana slowo po slowie, poniewaz metoda next(), zwraca kazdy element osobno zaczynaja od 
+elementu op indeksie 0 (w przypadku wszelkich typow kontenerow).
+Wspaniala praktyka jest zamykanaie pliku po skonczonym odczcie pamietaj o tym, pracujac z plikami. Do tego wlasnie 
+sluzy nam metoda o nazwie close();
+
+7) Zadanie (praktyka)
+Uzupelnij luki w podanym nizej kodzie:
+try {
+	File file = (1)... File("a.txt");
+	Scanner sc = new Scanner((2)...);
+	while(sc.hasNext()) {
+		String a = sc.(3)...;
+		String b = sc.(3)...);
+		System.out.println((4)... + " " + b + " ");
+	}
+	sc.(5)...;
+}
+catch ((6)... e) {
+	System.out.println("Error");
+}
+Odpowiedz: (1) - new; (2) - file; (3) - next(); (4) - a; (5) - close(); (6) - Exception

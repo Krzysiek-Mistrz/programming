@@ -1,0 +1,36 @@
+1) istnieja dwa typy wyjatkow: zaznaczony i niezaznaczony, (zwany takze srodowiskiem wykonawczym - runtime). Glowna roznica miedzy tymi wyjatkmi jest to ze zaznaczone wyjatki sa sprawdzane podczas kompilacji, podczas gdy niezaznaczone wyjatki sa sprawdzane w czasie wykonywnaia. Jak wspomnialem poprzednio Thread.sleep() zglasza InterruptedException. To jest przyklad zaznaczonego wyjatku. Pamietaj ze twoj kod sie nie skompiluje do czasu kiedy nie obsluzysz wyjatku.
+Przyklad zaznaczonego wyjatku:
+public class myClass {
+  public static void main(String[] args) {
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      //some code
+    }
+  }
+}
+Zobaczylim ytakze poprzednio niezaznaczone wyjatki, ktore s asprawdzane podczas wykonywania programu. Przyklad:
+public class MyClass {
+  public static void main(String[] args) {
+    int value = 7;
+    value = value / 0;
+  }
+}
+/*
+Blad:
+Exception in thread "main"
+java.lang.ArithmeticException: / by zero
+at MyClass.main(MyClass.java:4)
+*/
+
+2) Dobrze jest znac typy wyjatkow poniewaz moga one pomoc ci zdebugowac twoj kod szybciej.
+
+3) Zadanie (teoria)
+Wybierz popranwa odpowiedz.
+Ten typ bledow jesli nie jest obsluzony spowoduje nieskompilowanie twojego programu:
+-zaznaczony
+-zarowno zaznaczony jak i runtime
+-NullPointerExcepion
+-Runtime
+Odpowiedz: Spowoduje to "wyjatek zaznaczony"
+Wyjansnienie: zwaz dokladnie na tresc pytania "nieskompilowanie", a nie "niewykonanie".

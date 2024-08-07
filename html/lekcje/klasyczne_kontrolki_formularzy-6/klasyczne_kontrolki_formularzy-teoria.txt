@@ -1,0 +1,99 @@
+1) Formularze to interfejsy sluzace uzytkownikom do wprowadzania danych wejsciowych do witryny, celem ich przetworzenia (np. formularz rejestracji wprowadzajacy nowego uzytkownika do bazy, formularz logowania wprowadzajacy login i haslo, ktorych poprawnosc nastepnie sprawdzamy w bazie danych).
+<form action = "login.php" method = "post">
+...obszar formularza...
+</form>
+Caly obszar formularza zamykamy w znacznikach <form>, zas pomiedzy tymi tagami, ukladamy z predefiniowanych kontrolek (niczym z klockow lego) dowolny potrzebny w witrynie interfejs.
+
+2) Poznamy w tym dniu nie tylko podstawowe kontrolki lecz takze waznew mechanizmy umozliwiajace nam bezpieczne z nich korzystanie.
+
+3) Najbardziej podstawowym atrybutem <form> jest "action" - Jego wartosc okresla ktory skrypt zajmie sie przetworzeniem informacji, ktore przyjda z formularza. 
+Kolejnym atrybutem jest method - okreslamy za pomoca niej czy do przeslania danych z naszego formularza uzyc get czy post. 
+Mozna dodatkowo okrelic sposob kodowania danych, okreslenia identyfikatora MIME-type(-ustandaryzowany przez orga. IANA identyfikator tego co zostanie przeslane przez siec) zawartosci przesylanej na server metoda post, za pomoca atrybutu "enctype". Domyslna wartoscia enctype jest "application/x-www-form-urlencoded" wszytskie znaki zostaja zakodowane metoda urlencode - spacje zamieniaja sie na +, zas wszystkie wartosci nie alfanumeryczne zostaja zastapiuone % po ktorym pojawiaja sie dwie cyfry zapisane szesnastkowo. Druga mozliwa wartosc to: "multipart/form-data" - wartosc stosowana dla plikow gdy w formularzu znajduje sie input type file - znaki nie zostja zakodowane w urlencode. Trzecia mozliwosc to "text/plain" - przesylany znaki reprezentuja tekst mozliwy do przeczytania przez czlowieka i bezposredniego wyswietlenia przez przegladarke.
+
+4) Zrealizujemy wybor jednokrotny w formularzu - mozliy bedzie wybor tylko jednej opcji z wybranego zbioru. Mozemy to zrealizowac na dwa sposoby pierwszym mozliwym jest lista wyboru, drugim natomaist sa pola radio.
+
+5) Napisalismy w tym celu prosta instrukcje:
+<input type = "radio"> Hatchback
+Jednak nic sie nie dzieje po najechaniu na napis "trza to zrobic!" Nalezy se zrobic etykiete - powiedziec przegladarce ze naps wraz z inputem stanowi jedna integralna calosc. We wspolczesnych formularzach kazda kontrolka powinna miec swa etykiete z wyjatkiem tu sa przyciski.
+Jest pare sposobow uzycia etykiety:
+1.<label><input type = "radio"> Hatchback</label>
+(wszystko w tagu <label> wiec wszystko ze soba powiazane)
+2.<input type = "radio" id = "nadwozie"> <label for = "nadwozie">Hatchback</label>
+(to jest etykieta dla kontrolki o takim id)
+Nastepnie po okodowaniu opcji wyboru nalezy polaczyc wszytskie inputy nadajac im ten sam atrybut "name". Zeby zaznaczyc dana opcje domyslna przy odswiezaniu strony wystarczy dopisac atrybut checked.
+Dalej okodujmy zeby opcje sie ukladaly pod soba, a nie zeby byly kolo siebie. Wystarczy te elementy zamknac w elementach blokowych - div-ach poniewaz z definicji ukladaja sie one pod soba. We wspolczesnych formularzach zamiast znacznikow </br> duzo lepiej jest uzyc elementow blokowych, w trazie potrzeby majacych nadany "display:inline-block albo "float:left" lub "display:flex" lub "display:inline-flex".
+<div><label><input type = "radio" name = "nadwozie"> Kombi</label></div>
+Azeby dana opcja byla automatycznie zaznaczona wystarczy nadac atrybut checked odpowiedniemu tagowi <input>.
+<div><label><input type = "radio" name = "nadwozie" checked> Kombi</label></div>
+Istnieje ciekawy znacznik grupujcy elementy interfejsu, kontrolki formularza poprzez otoczenie ramka jego nazwa to <fieldset> - zestaw pol. Oprocz tego w formularzu mozna takze ustanowi tag <legend> jest to zwyczajny opis pojawiajacy sie w lewym gornym rogu formularza.
+
+6) Pamietajmy tez, ze dla kazdej kontrolki podamy takze wybrana wartosc w PHP. Zatem pozostaje pytanie jak odebrac taka wartosc po stronie servera. Otoz tak jak to robilismy w kursie PHP bedzie to nastepujace:
+$wartosc = $_POST['nadwozie'];
+echo $wartosc;
+jak widzimy uzyjemy metody POST natomiast nasza przesylana wartoscia bedzie zapisan w atrybucie name "nadwozie odpowiedz od uzytkownika." W praktyce zatem do uchwycenia wartosci w PHP uzyjemy atrybutu name natomiast w JavaScript-cie bedzie to atrybut id. Musimy takze jeszcze podac po stronie front-endowej atrybuty value = "..." i tak dla kazdego tagu <input>. Czyli:
+<div><label><input type = "radio" value = "1" name = "nadwozie" checked = "true"> Hatchback</label></div>
+Jest to niezbedne poniewaz otrzymamy wartosc w jezyku PHP i wowczas bedziemy mogli stworzyc potrzebnego if-a, do okodowania poszegolnych przypadkow.
+
+7) Zrealizujemy teraz formluarz odnosnie wyboru jednostki napedowej do samochodu, z tymze w postaci listy wyboru.
+Liste ta tworzymy za pomoca ustanowienia tagow <select>...</select>. Kazda opcja na liscie bedzie reprezentowana przez tag <option>.
+<label>
+<select>
+<option> wysokoprężny </option>
+<option> hybrydowy </option>
+</select>
+</label>
+Pamietajmy jednak by calosc zamknac w tagu <label>,w tym wypadku uzyjemy mozliwosci z wstawieniem atrybutu for do <label> i ustawimy id dla <select>:
+<label for = "silnik"> Rodzaj silnika </label>
+<select id = "silnik">
+<option> wysokoprężny </option>
+</select>
+Po kliknieciu na etykiete lista zyskuje aktywnosc (mozna wiec uzyc spacji by ja rozwinac). 
+Zastanowmy sie teraz jak tutaj sprawic by jakas opcja byla domyslna? Otoz bardzo prosto wystarczy dodac atrybut selected.
+<option selected>benzynowy</option>
+Jak odebrac wartosc z listy po stronie servera? Takze nalezy w tym celu ustawic atrybuty value z odpowiednimi wartrosciami. Tym razem nadamy wartosci tekstowe. Lecz takze nalezy ustanowuc name calej listy.
+<select id="silnik" name="silnik">
+<option value="w">wysokoprezny</option>
+...
+</select>
+Oczywiscie ta literke bedziemy mogli bez problemu odczytac w PHP z uzyciem tablicy POST.
+Okodujemy teraz jeszcze marginesy dla obu naszych list jednka nie bede tego juz pisal: zamkniemy obie listy w dwoch <div> i nadamy klase i ta klase wystylizujemy w CSS-ie.
+
+8) Zrealizujemy jeszcze teraz wybor wielokrotny tak ze mozliwy bedzie wybor wielu opcji z wybranego zbioru. Uzyjemy w tym celu wartosci type = "checkbox". Wszytsko inne zrealizujemy na podobnej zasadzie jak odnosnie <select>.
+Pamietamy takze ze calosc tagu <input> nalezy zamknac w tagu <label>.
+<div><label><input type = "checkbox">klimatyzacja</label></div>
+Tak rozmieszczamy wszystkie opcje, rozmiescmy je jednak w trzech kolumnach po cztery w kazdej kolumnie. W tym celu zamkniemy je po cztery w divie o class="col".
+Azeby zaznaczyc w przypadku checkbox-ow wartosc domyslna wystarczy dopisac checked.
+W celu nie dopuszczenia do odznaczenia konkretnych pol w formularzu nalezy dopisac do <input> kolejny atrybut - disabled, mozna go dopisac do dowolnego pola, nie tylko do checkbox-a.
+<div><label><input type = "checkbox" checked disabled>klimatyzacja</label></div>
+Do odebrania wartosci checkbox-ow wystarczy dopisac dokazdego <input> atrybut value i przypisac do nich konkretne wartosci. Nalezy takze oczywoscie dodac atrybut name, jednak my uproscimy sobie sprawe zeby nie musiec zapisywac wyp1, wyp2, wyp3,... i stworzymy w tym celu tablice poniewaz jak bedzi eto tak zstworzone to i tak zmienna POST otrzyma name tylko tych checkbox-ow, ktore sa zaznaczone.
+$wartosci = $_POST['wyp'];
+foreach ($wartosci as $opcja)
+{echo $opcja."<br>";}
+
+9) Przerobimy sobie teraz specjalna liste ktora bedzie zawierala dodatkowy atrybut multiple - czyli wybor wielokrotny.
+<select id = "choinka" name = "choinka" multiple>
+Umozliwi nam to wybranie za pomoca shift+klik wiecej niz jednej choinki, lub ctrl+klik.
+<option value = "k">kokosowa</option>
+Pozostale tagi <input> sa prawie takie same jak w przypadku listy rozwijanej z wyborem pojedynczym. 
+Bardzo przydatnym jest tutaj takze atrybut size, ktorym okreslamy jak wiele opcji na raz jest widocznych. Przykladowo jezeli damy wartosc atrybutu na 4 to wszystkie nasze opcje beda widoczne na raz i nie trzeba bedzie ich sobie przewijac.
+W dalszej kolejnosci zamkniemy naszego <select> w <div> tak zeby ulozyc go pod naszym <label>. W dalszej kolejnosci tak jak w przypadku checkbox-ow damy jeszcze do name = "choinka" [] -> name = "choinka[]" utworzymy w ten sposob tablice przez co nie bedziemy musieli specjalnie nazywac name-ow. Odbierac wartosci w PHP mozemy tak samo jak w przypadku checkbox-ow.
+
+10) Zajmiemy sie teraz polem tekstowym, chodzic nam bvedzie o poibranie doklanie jednej linii tekstu. ktory nie bedzie zawieral znaku zlamania linii - enter-a. Zadamy w tym celu uzytkwnikowi konkretne pytanie.
+Domyslnie po wpisaniu tagu <input> juz domyslnie wyswietli sie pole tekstowe, jednak zeby bylo poprawnie i tak dopisujemy type = "text". Dalej nadajemy name, ktory bedziemy odczytywac istniejeca wartosc w tablicy POST w szufladzie "imie".
+Ok mjac juz to zrobione mozemy skopiowac dana linie kodu i bedziemy tworzyc pola tekstowe na password i search. Zrobimy to nastepujaco:
+<label> Imię <input type = "text" name = "imie"></label>
+<label> Hasło <input type = "password" name = "haslo"></label>
+<label> Szukaj <input type = "search" name = "fraza"></label>
+Widac zatem ze mamy podane typy tagow <input> kolejno search i password. Pole z haslem wowczas maskuje wpisywane znaki zapewniajac dyskrecje, natomiast typ search daje nam dodatkowa mozliwosc latwego usuniecia wpisanego tekstu. Odnieramy wartosc w PHP lapiac wartosci dzieki atrybutowi name.
+Mozemy ustawic atrybut placeholder wewnatrz tagu <input> odpowiada on za wyswietlenie w danym polu przykladowej wartosci. Pelnia one funkcje podpowiedi dla uzytkownika.Wsrod web-developer-ow podpowiedzi to goracy temat czesc z nich uwaza ze psuja one user-experience wielu formularzy. Nie nalezy na pewno naduzywac placeholder-ow a juz szczegolnie nie moga one zastapic etykiet.
+
+
+11) Do wpisywania loczb wewnatrz formularza mamy dedykowany atrybut number. Do takiego pola mozemy tylko wpisywac liczby nie mozna do nich wpisywac liter z wyjatkiem e poniewaz jest ona obecna w zapisie naukowym liczby. Przykladowo 3.5e2 = przecinek przesunac o 2 miejsca w prawo. Atryvut number nie pozwala nam wpisac przykaldowo liczby eeeeeee...., lub liczby 4.5, ktora de facto jest poprawna. Zeby przepuscic przez walidacje liczb 4.5 nalezaloby dodac atrybut step = "0.1", wowczas przejdziemy spokojnie walidacje np z 4.1, 4.3, 4.5, 4.7, itd.... Owe pole przy type = "number" pole posiada specjalne strzaleczki pozwalajace sie przesuwac przy wartosci domyslnej step = "1" co 1 dla kazdej liczby a dla innego step o inna wartosc.
+W celu odebrania wartosci z pola typu number nalezy w PHP odebrac za pomoca zmiennej POST wartosc zapisana w zmiennej o nadanym przez nas name, w tym przypadku nazwa - "kluczyk".
+
+12) Przyciskiem wysylajacym dany formularz jest przycisk tagu <input> typu submit. Dodac nalezy jeszcze jakies valeu do tego przycisku przykaldowo mozeto byc napis "zamawiam". Dodajac taki przycisk bedziemy mogli nastepnie dokonac jego walidacji. W tym celu takze do tagu <form> na pocatku dopisujemy atrybut action = "nazwa_pliku_php.php" i atrybut method przykladowo rowny "post".
+Do tego pliku udamy sie po poprawnej walidacji formularza.
+
+13) Drugi rodzaj przycisku to takze takze <input> z tymze o typie button, nie powoduje on wyslania formularza. Mozna jednak nie okreslac przycisku button za pomoca <input> lecz za pomoca tagu <button>...</button>, domyslnie button uzyty w znaczniku podsyumowuje formularz. Zrobiono tak dlatego gdyz pomiedzy tagi button mozna dac np. obrazek i w ten sposob uatrakcyjnic przycisk. Mozna jednak zmusoc go do niewysylania wartosci poprzez dopianie do niego type = "button" - przyciski ktor nie podsumowuja formularza to te ktore posiadaja ustawiony atrybut type = "button".
+
+14) Na tym skonczmy :)

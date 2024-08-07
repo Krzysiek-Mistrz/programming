@@ -1,0 +1,89 @@
+1) Zmienne przechowuja dane do przetwarzania. Zmienna otrzymuje nazwe lub identyfikator taka jak obszar wiek warost itp. nazwa jednoznacznie identyfikuje kazda zmienna przypisujac ej wartosc i pobierajac zapisana wartosc. Zmienna maja swoje typy , dla prykladu wyrozniamy typy:
+-int - dla liczb calkowitych
+- double - dla liczb zmiennoprzecinkowyh lub rzeczywistych, zdolny do przechowywania trakze notacji wykladniczej.
+-string - dla tekstow takich jak "hello" lub "good morning", ciagi znakow sa ujete w podwojne cudzyslowy.
+Mozesz zadeklarowac zienna danego typu i przypisac jej wartosc.Przyklad:
+string name = "David"
+Zostala stworzona zmienna o nazwie name typu String i zostala do niej przypisana wartosc "Dawid".
+Nalezy zauwazyc ze zmienna jest powiazana z typem i moze przechowywac tylko wartosci tego konkretnego typu. Na przyklad zmienna int moze przechowywac wartosci typu calkowitego, takie jak 1, 2, 3, 123, ale nie bedzue mogla przechowywac licb rzeczywistyh takich jak 12.456, ani tekstow takich jak "Hello".
+
+2) Jakiej typu zmiennej uzylbys do nadania nazwy miastu?
+Odpowiedz: String
+
+3) Przyklady deklaracji zmiennych:
+class Myclass
+{
+  public static void main(String[] args)
+  {
+    String name = "Dawid";
+    int age = 42;
+    double score = 15.9;
+    char group = 'Z';
+  }
+}
+Char oznacza znak i zawiera jednen znak.
+Innym typem jest typ boolean, ktory ma tylko dwie mozmliwe weartosci: true i false. Ten typ dnaych jest uzywanych do prostych flag ktore sledza warunki preawda falsz. Przyklad:
+boolean online = true;
+Mozesz uzyc listy nazw zmiennych przedzielonych przecinkiem w celu, zadeklarowania wiecej niz jednej zmiennej okreslonego typu:
+przyklad:
+int a = 42, b = 11.
+
+4) Zad "Paszport samochodowy"
+Wyswietl wlasnicwosci pojazdu. Napisz program wypisujacy wlasciwosci samochodu.
+Zadanie:
+Naprawic kod tak zeby wyswietlal wlasciwosci dango samochodu.
+Strumien wyjscia:
+name: Toyota
+Engine: 4.7
+Rok: 2019
+Zwroc uwage na typy zmiennych, powinny byc one dobrze i prawidlowo dobrane.
+1) Rozwiazanie:
+public class Program
+{
+    public static void main(String[] args)
+    {
+        String name = "Toyota";
+        double engine = 4.7;
+        int year = 2019;
+
+        System.out.println("Name: " + name);
+        System.out.println("Engine: " + engine);
+        System.out.println("Year: " + year);
+    }
+}
+
+5) Zadanie "Dokladne informacje uniwersyteckie"
+Napraw bledy w kodzie tak zeby wyswietlic informacje o studentach. Uniwersytecka baza danych przechowuje informacje o styudentach uczelni. Przechowuje ich wiek imie wyniki i informacje o tym czy przeszli czy nie. zmienne przechowujace te dane w kodzie sa niepoprawnie zadekarowane.
+Przykladowo:
+John
+21
+false
+4.3
+Jest wiele mozliwosci na nazwanie zmiennych w Javie. To codzienne zeby nazywac zmienne zaczynajac od malych liter. Jezeli nazwa zmiennej zawiera wiele slow, wowczas pierwsze slowo powinno byc napisane z malej litery a kolejne nazwy juz z duzej litery. Jest to zwyczaj ale warto sie do niego stosowac.
+1) Rozwiazanie:
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String name = "John";
+        int age = 21;
+        double averageScore = 4.3;
+        boolean isGraduated = false;
+
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(isGraduated);
+        System.out.println(averageScore);
+    }
+}
+
+6) Uzupelnij luki tak zeby otrzymac prawidlowy program w java-ie:
+class Apples
+{
+  public static void main(String[] args)
+  {
+    String name = "John";
+    int age = 24;
+    double height = 189.87;
+  }
+}

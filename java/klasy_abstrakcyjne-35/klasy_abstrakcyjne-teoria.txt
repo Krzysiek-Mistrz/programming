@@ -1,0 +1,49 @@
+1) Abstrakcja danych zapewnia swiatu zewnetrznemu tylko niezbedne informacje w procesie przedstawiania podstawowych funkcji bez uwzgledniania szczegolow implemetacji. Dobrym rzeczwistym przykladem jest ksiazka. kiedy slyszysz to slowo nie znasz wszytskich informacji odnosnie tej ksiazki. Niez wiesz dla przykladu ile ta ksiazka ma stron, jaki ma kolor czy rozmiar, jednak rozumiesza sama niejako idee ksiazki, ta idee nazywamy wlasnie abstrakcja. Zasadnicza koncepcja abstrakcji jest ze skupiamy sie na najwazniejszych niejako cechach danej idei, a nie na ogolnych cechach tej idei.
+W Javie abstrakcje sa uzyskiwane za pomoca abstrakcyjnych klas lub interfejsow. Klasa abstrakcyjna jest definiowa uzywajac slowa kluczowego "abstract".
+-Jesli klasa jest zadeklarowana jako abstrakcyjna wowczas nie mozesz utworzyc zadnych obiektow tej klasy.
+-Aby uzyc klasy abstrakcyjnej musisz odziedziczyc ja z innej klasy.
+-Kazda klasa zawierajaca metode abstrakcyjna powinna byc zdefiniowana jako abstrakcyjna.
+Metoda abstrakcyjna jest to metoda ktora jest zadeklarowana bez zadenej implementacji - tzn. bez jakichkolwiek nawiasow klamrowych, znajduje sie po prostu po niej srednik. Przykald:
+abstract void walk();
+
+2) Zadanie (teoria - rozumienie pojecia klasy abstrakcyjnej)
+Klasa posiadajaca metode abstrakcyjna jest klasa abstrakcyjna. TAK / NIE
+Odpowiedz: TAK
+
+3) Na przykald mozemy sobie zdefiniowac nasza klase Animal jako abstrakcyjna:
+abstract class Animal {
+  int legs = 0;
+  abstract void makeSound();
+}
+Metoda makeSound() jest takze funkcja abstrakcyjna, poniewaz nie ma implematcji w nadklasie. Mozemy dziedziczyc po klasie Animal i zdefiniowac metode makeSound() dla podklasy.
+class Cat extends Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+}
+Kazde zwierze wydaje inny dzwiek, ale kazdy robi to w inny sposob. Dlatego definiujemy klase abstrakcyjna Animal i pozostawiamy implematcje sposobu w jaki tworza dzwieki podklasom. takie roziwazanie jest stosowane kiedy nie ma sensownej definicji metody w nadklasie.
+
+4) Zadanie "Board game attrinutes" (angielski)
+Write a program and implemet the given metods inherited from abstract Game class. There are 5 classes: Main, Game, Chess, Monopoly, Battleships. In the Main class, the objects of these three classes are defined consecutively and the play () method is called on them. The Game class is an abstract class containing the methods: (String) getName () and (void) play (). These abstract methods are implemented in the classes: Chess, Battleships, Monopoly. Complete the method data as appropriate:
+Monopoly:
+-Monopoly
+-Buy all properties
+Chess:
+-Chess
+-Kill enemy king
+Battleships:
+-Battleships
+-Defeat your opponent
+
+5) zadanie (praktyka - tworzenie klas abstrakcyjnych, uzycie abstrakcji)
+Uzupelnij luki tak zeby stworzyc klase abstrakcyjna z abstrakcyjna metoda, nastepnie odziedzic z klasy Animal do klasy Dog.
+abstract class Animal {
+  public int age;
+  public (1)... int printAge();
+}
+class Dog (2)... Animal {
+  public (3)... printAge() {
+    return age;
+  }
+}
+Odpowiedz: (1)abstract, (2)extends, (3)int

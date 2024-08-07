@@ -1,0 +1,48 @@
+1) Tablice i listy przechowuja elementy jako uporzadkowane kolekcje, przy czym kazdemu elementowi przypisano indeks w postaci liczby calkowietj. Hashmap sluzy do przechowywania kolekcji danych jako par kluczy i wartosci. Jeden obiekty jest uzywany jako klucz (indeks) do innego obiektu (wartosc). Metody put, remove i get sluza do dodawania i uzyskiwania dostepu do wartosci HashMap. Przyklad:
+import java.util.HashMap;
+public class MyClass {
+  public static void main(String[] args) {
+    HashMap<String, Integer> points = new HashMap<String, Integer>();
+    points.put("Amy", 154);
+    ponits.put("Dave", 42);
+    points.put("Rob", 733);
+    System.out.println(points.get("Dave"));
+  }
+}
+Stworzylismy HashMap z typem String jako kluczem i typem Integer jako wartoscia, pamietaj ze w tym wypadku nie mozesz po prostu napisac "int", lub np. "float", a odpowiadajace im wartosci nadane w tych klasach: "Integer", "Double", "Float", etc...
+W celu dostania sie do wartosci HashMap nalezy uzyc metody get() podajac przy tym wartosc klucza.
+
+2) Zadanie (praktyka)
+Podaj rezultat ponizszego kodu:
+import java.util.HashMap;
+class A {
+  public static void main(String[] args) {
+    HashMap<String, String> m = new HashMap<String, String>();
+    m.put("A", "First");
+    m.put("B", "Second");
+    m.put("C", "Third");
+    System.out.println(m.get("B")); //podaje indeks klucza
+  }
+}
+Odpowiedz: "Second"
+Wyjasnienie: W metodzie get zostal podany klucz elementu 1 wartosci "B", zatem zostanie zwrocona wartoosc elementu z poodanym kluczem.
+
+3) HashMap nie moze zawierac zduplikowanych kluczy. Dodanie nowego elementu z kluczem, ktory nie istnieje, nadpisuje stary element. Klasa HashMap udostepnia metody ContainsKey i ContainsValue, ktore okreslaja obecnosc okreslonego klucza lub wartosci w danej HashMap. Jesli sprobujesz uzyskac wartosc ktorej nie ma w twojej HashMap, wowczas zwraca ona wartosc null.
+null to specjalny typ, ktory reprezentuje brak wartosci. W kwestii przypomnienia.
+
+4) Zadanie (praktyka)
+Uzupelnij luki tak by zadeklarowac HashMap, dodac do niej dwa elementy i wyswietlic jeden z nich:
+HashMap<String, String> m = (1)... HashMap<String, String>();
+m.put("A", "First");
+m.(2)...("B", "Second");
+System.out.println(m.(3)...("B"));
+Odpowiedz: (1) - new; (2) - put; (3) - get
+
+5) Zadanie "Age dependent" (angielski)
+The program you are given defines and outputs HashMap, where the names of employees are stored as keys, and their ages as values.
+It also takes N number from user as age limit. Write code to delete all the employees whom age is less than N number.
+The line of code for the output of HashMap object is already provided.
+Sample Input
+25
+Sample Output
+{Robert=32, John=28}

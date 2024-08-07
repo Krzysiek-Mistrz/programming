@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" VersionMinor="1" ProductId="508" ProductName="MC508">
+    <Environment>
+        <Software SoftwareVersion="5.4.3.30464" />
+        <Controller ControllerVersion="2.0320004001" ControllerFPGAVersion="11">
+            <Modules />
+        </Controller>
+    </Environment>
+    <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+            <Items />
+        </Group>
+    </Groups>
+    <Items>
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="d55f4009-811d-4119-8499-d875514bbb02" FileName="MC_CONFIG.MCC" Storage="internalStorage" />
+        <Item Type="basic" Name="RYSOWANIE_MOVE" Id="854aef24-a932-4add-a373-ed6fa90fb171" FileName="RYSOWANIE_MOVE.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basic" Name="RYSOWANIE_MOVEABS" Id="5a3c8d68-652b-4dc9-91c8-3ddd362f37f8" FileName="RYSOWANIE_MOVEABS.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basic" Name="RYSOWANIE_MOVECIRC" Id="2ef2da32-0aa3-4e8a-bbef-db3e20c95db9" FileName="RYSOWANIE_MOVECIRC.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basic" Name="STARTUP" Id="809de644-4efc-4c22-b1c1-43e7dc580667" FileName="STARTUP.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+    </Items>
+</Project>

@@ -1,0 +1,39 @@
+1) Set to kolekcja ktora nie moze zawierac zduplikowanych elementow. Modeluje ona abstrakcje zbiorow matematycznych. Jedna z implementacji Set jest klasa HashSet. Przyklad:
+import java.util.HashSet;
+public class MyClass {
+  public static void main(String[] args) {
+    HashSet<String> set = new HashSet<String>();
+    set.add("A");
+    set.add("B");
+    set.add("C");
+    System.out.println(set);
+  }
+}
+Mozesz uzyc metody size() w celu otrzymania liczby elementow kontenera klasy HashSet.
+
+2) Zadanie (praktyka)
+import java.util.HashSet;
+class A {
+  public static void main(String[] args) {
+    HashSet<String> set = new HashSet<String>();
+    set.add("A");
+    set.add("B");
+    set.add("C");
+    System.out.println(set.size());
+  }
+}
+Odpowiedz: 3
+Wyjasnienie: Metoda size() zwraca liczbe elementow w danym kontenerze.
+
+3) Klasa HashSet nie zachowuje automatycznie kolejnosci elementow podczas ich dodawania. Aby uporzadkowac elementy uzyj klasy LinkedHashSet, ktory utrzymuje polaczona liste elementow zestawu w kolejnosci w jakiej zostaly wstawione.
+Teraz o tym co to jest hashowanie? Tablica mieszajaca (tablica mieszajaca) przechowuje informacje za pomoca mechanmizmu zwanego mieszaniem, w ktorym zawartosc informacyjna klucza jest uzywana do okreslenia unikalnej wartosci zwanej kodem mieszajacym. Zasadniczo kazdy element w HashSet jest powiazany z unikalnym kodem skrotu.
+
+4) Poznales juz rozne typy kolekcji, ktore sa dostepne w Javie, w tym Listy, Mapy i Zestaw. Wybor ktorego uzyc zalezy od danych, ktore bedziesz chcial przechowywac lub danymi ktorymi bedziesz chcial manipulowac.
+
+5) Zadanie (teoria)
+Ktore z ponizszych stwierdzen sa prawdziwe, w opdowiedzie podaj odpowiadajace tym zdaniom numery:
+1.LinkedHashSetnie nie zachowuje kolejnosci wprowadzonych danych.
+2.Set zawiera tylko unikalne wartosci, bez zadnych duplikatow.
+3.HashSet nie zachowuje kolejnosci wprowadzonych danych.
+4.Set moze zawierac duplikaty.
+Odpowiedzi: 2; 3

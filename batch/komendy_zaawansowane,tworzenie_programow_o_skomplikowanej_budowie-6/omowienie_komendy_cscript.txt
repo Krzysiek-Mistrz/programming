@@ -1,0 +1,25 @@
+1) Do czego sluzy?:
+Uruchamia skrypt do uruchomienia w środowisku wiersza polecenia. w praktyce pozwala uruchomic dany program w sposob inny niz pomyslal sobie jego tworca.
+
+2) Budowa Ogolna:
+cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript}] [/i] [/job:<identifier>] [{/logo | /nologo}] [/s] [/t:<seconds>] [x] [/u] [/?] [<scriptarguments>]
+
+
+Parameter		Description
+nazwa_skryptu.rozsz.	Określa ścieżkę i nazwę pliku skryptu z opcjonalnym rozszerzeniem nazwy pliku.
+/ b 			Określa tryb wsadowy, który nie wyświetla alertów, błędów skryptów ani monitów o 					wprowadzenie danych.
+/ d 			Uruchamia debuger.
+/ e: 			<silnik> Określa silnik używany do uruchamiania skryptu.
+/ h:cscript 		Rejestruje cscript.exe jako domyślny host skryptów do uruchamiania skryptów.
+/ h:wscript 		Rejestruje wscript.exe jako domyślny host skryptów do uruchamiania skryptów. To jest 					ustawienie domyślne.
+/ i 			Określa tryb interaktywny, w którym wyświetlane są alerty, błędy skryptów i monity 					wejściowe. Jest to ustawienie domyślne i przeciwieństwo / b.
+/ job: 			Uruchamia zadanie określone przez identyfikator w pliku skryptowym .wsf.
+/ logo 			Określa, że ​​baner hosta skryptów systemu Windows jest wyświetlany w konsoli przed 					uruchomieniem skryptu. To jest ustawienie domyślne i przeciwieństwo / nologo.
+/ nologo 		Określa, że ​​baner hosta skryptów systemu Windows nie jest wyświetlany przed uruchomieniem 				skryptu.
+/ s 			Zapisuje bieżące opcje wiersza polecenia dla bieżącego użytkownika.
+/ t: 			określa maksymalny czas działania skryptu (w sekundach). Możesz określić maksymalnie 32767 				sekund. Domyślnie nie ma limitu czasu.
+/ u 			Określa Unicode dla danych wejściowych i wyjściowych przekierowywanych z konsoli.
+/ x 			Uruchamia skrypt w debugerze.
+/? 			Wyświetla dostępne parametry poleceń i zapewnia pomoc dotyczącą ich używania. Jest to to 				samo, co wpisanie cscript.exe bez parametrów i skryptu.
+
+scriptarguments Określa argumenty przekazywane do skryptu. Każdy argument skryptu musi być poprzedzony ukośnikiem (/).

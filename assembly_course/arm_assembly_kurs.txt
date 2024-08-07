@@ -1,0 +1,140 @@
+assembly language
+
+Every address in stack register is away from another b y4 in decimal value
+register 7 is special purpose register. It stores info about system calls. when you write into this register this calls system interrupt to lokk at this register and do specific task
+sp register tells us the adress of next available piece of memory on the stack. 
+lr register stores the location that the function should return back to.
+pc register keeps track of location of the next instruction to execute.
+cpsr register is used to store information about program (for example used when need to tell whether result of mathematical operation is negative or not)
+
+Every program starts with:
+.global _start
+_start:
+where _start: is a label, whereas .global indicate that the any subprogram can go to this label which is the start of our program
+Writing 1 to register 7 terminates the program
+mov corresponds to moving data into registerswe need to gie it the source and destination.
+MOV R0, #30 -> moving decimal value into rehister
+MOV R0, #0xA0 -> moving hex value into register
+SWI -> calls system interrupt reading register 7
+
+little endian refers to most significant bit being on the left hand side of register, big endian analogously. ARM processor can be used in either of these systems
+
+We can differentiate a few types of addressing: like immediate addressing: mov r0, #5, registered direct addressing: mov r1, r0
+to get the date on to the stack we have to use the .data section of the program. the we are declarig any data to store into stack memory.
+list:
+   .word 4, 5, -9, 1, 0, 2, -3
+at first we are declaring name of variable then size of variable
+ldr lets us load date from stack into registers. ldr r0, =list. it places first number from list of stack into register. After ths instruction the first addres of the stack list will be assigned to r0.
+now having the addres of the begining of the list we can retreive the values of the list by using indirect addresing: ldr r1, [r0] -> this will retreiv the value associated with address which is in r0. This is the value ONLY of the first element. We can also use indirect addresing with offset: ldr r2, [r0, #4] 4 because each stack addres is away of 4 bits. this will actually return the value in the next stack memory cell to r0 by 4 bits. Last 2 types of addresing is pre and post increment. ldr r2, [r0, #]! is preincrement it also returns second number from list but also increments the value in r0 (this incerment is done before accesing the value. the post incrementation incremnets however after accesing the value from r0: ldr r2, [r0], #4
+
+we can do arithmetics using add, sub, mul: add r2, r0, r1 -> which adds numbers from r0 and r1 and stores the result in r2. sub r2, r0, r1 -> r2 = r0 - r1, mul r2, r0, r1 -> r0 - r1. the trick is when you substract and get negative number yuou actually dont know if you subtracted and got negative or subracted from very big number very small and got the same result... therefor cpsr need to be used to determine if there was u2 complementary method used, carry opr any other. when you know thyere will be negative numbers you should use subs to write into cpsr register. in case it was a negative number using subs the first 0000 of cpsr will be changed to 8000, indicating that the resukt is negative. there may also be a carry when we add very big nmbers and the result couldnt be stored in 32 bit register, if we would like to add this carry we would use: adc R2, R0, R1 <=> r2 = r0 + r1 + carry.
+
+We can also do logical operatins in assembler fe.: mov r0, #0xff; mov r1, #16; and r2, r0, r1 will do an and on r1 and r0 and will store result in r2 (result would be 16) because ff is all '1....'. There is also or r2, r0, r1, that works analogoulsy. also we have exor that works as expected. we can implement negation of certain bits using and operator: and r0, r0, #0x000000ff.
+
+we can determine two types of loical shifts: LSL and LSR: like for example lsl: 00001010 = 10 -> 00010100 = 20, by lsl we can very fast multiply number by 2. by using lsr we can divide by 2. we can also differ ror (rotation operation) in rotate right thr right most thing lop back over to the left most position fe.: 00000101 -> 10000010. ROL doesnt exist. ROR doeasnt appear very often in real applications (only in graphics crypto, ...)
+
+in assembler we can recoginze condition statements that are implemented by comprators as well as branches that are used in order to move to some code after the condition in statement is met. R0 - R1 the sign of the result is given by the result of this subtration. if the result is negative the cpsr register is set as well. after the conditional we add a flag that finds out certain conditions fr. BGT branch is used to check if r0 is greater than Ri in the case of program below.even though the program wont go to the greater branch immediately after executing MOV R2, #2 it will eventualy go to the next branch because of the sequentiality of assembler. Therefore we can use the BAL branch to got to diffrent branch if condition isnt met: BAL its called. Other typical branches are: BGE - greater / equal to, BLT - less than, BLE - less than or equal to, BEQ - equals, BNE - not equals
+.global _start
+_start:
+   MOV R0, #1
+   MOV R1, #2
+   CMP R0, R1
+   BGT greater
+   MOV R2, #2
+   BAL default
+greater:
+   MOV R2, #1
+default:
+   MOV R2, #2 
+
+We can also implement loops in our program using conditional statements. every slot in stack memory in processor have a certain indication for example arm has indication of 0xaaaaaaaa, that measns it is empty we can use that to determine the end pf the list which elements we are going to increment. to store literal i narm we are using constants: .equ. Using this way we dont need to use the length of the list. Downside of this method however is that it may not work because many times the indication of empty memory is diffrent then aaaa...
+.global _start
+.equ endlist, 0xaaaaaaaa
+_start:
+   LDR R0, =list
+   LDR R3, =endlist
+   LDR R1, [R0]
+   ADD R2, R2, R1
+loop:
+   LDR R1, [R0, #4]!
+   CMP R1, R3
+   BEQ exit
+   ADD R2, R2, R1
+   BAL loop
+
+exit:
+
+.data
+list:
+   .word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+We can also use other conditional statements in assembly. instead of usng branches we can use conditional based instructions like addlt -> add less then. we can differentiate a few types of those instructions: movlt, movgt, movle, movgt, addgt, addlt, ... and analogously for orr, and others
+.global _start
+_start:
+   MOV R0, #2
+   MOV R1, #4
+   CMP R0, R1
+   ADDLT R2, #1
+   MOVGE R2, #2
+
+There are also some function concepts in assembly. of course to achieve the work of the functions we can use branches like bal go to location of label and after execution of function go to point of call of the fnction using another branch. but thats too much complexity. instead we can use bl -> branch links which stores location of branch call position in lr register. to achieve this goal of going back from funcytion we will use bx branch and giving it a lr as the position to go to.
+.global _start
+_start:
+   MOV R0, #1
+   MOV r1, #3
+   BL add2
+   MOV R3, #4
+add2:
+   ADD R2, R0, R1
+   BX LR
+
+we can preserve and retrieve data from stack memory. what i mean by that is that we can simulate the local variables used inside of functions and after end of the function its being deleted.to utilize this concept we can use push and pop functions. Push function is responsible for adding values from registers to stack memory. pop however is used to brig them back from stack memory to our registers. This mechanism is  used to simulate the exact mechanism of local variables.We can utiles returning values from functions using this concept as well.
+.global _start
+_start:
+   MOV R0, #1
+   MOV R1, #3
+   PUSH {R0, R1}
+   BL get_value
+   POP {R0, R1}
+   B end
+get_value:
+   MOV R0, #5
+   MOV R1, #7
+   ADD R2, R0, R1
+   BX lr
+end:
+   
+we can also directly interact with devices using asm. for example we can use switches and led. we can read input from users using getting values from registers associated with the hardware in our case switches. string value in the register of led will switch on the corresponding led. We are doing this thing by str r1, [r0] -> stores value of r1 in value of addres stored in r0. 
+.equ SWITCH, 0xff200040
+.equ LED, 0xff200000
+.global _start
+_start:
+   LDR R0, =SWITCH
+   LDR R1, [R0]
+   LDR R0, =LED
+   STR R1, [R0]
+
+You can write assembly arm on any architecture that is based on arm processors like for example raspberry pi with raspbian os. when we are on raspberry we can right away go to write some program. The extension for asm should be .s. under .data of the program will be everything that we will output to the screen. .asciz (alias of it is .string) describes our text with the null terminator on the end. moving 1 to R0 tells our machine that we want to place our output in standard output (typically cmd). moving message to r1 tells the location of the message to our machine. with r2 and len analogoulsy working. R7 and 4 is responsible for telling the system that we actually want to write a message to screen. After that we endure program by writing 1 to R7. after writing the code we need to create a object file from it that may be combined with other objectsand after that we need to compile it into binary:
+nano helloworld.s
+ashelloworld.s -o helloworld.o
+ld helloworld.o -o helloworld
+./helloworld
+.global _start
+_start:
+   MOV R0, #1
+   MOV R1, =message
+   MOV R2, =len
+   MOV R7, #4
+   SWI 0
+   MOV R7, #1
+   SWI 0
+
+.data
+message:
+   .asciiz “hello world \n”
+len = .-message
+
+we can as well debug our programs from linux cmd. after creating binary file:
+gdb helloworld
+break _start
+we can prin the layout mode so that we will see every command being run by (layout asm). to see the registers, we can type info register r0 or layout regs. we can run our program after adding breakpoint by run. to step into next line we use stepi. we can examine the stack memory using x/10x $r1 where x is examine 10 is the numbers o memory slots to uncover nother x is hexadecimal format (we also have d, c, u) and $r1 represents the addres of stack memory stored in r1 to start to read from.

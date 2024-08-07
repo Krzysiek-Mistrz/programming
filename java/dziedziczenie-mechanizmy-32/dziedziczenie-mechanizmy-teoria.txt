@@ -1,0 +1,92 @@
+1) Dziedziczenie jest to proces ktory umozliwia jednej klasie nabywanie wlasciwosci (metod i zmiennych) innej klasy. Dzieki dziedziczeniu informacje sa umieszczane w latwiejszym do zarzadzania, hierarchicznym porzadku. Klasa dziedziczaca wlasciwosci innej jest podklasa (zwana jest takze klasa pochodna, ewentualnie potomna). Klasa ktorej wlasciowsci sa dziedziczone nazwyamy nadklasa (klasa bazowa, lub nadrzedna). Aby dziedziczyc z klasy uzyj slowa kluczowego extends. ten przyklad pokazuje, jak sprawic by klasa Dog dziedziczyla po klasie Animal.
+class Dog extends Animal {
+    //...
+}
+W tym wypadku klasa Dog jest podklasa a klasa Animal jest nadklasa.
+
+2) Zadanie
+Uzupelnij luke (1) tak by zastosowac mechanizm dziedziczenia klasy car z klasy vehicle.
+class Car ... Vehicle{
+    //...
+}
+
+3) Kiedy jedna klasa jest dziedziczona z innej klasy, dziedziczy wszystkie nieprywatne zmienne i metody swojej nadklasy. Przyklad:
+class Animal {
+  protected int legs;
+  public void eat() {
+    System.out.println("Animal eats");
+  }
+}
+class Dog extends Animal {
+  Dog() {
+    legs = 4;
+  }
+}
+Klasa Dog dziedziczy zmienna legs z klasy Animal. Mozemy teraz zadeklarowac obiekt Dog i wywolac metode eat() jej nadklasy.
+class MyClass {
+  public static voi main(String[] args) {
+    Dog d = new Dog();
+    d.eat();
+  }
+}
+Z ta wiedza tkora teraz posiadasz przypomnij sobie modyfikator dostepu protected. Sluzyl on przypomne do dostepu do elementow nadklasy dla jej podklasy.
+
+4) Zadanie
+Uzupelnij luki tak by dziedziczyc z klasy Animal i wywolac jej metody w funkcji main.
+class Animal {
+  public void makeSound() {
+    System.out.println("Hi");
+  }
+}
+class Dog extends Animal {
+}
+class A {
+  public static void main(String[] args) {
+    Dog og = new Dog();
+    dog.makeSound();
+  }
+}
+
+5) Konstruktory nie sa metodami skladowymi wiec nie sa dziedziczone przez podklasy. Jednak konstruktor nadklasy jest wywolywany podczas tworzenia instancji podklasy.
+class A {
+  public A() {
+    System.out.println("New A");
+  }
+}
+class B extends A {
+  public B() {
+    System.out.println("New B");
+  }
+}
+class Program {
+  public static void main(String[] args) {
+    B obj = new B();
+  }
+}
+W rezultacie wykona sie konstruktor z klasy B poniewaz tworzony jest nowy obiekt tej klasy za pomoca konstruktor , a ponadto poniewaz ta klasa dziedziczy z klasy A, ktora takze ma swoj konstruktor, zatem wywola sie takze konstruktor klasy A.
+Mozesz uzyskac dostep do nadklasy z podklasy za pomoca slowa kluczowego super. Na przyklad super.var uzyskuje dostep do czlonka var nadklasy. Przyklad:
+class A {
+  int number1 = 50;
+  public void A() {
+    System.out.println("New A");
+  }
+}
+class B extends A {
+  int number2 = 100;
+  public void B() {
+    System.out.println("New B");
+    System.out.println(number2);
+    System.out.println(super.number1)
+  }
+}
+W rezultacier zostanie wyswietlone: 
+100
+50
+
+6) Zadanie "Upgrade your subscription" (angielski)
+Write a program with three classes: Standard, Pro and Main classes, where the Pro class will inherit from the Standard class. The Standard class will have two methods: (public) draw () and (public) write (), which will output "Drawing", "Writing" in sequence. While a Pro class inheriting from this class will have methods: (private) useEffects () and (private) changeResolution (), which will print "using effects", "changing resolution" in sequence. Then call these methods in the Main class for each of the Standard and Pro classes.
+
+7) Zadanie (tekstowe)
+Metody prywatne sa dziedziczone z nadklasy:
+Prawda / Falsz
+Odpowiedz: Falsz, poniewaz wszytsko z modyfikatorem dostepu private jest niedostepne dla podklasy

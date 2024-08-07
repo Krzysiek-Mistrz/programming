@@ -1,0 +1,33 @@
+%ETAP III: METODA LINIOWA (solver)
+%Czyścimy pamięć aby uniknąć problemów z poprzednimi zadaniami
+clc, clear;
+
+%Stworzenie zmiennych do użycia z solverem optymalizacyjnym
+czasPracy_M1 = optimvar('czasPracy_M1','LowerBound',0);
+czasPracy_M2 = optimvar('czasPracy_M2','LowerBound',0);
+czasPracy_M3 = optimvar('czasPracy_M3','LowerBound',0);
+czasPracy_M4 = optimvar('w','LowerBound',0);
+problemOptymalizacyjny2 = optimproblem('Objective',30*czasPracy_M1 + 20*czasPracy_M2 + 50*czasPracy_M3 + 80*czasPracy_M4,'ObjectiveSense','max');
+
+%Tworzenie ograniczeń (c1, c2, c3, c4, c5) zgodnie z poleceniem
+problemOptymalizacyjny2.Constraints.c1 = 2*czasPracy_M1 + 1*czasPracy_M2 + 2*czasPracy_M3 + 5*czasPracy_M4 <= 1000;
+problemOptymalizacyjny2.Constraints.c2 = 3*czasPracy_M1 + 3*czasPracy_M2 + 1*czasPracy_M3 + 1*czasPracy_M4 <= 2400;
+problemOptymalizacyjny2.Constraints.c3 = 1.5*czasPracy_M1 + 0*czasPracy_M2 + 1*czasPracy_M3 + 1*czasPracy_M4 <= 600;
+problemOptymalizacyjny2.Constraints.c4 = 0*czasPracy_M1 + 0*czasPracy_M2 + 4*czasPracy_M3 + 6*czasPracy_M4 <= 3000;
+problemOptymalizacyjny2.Constraints.c5 = 0*czasPracy_M1 + 0*czasPracy_M2 + 3*czasPracy_M3 + 3*czasPracy_M4 <= 2000;
+
+%Konwersja obiektu `problemOptymalizacyjny2` na strukturę problemu, która jest w stanie zostać podana solver'owi.
+strukturaProblemu2 = prob2struct(problemOptymalizacyjny2);
+
+%Rozwiązanie struktry problemu przez solver'a (linprog).
+[rozwiazanie2,osiagnietaWartosc2,exitflag2,output2] = linprog(strukturaProblemu2);
+%rozwiazanie2 = która maszyna ile musi pracować
+%osiagnietaWartość2 = ile pieniędzy zarobiliśmy poprzed pracę maszyn
+%exitflag2 = powód zatrzymania działania linprog'a (zmienna nie użyta w programie)
+%output2 = informacja o przebiegu zadania optymalizacyjnego (zmienna nie użyta w programie)
+
+%Wyświetlenie wyniku
+disp("Czas pracy M1, M2, M3 i M4:")
+disp(rozwiazanie2)
+disp('Osiągnięta wartość (cena):') 
+disp(-(osiagnietaWartosc2)) %specyfika funkcji linprog jest taka, że zwraca ujemną wartość, zatem należy zmienić znak przed wypisaniem.

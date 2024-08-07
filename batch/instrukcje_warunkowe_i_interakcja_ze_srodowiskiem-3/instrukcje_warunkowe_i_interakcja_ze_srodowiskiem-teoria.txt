@@ -1,0 +1,40 @@
+1) Instrukcje warunkowe sluza do sprawdzania warunkow, w jezyku Batch sa bardzo podstawowe jednak i tak mozna ich z powodzenieniem uzywac w innych programach.
+
+2) Komendy podstawowe dla instrukcji warunkowej w Batch-u:
+if [not] [exist] cos==cos komenda - jezeli cos rowna sie czemus wykonaj komende. Jezeli uzyte jest not, stanie sie przeciwienstwo - jezeli cos nie rowna sie czemus wykonaj komende. Jezeli uzyte jest exist, zamiast zwyklego sprawdzenia warunku sprawdzane jest istnienie danego pliku (w przykladzie w poprzednim rozdziale).
+start - wykonanie jakiegoś programu w osobnym oknie.
+call - odmiana komendy start sluzaca do uruchomienia jakiegos pliku wsadowego w tym samym oknie. Moze sluzyc do podzielenia skomplikowanego programu na mniejsze czesci.
+
+3) Podam teraz przyklad:
+@echo off
+echo Prosze wpisac jeden do konsoli
+set /p zmienna=
+if %zmienna%=="1"
+(
+  echo Dziekuje!
+)
+if not %zmienna%=="1"
+(
+  echo Nieprawidlowo
+)
+pause
+
+4) Mozna zatem uogulnic dzialanie instrukcji warunkowej if do sprawdzania czy argument podany przez np. uzytkownika jest zgodny z tym, ktory podalismy jako prawdziwy.
+
+5) Tutaj inny program obrazujacy dzialanie instrukcji if:
+if exist c:\moje\zm.txt goto 1
+if not exist c:\moje\zm.txt goto 2
+:1
+echo Znaleziono plik.
+pause >nul
+exit
+:2
+echo Nie znaleziono pliku.
+pause >nul
+exit
+Wykorzystanie instrukcji warunkowych w celu znalezienia pliku
+
+6) Polecenie pause >nul oznacza, ze standardowe wyjscie jest przekierowywane do specjalnego "urzadzenia" o nazwie nul. Cokolwiek jest tam przekierowywane "znika" (to taka "czarna dziura" na dane). to, co powinno wyswietlic na konsoli przez polecenie "pause" po prostu zniknie i nie pojawi się w okienku konsoli.
+
+7) O instrukcje goto nie martw sie, wytlumacze ja w kolejnej lekcji.
+

@@ -1,0 +1,35 @@
+1) set /p zmienna = zacheta - zapytanie o cos i zapisanie tego jako tzw. zmienna srodowiskowa. Zmienne srodowiskowe moga byc stale, jak na przykład COMSPEC zawierajaca sciezke do interpretera polecen. 
+
+2) Nazwy zmiennych podajemy ograniczone procentami. Dla przykladu: %imie%.
+
+3) Podczas tworzenia plikow wsadowych waznym jest rowniez zwracanie uwagi na nazwy gdyz dla cmd jest rożnica pomiedzy "liczba=" a "liczba =". Mozemy wiec zrobic nazwe z imienia i nzwiska i jako wartosc podac numer id. Wlasnie przez to, ze mozemy nadawac nazwy z spacja wszystko co jest przed znakiem "=" jest uznawane za nazwe zmiennej. Za nazwe zmiennej moze nam sluzyc rowniez liczba.
+
+4) Zmienne są waznym elementem w kazdym jezyku programowania (jezeli mozna tak nazwac pliki wsadowe). W DOS zeby stworzyc zmienna nalezy uzyc komendy set: 
+1.set liczba=10
+2.set imie=Damian
+
+5) Aby nie traktowalo tego jako napis a jako wartosc policzalna nalezy do polecenia set dodac przelacznik /a.
+set zmienna=1
+set /A zmienna=%zmienna%+1
+echo %zmienna%
+Mozna w ten sposob dodawac rowniez dwie wartosci zmiennych. Jezeli jedna zmiennych nie istnieje lub jej wartosc to liczba i litery to jest traktowana jako 0.
+
+6) Posiadamy mozliwosc podmieniania czesci zmiennych. Robi sie to poprzez taki wzor:
+%zmienna:nap1=nap2%
+gdzie zmienna to nazwa zmiennej a nap1 to wartosc, ktora ma zastapic nap2. Jezeli jest pare wsytapien nap1 to zostanie on zamieniony w wszytkich miejscach. Więc np:
+set zmienna=ala ma kota i kot ma ale
+echo %zmienna:a=e%
+
+7) Mozna wyciac kawalek tesktu ze zmiennej:
+echo %zmienna:~7,10%
+echo %zmienna:~3%
+echo %zmienna:~-10%
+Pierwszy przyklad pokazuje typowe zastosowanie. Pierwszy parametr po "~", oznacza od ktorej litery w ciagu ma zaczac, a po przecinku ile liter ma zostac wyświetlonych. Jezeli opuscimy drugi parametr to oznacza to, ze do konca tekstu.
+
+8) Polecenie set mozna uruchomic jeszcze z jednym parametrem a mianowicie z "/p". Po wpisaniu tego polecenia terminal rejestruje wszytkie znaki, ktore wprowadzimy i przypisuje je zmiennej. Oto przyklad:
+set /p zmienna=
+
+9) Argumenty to dane przyjmowane w momencie uruchamiania. Mozemy je wpisywac przez konsole lub w oknie wlasciwości. Sa one oznaczane jako %1, %2, itd. Jezeli uruchamiamy cos w jakims programie, to zostanie mu to podane jako pierwszy argument i mozemy to wykorzystac. Dla przykladu, oto program "cicho" usuwajacy uruchamiany plik:
+@echo off
+if exist %1 del %1
+Linijka if exist %1 del %1 oznacza jezeli istnieje %1 (argument pierwszy) usuń %1 (argument pierwszy). Jezeli program zostanie uruchomiony bez argumentu nic się nie stanie.

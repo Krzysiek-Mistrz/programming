@@ -1,0 +1,23 @@
+1) String jest obiektem reprezentujacym sekwencje znakow. Dl aprzykladu "Hello" jest sekwencja pieciu znakow. Przyklad:
+String s = "SoloLearn";
+Dopuszczalne jest zadeklarowanie pustego stringa.
+String str = "";
+
+2) Uzupelnij luki w ponizszym kodzie tak aby program wyswietlil na ekran "Hello":
+String var;
+var = "hello";
+System.out.println(var);
+
+3) Konkatenacja Stringow:
+Operatorem konkatenacji jest znak (+), dodany miedzy dwoma napisami dodaje je do siebie tworzac nowy lancuch. Proces ten nazywamy konkatenacja. String w wyniku jest pierwszym Stringiem polaczopnym z drugim stringiem.
+String firstName, lastName;
+firstName = "Dawid";
+lastName = "Kowalski";
+System.out.println("My name is " + firstName + " " + LastName);
+
+4) Typ char reprezentuje pojedynczy znak.
+
+5) Ktore zdanie w odniesieniu do typu char jest poprawne?
+1."hello" jest jest char-em
+2.'k' nalezy do typu char
+3.char jest uzywany do magazynowania wartosci numerycznych

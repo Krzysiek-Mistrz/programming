@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="9">
+  <Content Name="Project">
+    <Project>
+      <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+          <Items />
+        </Group>
+      </Groups>
+      <Items>
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="d6381fe5-90c1-45cb-9f68-9de3945f9857" />
+        <Item Type="basic" Name="_GLOBAL_VARS" Id="1e97c8c5-500b-42f8-9efa-b903f5101a60" />
+        <Item Type="basic" Name="STARTUP" Id="52b6954a-33b4-4c4c-be19-56fb5cbba0b5" />
+        <Item Type="basic" Name="BAZOWANIE_1" Id="49c2e0f6-fabd-4a2b-9018-755e5e7c42ca" />
+        <Item Type="basic" Name="BAZOWANIE_2" Id="8e669578-12f6-45b6-8bef-4519efe79860" />
+      </Items>
+    </Project>
+  </Content>
+  <Content Name="Controller">
+    <Controller>
+      <PropertyRepository>
+        <Item id="DigitalIO">
+          <Property Name="Visibility_0_Input" Value="True" />
+          <Property Name="Visibility_1_Input" Value="True" />
+          <Property Name="Visibility_1_Output" Value="True" />
+          <Property Name="Visibility_2_Input" Value="True" />
+          <Property Name="Visibility_2_Output" Value="True" />
+          <Property Name="Visibility_3_Input" Value="True" />
+          <Property Name="Visibility_4_BiDirectional" Value="True" />
+        </Item>
+      </PropertyRepository>
+    </Controller>
+  </Content>
+</Contents>

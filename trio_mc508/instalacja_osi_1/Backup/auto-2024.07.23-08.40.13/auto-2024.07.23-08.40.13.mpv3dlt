@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_30655403ab2445fa8b1302636d5536b3">
+      <Program Name="BASE" Process="-1" />
+    </Content>
+    <Content Name="document_5c96737f288c46c7b2a5c432fbe6b867">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_b66e9eddb6bf45e5899c95b575c9536b">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 08:38:10" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="BASE" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_30655403ab2445fa8b1302636d5536b3" LastActivationTimeStamp="07/23/2024 08:39:37" />
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_5c96737f288c46c7b2a5c432fbe6b867" LastActivationTimeStamp="07/23/2024 08:38:08" />
+            <LayoutDocument Title="STARTUP" ContentId="document_b66e9eddb6bf45e5899c95b575c9536b" LastActivationTimeStamp="07/23/2024 08:38:10" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

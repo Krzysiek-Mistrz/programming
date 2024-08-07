@@ -1,0 +1,61 @@
+1) aby stworzyc wlasne niestandardowe obiekty, musisz najpierw stworzyc odpowiednie klasy. W tym celu nalezy kliknac prawym przyciskiem myszy w zakladke src w srodowisku eclpse i wybrac opcje utworz -> nowa -> klasa. nastepnie nadajem swojej klasie nazwe i kliknij przycisk zakoncz, aby dodac nowa klase do projektu:
+Jak widzisz eclipse dodalo juz poczatkowy kod dla klasy. teraz stworzmy prosta metode w naszej nowej klasie Animal.java.
+public class Animal {
+  void bark() {
+    System.out.println("Woof-Woof");
+  }
+}
+zadeklarowalismy metode bark() w naszej klasie Animal.
+Teraz jesli chcemy uzyc tych klas i metod ktore zadeklarowalismy musimy jeszcze zadeklarowac obiekt tej klasy.
+
+2) Zadanie
+Uzupelnij luki w kodzie, stworz klase z pojedyncza metoda o nazwie "test":
+public ... A{
+  public void ...() {
+    System.out.println("Hi");
+  }
+}
+Rozwiaznie:
+public class A{
+  public void test() {
+    System.out.println("Hi");
+  }
+}
+
+3) Powrocmy teraz do naszego programu dokladnie do naszego maina i stworzmy nowy obiekt naszej klasy MyClass.java:
+class MyClass {
+  public static void main(String[] args) {
+    Animal dog = new Animal();
+    dog.bark();
+  }
+}
+Teraz dog jest obiektem typu Animal. W ten spposob mozemy wywolac jego metode bark() uzywajac nazwy obiektu i kropki. Notacja z kropka sluzy do uzyskiwania dostepu do atrybutow i metod obiektu. Zatem stworzyles swoj projekt pierwszy.
+
+4) Zadanie "Ladowanie..."
+Stworz program wyswietlajac y uzytkowinkowi ze trwa ladowanie.
+
+5) Zadanie
+Uzupelnij podane luki w kodzie.
+public ... A {
+  public void test() {
+    System.out.println("Hi");
+  }
+}
+class B {
+  public static void main(String[] args){
+    ... obj = ... A();
+    obj. ...;
+  }
+}
+Rozwiaznie:
+public class A {
+  public void test() {
+    System.out.println("Hi");
+  }
+}
+class B {
+  public static void main(String[] args){
+    A obj = new A();
+    obj.test();
+  }
+}

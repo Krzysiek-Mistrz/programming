@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_28b226794e594853b6ba883190963119">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_db07b6d0ef2640fcb09ab23d9c91b1fe">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_aa4cc24665b849d5a79a31101c7f41cc">
+      <Program Name="RUCHY_SP" Process="-1" />
+    </Content>
+    <Content Name="document_c860eebeddc842129716b2da70b051ae">
+      <Program Name="WYKONANIE_RUCHU_O_BPREDKOSC" Process="-1" />
+    </Content>
+    <Content Name="document_3ed972f47a374a67a40021283ebe1142">
+      <Program Name="WYKONANIE_RUCHU_O_PREDKOSC" Process="-1" />
+    </Content>
+    <Content Name="document_5a4cf847ea7a4cd89e063b76ac67e86e">
+      <Program Name="ELIPSA" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 12:43:01" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="ELIPSA" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_5a4cf847ea7a4cd89e063b76ac67e86e" LastActivationTimeStamp="07/23/2024 12:43:09" />
+            <LayoutDocument Title="WYKONANIE_RUCHU_O_PREDKOSC" ContentId="document_3ed972f47a374a67a40021283ebe1142" LastActivationTimeStamp="07/23/2024 12:39:31" />
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_28b226794e594853b6ba883190963119" LastActivationTimeStamp="07/23/2024 12:15:52" />
+            <LayoutDocument Title="STARTUP" ContentId="document_db07b6d0ef2640fcb09ab23d9c91b1fe" LastActivationTimeStamp="07/23/2024 12:16:26" />
+            <LayoutDocument Title="RUCHY_SP" ContentId="document_aa4cc24665b849d5a79a31101c7f41cc" LastActivationTimeStamp="07/23/2024 12:17:35" />
+            <LayoutDocument Title="WYKONANIE_RUCHU_O_BPREDKOSC" ContentId="document_c860eebeddc842129716b2da70b051ae" LastActivationTimeStamp="07/23/2024 12:28:34" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 12:12:07" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

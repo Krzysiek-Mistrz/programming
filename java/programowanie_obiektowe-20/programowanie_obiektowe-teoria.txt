@@ -1,0 +1,32 @@
+1) Java uzywa programowania zorientowanego obiektowego (OOP), stylu programownia ktory ma na celu przyblizeie myslenia o programowaniu do myslenia o swiecie rzeczywistym. W OOP kazdy obiekt jest niezalezna jednostka o unikalnej tozsamosci, podobnie jak obiekt w swiecie rzeczywistym.
+Jablko to przedmiot podobnie jak kubek Kazdy ma swoja niepowtarzalna tozsamosc. Mozliwym jest posiadanie dwoch takich kubkow ktorre wygladaja identycznie ale nadal sa to osobne i niepowtarzalne kubki - przedmioty.
+Przedmioty posiadaja takze cechy ktore sluza do ich opisu. Na przyklad samochod moze byc czerwony lub niebieski, kubek moze byc pelny lub pusty i tak dalej. Te cechy w programowaniu zorientowanym obiektowo nazywamy atrybutami. Atrybut opisuje aktualny stan obiektu. W rzeczywistosci kazdy obiekt zachowuje sie na swoj sposob. Samochod rusza, telefon dzwoni, to samo tyczy sie obiektow w programowaniu kazdy zachpwuje sie specyficznie w zaleznosci od swojego typu.
+
+2) Podsumowujac w programowaniu obiketowym kazdy obiekt ma trzy wymiary: tozsamosc, arybuty i zachowanie (identity, attributes and behaviour). Atrybuty opisuja aktualny stan obiektu, a to, co obiekt jest w stanie zrobic, jest demonstrowane poprzez zachowanie obiektu. 
+
+3) Klasa opisuje czym bedzie dany obiekt ale jest oddzielona od samego obiektu. Innymi slowy klasy mozna opisac jako plany, opisy lub definicje obiektu. Mozesz uzyc tej samej klasy jako planu do tworzenia wielu obiektow. Pierwszym krokiem jest zdefiniownaie klasy, ktora nastepnie staje sie planem tworzenia obiektu.
+Kazda klasa ma nzawe i kazda sluzy do definiowania atrybutow i zachowania (metod).
+Przyklady zachowan i atrybutow:
+attributes:
+- name
+- height
+- weight
+- gender
+- age
+behaviour:
+- walk
+- run
+- jump
+- speak
+- sleep
+Innymi slowy obiekt jest inaczej instancja danej klasy.
+
+4) Zadanie:
+Klasa definiuje...(dwie odpowiedzi):
+- zachowanie
+- jablka
+- wartosci
+- atrybuty
+Rozwiazanie:
+- zachowanie
+- atrybuty

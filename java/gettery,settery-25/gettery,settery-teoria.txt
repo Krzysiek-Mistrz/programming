@@ -1,0 +1,51 @@
+1) Gettery i Settery sluza do skutecznej ochrony danych, szczegolnie podczas tworzenia klas. Dla kazdej zmiennej metoda get zwraca jej wartosc, natomiast metoda set ustawia jej wartosc.
+Gettery zaczynaja sie od get, po ktorym nastepuje nazwa zmiennej, z pierwsza litera nazwy zmiennej pisanej z duzej litery.
+Setery zas zaczynaja sie od set po ktorym nastepuje nazwa zmiennej, z pierwsza litera nazwy zmiennej pisanej wielka litera.
+Przyklad:
+public class Vehicle {
+  private String color;
+
+  //Getter
+  public String getColor() {
+    return color;
+  }
+
+  //Setter
+  public void setColor(String c) {
+    this.color = c;
+  }
+}
+Metoda getter zwraca wartosc atrybutu, natomiast metoda setter bierze parametr i przypisuje go do atrybutu.
+Instrukcja "this" jest uzywana do odwolania sie do obecnego obiektu. Wlasciwie this.color jest to atrybut color obecnego obiektu.
+
+2) zadanie
+uzupelnij luki tak by zdefiniowac w poprawny sposob metody set i get.
+class A {
+  private int x;
+  public int getX {
+    return x;
+  }
+  public void setX(int x) {
+    this.x = x;
+  }
+}
+
+3) W chwili kiedy nasze metody getter i setter zostaly zdefiniowane mozemy ich uzyc w funckji main.
+public static void main(String[] args) {
+  Vehicle v1 = new Vehicle();
+  v1.setColor("Red");
+  System.out.println(v1.getColor());
+}
+Gettery i Settery pozwalaja nam miec kontrole nad wartosciami. Mozesz dla przykladu dokonac walidacji danej wartosci w setter zanim dokonasz wlasciego przypisania do zmiennej danej wartosci.
+Gettery i Settery sa fundamentalne w procesie enkapsulacji blokow, o tym porozmawiamy w kolejnym module.
+
+4) Zadanie "Student Information System" (angielski + polski)
+Uzupelnij program tak zeby operowal on na klasie Student i wyswietlal ostateczne rezultaty. Create a program in which you will store and then send a variable that stores the name and age of the student given by the user. The object should be a student, and the class id should be the name: Student. If the age is under zero, set the age attribute to zero and then display the message "invalid age". Wskazowka: uzyj getterow i setterow.
+
+5) Pytanie
+Jaka nazwe mialaby funkcja setter kiedy zminna w klasie nazwana by byla "age"?
+setAge
+Age
+getAge
+initAge
+odpowiedz: setAge

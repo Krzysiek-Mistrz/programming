@@ -1,0 +1,81 @@
+1) Konstruktory to specjalne metody wywolywane kiedy obiekt jest tworzony i uzywane w celu ich inicjalizacji. Konstruktor moze sluzyc do dostarczania poczatkowych wartosi atrybutow obiketow.
+Nazwa konstruktora musi byc taka sama jak nazwa jego klasy + konstruktor nie moze miec jawnego zwracanego typu danych. Przyklad:
+public class vehicle {
+  private String color;
+  Vehicle() {
+    color = "Red";
+  }
+}
+Metoda Vehicle() jest w tym wypadku naszym konstruktorem, konstruktirem naszej klasy, wiec za kazdym razem gdy tworzony jest obiekt tej klasy, atrybut koloru zostanie ustawiony na czerwony = "Red". Konstruktor moze takze przyjmowac atrybuty po to by zainicjowac atrybuty.
+public class Vehicle {
+  private String color;
+  Vehicle(String c) {
+    color = c;
+  }
+}
+Mozesz myslec o konstruktorach jako o metodach ktore ustawia nasza klase defaultowo, zebys nie musial kazdorazowo przypisywac kolejnym atrybutom tych samych wartosci.
+
+2) zadanie
+uzpelnij luki tak by zdefiniowac prawidlowy konstruktor:
+class Person {
+  private int age;
+  public Person(int myage) {
+    age = myage;
+  }
+}
+
+3) Konstruktor jest wywolywany kiedy tworzysz nowy obiekt uzywajac instrukjci new.
+public class MyClass {
+  public static void main(String[] args) {
+    Vehicle v = new Vehicle("Blue");
+  }
+}
+Powyzszy kod wywola konstruktora, ktory ustawi color atrybutu na "blue".
+
+4) zadanie "Organizing screenshots" (angielski)
+napraw kod tak zeby wyniki zgadzaly sie dla twojego programu organizujacego screeny. Create a program that will display on the screen two words stored in the objects screenshot1 and screenshot2, which will be of the Screenshot class. The first word should be the name of the screen loaded from the user, the second should be simply the word "Screenshot". Create two constructors inside which you take these conditions into account.
+
+5) zadanie
+Prawda / falsz. Konstruktor musi miec taka sama nazwe jak klasa.
+odpowiedz: Prawda
+
+6) Pojedyncza klasa moze miec wiele konstruktow z roznymi cyframi jako z parametrami. Metoda setter wewnatrz konstruktora moze byc uzyta do ustawienia wartosci atrybutow.
+public class Vehicle {
+  private String color;
+  Vehicle() {
+    this.setColor("Red");
+  }
+  Vehicle(String c) {
+    this.setColor(c);
+  }
+  //setter
+  public void setColor(String c) {
+    this.color = c;
+  }
+}
+Powyzsza klasa ma dwa konstruktory jeden jest bez zadnych parametrow ustawiajacy atrybut color na wartosc "Red", a drugi konstruktor ktory przyjmuje argumenty - parametry i przypisuje je do atrybutu.
+Mozemy takze uzywac konstruktorow do tworzenia obiektow naszej klasy.
+Vehicle v1 = new Vehicle(); //color will be "Red"
+Vehicle v2 = new Vehicle("Green") //color bedzie "Green"
+Java automatycznie zapewnia defaultowy konstruktor wiec wsyztskie klasy posiadaja swoj konstruktor niezaleznie od tego czy my jakis zdefiniowalusmy czy nie.
+
+7) "Movie tickets"
+uzupelnij ponizszy kod dodajac do niego konstruktor do klasy Ticket tak zeby mogla byc poprawnie zainicjalizowana. Your friend is a cashier at a movie theater. He knows that you are an awesome java developer so he asked you to help him out and create a program that gets movie title, row, and seat information and prints out a new ticket.
+Complete the existing code by adding a constructor to Ticket class so that it can be correctly initialized.
+Sample Input
+Jaws
+5
+1
+Sample Output
+Movie: Jaws
+Row: 5
+Seat: 1
+
+
+8) Uzupelnij puste miejsca
+public class A {
+  private int x;
+  public A(int val) {
+    x = val;
+  }
+}

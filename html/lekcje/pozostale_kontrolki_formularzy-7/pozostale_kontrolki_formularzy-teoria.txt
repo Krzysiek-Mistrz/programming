@@ -1,0 +1,133 @@
+1) Omowimy teraz pozostale - nowsze lub rzadziej uzywane kontrolki w formularzach zatem kontynuacja poprzedniego tematu.
+
+2) Pierwsza kontrolka jaka dzis omowimy bedzie:
+<input type = "email">
+Czyli element formularza dedykowany przesylaniu poczty elektronicznej.
+Ponadto jak pamietamy z poprzedniego tematu - kazda kontrolka formularza o ile nie jest przyciskiem powinna posiadac etykiete ustanowiona tagiem <label>. Zatem:
+<label><input type = "email"></label>
+Pole typu email nie wymusza uzupelnienia, czyli pusta wartosc tego pola nie zapobiega submit-owi formularza. Aby wymusic wartosc niepusta pola, nalezy uzyc dodatkowego atrybutu required. Wowczas jesli cos wpiszemy, to musi to byc poprany skladniowo adres poczty elektronicznej, tzw. wyrazenie regularne, nie sama autentycznosc adresu email.
+Przegladarkowa prewalidacja formularza nie moze nigdy stanowic substytutu wlasciwej sanityzacji wejscia po stronie servera. Nie mozna ufac front-endowym ograniczeniom nalozonym w interfejsie, ktory latwo zmodyfikowac po stronie klienta. Zreszta dane do skryptu order.php mozna przeslac bezposrednim zadaniem na server.
+Warto pamietac ze po dopisaniu atrybutu multiple mozna do jednego pola wpisac wiele adresow, po przecinku.
+W przegladarkach, ktore nie obsluguja pola typu email (IE<10) nastapi tzw. fallback (downgrade - cofniecie) do zwyklego input-a typu text (pozbawionego prewalidacji adresu).
+Mozna takze do tego pola dodac atrybut placeholder.
+Wartosc tego pola klasycznie lapiemy z tablicy globalnej w PHP adres szufladki taki jak name naszego pola.
+$adres_email = $_POST['adres'];
+echo $adres_email;
+
+3) Kolejna kontrolka to:
+<label> Numer telefonu <input type = "tel" name = "telefon"></label>
+Typ "tel" odpowiada za dodanie pola na numer telefonu. Jezeli nie jest ono wypelnione to samo nie powstrzyma submit-a. Nie nastpuje takze zadna walidacja tych numerow telefonow, nawet jak wpiszemy byle jakie litery to i tak przejdzie. Jednka jest mala subtelna roznica miedzy zwyczajnym <input type = "text">, a <input type = "tel">. Otoz na urzadzeniu mobilnym po kliknieciu w to pole wyswietli sie klawiatura numeryczna, natomiast w polet o type = "text" wyswietli sie klawiatura alfanumeryczna.
+Wartosc tego pola klasycznie w PHP odbieramy po name-ie w tablicy $_POST. Mozemy takze uzyc na nim placeholder-a, a w starszych przegladarkach pole to ulegnie fallback-owi do pola tekstowego.
+$numer_telefonu = $_POST['telefon'];
+echo $numer_telefonu;
+
+4) Omowmy teraz pole typu date.
+<label> Data dostawy <input type = "date" name = "dzien"></label>
+Po dodaniu, w przegladarce moge dodac taka date recznie, lecz takze moge, taka date wprowadzi c za pomoca specjalnego kalendarza po kliknieciu w strzalke obok tego pola w przegladarce.
+Nie podanie daty przepuszcza formularz. Czyli takie pole nie jest required z natury. Jednak wpisanie czesciowej daty, np. samego dnia spowoduje blad i przegladarka nas o tym poinformuje. W kazdej przegladarce ten interfejs z kalendarzem przy tym polu jest inny. Pole typu date nie jest wspierane w przegladrkach IE oraz Safari - nastapiu w nich fallback do inputa tekstowego (czyli interfejsu wyboru daty).
+W przegladrce internetowej widzimy ze pole date ma wartosc np.: 28.02.2003, natomist sama wartsoc w PHP odbierzemy jako 2003-02-28.
+$data_dostawy = $_POST['dzien'];
+echo $data_dostawy;
+Zatem i tak nalezy zbadac po stronie servera jak ta data jest zapisana.
+Jezeli interesuje nas zeby uzytkownik mogl wybrac date jedynie z ograniczonego przedzialu to wowcza smozemy uzyc atrybutow min i max. min - najwczesniejsza akceptowana wartosc, natomiast max - najpozniej akceptownaa wartosc.
+
+5) Zajmijmy sie teraz czasem 
+<
+label> Preferowany czas dostawy <input type = "time" name = "czas"></label>
+Jest to pole ktore domyslnie pozwala nam na wpisanie, wybranie godzin i minut, w Polsce format czasu jest 24-ro godzinny. Nie ma zatem systemu AM (ante meridiem) - od polnocy do godziny 12.00 i PM (post meridiem) - od godziny 12.00 do polnocy. Zaleznie od ustawien systemowych kontrolka time bedzie sie dostosowywac.
+Jezeli interesuje nas takze wprowadzenie sekund, to wystarczy do naszego <input> dopisac atrybut step, wowczas dopiszemy do niego wartosc 1. Wowczas pojawi sie takze popcja wpisania sekund.
+Pole typu time nie jest wspierane w przegladarkach IE oraz Safari - nastapi w nich fallback do input-a tekstowego (interfejsu wyboru czasu).
+Pobrana w PHP wartosc pola time bedzie w formacie 24-o godzinnym.
+$czas_dostawy = $_POST['czas'];
+echo $czas_dostawy;
+Jezeli chodzi o prewalidacje - pusta wartosc przejdzie. Żeby wymusic jakas wartosc dla tego pola nalezy posluzyc sie atrybutem required. Kontrolka nie reaguje na wpisywane z klawiatury litery. Podana wartosc np: 15.45 (brak liczby sekund, mimo atrybutu step), to wartosc odebrana w Firefoxie bedzie niepoprawna (w Chrome - poprawna).
+Dla typu time mozemy takze ustalic atrybuty min i max, ktore dzialaja tak samo jak w przypadku dat. Zapis: min="9:00", max = "18:00".
+
+6) Zajmiemy sie teraz dodanie do naszego formularza text area - obszaru tekstowego, czyli pola wieloliniowego. Nasz obszar tekstowy bedzie zamkniety w tagu podwojnym, poniewaz to jest obszar zatem musi byc "wiekszy". Nadamy mu atrybut name, by odebrac jego wartosc w PHP i atrybut id, by moc go polaczyc z label-em. Zeby to polaczenie ustanowic to takze etykieta musi byc wyposazona w atrybut for="komentarz".
+Atrybuty znacznika <textarea> to rows - ang. liczba wierszy, cols - ang. liczba kolumn. Tak rows mozemy dac 4, natomiast cols oznacza ile znakow ma sie zmiescic w jednej linii. Zawsze uzytkownik ma takze mozliwosc resize-u takiego pola, w celu pozbawienia go tej mozliwosci odpal se plik .css i dla id (w naszym przypadku "komentarz"), piszemy:
+#komentarz
+{
+resize: none;
+}
+Dalej omowmy jeszcze minlength i maxlength czyli maksymalna i minimalna ilosc znakow jaka ma zmiescic pole. Tak tez mozemy sobie wpisac: maxlength = "25" minlength = "10". Jak widzimy po wpisaniu nawet bez tych 10 znakow formularz przejdzie, zasada ta sama co poprzednio - kontrolka <textarea> nie wymusza na uzytkowniku uzupelnienia do 10 znakow tekstu (dopoki nie ma atrybutu required).
+Czesciej jednak zamiast takiego <textarea> dostaniemy wrecz pieprzone edytory WYSIWYG (what you see is what you get), wspierane JS-em, bogatsze w opcje formatowania tekstu, wspierajace klasyczne pole <textarea>. [CKEditor, TinyMCE, Summernote, Froala Editor], mozna je osadzic w witrynie. Jednak dolaczanie takich edytorow powoduja opoznienia w renderownaiu strony.
+Wartosc <textarea> standardowo odbierzemy w PHP z uzyciem name-a i naszej talicy POST.
+$komentarz = $_POST['komentarz'];
+echo $komentarz;
+
+7) Omowimy teraz kontrolke sluzaca do uploud-u plikow. Czyi tak jak poprzednio tworzymy kolejnego <label> i <input>, definiujemy typ = "file" i nadajemy atrybut name.
+<label> Prześlij zdjęcie poprzedniego samochodu </label> <input type = "file" name = "obraz">
+Musimy jednak okreslic dla <form> atrybut enctype = "multipart/form-data" - wartosc stosowana dla plikow - dane wejsciowe nie zostana zakodowane w urlencode (wazne jest by plik dotarl na server w orginalnej postaci). enctype - okreslenie identryfikatora MIME-type zawartosci przeslanej na server metoda POST.
+Sama fontrolka typu file jest bardzo trudna do obsluzenia fron-endowo jak i backendowo. Problemy frontendowe - do ostylownia kontrolki najczesciej uzywamy okreznych metod - samego inputa ukrywa sie poprzez dopisanie display:none albo position:absolute, natomiast role wizualizacji tej kontrolki przejmuje odpowiednio ostylownaa etykieta <label>. Problemy backendowe - nalezy dokladnie sanityzowac plik przeslany przez uzytkownika pozwolenie na umieszczenie pliku na naszym serverze to ryzyko pod katem bezpieczenstwa. Odebranie wartpsci w PHP nastepuje z uzyciem tablicy $_FILES (bedacej tablica dwuwymiarowa). Przedtem musimy jeszcze wgl sprawdzic czy plik zostal wybrany:
+if(isset($_FILES['obraz']))
+{
+//skrypt sanityzujacy
+//plik wejsciowy
+}
+Przykladowe wartosci $_FILES:
+$_FILES['obraz']['tmp_name']
+$_FILES['obraz']['size']
+$_FILES['obraz']['type']
+Najwazniejszy atrybut dla typu files w <input> to teorytycznie "accept" - okreslajacy jaki typ plikow bedzie akceptowany, jednak pamietajmy ze wlasciwa sanityzacja pliku odbedzie sie niejawnie na serverze. Do akceptowanych plikow dajmy:
+<label> Prześlij zdjęcie poprzedniego samochodu </label> <input type = "file" name = "obraz" accept = "image/x-png, image/gif, image/jpeg">
+Jest to jednoczesnie taki filtr bo po kliknieciu wybierz wyswietla nam sie tylko pliki z rozszerzeniem .png, .jpeg, .gif. Nie wymusza jednak przeslanie pliku o akceptowanym rozszerzeniu. Uzytkownik moze sobie wybrac (*)wszystkei pliki, a istnienie naszego servera stanelo przed duzym punktem zaytania.
+Kolejny atrybut to multiple, pozwoli wybrac wiecej niz jeden plik.
+
+8) Kolejna kontrolka, ktora omowimy bedzie kolor:
+<label> Kolor lakieru <input type = "color" name = "color"></label>
+Oczywiscie typem przez nas wskazanym bedzie tutaj "color". Po odswiezeniu stronby i kliknieciu w pole o tym typie wyswietli nam sie interfejs do wybranai koloru (stosunkowo rozbudowany). W kazdej przegladrce jest nieco inaczej pomyslany. Domyslna wartoscia jest kolor czarny #000000, mozemy to wartosc domyslna jednak zmienic ustawiajac po prostu inny value, przykladowo: #ff0000.
+Odbieramy wartosc tego pola ta sama metoda co przy innych kontrolkach. Wart pamietac ze w PHP wartosc koloru ma postac szesnastkowa, w klasycznym formacie #RRGGBB:
+$kolor = $_POST['kolor'];
+echo $kolor;
+Pole typu color nie jest wspierane w przegladrkach IE oraz Safari w OSX nastapi w nich fallback do zwyklego input-a tekstowego, przez co nie pojawi sie interfejs wskazania koloru. W praktyce z tego powodu webmasterzy wola uzyc wlasnego okodowanego color-picker-a z uzyciem JS-a. Przyklad: jscolor.com.
+
+9) Kolejnym elementem interfejsu bedzie "progress" czyli stopien postepu jakiegos proces, moze to byc np. stopien postepu przesylania jakiegos pliku na server. Lub ilosc pytan w quizie na ktore juz udzielilismy odpowiedzi. Progress jest tagiem podwojnym:
+<label> Stopień realizacji zamówienia </label> <progress></progress>
+Jezeli chodzi o atrybuty to po pierwsze wartosc maksymalna - "max", domyslnie jest to jeden, my damy sobie na 100 zeby 100% to skonczona realizacja. Drugi atrybut to "value", czyli biezacy stopien progresu, mozemy mu dac value = "25".
+Wyjatkiem nie obslugujacym tego typu elementu jest klasycznie nasz troll IE ponizej 10-tki. Czasami webmaterzy decyduja sie jednak na wersje animowana progress bar-u, wspierana przez JS-a, przyklady: ProgressBar.js, LoadingBar.js. Wyglad tego typu progress bar-u jest oczywscie zalezny od przegladrki w ktorej dana witryne ogladamy oraz od wersji przegladarki.
+Wartosci w PHP nie odbieramy gdyz ten element sluzy nam do przekazania wartosci userowi (nie odwrotnie).
+
+10) Zajmijmy sie teraz jeszcze kontrolka "meter" - ang. licznik, czyli kontrolk formularza obrazujaca wartosc wielkosci, ale w odniesieniu do jej mozliwego przedzialu. Czyli np. ile zostalo nam jeszcez baterii lub ile paliwa w samochodzie.
+<label> Stopień zatankowania samochodu </label> <meter> </meter>
+Jak widzimy meter jest tagiem podwojnym. jego wartosc w PHP nie odbieramy, gdyz ten element sluzy nam developerom do przekazania wartosci userowi (nie odwrotnie).
+Atrybuty tego znacznika to przede wszystkim min = "0" oraz max = "100", jak 100% pojemnosci zapelniono, kolejnym atrybutem moze byc "title" podpowiadajacy czego dany tag <meter> dotyczy. Dajmy value = "40", czyli obecna wartosc na 40%. Kolejnym atrybutem bedzie low, czyli jaka wartosc bedzie uznawana za niska, tak samo atrybut "high", atrybut "optimum" - czyli wartosc optymalna w naszym przypadku zatankowania samochodu, te atrybuty pozwalaja przekazac uytkownikowi jaka jest wartosc (dobra-zielona, srednia-zolta, czy niedobra-czerwona), takiego pzm. zatankowania.
+Kontrolka formularza obrazujaca wartosc jakiejs wielkosci, ale wodniesieniu do jej mozliwego przedzialu (zakresu, zasiegu). Na przyklad wartosc zuzycia baterii w porownaniu do jej pelnego naladowania, ilosc paliwa (wzgledem pojemnosci calego zbiornika na paliwo w naszym samochodzie). Znacznik <meter> jest kompletnie nie obslugiwany w IE (dowlonej wersji (;) - uzytkownik nawet tego nie zobaczy - brak fallbacku.
+
+11) Pogadajmy teraz o polu URL - ang. Uniform resource locator, link wyposazony w oznaczenie uslugi (protokolu), po czym nastepuje ://, po czym nazwa strony.
+<label> twoja strona www </label> <input type = "url" name = "witryna">
+Typ ten siedzi sam w znaczniku <input>. Brak wartosci w tym polu w niczym kompletnie nie przeszkadza. Formularz bez tej wartosci i tak zostanie przeslany, chyba ze damy atrybut required to wtedy jest on wymagany.
+Jezeli niedoswiadczony uztkownik nie doda na poczatku nzwy protokolu sieciowego - np. http://, to mozna do pola dodac wlasny skrypt JS-a ktory doklei nazwe protokolu:
+<input type = "url" name = "witryna" onblur = "checkURL(this)">
+<script>
+function checkURL(abc)
+{
+var string = abc.value;
+if(!~string.indexOf("http"))
+{
+string = "http://" + string;
+}
+abc.value = string;
+return abc;
+}
+</script>
+Wartosc tego pola odbieram klasycznie w PHP:
+$link = $_POST['witryna'];
+echo $link;
+Podczas podawania wartosci dla tego pola sprawdzana jest jedynie rgularnosc tego wyrazneia - syntax, nie zas autentycznosc (istnienie samego zasobu sieciowego). Nie nalezy ufac walidacji po stronie klienta, potrzebna jest sanityzacja podanej wartosci na serverze. W przegladarkach ktore nie obsluguja pola typu url (IE < 10) nastapi fallback do inputa tekstowego, bedzie on pozbawiony walidacji zasobu URL. 
+Mozemy takze skorzystac podczas obslugi z atrybutow minlength i maxlength - pozwalaja one okreslic jak dlugi czy krotki moze byc podany przez uzytkownika adres.
+
+12) Zajmijmy sie teraz polem ukrytym - hidden. Nie widocznym normalnie w formularzu natomiast w pelni widocznym w zrodle strony - od strony frontendowej. Przykladowe zastosowni etego pola jest nastepujace: PHP bedzie do niego wkladal losowo wygenerowany token bezpieczenstwa i w razie niezgodnosci tego tokenu formularz nie przejdzie do realizacji.
+$token = $_POST['token'];
+echo $token;
+if($token != $token_w_sesji)
+{
+//nie przesylamy formularza
+}
+Skladnia takiego <input> jest nastepujaca:
+<input type = "hidden" name = "token" value = "90d1gyd2dg32gd832vcd">
+
+13) Omowmy teraz do kontrolek obslugujacych dzialanie naszego formularza. Zastanawiamy sie na tym aetapie projektownaia ktore pola sa niezbedne do uzupelnienia i tam dajemy atrybut "required". Atrybuty checked, selected, czynia wybor koniecznym nawet bez potrzeby stosownaia "required". Takze dodajemy ten atrybut do paru pol. Kolenym atrybutem jest readonly. Z ang. wartosc tylko do odczytu. Warto takze pamietac o atrybucie "disabled", ktory juz w poprzednim temacie omawialismy. pamietajmy jednak o dodaniu komentarza do readonly tak zeby uzytkownik nie byl sfrustrowany, ze cos nie tak.
+
+14) Przejdzmy teraz do ostatniego juz <input> w tym materiale. Bedzie to <input> o typie reset. Czyli przcisk czyszczacy wartosc obecna formularza - zaznaczenia ktorych dokonal user i przywracajacy zaznaczenia do defaultowych.
+<input type = "reset" value = "Wyczyść formularz">
+Najepiej jednak tego typu kontrolki nie umieszcac w formularzu, gdyz moze sie zdarzyc, ze ktos z pietyzmem uzupelnial nasz formluarz o pozniej mial misclicka i cala jego robota poszla na marne.

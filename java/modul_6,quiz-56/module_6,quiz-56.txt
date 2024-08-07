@@ -1,0 +1,98 @@
+1) Uzupelnij luki tak zeby zadeklarpwac funkcje ktora pobierze dwa argumenty typu int i wyswietli na ekran ich iloraz:
+void myFunc(int a, ... b) {
+  ... {
+    System.out.println(a ... b);
+  }
+  ...(Exception e1) {
+    System.out.println("Error");
+  }
+}
+Odpowiedz:
+void myFunc(int a, int b) {
+  try {
+    System.out.println(a / b);
+  }
+  catch(Exception e1) {
+    System.out.println("Error");
+  }
+}
+
+2) Uzupelnij luki tak zeby zdefiniowac funkcje myFunc, ktora wyrzuci blad jesli jej parametr jest mniejszy od zera.
+void myFunc(int arg) {
+  ... IllegalArgumentException
+}
+  ...(arg < ...)
+    throw ... IllegalArgumentException();
+}
+Odpowiedz:
+void myFunc(int arg) {
+  throws IllegalArgumentException
+}
+  if(arg < 0)
+    throw new IllegalArgumentException();
+}
+
+3) jak wiele linijek kodu ponizszy kod "wprodukuje"?
+class B implements Runnable {
+  public void run() {
+    System.out.println("B");
+  }
+}
+class A extends Thread {
+  public void run() {
+    System.out.println("A");
+    Thread t = new Thread(new B());
+    t.start();
+  }
+  public static void main(String[] args) {
+    A object = new A();
+    object.start();
+  }
+}
+Odpowiedz: 2
+Wyjasnienie: Poniewaz tworzymy obiket klasy A, dziedziczacej z klasy Thread, nastepnie uruchamiamy na rzecz tego obiektu klasy A metode start()., zatem wywola sie metoda run() wyswietlajac A, natepnie zosanie wywolana metoda run na rzecz obiektu t klasy Thread.
+
+4) Ktore dwie opcje pozwalaja na tworzenie nowych watkow?
+a) extend the Thread class
+b) handle exceptions
+c) implement Runnable
+d) name your class Thread
+Odpowiedz: a), c)
+
+5) Podaj output podanego nizej kodu:
+ArrayList<Integer> list = new ArrayList<Integer>();
+for(int i = 0; i < 6; i++) {
+  list.add(i);
+}
+int x = 0;
+Iterator<Integer> iter = list.iterator();
+while(it.hasNext()) {
+  x += it.next();
+}
+System.out.println(x);
+Odpowiedz: 15
+Wyjasnienie: Obliczana jest suma za pomoca obiektu klasy Iterator, wskazujacej na kolejne elementy listy list klasy ArrayList.
+
+6) Podaj output kodu:
+int f = 1, i = 2;
+while(++i < 5)
+  f *= i;
+System.out.println(f);
+Odpowiedz: 12
+Wyjansienie: Zauwaz ze wystepuje w tym przykladzie zjawisko preinkrementacji, zatem wartosc zwiekszonego f jest juz od razu znana i dopisana do f (=3), zatem mamy kolejno:
+3 < 5
+  f = 1*3
+4 < 5
+  f = 3*4
+5 nie jest mniejsze od 5 zatem kolejny warunek sie juz nie wykona.
+
+7) ZADANIE KONCOWE MODUL 6 (angielski)
+You are creating a bowling game. The given code declares a Bowling class with its constructor and addPlayer() method. Each player of the game has a name and points, and are stored in the players HashMap. The code in the main takes 3 players data as input and adds them in the game.
+You need to add getWinner() method to the class which calculates and outpts the name of the player with the maximum points.
+Sample input:
+Dave 42
+Amy 103
+Rob 64
+Sample Output:
+Amy
+(Musisz iterowac przez Hashmap w celu znaleienia elementow z maxymalna liczba punktow nastepnie potrzebujesz wyswietlic jako output odpwiadajacy mu klucz HashMap).

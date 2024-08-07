@@ -1,0 +1,16 @@
+{
+    "name": "odczyty-ir-5",
+    "meta": {},
+    "editor": "blocksprj",
+    "pubId": "",
+    "pubCurrent": false,
+    "target": "microbit",
+    "targetVersion": "6.0.19",
+    "id": "32d8f358-b089-401b-b0ac-773e0c847e34",
+    "recentUse": 1712567534,
+    "modificationTime": 1712567534,
+    "path": "autonomiczny-odkurzacz-5",
+    "cloudCurrent": false,
+    "saveId": null,
+    "githubCurrent": false
+}

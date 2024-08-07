@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="3">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="Document_Program_RUCHY_SP" />
+  <Content Name="Document_Program_WYKONANIE_RUCHU_O_BPREDKOSC" />
+  <Content Name="Document_Program_WYKONANIE_RUCHU_O_PREDKOSC" />
+  <Content Name="Document_Program_ELIPSA" />
+</Contents>

@@ -1,0 +1,35 @@
+/*okreslenie wygladu ciala strony*/
+body
+{
+	/*zdefiniowanie koru tla witryny, kolor mozna definiowac szesnastkowo*/
+	background-color: gray;
+	/*zdefiniowanie kroju czcionki*/
+	font-family: Verdana;
+	/*zdefiniowanie rozmiaru czcionki*/
+	font-size: 20px;
+	/*zdefiniowanie koloru czcionki*/
+	color : white;
+}
+
+h1
+{
+	font-size: 48px;
+}
+
+/*nieodwiedzony link*/
+a:link
+{
+	color: yellow;
+}
+
+/*odwiedzony link*/
+a:visited
+{
+	color: yellow;
+}
+
+/*link po najechaniu kursorem*/
+a:hover
+{
+	color: red;
+}

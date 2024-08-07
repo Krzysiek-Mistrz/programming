@@ -1,0 +1,71 @@
+1) Jak widzielismy w poprzedniej lekcji o polimorfizmie, podklasa moze definiowac zachowanie, ktore jest specyficzne dla typu podklasy, co oznacza ze podklasa moze zaimplemetowac metode klasy nadrzednej na podstawie sowich wymagan. Ta funkcja jest znana jako nadpisywanie metody.
+Przyklad:
+class Animal {
+  public void makeSound() {
+    System.out.println(Grr...);
+  }
+}
+class Cat extends Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+}
+W powyzszym kodzie klasa Cat zastepuje metode makeSound() swojej nadklasy Animal.
+
+2) Zasady zastepowania metod:
+1.  powinien miec ten sam typ zwrotu i argumenty
+2. poziom dostepu nie moze byc bardziej restrykcyjny niz poziom dostepu nadpisanej metody (przyklad: jesli metoda nadklasy jest zadeklarowana jako publiczna (<-> public), nadrzedna metoda w podklasie nie moze byc ani prywatna ani chroniona (<-> private/protected).
+3. nie mozna nadpisac metody zadeklarowanej jako ostateczna lub statyczna.
+4. jesli metody nie mozna odziedziczyc, nie mozna jej wowczas zastapic.
+5. konstruktorow nie mozna nadpisac.
+
+3) Zastepowanie metod jest rowniez znane jako polimorfizm w czasie wykonywania (runtime polymorphism).
+
+4) zadanie "Checking or saving"
+Write a program that calculates the income based on the type of the account. You are writing a program that calculates interest  income based on account type. If it is a saving account, 20% is added to the balance in the account. If it is a checking account,  5% more is added to the balance in the account.
+The program you are given should take the balance of the savings and checking accounts and output the appropriate balance plus interest income
+Account class and SavingAcc & CheckingAcc classes inherited from it are already defined. 
+Override getIncome() methods in the inherited classes to calculate and return the account balances, so that the given outputs work correctly.
+
+5) zadanie (teoria - na rozumienie zagadnienia)
+Nadpisane metody powinny miec ten sam typ zwracany i argumenty jak metoda nadrzedna? TAK / NIE
+Odpowiedz: TAK
+
+6) Gdy metody maja ta sama nazwe ale rozne parametry jest to nazwane przeciazeniem metod. moze to byc bardzo przydatne, gdy potrzebujesz tej samej funkcjonalnosci metody dla roznych typow parametrow. Ponizszy prztklad ilustruje metode ktora zwraca maksimum z dwoch parametrow.
+int max(int a, int b) {
+  if(a > b) {
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+Metoda powyzej zadziala zatem jedynie dla argumentow typu integer - licby calkowite. Jednakowoz mozemy chciec uzyc owej funkcji dla typu double takze. W tym celu musisz przeciazyc / przeladowac metode max.
+double max(double a, double b) {
+  if(a > b)
+    return a;
+  else
+    return b;
+}
+Teraz nasza metoda max takze zadziala z typem double, przeciazona metoda musi miec inna liste argumentow, parametry powinny roznicowac sie w swoim typie wartosci lub nawet w tych dwoch naraz.
+
+7) zadanie "Double Trouble" (angielski)
+Write a program that overload the given method to calculate the double provided variables. there is one main class and two methods: main, doubleTheValue. The doubleTheValue method is defined for parameters of the following type: int and double. Overwrite this method so that it works for both int and b values of type int and double. will immediately return the values of a and b doubled.
+
+8) Zadanie (praktyka - sprawdzenie umiejetnosci przeladowywania i nadpisywania)
+Podaj rezultat kodu:
+class A {
+  public void doSomething() {
+    System.out.println("A");
+  }
+  public void doSomething(String str) {
+    System.out.println(str);
+  }
+}
+class B {
+  public static void main(String[] args) {
+    A object = new A();
+    object.doSomething("B");
+  }
+}
+Rezultat: B

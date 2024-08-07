@@ -1,0 +1,52 @@
+%ETAP I: METODA LINIOWA (solver)
+%Czyścimy pamięć aby uniknąć problemów z poprzednimi zadaniami
+clear
+
+%Stworzenie zmiennych do użycia z solverem optymalizacyjnym
+czasPracy_W1 = optimvar('czasPracy_W1','LowerBound',0);
+czasPracy_W2 = optimvar('czasPracy_W2','LowerBound',0);
+
+%Zapisanie problemu do użycia z solverem optymalizacyjnym
+problemOptymalizacyjny = optimproblem('Objective', 30*czasPracy_W1 + 20*czasPracy_W2, 'ObjectiveSense','maximize');
+
+%Tworzenie ograniczeń (c1, c2, c3) zgodnie z poleceniem
+problemOptymalizacyjny.Constraints.c1 = 2*czasPracy_W1 + 1*czasPracy_W2 <= 1000;
+problemOptymalizacyjny.Constraints.c2 = 3*czasPracy_W1 + 3*czasPracy_W2 <= 2400;
+problemOptymalizacyjny.Constraints.c3 = 1.5*czasPracy_W1 + 0*czasPracy_W2 <= 600;
+
+%Konwersja obiektu `problemOptymalizacyjny` na strukturę problemu, która jest w stanie zostać podana solver'owi.
+strukturaProblemu = prob2struct(problemOptymalizacyjny);
+
+%Rozwiązanie struktry problemu przez solver'a (linprog).
+[rozwiazanie,osiagnietaWartosc,exitflag,output] = linprog(strukturaProblemu);
+%rozwiazanie = która maszyna ile musi pracować
+%osiagnietaWartość = ile pieniędzy zarobiliśmy poprzed pracę maszyn
+%exitflag = powód zatrzymania działania linprog'a (zmienna nie użyta w programie)
+%output = informacja o przebiegu zadania optymalizacyjnego (zmienna nie użyta w programie)
+
+%Wyświetlenie wyniku
+disp("Czas pracy W1 i W2:")
+disp(rozwiazanie)
+disp('Osiągnięta wartość (cena):') %specyfika funkcji linprog jest taka, że zwraca ujemną wartość, zatem należy zmienić znak przed wypisaniem.
+disp(-osiagnietaWartosc)
+
+%ETAP II: Metoda graficzna (na wykresie)
+
+%Stworzenie wykresów na podstawie ograniczeń:
+plot(0:500, 1000 - 2*(0:500), 'g', LineWidth=2); %c1 = 2*czasPracy_W1 + 1*czasPracy_W2 <= 1000; 0:500 to wektor wybrany samodzielnie ze względu na czytelność
+plot(0:800, (2400 - 3*(0:800))/3, 'b', LineWidth=2); %c2 = 3*czasPracy_W1 + 3*czasPracy_W2 <= 2400; 0:800 to wektor wybrany samodzielnie ze względu na czytelność
+
+%Stworzenie liń na podstawie ograniczeń
+xline(600/1.5, 'y'); %brane z ograniczenia c3 = 1.5*czasPracy_W1 + 0*czasPracy_W2 <= 600; czyli c3 = czasPracy_W1 <= 600/1.5
+xline(0, 'r'); %brane z ograniczenia W1>0
+yline(0, 'm'); %brane z ograniczenia W2>0
+
+%Dodanie tytułu i etykiety osi
+title('Wykres ograniczeń');
+xlabel('Ilość produkcji przez maszynę W1');
+ylabel('Ilość produkcji przez maszynę W2');
+%Wyświetlanie siatki
+grid on;
+
+%Po odczytaniu wykresu można manualnie zaznaczyć na wykresie punkty podejrzane o bycie rozwązaniami
+plot([0 0 400 500 800 400 400 200], [0 800 0 0 0 200 400 600], 'r*');

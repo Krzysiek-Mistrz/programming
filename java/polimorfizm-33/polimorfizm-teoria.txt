@@ -1,0 +1,33 @@
+1) Polimorfizm ktory odnosi sie do idei posiadania wielu form, wystepuje gdy istnieje hierarchia klas powiazanych ze soba poprzez dziedziczenie. Wywolanie metody skladowej spowoduje wykonanie innej implementacji, w zaleznosci od typu obiektu wywolujacego metode. Oto przyklad: Dog i Cat to klasy dziedziczace po klasie Animal. Kazda klasa ma wlasna implementacje metody makeSound().
+class Animal {
+  public void makeSound() {
+    System.out.println("Grr...");
+  }
+}
+class Cat extends Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+}
+class Dog extends Animal {
+  public void makeSound() {
+    System.out.println("Woof");
+  }
+}
+Jako ze klasa Cat i klasa Dog sa elementami klasy Animal, mozemy wykonac nastepujaca rzecz w funkcji main():
+public static void main(String[] args) {
+  Animal a = new Dog();
+  Animal b = new Cat();
+}
+Stworzylismy dwie zmienne referencyjne typu Animal i skierowalismy je do obiektow Cat i Dog. Teraz mozemy wywolac metody makeSound().
+a.makeSound();
+b.makeSound();
+Poniewaz zmienna referencyja a zawiera obiekt Dog zostanie wywolana metoda makeSound() klasy Dog. To samo tyczy sie zmiennej referencyjnej b, ktora natomiast zawiera obiekt Cat i wywola metode z tej wlasnie klasy.
+To pokazuje ze mozesz uzyc zmiennej typu Animal be jakiejkolwiek wiedzy ze zawiera ona obiekt podklasy. Jest to bardzo przydatne, gdy masz wiele podklas nadklasy.
+
+2) Zadanie "Car classes" (angielski)
+Write a program by reimplementing the given method in the inherited vehicle classes. The data is of four classes: Main, Vehicle, Electric, Hybrid. Where, in turn, the Hybrid and Electric classes inherit from the Vehicle class. Create a resource method for each class that displays on the screen what fuel the car uses. In addition, the start () method may inherit both of these classes from the Vehicle class. This method is supposed to print "Starting". Take advantage of polymorphism.
+
+3) Zadanie (teoria - rozumienie zagadnienia polimorfizmu)
+W trzech zdaniach opisz czym jest polimorfizm, nastepnie popatrz na odpowiedz ponizej i zastanow sie nad tym na ile zrozumiales to pojecie, jesli okazalo sie ze zupelnie nie rozumiesz feel free by zagladnac jeszcze raz do notatek :)
+Odpowiedz: Oznacza to ze jedna metoda w danej nadklasie moze miec swoich wiele innych implemetacji w innych klasach.

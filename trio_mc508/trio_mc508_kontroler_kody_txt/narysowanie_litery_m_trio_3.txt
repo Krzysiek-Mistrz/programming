@@ -1,0 +1,22 @@
+'poprzez ruch inkrementalny
+BASE(0, 1)
+SPEED = 10
+ACCEL = 100
+DECEL = 100
+
+MOVE(0, 12)
+MOVE(3, -6)
+MOVE(3, 6)
+MOVE(0, 12)
+
+'poprzez ruch absolutny
+BASE(0, 1)
+SPEED = 10
+ACCEL = 100
+DECEL = 100
+
+MOVEABS(0, 0)
+MOVE(0, 12)
+MOVE(3, 9)
+MOVE(6, 12)
+MOVE(6, 0)

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" VersionMinor="1" ProductId="508" ProductName="MC508">
+    <Environment>
+        <Software SoftwareVersion="5.4.3.30464" />
+        <Controller ControllerVersion="2.0330027005" ControllerFPGAVersion="11">
+            <Modules />
+        </Controller>
+    </Environment>
+    <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+            <Items />
+        </Group>
+    </Groups>
+    <Items>
+        <Item Type="basic" Name="__MAIN" Id="4933a26d-43cf-4eba-b7ec-bb312f9a62cb" FileName="__MAIN.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basicLibrary" Name="_FUNC_BASE" Id="f0011d5d-3781-4265-80d5-b1295079adc1" FileName="_FUNC_BASE.BAL" Storage="internalStorage" />
+        <Item Type="basicLibrary" Name="_FUNC_EMERGENCY" Id="90fec9ef-9b45-49d9-80bb-07dacffd0b96" FileName="_FUNC_EMERGENCY.BAL" Storage="internalStorage" />
+        <Item Type="basicLibrary" Name="_FUNC_MIDDLE" Id="b008ea06-62f9-47df-a96d-e7256f8cbf49" FileName="_FUNC_MIDDLE.BAL" Storage="internalStorage" />
+        <Item Type="basicLibrary" Name="_FUNC_POS" Id="1d8e4f2d-8c66-4496-b11b-c59a8d3648d4" FileName="_FUNC_POS.BAL" Storage="internalStorage" />
+        <Item Type="basic" Name="_GLOBAL_VARS" Id="0e87106a-2294-433f-a76f-dae77134f5cd" FileName="_GLOBAL_VARS.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="26544419-ac0c-42d7-b81a-bb7b9881cddd" FileName="MC_CONFIG.MCC" Storage="internalStorage" />
+        <Item Type="basic" Name="STARTUP" Id="2dd9ced9-85dd-4a56-90fe-f0722520a17e" FileName="STARTUP.BAS" Storage="internalStorage" Autorun="-1" IsAutorun="True" />
+        <Item Type="basic" Name="TEST" Id="55be911c-9efb-4a1c-a710-f1e0582ac593" FileName="TEST.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+    </Items>
+</Project>

@@ -1,0 +1,84 @@
+1) Klasa posiada atrybuty i metody. Atrybuty sa w zasadzie zmiennymi w obrebie klasy. Stworzmy klase o nazwie vehicle wraz z odpowiadajacymi jej atrybutami i metodami.
+public class Vehicle {
+  int maxSpeed;
+  int wheels;
+  String color;
+  double fuelCapacity;
+
+  void horn() {
+    System.out.println("Beep!");
+  }
+}
+Widzimy zatem ze maxSpeed, wheels, color, fuelCapacity sa atrybutami naszej klasy Vehicle, natomaist metoda horn() jest zachowaniem wewnatrz naszej klasy.
+Mozesz zdefiniowac tak wiele atrybutow i metod wewnatrz klasy jak tylko bedziesz chcial.
+
+2) Zadanie
+Uzupelnij luki tak zeby zdefiniowac klse z tymi atrybutami age typu integer, wysokosc jako double i name jako string.
+... person {
+... age;
+... height;
+... name;
+}
+Rozwiazanie:
+class person {
+int age;
+double height;
+String name;
+}
+
+3) Nastepnie mozemy zdefiniowac sobie pare objektow naszej klasy Vehicle i uzyc notacji z kropka w celu dotarcia do atrybutow i metod naszej klasy.
+class MyClass {
+  public static void main(String[] args) {
+    Vehicle v1 = new Vehicle();
+    Vehicle v2 = new Vehicle();  
+    v1.color = "red";
+    v2.horn();
+  }
+}
+Zadanie "Tracking consumer data"
+Uzupelnij klase tak by metoda saveConsumerInfo() poprawnie dzialala dl administratora hotelu.
+
+4) zadanie
+Uzupelnij luki zeby zdefiniowac dwa obikety klasy "people"
+People obj1 = ... People();
+People obj2 = new People...;
+
+5) Pora juz zeby omowic kolejne niezwykle wazne slowo kluczowe public zaraz na poczatku kazdej klasy czy funkcji main() - public i takze inne ciekawe modyfikatory dostepu.
+public static void main(String[] args) {
+    ...
+}
+Public to modyfikator dostepu co oznacza ze sluzy do ustawiania poziomu dostepu. Mozesz uzywac modyfikatorow dostepu do klas, atrybutow i metod.
+W przypadku klas dostepne modyfikatory dostepu sa - publiczne lub domyslne (pozostawione puste), zgodnie z opisem ponizej:
+public: klasa jest dostepna dla kazdej klasy.
+default: klasa jest dostepna tylko dla klas w tym samym pakiecie.
+W przypadku atrybutow i metod dostepone sa nastepujace opcje:
+default: zmienna lub metoda zadeklarowana jest bez modyfikatora kontroli dostepu jest dostepna dla dowolnej innej klasy w tym samym pakiecie.
+public: dostepne z dowolnej innej klasy.
+protected: zapewnia ten sam dostep co domyslny modyfikator dostepu, z dodatkiem ze podklasy maja dostep do chronionych metod i zmiennych nadklasy (W nastepnych lekcjach).
+private: dostene tylko w obrebie samej zadeklarowanej klasy.
+Przyklad:
+public class Vehicle {
+  private int maxSpeed;
+  private int wheels;
+  privte String color;
+  private double fuelCapacity;
+
+  public void horn() {
+    System.out.println("Beep");
+  }
+}
+Najlepsza praktyka jest zeby zmienne wewnatrz klasy byly prywatne. Zmienne sa dostepne i modyfikowane za pomoca  Getter-ow i Setter-ow. Zaraz zreszta o nich odrobine wiecej powiemy.
+
+6) Zadanie "Going places"
+jestes menadzerem wycieczki i musisz miec liste panstw z ich stolicami.
+
+7) Zadanie "Calkowite wyplaty"
+Jestes menedzerem firmy i musisz stworzyc program ktory obliczy calkowita wyplate.
+
+8) Ktore z ponizszych sa prawidlowymi modyfikatorami dostepu?
+-protected
+-public
+-private
+-hidden
+Odpowiedz:
+protected, public, private.

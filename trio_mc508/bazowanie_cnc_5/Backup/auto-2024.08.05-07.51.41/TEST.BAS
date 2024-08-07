@@ -1,0 +1,4 @@
+WDOG = ON
+
+WHILE TRUE
+WEND

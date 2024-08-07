@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="2">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="Document_Program___MAIN" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="tool_TableViewerControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+</Contents>

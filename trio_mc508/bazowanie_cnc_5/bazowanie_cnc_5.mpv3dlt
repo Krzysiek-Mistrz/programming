@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents />
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="300">
+        <LayoutAnchorablePane Id="1fa2f193-993c-4d69-a017-75895a3c72f6" DockWidth="300" FloatingWidth="200" FloatingHeight="600" FloatingLeft="NaN" FloatingTop="NaN">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="External Devices" IsSelected="True" ContentId="tool_RemoteDeviceTreeControl" LastActivationTimeStamp="08/05/2024 07:53:37" />
+        </LayoutAnchorablePane>
+        <LayoutAnchorablePane FloatingWidth="200" FloatingHeight="600" FloatingLeft="151" FloatingTop="600">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="VR Viewer" IsSelected="True" ContentId="tool_VRViewerControl" FloatingLeft="151" FloatingTop="600" FloatingWidth="200" FloatingHeight="600" LastActivationTimeStamp="08/05/2024 07:50:29" PreviousContainerId="1fa2f193-993c-4d69-a017-75895a3c72f6" PreviousContainerIndex="1" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane />
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane Id="909b93f5-5844-4c5e-b867-4b0ae6efcedc" DockHeight="300" FloatingWidth="520" FloatingHeight="480" FloatingLeft="NaN" FloatingTop="NaN">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="08/02/2024 15:06:01" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="500" FloatingHeight="300" FloatingLeft="353" FloatingTop="260">
+          <LayoutAnchorablePane Id="03c65f11-15e9-4747-ab67-8efdfc4d27e7" DockHeight="300" FloatingWidth="500" FloatingHeight="300" FloatingLeft="353" FloatingTop="260" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="136" FloatingHeight="39" FloatingLeft="119" FloatingTop="26">
+          <LayoutAnchorablePane Id="2c641b77-2935-4220-acda-62128c974f01" DockHeight="300" FloatingWidth="136" FloatingHeight="39" FloatingLeft="119" FloatingTop="26" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="520" FloatingHeight="480" FloatingLeft="171" FloatingTop="78">
+          <LayoutAnchorablePane Id="055f579f-dee4-4c45-b75f-def36f84fb8d" DockHeight="300" FloatingWidth="520" FloatingHeight="480" FloatingLeft="171" FloatingTop="78" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+    </FloatingWindows>
+    <Hidden>
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Axis Parameters" IsSelected="True" ContentId="tool_AxisParametersControl" FloatingLeft="353" FloatingTop="260" FloatingWidth="500" FloatingHeight="300" LastActivationTimeStamp="08/05/2024 07:53:32" PreviousContainerId="03c65f11-15e9-4747-ab67-8efdfc4d27e7" PreviousContainerIndex="0" />
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Find and Replace" IsSelected="True" ContentId="tool_FindReplaceWindow" FloatingLeft="119" FloatingTop="26" FloatingWidth="239" FloatingHeight="343" LastActivationTimeStamp="08/05/2024 07:53:32" PreviousContainerId="2c641b77-2935-4220-acda-62128c974f01" PreviousContainerIndex="0" />
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Jog Axes" IsSelected="True" ContentId="tool_JogAxesControl" FloatingLeft="171" FloatingTop="78" FloatingWidth="520" FloatingHeight="480" LastActivationTimeStamp="08/05/2024 07:53:32" PreviousContainerId="055f579f-dee4-4c45-b75f-def36f84fb8d" PreviousContainerIndex="0" />
+    </Hidden>
+  </LayoutRoot>
+</MotionPerfectLayout>

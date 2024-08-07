@@ -1,0 +1,65 @@
+1) iterator to obiekt ktory umozliwia przechodzenie przez kolekcje, uzyskujac lub usuwajac elementy tego kontenera. Aby uzyskac dostep do kolekcji za pomoca iteratora, musisz stworzyc jeden. Kazda z klas kolekcji udostepnia metode iterator(), ktora z powrotem daje iterator na poczatek kolekcji. Uzywajac obiektu iteratora mozesz uzyskac dostep do kazdego elementu w kolekcji, po jednym elemencie na raz. Klasa Iterator udostepnia nastepujace metody:
+-hasNext() - zwraca prawde jesli istnieje co najmniej jeden element wiecej, w przeciownym razei zwraca falsz.
+-next() - zwraca nastepny obiekt i przesuwa iterator
+-remove() - usuwa z kolekcji ostatni obiekt, ktory zostal zwrocony przez next().
+Pamietaj ze aby uzywac tych funkcji musisz zaimportowac najpierw klase "Iterator", znajduje sie ona w pakiecie java.util.
+Przyklad:
+import java.util.Iterator;
+import java.util.LinkedList;
+public class MyClass {
+  public static void main(String[] args) {
+    LinkedList<String> animals = new LinkedList<String>();
+    animals.add("fox");
+    animals.add("cat");
+    animals.add("dog");
+    animals.add("rabbit");
+    
+    Iterator<String> it = animals.iterator();
+    String value = it.next();
+    System.out.println(value);
+  }
+}
+it.next() zwraca pierwszy element z listy, a nastepnie przenosi iterator do nastepnego elementu. Za kazdym razem kiedy wywolujesz it.next(), iterator przechodzi do nastepnego elementu listy.
+
+2) Zadanie (praktyka)
+Podaj rezultat ponizszego kodu:
+List<Integer> list = new ArrayList<Integer>();
+list.add(10);
+list.add(20);
+list.add(30);
+Iterator<Integer> it = list.iterator();
+it.next();
+System.out.println(it.next());
+Odpowiedz: 20
+Wyjasnienie: zwroc uwage ze przed println masz jeszcze jedno wywolanie funckji iterator ktora zwroci wartosc 10 i przejdzie donastepnego elementu, zatem do 20, ktory zwroci kolejna metoda iterator ta w funckji wypisujacej.
+
+3) Zazwyczaj iteratory sa uzywane w petlach. W kazdej iteracji petli mozesz uzyskac dostep do odpowiedniego elementu listy.
+Przyklad:
+import java.util.Iterator;
+import.java.util.LinkedList;
+public class MyClass{
+  public static void main(String[] args) {
+    LinkedList<String> animals = new LinkedList<String>;
+    animals.add("fox");
+    animals.add("cat");
+    animals.add("dog");
+    animals.add("rabbit");
+    Iterator<String> it = animals.iterator();
+    while(it.hasNext()) {
+      String value = it.next();
+      System.out.println(value);
+    }
+  }
+}
+Jako rezultat powyzszego kodu otrzymamy: fox, cat, dog, rabbit. Tutaj petla while okresla czy iterator ma kolejne elementy, jesli ma to przypisuje wartosc tego elementu do zmiennej value i wypisuje owa zmienna na ekran sytuacja sie nastepnie powtarza.
+
+4) Zadanie "Link Of The List" (angielski)
+Write a code to calculate and output the sum of LinkedList elements. Whil the size of he LinkedList isn't equal to 5 collect the input of type int to list. Then use iterator and while here is another element f the list try to add this element to the final sum using iterator.
+
+5) Zadanie (praktyka)
+Uzupelnij luki w kodzie tak by uwzglednic iterowanie w petli i wyswietlic na ekran wszystkie elementy z listy typu Integer.
+(1)...<(2)...> it = list.(3)...();
+while(it.hasNext()) {
+  System.out.println(it.(4)...);
+}
+Odpowiedz: (1) - Iterator; (2) - Integer; (3) - hasNext(); (4) - next()

@@ -1,0 +1,16 @@
+Zapisywanie danych do pliku tekstowego odbywa się za pomocą symbolu > lub >> . Oto dwa przypadki:
+
+rem Przypadek 1
+set /a m=2
+echo %m% >>zm.txt
+pause >>nul
+
+rem Przypadek 2
+set /a m=2
+echo %m% >zm.txt
+pause >>nul
+W przypadku pierwszym komenda set /a przyporządkowała zmiennej m cyfrę 2 a symbol >> dopisał zmienną do pliku zm.txt lub utworzył nowy gdyby nie było zm.txt.
+
+W przypadku drugim symbol > kasował dane z pliku zm.txt i zapisał nowe lub utworzył nowy gdyby nie było zm.txt
+
+Gdy skorzystamy z tego ułatwienia, możemy zapisać pause >nul tzn. nie będziemy widzieć "Aby kontynuować, nacinij dowolny klawisz . . . " na ekranie konsoli.

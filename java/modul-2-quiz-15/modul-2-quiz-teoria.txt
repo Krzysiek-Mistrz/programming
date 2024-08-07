@@ -1,0 +1,78 @@
+1) Uzupelnij luki w kodzie w petli w celu wyswietlenia napisu "in a loop" 7 razy, uzywajac petli while:
+int x = 1;
+while (x <= ...)
+{
+  System.out.println("in a loop");
+  ...++;
+}
+Rozwiazanie:
+int x = 1;
+while (x <= 7)
+{
+  System.out.println("in a loop");
+  x++;
+}
+
+2) Prosze wybrac prawdziwe zdania sposrod podanych oznaczajac je literka Prawda = P, lub F = Falsz (wstaw obok zdania).
+1. a&&b jest prawda jesli b albo a jest prawdziwe.
+2. a&&b jest falszywe jest a i b sa prawdziwe.
+3. a||b jest prawdziwe jesli a lub b jest prawdziwe.
+4. (a||b)&&c jest prawdziwe jesli c i a albo b jest prawdziwe
+Rozwiazanie:
+1. a&&b jest prawda jesli b albo a jest prawdziwe	F
+2. a&&b jest falszywe jest a i b sa prawdziwe.		F
+3. a||b jest prawdziwe jesli a lub b jest prawdziwe.	P
+4. (a||b)&&c jest prawdziwe jesli c i a albo b...	P
+
+3) Uzupelnij puste pola by wyswietlic napis "You rock!" jesli zmienna "a" jest wieksza od 15 i zmienna b jest mniejsza lub rowna 72.
+int a = 144;
+int b = 33;
+if (a > 15 ... b <= ...) {
+  System.out.println("You rock");
+}
+Rozwiazanie:
+int a = 144;
+int b = 33;
+if (a > 15 && b <= 72) {
+  System.out.println("You rock");
+}
+
+4) Uzupelnij luki w celu wyswietlenia "in a loop" 5 razy uzywajac petli for.
+... (int x = 0; x < 5; x++)
+{
+  System.out.println("in a loop");
+}
+Rozwiazanie:
+for (int x = 0; x < 5; x++)
+{
+  System.out.println("in a loop");
+}
+
+5) Zadanie Sprawdzajace Z Modulu 2:
+Bierzesz pozyczke od znajomego i musisz obliczyc ile bedziesz mu winien po 3 miesiacach, co miesiac bedziesz splacac mu 10% pozostalej kwoty kredytu. Utworz program ktory pobiera kwote pozyczki jako dane wejsciowe, oblicza i wyswietla pozostala po 3 miesiacach kwote do oddania.
+Przykladowe dane wejciowe:
+20000
+Przykladowe dane wyjsciowe:
+10628
+Oto miesieczny harmonogram z platnosci:
+Miesiac 1 - platnosc 10% z 20000 = 2000, pozostalo - 18000
+Miesiac 2 - platnosc 10% z 18000 = 1800, pozostalo - 16200
+Miesiac 3 - platnosc 10% z 16200 = 1620, pozostalo - 14580
+Uzyj petli do obliczenia podanej wartosci w kolejnych miesiacach, ponadto do przechowywania danych staraj sie uzywac typow int
+1) Rozwiazanie:
+import java.util.Scanner;
+public class Program
+{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int amount = scanner.nextInt();
+    int remaining = amount;
+    for (int i = 0; i < 3; i ++)
+    {
+      int payment = (amount * 10)/100;
+      remaining = amount - payment;
+      amount = remaining;
+    }
+    System.out.println(remaining)
+  }
+}

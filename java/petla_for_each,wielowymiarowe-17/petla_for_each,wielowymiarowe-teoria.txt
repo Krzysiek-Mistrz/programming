@@ -1,0 +1,27 @@
+1) Ulepszona petla for nazywana czasami petla "for each" sluzy do przechodzenia elementow w tablicach. Zaletra jest taka ze ta petla eliminuje prawdopodobienstwo bugow i sprawia ze kod jest prostszy wrozczytaniu.
+int [] primes = {2, 3, 5, 7};
+for (int t: primes) {
+  System.out.println(t);
+}
+Wyswietli kolejno:
+2
+3
+5
+7
+Petla for each (ulepszona petla for) deklaruje zmienna typu zgodnego z elementami tablicy, do ktorej uzyskuje dostep. Zmienna bedzie dostepna w bloku for, a jj wartosc jej wartosc bedzie taka sama jak biezacy element tablicy. W kazdej iteracji petli zmienna t bedzie rowna odpowiadajacemu elementowi tablicy.
+Zwoc uwage na dwukropek po zmiennej w warunku petli.
+
+Zadanie "Geometry code"
+Napisz czesc ktora otzrzymuje tabluce bokow kwadratu i wyswietla dla uzytkownika pola tych figur.
+
+Zadanie
+Uzupelnij luki w kodzie tak zeby uzyc petli for each do tablicy nazywanej "arr".
+int total = 0;
+for(int x ...) {
+  total += x;
+}
+Rozwiazanie:
+int total = 0;
+for(int x: arr) {
+  total += x;
+}

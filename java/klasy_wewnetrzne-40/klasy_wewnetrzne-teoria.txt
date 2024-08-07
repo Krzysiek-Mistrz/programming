@@ -1,0 +1,26 @@
+1) Java obsluguje zagniezdzanie klas. Klasa moze byc czlonkiem innej klasy. Tworzenie klasy wewnetrznej jest stosunkowo proste. Po prostu nalezy napisac klase wewnatrz innej klasy ;) W przeciwienstwie do zwyklej klasy klasa wewnetrzna moze byc prywatna. Po zadeklarowaniu wewnetrznej klasy prywatnej nie mozna uzyskac do niej dostepu z obiektu spoza klasy.
+Przyklad:
+class Robot {
+  int id;
+  Robot(int i) {
+    id = i;
+    Brain b = new Brain();
+    b.think();
+  }
+  private class Brain {
+    public void think() {
+      System.out.println(id + " is thinking");
+    }
+  }
+}
+Klasa Robot ma zatem teraz klase wewnetrzna o nazwie Brain. Klasa wewnetrzna moze uzyskac dostep do wszystkich zmiennych skladowych i metod swojej klasy zewnetrznej, ale nie mozna uzyskac do niej dostepu z zadnej klasy zewnetrznej.
+
+2) Zadanie (rozumienie i zastosowanie pojecia klasy wewnetrznej w praktyce)
+Ustaw prawidlowo ponizsze fragmenty kodu we wlasciwej kolejnosci Tak by klasa wewnetrzna Hand miala metode shake().
+1.class Hand {
+2.} }
+3.System.out.println("Hi"); }
+4.public void shake() {
+5.public class Person {
+Odpowiedz:
+5., 1., 4., 3., 2.

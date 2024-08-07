@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_44f59e1171ee403aa1d8b79ed0fd6b93">
+      <Program Name="BASE" Process="-1" />
+    </Content>
+    <Content Name="document_ebeee341a9cf4c9f94055869e1dda86b">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_42b598961bf24fa89bc1373db4f518c5">
+      <Program Name="SKALOWANIE" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 10:27:16" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane Id="ac015864-61d6-43da-bb01-375ccc47edee">
+            <LayoutDocument Title="BASE" ContentId="document_44f59e1171ee403aa1d8b79ed0fd6b93" LastActivationTimeStamp="07/23/2024 10:08:44" />
+            <LayoutDocument Title="STARTUP" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_ebeee341a9cf4c9f94055869e1dda86b" LastActivationTimeStamp="07/23/2024 10:27:16" />
+            <LayoutDocument Title="SKALOWANIE" ContentId="document_42b598961bf24fa89bc1373db4f518c5" LastActivationTimeStamp="07/23/2024 10:22:50" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

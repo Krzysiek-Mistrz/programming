@@ -1,0 +1,68 @@
+1) Klasy anonimowe to sposob na rozszerzenie istniejacych klas w locie. Dla przykladu rozwaz posiadanie klasy Machine:
+class Machine {
+  public void start() {
+    System.out.println("Starting...");
+  }
+}
+Przy tworzeniu obiektu klasy Machine mozemy zmienic metode start w locie:
+public static void main(String[] args) {
+  Machine m = new Machine() {
+    @Override public void start() {
+      System.out.println("Woooo...");
+    }
+  };
+  m.start();
+}
+Po wywolaniu komstruktora otworzylismy nawiasy klamrowe i w locie zastapilismy implementacje metody start(). Ciekawe nieprawdaz?
+Zauwaz ze pozwolila nam to uczynic adnotacje @Override. Jest ona uzywana, aby ulatwic zrozumienie kodu, poniewaz czyni go bardziej oczywistym, gdy metody sa zastepowane.
+
+2) Zadanie (Praktyka - rozumienie kodu i zastosowanie pojecia nadpisywania metod)
+Uzupelnij luki w kodzie tak by nadpisac metode klasy Machine o nazwie "start":
+Machine m = 1()... Machine() {
+  @(2)... public void (3)...() {
+    System.out.println("Hi");
+  }
+}
+Odpowiedz: (1)new, (2)Override (3)start
+
+3) Modyfikacja dotyczy tylko biezacego obiektu, a nie samej klasy. Jesli wiec utworzymy kolejny obiekt tej klasy, implementacja naszej metody start bedzie ta zdefiniowana w klasie. Przyklad:
+class Machine {
+  public void start() {
+    System.out.println("Starting...");
+  }
+}
+public static void main(String[] args) {
+  Machine m1 = new Machine {
+    @Override public void start() {
+      System.out.println("Wooo...");
+    }
+  };
+  m1.start();
+  Machine m2 = new Machine();
+  m2.start();
+}
+W wyniku uruchomienia powyzszego kodu np. w Eclipse ktore Ci serdecznie polecam na poczatek drogi czytelniku, otrzymamy: 
+Wooo...
+Starting...
+Jak widzisz dla obiektu otworzonego m1 zostala wykonana nadpisana funckja start(), natomaist dla obiektu drugiego m2 zostala wykonana funckja start glowna zastosowana w naszej glownej klasie.
+
+4) Zadanie "Special Customer Discount" (angielski)
+Create a program by creating two purchase objects and overriding the given methods. in this exercise, you are supposed to give a 10% discount to the first customer, but override the totalAmount () method and give the second customer a 20% discount. Creation of the Purchase class in which you create this method totalAmount (). Enter the price you send as a parameter for this function from the user (int type).
+
+5) Zadanie (praktyka - zastosowanie pojecia klasy anonimowej)
+Uzupelnij ponizsze luki w kodzie:
+class A {
+  public void print() {
+    System.out.println("A");
+  }
+}
+class B {
+  public (1)... void main(String[] args) {
+    (2)... object = (3)... A() {
+      (4)...Override public void (5)...() {
+        (5)....out.println("Hello");
+      }
+    };
+    object.print();
+  }
+}

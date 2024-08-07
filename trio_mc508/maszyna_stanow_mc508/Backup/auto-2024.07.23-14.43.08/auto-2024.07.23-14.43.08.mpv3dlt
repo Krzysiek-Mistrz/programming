@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_bc9ea1cdd40d4f1492215205cc1bb0ae">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_de9229b3937b411c9a903ad479c2c392">
+      <Program Name="MAIN" Process="-1" />
+    </Content>
+    <Content Name="document_8f766660638140a0af51f70323518251">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane Id="48984ad7-f141-4829-b32d-15d4b9308406" DockWidth="260" FloatingWidth="300" FloatingHeight="300" FloatingLeft="NaN" FloatingTop="NaN">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 14:31:20" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_bc9ea1cdd40d4f1492215205cc1bb0ae" LastActivationTimeStamp="07/23/2024 14:25:59" />
+            <LayoutDocument Title="MAIN" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_de9229b3937b411c9a903ad479c2c392" LastActivationTimeStamp="07/23/2024 14:35:16" />
+            <LayoutDocument Title="STARTUP" ContentId="document_8f766660638140a0af51f70323518251" LastActivationTimeStamp="07/23/2024 14:26:35" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 14:25:09" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="136" FloatingHeight="39" FloatingLeft="977" FloatingTop="254">
+          <LayoutAnchorablePane Id="91de1f4c-e5c4-4fe8-8e0e-eb42c5314f67" FloatingWidth="136" FloatingHeight="39" FloatingLeft="977" FloatingTop="254" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+    </FloatingWindows>
+    <Hidden>
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Find and Replace" IsSelected="True" ContentId="tool_FindReplaceWindow" FloatingLeft="977" FloatingTop="254" FloatingWidth="234" FloatingHeight="322" LastActivationTimeStamp="07/23/2024 14:35:12" PreviousContainerId="91de1f4c-e5c4-4fe8-8e0e-eb42c5314f67" PreviousContainerIndex="0" />
+    </Hidden>
+  </LayoutRoot>
+</MotionPerfectLayout>

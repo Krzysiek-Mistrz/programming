@@ -1,0 +1,99 @@
+1) Poznamy dzisiaj i usystematyzujemy wszystkie popularne rodzjae jednostek w jezyku CSS. Dodatkowo zastosujemy podpiecie webfont-a - plikow z rozszerzeniem .wov.
+
+2) Jednostki CSS mozna podzielic w dualny sposob. Moga byc one absolutne lub tez relatywne. Jednostki absolutne sa w zasadzie niezalezne od wszystkiego na stronie, inne dokumenty HTML nie maja wplywu na ich wartosc. Przykladem jednostki absolutnej jest piksel. Niezaleznie od zmiany ulozenia czy rozmiaru witryny pozostaje on taki sam. Z definicji piksel to najmniejsza, niepodzielna widoczna plamka obrazu jaka potrafi wyrenderowac css na komputerze, dajaca sie wyroznic na wyswietlanym obrazie. Pamietajmy jednoczesnie ze skala to nie to samo co bezwzgledna wartosc szerokosci i wysokosci podana w pikselach.
+
+3) Wymiar pikselowy mozna sprobowac odniesc do mm dopiero znajac DPI (dots per inch) wyswietlacza. Jest to liczba punktow przypadajacych na cal (zalezy od rozdzielczosci). Zaleznie od sprzetu mamy rozne DPI. Zasada ogolna jest taka ze im mniejsze urzadzenie tym jego DPI powinno byc wieksze (gdyz inaczej obraz bedzie nieostry). Mamy jeszcze monitory CRT ktore nie maja natywnej rozdzialki DPI, jest ono regulowane.
+
+4) Rozmiar piksela w CSS (emulowanego w wyswietlaczu) - 1px = 1/96cala, gdzie 1cal (inch) = 25.4mm stad 1px ~ 0.265mm. Antyaliasing - proces dodawania pikseli do rysunku, ktore zmniejszaja kontrast miedzy wyrenderowanym obiektem i jego tlem. Oczywiscie taki renderowany piksel absolutnie nie jest rownoznaczny z pikselem sprzetowym na urzadzeniu. To dlatego w CSS teorytycznie mozna ustanawiac linie o niecalkowitej grubosci, np. 0.5px, 1.5px, 2.75px.
+
+5) Linia o grubosci 1px bedzie widoczna na dowolnym uzytym wyswietlaczu. Wielkosc elementow zdefiniowana w pikselach bedzie sie wydawac analogiczna na roznych przekatnych uzywanych przez nas wyswietlaczy, czyli niezaleznie od dpi. Piksele w CSS nie odpowiadaja sprzetowym punktom urzadzen - witryna renderuje obraz na danym display-u przy zalozeniu parametru dpi o wartosci dokladnie 96 (bezpieczna wartosc przy uzywanym sprzecie).
+
+6) Wydruki papierowe: wydruk A4 - zazwyczaj ogladamy z odleglosci 30 - 40 cm = 300dpi, natomiast plakat filmowy widziany z przewaznie wiekszej odleglosci = 2 - 3 m, bedzie posiadal dpi = 150dpi. Z powodu odmiennosci kontntu drukowanego od wyswietlanego istnieja jednostki dedykowane wydrukom, odpowidajace miara dlugosci, metryczne: mm, cm, cale, zastosujemy w CSS tylko do przygotowania wydrukow witryny. Ponadto do jednostek dedykowanych wydrukom zaliczamy znane z typografii: pc (pica) = 1/6cala oraz pt (point) = 1/12pc. Obecnie wprowadzono dtp pointa, bedacego standardem i wynoszacy 1/72 cala. Oczywscie wszystkie dotychczas podane jednostki zaliczane sqa do jednostek absolutnych.
+Miary odleglosi na wydruku (metryczne jak i typograficzne) nie beda tozsame z wartosciami zmierzonymi na wyswietlaczu. px to jednostka renderowana przez CSS, ktorej powinnismy uzywac na wyswietlaczach, nie musimy sie martwic o dpi roznych urzadzen, gdyz nie sa to piksele sprzetowe. Zaleca sie uzywac jednostki px zamiast mm, cm, in, pc, pt. Podczas gdy do wydruku stosujemy juz jednostki realne - mm, cm, inch, pc, pt.
+
+7) W CSS-ie z uzyciem media queries mozna ustalic style specjalnie do wydruku czegos:
+@media screen
+{
+...
+}
+Wspolczesnie jednak nie drukujemy witryn a raczej generujemy plik pdf, ktory zarowno po stronie klienta jak i firmy wyglada tak samo.
+
+8) Jednostki relatywne sa zalezne od innych elementow w dokumencie HTML. Wyrozniamy tu elementy zalezne od elementow nadrzednych - pojemnika w ktorym sie znajduja. Przykladem takiej jednostki jest %. Przyklad:
+<div style="width:67%;height:50px;border:2px solid red;"></div>
+umieszczony nad div-em container zakladajac ze container mial wymiar absolutny, to wowczas div takze bedzie mial taki wymiar, natomiast jesli wyjmiemy go z tego pojemnika to wowczas przjmie on 67% calej dostepnej przestrzeni. Reasumujac - procenty moga okreslac zarowno wymiar dynamicznie zmienny jak i wartosc absolutna zalezy co ustawiono u rodzica w kaskadzie. Procent to zawsze jednostka relatywna, ale zachowa sie jak wartosc niezalezna, gdy ustawimy relacje wobec jednostki absolutnej.
+<div style="width:67%;height:10%;border:2px solid red;"></div>
+Odnoszac sie oczywiscie do containera ktory ma ustawiona sztywna wysokosc. Gdyby nie mial to wowcza snasza wysokosc 10% bylaby rowna zero bo wysokosc elementu nadrzednego automatycznie jest na zero.
+Wysokosc w przegladarce nie zachowuje sie tak samo jak wysokosc, nie dopasowuje sie automatycznie do wyskosci contentu.
+Kolejna jednostka jest em jednostka zalezna od rozmiaru czcionki rodzica. Ma taki sam rozmiar jak element nadrzedny w ktorym jest zachowana. Nie ustawiamy wartosci absolutnych kazdemu elementowi, a jedynie poslugujemy sie proporcjami miedzy poszczegolnymi elementami.
+body p{
+font-size: 16px;
+}
+h2{
+font-size: 1.5em;
+}
+Nazwa em w typografii nawiazuje do szerokosci duzej litery M.
+
+19) Domyslnym rozmiarem czcionki w chromie jest 16px;
+article
+{
+font-size:16px;
+}
+.one h2
+{
+font-size:2em;
+}
+.one p
+{
+font-size:0.8em;
+}
+W ostatnim przypadku Nie bedzie zaokraglal podanej wartosci w gore czy w dol, piksele w CSS sa emulowane a nie sprzetowe zatem niecalkowita wartosc nie stanowi wiekszego problemu. Wartosc jednostki em zalezy od rozmiaru czcionki, nie ogranicz sie jej zastosowania tylko do fontow czesto jest takze uzywana w stylach okrelajacyh wlasciwosci na przyklad: text-indent, margin, padding.
+
+9) Zatem najwazniejsza roznica w doborze jednostek jest w doborze typow jednostek: jednostki absolutne stosuj wtedy kiedy chcesz zeby element byl ulozony w sposob absolutny natomiast jednostrki relatywne wtedy kiedy chcesz azeby dane elementy byly ustawione w sposob zalezny o innych elementow, jednka moznesz i tak jeden typ do wszystkiego - alezyy od preferencji.
+
+10) Uzywanie jednostek em nie sprawia ze musimy uzyc w kodzie wiecej selektorow, czy innych elementow i instrukcji. Stosuje sie tu taki sam mechanizm kaskadowosci i to pozwala nam unikac redundancji.
+
+11) Kolejna jdnostka to "rem" - od "root em", w relacji do root-a. W stylizowaniu wzglednym z uzyciem jednostek em, mozna zapomniec wzgledem ktorej wartosci proporcje ustawiamy. W stylizowaniu wzglednym jednostka "rem" nie sposob sie zgubic, poniewaz kazda jednostka proporcja jest ustanowiona wzgledem tzw. "root-a", nie bede musial szukac elementu wzgledme ktorego dana proporcje ustawilem. Takim root-em jest znacznik <html>, lub tez mozemy go ustanowic za pomoca pseudoklasy - :root. Pamietac jednak nalezy o wartosciach przyslaniajacych rozmiary danych elementow. rem nie bedzie mial na takie elementy wplywu. Pamietac nalezy zeby dac znac np liscie o rozmiarze root-a znac poniewaz rozmiar elementu listy ktory okreslilismy moze szostac przesloniety.
+Czyli reasumujac:
+em
+-stylizowane proporcja.
+-sam wybierz rodzica wzgledem ktorego ustawisz rozmiar
+rem.
+-rowniez stylizowanie proporcja.
+rozmiar ustawisz wobec root-a.
+
+12) W mowie potocznej czesto uzywamy pojec viewport, okno, obszar, canvas zamiennie. Jednak, mowiac dokladnie to viewport definiujemy jako obszar, w ktorym ogladamy witryne, lecz bez obramowania okna oraz mozliwyvch suwakow. Natomiast plotno - canvas moze byc wieksze niz viewport - wowczas pojawiaja sie suwaki. Zatem plotno to caly obszar witryny i to nawet taki ktory nie miesci sie w viewport-cie. Zas powiedzenie "okno" teorytycznie odnosic sie powinno tak do viewport-u, jak rowniez zakladek i paska adresu przegladarki. 
+Jednostki viewport-owe - w relacji do rozmiaru okna - vw - viewport width, vh - viewport height. Obszar viewport-u zaprojektowano jako siatke 100x1000 jednostek - nie musi to byc kwadrat bo niekoniecznie 1vh bedzie rowny 1vw. vw = 1/100 szerokosci obszaru; vh = 1/100 wysokosci obszaru; 1/100 - procent.
+
+13) Jednostki viewport-owe przydaja sie bardzo do osiagania efektow pojemnikow reagujacych na zmiane moze byc wysokosci moze byc szerokosci, etc.... Przyklad:
+<div style = "width: 67%; height: 10vh; bprder: 2px solid red;"></div>
+W tym wypadu zajmie nam 10% nie wysokosci rodizca lecz 10% okna. W przypadku 100vh byloby 100% wysokosci okna, lacznie z scroll-bar-ami tzn jezeli amy wowczas overflow-y: hidden; to wowczas nie bedzie widoczny scroll-bar.
+
+14) Mamy jeszcze dodatkowo pare innych jednostek relatywnych - vmax - maksimum, vmin - minimum. Idea jest prosta 0 jezeli szerokosc plotna jest wieksza od jego wysokosci to jednostka vmax przyjmie wartosc szerokosci a vmin wysokosci. Jezli na odwrot to vmax = wysokosc a vmin szerokosc. Algorytm wyznaczania - porownaj szerokosc vw z wysokoscia vh, wieksza wartosc to vmax, a mniejsza to vmin.
+
+15) Dokonywanie konwersji miedzy jednostkami CSS wykonywane jest za pomoca funkcji calc() - od calculate. Przyklad:
+width: calc(100% - 200px);
+Nalezy jednak pamietac o fakcie, iz nalezy postawic spacje po obu stronach "-" lub "+". Dostepne operatory matematyczne funkcji calc() to: +, -, *, /. Przy czym dzielenie i nozenie nie wymaga spacji.
+
+16) Czasami uzycie jednostek nie jest w ogole potrzebne: 
+margin: 0;
+line-height: 1.5;
+opacity: 0.75;
+
+17) Azeby wstawic webfont-a, wystrczy go miec w pliku o rozszerzeniu .woff = web open font format - standard przechowywania czcionki wykorzystywanej w internecie, opracowanym przez mozille, istnieje takze rozszerzenie .woff2, w ktorym poprawiono mechanizm kompresjii. Okreslamy go w kodzie CSS:
+@font-face
+{
+font-family: 'MrRobot';
+font-style: normal;
+font-weight: normal;
+src: local('MrRobot'), url('mrrobot.woff') format('woff');
+}
+Okreslamy zrodlo - sciezke wzgledna do pliku (jezeli w folderze wyzej to dodamy "../mrrobot.woff") i definiujemy tak jak przy zwyklej czcionce jakie ma wlasciwosci. Dodatkowo podajemy format przegladarce, poniewa moze byc rozny: woff, woff2 truetype, opentype, svg, embedded-opentype. Jednak pamietajmy @font-face to definicja uzycie nastepuje w:
+.logo h1
+{
+font-family: 'MrRobot';
+font-size: 128px;
+font-weight: 400;
+color: red;
+margin: 35px 0 5px 0;
+}
+Standard ten jest dostepny w prawie wszystkich przegladarkach. Pamietajmy o prawach autorskich podczas uzycia tej czcionki.

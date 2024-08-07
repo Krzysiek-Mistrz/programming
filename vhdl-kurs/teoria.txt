@@ -1,0 +1,360 @@
+odcinek 1: report
+Ogolna struktura kodu vhdl jest nastepujaca:
+entity hello_world_1 is
+    
+end entity;
+
+architecture sim of hello_world_1 is
+begin
+    process is
+    begin
+
+    end process;
+end architecture;
+w jednostce entity definiujemy sygnaly wejsciowe i wyjsciowe. jezeli nie potrzebujmey zadnych sygnalow wejsciowych ani wyjsciowych to zostawiamy ta sekcje pusta.
+Sekcja architecture to sekcja gdzie dajemy logike naszego programu oraz nasze algorytmy. Wewnatrz architektury mozemy zdefinowac procesy definiujace wiekszosc naszego kodu. Sekcje process nalezy traktowac jako watek w korym kod wykonywany jest sekwencyjnie.
+report "hello world"; -> wypisuje hello world w symulacji
+wait; -> wstrzymuje wykonanie programu na wiecznosc
+Komentarzedo vhdl mozemy wstaiwac za pomoca 2x - czyli: --komentarz jakis xD
+
+
+odcinek 2: wait
+nazwa jednostki entity musi byc taka sama jak nazwa pliku ktory stworzylismy. Kiedy rozpoczynamy wykonywanie programu program idzie od poczatku architektury i gdy napotka na proces to idzi od poczatku do jego konca sekwencyjnie i loopuje wykonywanie procesu. Instruckja wait; spowoduje odczekanie wiecznosci wstrzymanie n dobre programu, do zatryzmania na okreslony czas mozemy uzyc wait for; np: wait for 10 ns;
+
+
+odcinek 3: loop
+aby stworzyc sobie nieskonczona petle mozemy skorzystac ze struktury: 
+loop
+	...
+end loop;
+zeby wyjsc z petli mozemy uzyc exit;
+
+
+odcinek 4: for-loop
+aby stworzyc petle for mozemy skorzystac ze strukty:        
+for i in 1 to 10 loop
+        report "i = " & integer'image(i);
+end loop;
+Nie musimy deklarowac i jako zmiennej!
+
+
+odcinek 5: while loop
+struktura while loop jest nastepujaca:
+while i < 10 loop
+        report "i = " & integer'image(i);
+        i := i + 2;
+end loop;
+gdzie i to zdefiniowana zmienna. Zmienne w procesie definiujemy miedzy nazwa procesu a miedzy begin:
+variable i : integer := 0;
+Gdzie scope takiej zmiennej to tylko proces w ktorym sie ona znajduje.
+
+
+odicnek 6: signals
+Zmienne dla architekury definiujemy tylko w rejonie deklaratywnym  tzn. miedzy nazwa architektury a miedzy begin architektury. Przykladowo
+architecture sim of main is
+	signal my_sginal : integer := 0;
+begin
+...
+Kiedy wpisujemy wartosc do sygnalu musimy uzyc operatora przypisania wspolbieznego <=, zamiast : ktory to jest zarezerowany tylko dla zmiennych "variable". Zasadnicza roznicza miedzy sygnalami a zmiennymi jest taka ze zmienne updateowane sa natychmiast natomiast sygnaly sa updateowane kiedy proces pauzuje. Ponadto jezeli pare razy przypiszemy wartosc do sygnalu przed zapauzowanie ukladu to zostanie wykonane tylko ostatnie przypisanie po pauzie. Sygnaly takze moga byc definiowane wewnztrz procesu jak zwyczajne zmienne miedzy nazwa a begin procesu. 
+
+
+odcinek 5: wait on, wait until
+wait on sluzy zeby proces byl wrazliwy na dane sygnaly tzn kiedy dane sygnaly przy wait on sie zmienia wowczas proces ktory jest na nie wrazliwy uruchamia sie. tzn linie kodu sekwencykjnie pod wait on sie uruchamiaja. Wait until natomiast sluzy do zdefiniowania warunku ktory gdy jest spoelniony to wowczas przechodi do wykonywania kodu nizej, przyklady:
+wait on count_down, count_up;
+        report "count up: " & integer'image(count_up) & " count down: " & integer'image(count_down);
+wait until count_down = count_up;
+        report "counters're equal";
+wait on dajemy zawsze na koncu procesu! a until to gdzie padnie xD
+
+
+odcinek 6: conditional statements
+warunki tworzmy za pomoca konsutrkcji:
+if count_up > count_down then
+	...
+elsif count_down > count_up then
+	...
+else
+	...
+end if;
+(dla przykladowych zmiennych wzietych z countera ...)
+
+odcinek 7: sensitivity list
+dwa kody sa sobie rownowazne proces budzi sie tylko w przypadku kiedy sygnaly zostaja zmienione:
+process is
+begin
+        if count_up = count_down then
+            report "process a: counters equal!";
+        end if;
+        wait on count_down, count_up;
+end process;
+process(count_down, count_up) is
+begin
+        if count_down = count_up then
+            report "process b: counters are equal!";
+        end if;
+end process;
+
+odcinek 8: std_logic
+sygnaly typu std_logic definiuje sie nastepujaco signal signal_1 : std_logic := '0'. Gdzie wartosc po przypisaniu moze byc:
+'1' -> 
+'0' -> 
+'Z' -> 
+'W' -> 
+'L' -> weak 0	//do spi lub i2c
+'H' -> weak 1	//do spi lub i2c
+'-' -> doesnt matter
+'U' -> uninitialized	//z reguly z powodow bledow w programie
+'X' -> unknown	//z reguly z powodow bledow w programie
+podobnie jak z typami integer sygnaly std_logic takze mozemy umieszczac na liscie wrazliwosci (OGOLNIE STD_LOGIC TY;LKO MOZE BYC WYKORZYSTYWANY NA LISCIE WRAZLIWOSCI!):
+process is
+    begin
+        signal_2 <= 'Z';
+        signal_3 <= '0';
+        wait;
+end process;
+--driver b will wake up every 10ns
+process(signal_1) is
+    begin
+        if signal_1 = '0' then
+            signal_2 <= 'Z';
+            signal_3 <= 'Z';
+        else
+            signal_2 <= '1';
+            signal_3 <= '1';
+        end if;
+end process;
+kiedy 2 procesy rownolegle staraj sie przypisac wartosci do odpowiednich sygnalow wpowczas kompilator posluguje sie resolution table ktore dla 2 roznych sygnalow ktore staraj sie bvyc przyopusane zwraca inn wartosc sygnalu. dlatego powyzszy kod nie zwraca bledow!  
+CO JESZCZE BARDZO WAZNE TYLKO SYGNALY MOZEMY SOBIE PODGLADAC W FORMIE WAVEFORM DIAGRAM CZYLI TEGO WYKRESIKU Z ZIELONYMI SYGNALAMI!
+
+
+odcinkek 8: std_logic_vector
+przechowuje wartosci std_logic, okreslamy jego wielkosc za pomoca:
+signal signal_vector_2 : std_logic_vector(7 downto 0)
+, tu dlugosc tego wektora wynosi 8 w kolejnosci od msb = 7 do lsb = 0.
+signal signal_vector_1 : std_logic_vector(7 downto 0);
+--initializing all std_logic signals of vector to '0'
+signal signal_vector_2 : std_logic_vector(7 downto 0) := (others => '0');
+signal signal_vector_3 : std_logic_vector(7 downto 0) := (others => '1');
+--initializing vector with AA hex value
+signal signal_vector_4 : std_logic_vector(7 downto 0) := x"AA";
+signal signal_vector_5 : std_logic_vector(0 to 7) := "10101010";
+signal signal_vector_6 : std_logic_vector(7 downto 0) := "00000001";
+w uzywaniu to lub downto roznica ie lezy w rozmiarze tworezonego wektora lecz bezposrednio w znaczeniu poszczegolnych bitow danego wektora. Przy czy dla downto i przy 7 downto 0 bit, 7 jest najbardziej znaczacy MSB, a 0 jest najmniej znaczacy bit LSB. dla 0 to 7 dokladnie na odwrot. W praktyce stosowanie downto zalecane bo po prostu sie tak robi :)
+
+
+odcinek 9: signed and unsigned
+definiujemy nastepujaco na rozne sposoby:
+signal unsigned_counter : unsigned(7 downto 0) := (others => '0');
+signal signed_counter : signed(7 downto 0) := (others => '0');
+signal unsigned_4 : unsigned(3 downto 0) := "1000";
+signal signed_4 : signed(3 downto 0) := "1000";
+signal unsigned_8 : unsigned(7 downto 0) := (others => '0');
+signal signed_8 : signed(7 downto 0) := (others => '0');
+signed uwzglednia znak z tego powodu dodajac do niego wartoosc 1000 4 pierwsze bity uzupelnione zostaja 1 przed dodaniem, w przypadku unsigned natomiast uzupelniane sa 0 poniewaz nie uwzgledniamy tu znaku ujemnego, na skutek tego w signed liczymy dodajac 1000 liczymy do tylu dekrementujac o wartosc decymalna 8,a w unsigned dodajac 1000 dodajemy za kazdym razem 8.
+--wraping counter
+unsigned_counter <= unsigned_counter + 1;
+signed_counter <= signed_counter + 1;
+--adding signals
+unsigned_8 <= unsigned_8 + unsigned_4;
+signed_8 <= signed_8 + signed_4;
+Natomiast wrapping conter dziala tak samo w kazdym z tych przypadkow.
+
+
+odcinek 10: concurrent statements
+deklaracje wspolbiezne traktowane sa jako procesy on their own. Co jeszcze wazne to te 4 rzeczy sa sobie rownowazne:
+    proc_a: process is
+    begin
+        unsigned_signal <= unsigned_signal + 1;
+        wait for 10 ns;
+    end process proc_a;
+
+    proc_b: process is
+    begin
+        multiplication_1 <= unsigned_signal & "00";
+    end process proc_b;
+
+    proc_c: process(unsigned_signal) is
+    begin
+        multiplication_2 <= unsigned_signal & "00";
+    end process proc_c;
+
+    --concurrent statement
+    multiplication_3 <= unsigned_signal & "00"
+w tym przypadku concurrent statement zachowa sie dokladnie tak jak proces ktory jest wrazliwy na unsigned_signal czyli to co jest po prawej strnie przypisania. Generalnie zasada jest taka ze w kodach produkcyjnych raczej nie uzywac procesow z wait on, co najwyzej w testbenchach.
+
+
+odcinek 11: case
+mysle ze ten przyklad bedzie dobrym wyjasnieniem case'a: ( te 2 kody sa sobie rownowazne)
+kod 1:
+	if selector = "00" then
+            output_1 <= signal_1;
+        elsif selector = "01" then
+            output_1 <= signal_2;
+        elsif selector = "10" then
+            output_1 <= signal_3;
+        elsif selector = "11" then
+            output_1 <= signal_4;
+        else
+            output_1 <= (others => 'X');
+        end if;
+kod 2:
+	case selector is
+            when "00" =>
+                output_2 <= signal_1;
+            when "01" =>
+                output_2 <= signal_2;
+            when "10" =>
+                output_2 <= signal_3;
+            when "11" =>
+                output_2 <= signal_4;
+            when others =>
+                output_2 <= (others => 'X');
+        end case;
+
+
+odcinek 12: port map
+port map sluzy do tego zeby sygnaly uzywane wenatrz danego modulu (np. multipleksera) mogly byc uzywane na zewnatrz tego modulu (tzn. wsm pliku :) ) Dzieki temu te sygnaly mozemy pozniej sobie zainicjalizowac przypisujac je np do lokalnych sygnalow z innego modulu lub testbencha testujacego zachowanie danego modulu.
+port map okreslamy w entity i ma nastepujaca konstrukcje:
+entity port_map_mux_15 is
+port(
+    --inputs signals
+    signal_1 : in unsigned(7 downto 0);
+    signal_2 : in unsigned(7 downto 0);
+    signal_3 : in unsigned(7 downto 0);
+    signal_4 : in unsigned(7 downto 0);
+    --input selector
+    selector : in unsigned(1 downto 0);
+    --output
+    output : out unsigned(7 downto 0)
+);
+end entity port_map_mux_15;
+pozniej te sygnaly inicjalizujemy np w testbenchu, podpiecie modulu i przypisanie sygnalow z modulu do tb wyglada nastepujaco:
+    --instance of mux rtl (file: port_map_mux_15)
+    mux_1 : entity work.port_map_mux_15(rtl) port map(
+        selector => selector,
+        signal_1 => signal_1,
+        signal_2 => signal_2,
+        signal_3 => signal_3,
+        signal_4 => signal_4,
+        output => output
+    );
+Po stronie lewej sa sygnaly z naszego modulu ktory instancjonujemy, a po prawej nasze sygnaly lokalne ktore sb mozemy na chilku zmieniac.
+
+
+odcinek 13, constants and generic map
+Constants: Stałe są używane do definiowania wartości, które nie zmieniają się w czasie symulacji.
+constant CLOCK_FREQ : integer := 50_000_000; -- 50 MHz
+Generic Map: Umożliwia parametryzowanie modułów VHDL.
+entity counter is
+    generic (
+        MAX_COUNT : integer := 100
+    );
+    port (
+        clk : in std_logic;
+        count : out integer
+    );
+end entity;
+
+
+odcinek 14, clocked process
+Clocked Process: Proces wyzwalany zboczem sygnału zegarowego.
+process (clk)
+begin
+    if rising_edge(clk) then
+        -- Sygnały synchronizowane z zegarem
+    end if;
+end process;
+
+
+odcinek 15, timer in vhdl
+Timer: Używa licznika do tworzenia opóźnienia czasowego.
+process (clk)
+    variable counter : integer := 0;
+begin
+    if rising_edge(clk) then
+        if counter < 50_000_000 then
+            counter := counter + 1;
+        else
+            counter := 0;
+            -- Wykonaj akcję po 1 sekundzie (dla zegara 50 MHz)
+        end if;
+    end if;
+end process;
+
+
+odcinek 16, procedure in vhdl
+Procedure: Blok kodu, który wykonuje określoną operację. jego parametry moga byc wejsciowe, wyjsciowe lub wejsciowo - wyjsciowe (tzn. sensus stricto nie zwraca tylko zmienia, lub czyta :)
+procedure increment(signal x : inout integer) is
+begin
+    x := x + 1;
+end procedure;
+-- Użycie procedury
+signal count : integer := 0;
+process
+begin
+    increment(count);
+end process;
+
+
+odcinek 17, fsm in vhdl
+FSM: Maszyna stanów skończonych do modelowania sekwencyjnych działań.
+type state_type is (IDLE, RUNNING, DONE);
+signal state : state_type := IDLE;
+process (clk)
+begin
+    if rising_edge(clk) then
+        case state is
+            when IDLE =>
+                -- Akcje dla stanu IDLE
+                state <= RUNNING;
+            when RUNNING =>
+                -- Akcje dla stanu RUNNING
+                state <= DONE;
+            when DONE =>
+                -- Akcje dla stanu DONE
+                state <= IDLE;
+        end case;
+    end if;
+end process;
+(realizuje automat moore'a lub mealyego)
+
+odcinek 18, function in vhdl
+Function: Zwraca wartość 1 WARTOSC na podstawie danych wejściowych.
+function add(a, b : integer) return integer is
+begin
+    return a + b;
+end function;
+-- Użycie funkcji
+signal result : integer;
+result <= add(3, 5); -- result = 8
+
+
+odcinek 19, impure function
+Impure Function: Funkcja, która może mieć efekty uboczne. Tzn. moze sobie czytac lub zmieniac parametry ktore sobie dostanie, ale tez musi cos zwrocic :)
+impure function random_number(seed : inout integer) return integer is
+begin
+    seed := (seed * 7 + 3) mod 16;
+    return seed;
+end function;
+-- Użycie impure function
+signal seed, rand_num : integer := 0;
+impure function random_number(seed : inout integer) return integer is
+begin
+    seed := (seed * 7 + 3) mod 16;
+    return seed;
+end function;
+
+
+odcinek 20, procedure in process vhdl
+Procedure in a Process: Używanie procedury wewnątrz procesu moze zastapic koniecznosc uzywania funkcji i impure functions :)
+procedure increment(signal x : inout integer) is
+begin
+    x := x + 1;
+end procedure;
+signal count : integer := 0;
+process (clk)
+begin
+    if rising_edge(clk) then
+        increment(count); -- Wywołanie procedury
+    end if;
+end process;

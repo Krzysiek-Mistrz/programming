@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body><w:p><w:pPr><w:pStyle w:val="title"/><w:jc w:val="center"/></w:pPr><w:r><w:t>Zadania laboratorium 6</w:t></w:r></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:t>Nazwisko i imię: Krzysztof Jura</w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:t>Zadanie 1</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Napisz program (skrypt) wyświetlający liczby całkowite z przedziału &lt;x,y&gt; (wartości x i y podaje użytkownik). Uzyj pętli for, funkcji disp oraz input.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[clear, clc;
+prompt1 = "PODAC X: ";
+x = input(prompt1);
+prompt2 = "PODAC Y: ";
+y = input(prompt2);
+wektorUzytkownika = x:1:y;
+for index = wektorUzytkownika
+    disp(index)
+end]]></w:t></w:r></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading3"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:rPr><w:u/></w:rPr><w:t>Zadanie 2</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Utwórz funkcję odległość, wyznaczającą odległość pomiędzy dwoma punktami P1 oraz P2 (punkty zadane są przez użytkownika).</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[clear, clc;
+
+%pobranie inputu
+x1 = input("PODAJ WSP X PUNKTU1: ");
+y1 = input("PODAJ WSP Y PUNKTU1: ");
+p1 = [x1, y1];
+x2 = input("PODAJ WSP X PUNKTU2: ");
+y2 = input("PODAJ WSP Y PUNKTU2: ");
+p2 = [x2, y2];
+%wyswietlenie odleglosci 1 -> ALTERNATYWNE 2 -> ZA POM fprintf()
+%{
+tekst = ["ODLEGLOSC MIEDZY P1, P2: ", num2str(odleglosc(p1, p2))];
+disp(tekst)
+%}
+fprintf("ODLEGLOSC MIEDZY P1, P2: %s", num2str(odleglosc(p1, p2)))
+%funkcja zwracaja odleglsoc miedzy punktami, przetestowana dla zestawu 2
+%punktow
+
+%UWAGA: Funkcja liczaca odleglosc miedzy 2 punktami]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:rPr><w:u/></w:rPr><w:t></w:t></w:r></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:rPr><w:u/></w:rPr><w:t>Zadanie 3</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Utwórz skrypt wyznaczający n-ty element ciągu rekurencyjnego (parametr n zadawany jest przez Użytkownika).</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId1"/></w:customXmlPr><w:r><w:t>a_n =\left\lbrace \begin{array}{ll}
+-1 &amp; \textrm{dla}\;n=1\\
+-a_{n-1} *n-3 &amp; \textrm{dla}\;n&gt;1
+\end{array}\right.</w:t></w:r></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[clc, clear;
+% pobranie parametru od usera i wyswietlenie wyniku funkcji
+param = input("PODAC N-TY WYRAZ CIAGU REKUR: ");
+disp([num2str(param), ' WYRAZ CIAGU REKUR: ', num2str(ciagRekur(param))]);
+
+% Funkcja zwracająca n-ty wyraz ciągu rekurencyjnego
+% UWAGA: FUNKCJA PRZETESTOWANA (SPRAWDZONA NA PAPIERZE) DLA n = 1, 2, 3, 4. FUNKCJA ZAKOMENTOWANA ZEBY NIE BRUZDZIC ZEBY PRZETESTOWAC
+
+%UWAGA: Funkcja liczaca n-ty wyraz ciagu na koncu w osobnej skecji]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:rPr><w:u/></w:rPr><w:t></w:t></w:r></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading2"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:rPr><w:u/></w:rPr><w:t>Zadanie 4</w:t></w:r></w:p><w:p><mc:AlternateContent xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"><mc:Choice Requires="R2018b"><w:pPr><w:pStyle w:val="heading3"/><w:jc w:val="left"/></w:pPr></mc:Choice><mc:Fallback><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr></mc:Fallback></mc:AlternateContent><w:r><w:t>Zapoznaj się z funkcją oraz przykładem do zagadanienia programowania liniowego: </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:hyperlink w:docLocation="https://www.mathworks.com/help/optim/ug/linprog.html"><w:r><w:t>https://www.mathworks.com/help/optim/ug/linprog.html</w:t></w:r></w:hyperlink></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Rozwiąż podane zagadnienie:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Część I:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Przedsiębiorstwo produkuje dwa wyroby : W1 i W2. Ograniczeniem w procesie produkcji jest czas pracy maszyn: M1, M2 i M3. W tablicy podano zużycie czasu pracy każdej z tych maszyn na produkcje jednostki poszczególnych wyrobów, dopuszczalne czasy pracy maszyn oraz ceny wyrobów. Określić w jakich ilościach produkować poszczególne wyroby, aby przy istniejących ograniczeniach przychód z ich sprzedaży był możliwie największy. Wykreśl ograniczenia. Sprawdź czy otrzymane wyniki zgadzają się z metodą graficzną.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="image"><w:customXmlPr><w:attr w:name="height" w:val="154"/><w:attr w:name="width" w:val="363"/><w:attr w:name="verticalAlign" w:val="baseline"/><w:attr w:name="altText" w:val=""/><w:attr w:name="relationshipId" w:val="rId2"/></w:customXmlPr></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Część II:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Po pewnym czasie przedsiębiorstwo postanowiło powiększyć swoją siedzibę. W tym celu pojawiły się nowe maszyny i nowe wyroby. Dane zostały przedstwione w tabeli. Wyznacz ponownie maksymalny zysk jaki można uzyskać dla poszczególnych parametrów.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="image"><w:customXmlPr><w:attr w:name="height" w:val="185"/><w:attr w:name="width" w:val="438"/><w:attr w:name="verticalAlign" w:val="baseline"/><w:attr w:name="altText" w:val=""/><w:attr w:name="relationshipId" w:val="rId3"/></w:customXmlPr></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Dla danego zadania:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Przygotuj sprawozdanie zgodnie z zasadami podanymi na wykładzie.</w:t></w:r><w:r><w:t> Zawrzyj wszystkie informacje (pomocniczo informacje poniżej)</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:numId w:val="2"/></w:numPr><w:jc w:val="left"/></w:pPr><w:r><w:t>Postawić cel zadania/problemu optymalizacyjnego</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:numId w:val="2"/></w:numPr><w:jc w:val="left"/></w:pPr><w:r><w:t>Opisz zmienne I części, postaw model matematyczny i ograniczenia zadania. </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:numId w:val="2"/></w:numPr><w:jc w:val="left"/></w:pPr><w:r><w:t>Rozwiąż graficznie (wyrysować ograniczenia w Matlabie) oraz zaznaczyć potencjalne punkty rozwiązania wiedząc, że:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="image"><w:customXmlPr><w:attr w:name="height" w:val="180"/><w:attr w:name="width" w:val="755"/><w:attr w:name="verticalAlign" w:val="baseline"/><w:attr w:name="altText" w:val=""/><w:attr w:name="relationshipId" w:val="rId4"/></w:customXmlPr></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>    4. Rozwiąż przy pomocy Matlaba postawiony problem wykorzystując funkcję </w:t></w:r><w:r><w:rPr><w:i/></w:rPr><w:t>linprog</w:t></w:r><w:r><w:t> i przykład podany wcześniej (w sprawozdaniu opisać z dokumentacji, co funkcja robi, jakie parametry przyjmuję oraz co zwraca)</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>    5. Opisz zmodyfikowany model matematyczny dla II części (czyli wprowadzenie zmian)</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>    6. Rozwiąż przy pomocy Matlaba.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>    7. Porównaj wyniki z obu części. Zawrzyj we wnioskach.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[%{
+%========================CZESC-1==========================
+
+%ROZWIAZANIE 2
+% Create optimization variables
+x13 = optimvar("x","LowerBound",0);
+y13 = optimvar("y","LowerBound",0);
+
+% Set initial starting point for the solver
+initialPoint3.x = zeros(size(x13));
+initialPoint3.y = zeros(size(y13));
+
+% Create problem
+problem = optimproblem("ObjectiveSense","Maximize");
+
+% Define problem objective
+problem.Objective = fcn2optimexpr(@objectiveFcn,x13,y13);
+
+% Define problem constraints
+problem.Constraints.constraint1 = 2*x13 + y13 <= 1000;
+problem.Constraints.constraint2 = 3*x13 + 3*y13 <= 2400;
+problem.Constraints.constraint3 = 1.5*x13 <= 600;
+
+% Display problem information
+show(problem);
+
+% Solve problem
+[solution,objectiveValue,reasonSolverStopped] = solve(problem,initialPoint3);
+
+% Display results
+solution
+reasonSolverStopped
+objectiveValue
+
+% Clear variables
+clearvars x13 y13 initialPoint3 reasonSolverStopped objectiveValue
+%}
+
+%UWAGA : FUNKCJA ZAKOMENTOWANA ZEBY NIE BRUZDZIC, WYNIK SPRAWDZONY W RAZIE
+%POTRZEBY ODKOMENTOWAC, DZIEKI :)
+
+%{
+function objective = objectiveFcn(x,y)
+    objective = 30*x + 20*y;
+end
+%}
+
+%-----------------------------
+
+%ROZWIAZANIE 1
+clc, clear;
+
+%Creating constraints
+x = optimvar('x','LowerBound',0);
+y = optimvar('y','LowerBound',0);
+prob = optimproblem('Objective',30*x + 20*y,'ObjectiveSense','max');
+prob.Constraints.c1 = 2*x + 1*y <= 1000;
+prob.Constraints.c2 = 3*x + 3*y <= 2400;
+prob.Constraints.c3 = 1.5*x + 0*y <= 600;
+
+%Convert the problem object to a problem structure.
+problem = prob2struct(prob);
+
+%Solve the resulting problem structure.
+[sol,fval,exitflag,output] = linprog(problem)
+disp(num2str(-fval))
+
+%-----------------------------
+
+%ROZWIAZANIE 0
+%{
+clc, clear;
+
+%Creating constraints
+f = [-30, -20, 0, 0, 0];
+A = [2, 1, 1, 0, 0; 3, 3, 0, 1, 0; 1.5, 0, 0, 0, 1];
+b = [1000; 2400; 600];
+lb = [0; 0; 0; 0; 0];
+
+%Solve the resulting problem structure.
+[x, fval, exitflag] = linprog(f, A, b, [], [], lb);
+
+disp(num2str(-fval))
+%}
+
+%-----------------------------
+
+%ROZWIAZANIE GRAFICZNE CZESC I
+% Narysuj wykres dla każdego równania
+plot(0:500, 1000 - 2*(0:500), 'g', 0:800, (2400 - 3*(0:800))/3, 'b', LineWidth=2);
+xline(600/1.5, 'y');
+xline(0, 'r');
+yline(0, 'm');
+hold on
+plot([0 0 200 400 400], [0 800 600 200 0], 'r*');
+
+% Dodaj tytuł i etykiety osi
+title('Wykres ograniczen');
+xlabel('x');
+ylabel('y');
+
+% Wyświetl siatkę
+grid on;]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[%========================CZESC-2==========================
+%ROZWIAZANIE 2
+%{
+% Create optimization variables
+x15 = optimvar("x","LowerBound",0);
+y15 = optimvar("y","LowerBound",0);
+z3 = optimvar("z","LowerBound",0);
+w3 = optimvar("w","LowerBound",0);
+
+% Set initial starting point for the solver
+initialPoint5.x = zeros(size(x15));
+initialPoint5.y = zeros(size(y15));
+initialPoint5.z = zeros(size(z3));
+initialPoint5.w = zeros(size(w3));
+
+% Create problem
+problem = optimproblem("ObjectiveSense","Maximize");
+
+% Define problem objective
+problem.Objective = fcn2optimexpr(@objectiveFcn,x15,y15,z3,w3);
+
+% Define problem constraints
+problem.Constraints.constraint1 = 2*x15 + 1*y15 + 2*z3 + 5*w3 <= 1000;
+problem.Constraints.constraint2 = 3*x15 + 3*y15 + 1*z3 + 1* w3 <= 2400;
+problem.Constraints.constraint3 = 1.5*x15 + 0*y15 + 1*z3 + 1*w3 <= 600;
+problem.Constraints.constraint4 = 0*x15 + 0*y15 + 4*z3 + 6*w3 <= 3000;
+problem.Constraints.constraint5 = 0*x15 + 0*y15 + 3*z3 + 3*w3 <= 2000;
+
+% Display problem information
+show(problem);
+
+% Solve problem
+[solution,objectiveValue,reasonSolverStopped] = solve(problem,initialPoint5);
+
+% Display results
+solution
+reasonSolverStopped
+objectiveValue
+
+% Clear variables
+clearvars x15 y15 z3 w3 initialPoint5 reasonSolverStopped objectiveValue
+%}
+
+%UWAGA : FUNKCJA ZAKOMENTOWANA ZEBY NIE BRUZDZIC, WYNIK SPRAWDZONY W RAZIE
+%POTRZEBY ODKOMENTOWAC, DZIEKI :)
+%{
+function objective = objectiveFcn(x,y,z,w)
+    objective = 30*x + 20*y + 50*z + 80*w;
+end
+%}
+
+%-----------------------------
+
+%ROZWIAZANIE 1
+clc, clear;
+
+%Creating constraints
+x = optimvar('x','LowerBound',0);
+y = optimvar('y','LowerBound',0);
+z = optimvar('z','LowerBound',0);
+w = optimvar('w','LowerBound',0);
+prob = optimproblem('Objective',30*x + 20*y + 50*z + 80*w,'ObjectiveSense','max');
+prob.Constraints.c1 = 2*x + 1*y + 2*z + 5*w <= 1000;
+prob.Constraints.c2 = 3*x + 3*y + 1*z + 1*w <= 2400;
+prob.Constraints.c3 = 1.5*x + 0*y + 1*z + 1*w <= 600;
+prob.Constraints.c4 = 0*x + 0*y + 4*z + 6*w <= 3000;
+prob.Constraints.c5 = 0*x + 0*y + 3*z + 3*w <= 2000;
+
+%Convert the problem object to a problem structure.
+problem = prob2struct(prob);
+
+%Solve the resulting problem structure.
+[sol,fval,exitflag,output] = linprog(problem)
+disp(num2str(-fval))
+
+%-----------------------------
+
+%ROZWIAZANIE 0
+%{
+f = [-30, -20, -50, -80, 0, 0, 0, 0, 0];
+A = [2, 1, 2, 5, 1, 0, 0, 0, 0; 3, 3, 1, 1, 0, 1, 0, 0, 0; 1.5, 0, 1, 1, 0, 0, 1, 0, 0; 0, 0, 4, 6, 0, 0, 0, 1, 0; 0, 0, 3, 3, 0, 0, 0, 0, 1];
+b = [1000; 2400; 600; 3000; 2000];
+lb = [0; 0; 0; 0; 0; 0; 0; 0; 0];
+[x, fval, exitflag] = linprog(f, A, b, [], [], lb);
+disp(num2str(-fval))
+%}
+
+%-----------------------------
+
+%ROZWIAZANIE GRAFICZNE CZESC II
+%niemozliwe na plaszczyznie 2D poniewaz dimV = 4]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[function d = odleglosc(P1, P2)
+    if length(P1) ~= 2 || length(P2) ~= 2
+        error("BLAD: PODANO NIEPOPRAWNE PUNKTY")
+    end
+    d = sqrt((P1(1) - P2(1))^2 + (P1(2) - P2(2))^2);
+end
+
+%FUNKCJA ZADANIE DRUGIE LICZACA ODLEGLOSC MIEDZY PUNKTAMI POWYZEJ
+
+function an = ciagRekur(x)
+    if x > 1
+        an = -ciagRekur(x - 1) * x - 3;
+    elseif x == 1
+        an = -1;
+    else
+        error('BLAD: PODANO NIEPRAWIDLOWY INDEKS');
+    end
+end
+
+%FUNKCJA ZADANIE TRZECIE LICZACA N-TY WYRAZ CIAGU REKUR POWYZEJ]]></w:t></w:r></w:p></w:body></w:document>

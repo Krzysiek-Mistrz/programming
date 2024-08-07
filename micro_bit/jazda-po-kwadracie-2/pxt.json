@@ -1,0 +1,17 @@
+{
+    "name": "jazda-po-kwadracie-2",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "AlphaBot2": "github:waveshare/pxt-AlphaBot2#v1.0.6"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main.py"
+    ],
+    "preferredEditor": "blocksprj"
+}

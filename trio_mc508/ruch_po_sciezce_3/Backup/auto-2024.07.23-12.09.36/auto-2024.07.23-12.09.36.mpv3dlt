@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_c2842656ed0342079dd19500aeb0a047">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_c4bb1d1c1ff04633921b6de7328cbca8">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_720158cc4bf1462b9fb7dbc50d0ed9b0">
+      <Program Name="MHELICAL" Process="-1" />
+    </Content>
+    <Content Name="document_af6b2d11089d43a9ada367b69236bc9f">
+      <Program Name="MSPHERICAL" Process="-1" />
+    </Content>
+    <Content Name="document_d0b58fe4102343d7a9f93dfc815763c1">
+      <Program Name="SFERYCZNA_INTERPOLACJA" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="1336">
+        <LayoutAnchorablePane Id="ccd4784c-f1e6-45cf-a0a5-485801229263" DockWidth="0.520885853472524*" FloatingWidth="800" FloatingHeight="600" FloatingLeft="NaN" FloatingTop="NaN">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 12:07:57" />
+        </LayoutAnchorablePane>
+        <LayoutAnchorablePane DockWidth="1.44812995814744*" FloatingWidth="800" FloatingHeight="600" FloatingLeft="-99" FloatingTop="555">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Oscilloscope" IsSelected="True" ContentId="tool_OscilloscopeControl" FloatingLeft="-99" FloatingTop="555" FloatingWidth="800" FloatingHeight="600" LastActivationTimeStamp="07/23/2024 12:08:21" PreviousContainerId="ccd4784c-f1e6-45cf-a0a5-485801229263" PreviousContainerIndex="1" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical" DockWidth="0.0187485865513552*">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="SFERYCZNA_INTERPOLACJA" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_d0b58fe4102343d7a9f93dfc815763c1" LastActivationTimeStamp="07/23/2024 12:08:57" />
+            <LayoutDocument Title="MSPHERICAL" ContentId="document_af6b2d11089d43a9ada367b69236bc9f" LastActivationTimeStamp="07/23/2024 12:04:23" />
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_c2842656ed0342079dd19500aeb0a047" LastActivationTimeStamp="07/23/2024 11:39:59" />
+            <LayoutDocument Title="STARTUP" ContentId="document_c4bb1d1c1ff04633921b6de7328cbca8" LastActivationTimeStamp="07/23/2024 11:51:44" />
+            <LayoutDocument Title="MHELICAL" ContentId="document_720158cc4bf1462b9fb7dbc50d0ed9b0" LastActivationTimeStamp="07/23/2024 12:04:17" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 11:46:50" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

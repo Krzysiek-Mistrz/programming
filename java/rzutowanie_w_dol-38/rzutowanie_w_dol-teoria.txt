@@ -1,0 +1,34 @@
+1) Dla klas istnieja dwa typy rzutowania.
+Rzutowanie W Gore:
+Mozesz rzutowac instancje podklasy na jej nadklase. Rozwazmy nastepujacy przyklad, zakladajac ze Cat jest podklasa klasy Animal:
+Animal a = new Cat();
+Java automatycznie rzutuje w gore typ Cat zmiennej na typ Animal.
+Rzutowanie W Dol:
+Rzutowanie obiektu z nadklasy do jejpodklasy nazywane jest rzuowaniem w dol, zachodzi wowczas co nastepuje:
+Animal a = new Cat();
+((Cat) a).makeSound();
+Taki zabieg spowoduje probe zrzutownaia zmiennej na typ Cat i wywolania jej metody makeSound().
+
+2) Pozwolisz drogi czytelniku ze bede sie od teraz poslugiwal nazwa downcasting - rzutowanie w dol, a upcasting - rzutowanie w gore? Tak jest mi po prostu duzo wygodniej niz mowic specjalnie "Rzutowanie w dol i rzutowanie w gore", mysle nawet ze odczuwasz samemu podobna sytuacje u siebie...
+Odpowiedzmy sobie na pytanie dlaczgeo upcasting jest automatyczny a dlaczgeo downcasting juz nie? To jest tak widzisz ze upcatsin gpo prostu jest niezawodny poniewaz cokolwiek odniesiesz do nadklasy to twoja podklasa zawsze bedzie sie chocby w sensie teoretyczny w niej zawierac zatem rzutowanie zmiennej na typ nadklasy, czyli przykladowo tak obrazowo pokazujac rzutujemy typ Cat na Animal, czy to nie prada ze Cat jest to Animal?
+Co jednak jesli chcesz np. downacastowac Dog na Cat, czy Dog jest Cat? No nie dlatego ta subtelna roznica powodiuje ze nie mozesz tak wykanac niejako bez obejscia tego manualnie.
+
+3) Zadanie (praktyka - rozumienie pojecia doncasting i upcasting + uzycie w praktyce)
+Podaj rezultat ponizszego kodu:
+class A {
+  public void print() {
+    System.out.println("A");
+  }
+}
+class B extends A {
+  public void print() {
+    System.out.println("B");
+  }
+  public static void main(String[] args) {
+    A object = new B();
+    B b = (B) object;
+    b.print();
+  }
+}
+Rezultat: "B"
+Wyjasnienie: Zauwaz ze w powyzszym przykladzie klasa B dziedziczy z klasy A zatem poczatkowo zajdzie upcatsing we fragmencie: "A object = new B();", natomaist zaraz pozniej zajdzie manual downcasting object na typ B. Zatem zostanie ostatecznie wywolana metoda z podklasy B.

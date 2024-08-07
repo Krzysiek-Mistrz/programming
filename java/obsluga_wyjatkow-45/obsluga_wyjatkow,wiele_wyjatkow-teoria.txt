@@ -1,0 +1,94 @@
+1) "Exception" - wyjatek jest problemem wystepujacym podczas wykonywania programu. Wyjatki powoduja nieprawidlowe zakonczenie programu. Obsluga wyjatkow to potezny mechanizm, ktory obsluguje bledy w czasie wykonywnia w celu utrzymania normalnego dzialania aplikacji.
+Wyjatek moze wystapic z wielu roznych powodow. Kilka przykladow:
+-Uzytkownik wprowadzil nieprawidlowe dane.
+-Nie mozna znalezc pliku ktory nalezy otworzyc.
+-Utracono polaczenie z serverem w trakcie komunikacji.
+-Niewystarczajaca pamiec i inne problemy zwiazane z zasobami fizycznymi.
+
+2) Jak mozesz zauwazyc wyjatki sa spowodowane bledem uzytkownika, bledem pogramisty lub problemami z zasobami fizycznymi. jednak dobrze napisany program powinien obslugiwac wszytskie mozliwe wyjatki.
+
+3) Zadanie (teoria)
+Ktore z ponizszych stwierdzen sa prawdziwe:
+1. Wylapywanie wyjatkow, ich przewidywanie usprawnia design interfejsu programu.
+2. Nie mozemy jako developerzy javy rzewidziec zadnych wyjatkow w programie.
+3. Jesli nie wylapiemy wyjatkow, moze to spowodowac negatywny efekt na dzialaniu programu, przykladowo moze sie on zamknac.
+4. Wylapywanie wyjatkow jest dobra praktyka.
+odpowiedz: zdanie 3 i 4 sa poprawne
+
+4) Wyjatki mozna przechowywac za pomoca kombinacji slow kluczowych try i catch. Blok try / catch jest umieszczany wokol kodu, ktory moze generowac wyjatek. Przyklad:
+try {
+  //some code
+} catch (Exception e) {
+  //some code to handle errors
+}
+Instrukcja catch obejmuje zadeklarowanie typu wyjatku ktory probujesz przechwycic. jesli w bloku try wystapi wyjateksprawdzany jest wowczas blok catch nastepujacy po try. Jesli typ wyjatku ktory wystapil jest wymieniony wbloku catch wyjatek jest wowczas przekazywany do bloku catch, podobnie jak argument jest przekazywany do parametru metody. Typ wyjatku moze slzuzyc do przechwytywnaia wszystkich mozliwych wyjatkow.
+Ponizszy przyklad ilustruje obsluge wyjatkow podczas proby uzyskania dostepu do indeksu tablicy, ktory nie istnieje:
+public class MyClass {
+  public static void main(String[] args) {
+    try { 
+	int a[] = new int[2];
+	System.out.println(a[5]);
+    } catch (Exception e) {
+	System.out.println("An error occured");
+    }
+  }
+}
+Bez fragmentu try/catch nasz program wysypalby sie na linijc gdzie probujemy sie odwolac do elementu tablicy ktory nie istnieje.
+Zauwaz ze w nawiasie (Exception e) w bloku catch jest uzywane do wylapywania wszystkich mozliwych wyjatkow.
+
+5) Zadanie "Cathegory handling" (angielski)
+Write a program to take N number as input and output the element of the array with N index. An online electronics store has 5 product categories - PCs, Notebooks, Tablets, Phones, and Аccessories. The program you are given declares an array and stores that types into it.
+Write a program to take N number as input and output the element of the array with N index. If the index is out of range, program should output "Wrong Option".
+
+6) zadanie (praktyka)
+Uzupelnij luki tak by zapobiec jakimkolwiek wyjatkom:
+int x = 12;
+int y = 0;
+try {
+  int z = x / y;
+  System.out.println(z);
+}
+catch(Exceptions e) {
+  System.out.println("Error");
+}
+
+7) Slowo kluczowe throw umozliwia reczne generowanie wyjatkow z metod. niektore z wielu dostepnych typow obejmuja - IndexOutOfBoundsException, ArithmeticException, IllegalArithmeticExceptions i tak dalej... Na przyklad mozemy zglosic wyjatek ArithmeticException w naszej metodzie, gdy parametr ma wartosc 0. Przyklad:
+int div(int a, int b) throws ArithmeticExcetion {
+  if(b == 0) {
+    throw new ArithmeticException("Division by Zero");
+  } else {
+    return a / b;
+  }
+}
+Instrukcja throws w definicji metody definiuje typ wyjatkow, ktore metoda moze zglosic. Nastpnie slowo kluczowe throw zglasza odpowiedni wyjatek wraz z komunikatem niestandardowym. Jesli wywolamy metode div z drugim parametrem rownym zero "wyrzuci" ona wyjatek ArithmeticException z komunikatem "Division by Zero".
+Wielokrotne wyjatki moga byc definiowane uzywajac listy typow wyjtkow, w ktorej kolejne typy oddzielone sa od siebe przecinkami.
+
+8) Zadanie (praktyka)
+Uzupelnij luki w ponizszym kodzie tak by ponizsza metoda wyrzucala wyjatek IOException wmomencie gdy przeslany argument / parametr funckji do bedzie mniejszy od zera.
+public void do(int x) (1)... (2)... {
+  if(x < 0)
+  {
+    (3)... (4)... IOException();
+  }
+}
+1 - throws, 2 - IOException, 3 - throw, 4 - new
+
+9) Blok try moze zawierac wiele blokow catch obslugujacy wiele wyjatkow osobno:
+try {
+  //some code
+} catch(Exception e1) {
+  //catch block
+} catch(Exception e2) {
+  //catch block
+} catch(Exception e3) {
+  //catch block
+}
+
+10) Wszystkie bloki chwytajace powinny byc uporzadkowane od najbardziej szczegolowych do najbardziej ogolnych.Postepujac zgodnie z okreslonymi wyjatkami, mozesz uzyc typu Exception do obslugi wszytskich iunnych wyjatkow ostatniego wylapania (as the last catch).
+
+11) Zadanie "No Zeroes" (angielski)
+Write a program that handles two possible exceptions. Respectively: ArithmeticException and InputMismatchException, printing: Error: division by zero, and Error: wrong value. You can use the throw instruction, or if you want multiple catch instructions. There is only one class called main. Two numbers are respectively collected from the user.
+
+12) Zadanie (teoria)
+Jak wiele blokow catch moze zawierac blok try?
+Odpowiedz prawidlowa: tak wiele jak potrzebujesz.

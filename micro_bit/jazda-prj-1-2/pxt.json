@@ -1,0 +1,20 @@
+{
+    "name": "jazda-prj-1",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "AlphaBot2": "github:waveshare/pxt-AlphaBot2#v1.0.6"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "targetVersions": {
+        "target": "6.0.19",
+        "pxt": "9.0.12"
+    },
+    "preferredEditor": "blocksprj"
+}

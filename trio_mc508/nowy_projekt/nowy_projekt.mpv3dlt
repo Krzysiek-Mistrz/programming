@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_e5f39095188c4f74911b4613c1b2715c">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_8284d91207ae4923b424a3bf91f68fe0">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_bd896e48efa8411c95cc7a01fe451812">
+      <Program Name="_GLOBAL_VARS" Process="-1" />
+    </Content>
+    <Content Name="document_8001a7fdca04412284616054dc56296d">
+      <Program Name="BAZOWANIE_1" Process="-1" />
+    </Content>
+    <Content Name="document_9723839499974bd096fcf33c3ff1a54a">
+      <Program Name="BAZOWANIE_2" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/29/2024 08:51:17" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane Id="d43fc75a-e37a-4e0f-b846-8d638022d4ad">
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_e5f39095188c4f74911b4613c1b2715c" LastActivationTimeStamp="07/29/2024 08:51:06" />
+            <LayoutDocument Title="STARTUP" ContentId="document_8284d91207ae4923b424a3bf91f68fe0" LastActivationTimeStamp="07/29/2024 08:51:06" />
+            <LayoutDocument Title="_GLOBAL_VARS" ContentId="document_bd896e48efa8411c95cc7a01fe451812" LastActivationTimeStamp="07/25/2024 10:00:48" />
+            <LayoutDocument Title="BAZOWANIE_1" ContentId="document_8001a7fdca04412284616054dc56296d" LastActivationTimeStamp="07/29/2024 08:48:06" />
+            <LayoutDocument Title="BAZOWANIE_2" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_9723839499974bd096fcf33c3ff1a54a" LastActivationTimeStamp="07/29/2024 08:51:33" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/25/2024 09:55:55" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

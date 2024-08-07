@@ -1,0 +1,50 @@
+1) Mozes uzyc jednej instrukcji if-else wewnatrz innnej insrukcji if lub else.
+Dla przykladu:
+int age = 25;
+  if(age > 0) {
+    System.out.println("Welcome");
+  } 
+  else {
+    System.out.println("Too young");
+  }
+else {
+  Sysem.out.println("error");
+}
+Mozesz sobie zagniezgdzic tyle if-else warunkow ile tych chcesz
+
+2) Uzupelnij luki w zagniezdzonej instrukjci warunkowej tak zeby wyswietlic "it works", na ekran.
+int x = 37;
+if(x > 27) {
+  if(x > 31) {
+    System.out.println("it works");
+  }
+}
+
+3) Zadanie "Lojalny klient"
+Uzupelnij kod tk zeby wyswietlic "Gift card" drugi raz jesli zakup ma wartosc powyzej 30000.
+
+4) Zadanie "Wygraj, przegraj lub zremisuj..."
+Napisz program ktory skategoryzuje juz rozegrane mecze na twojej stronie.
+
+5) Wspomnijmy teraz jeszcze o instrukjci else if. Zamiast uzywac wlasnie konstrukcji if-else, mozesz uzyc instrukcji else if w celu sprawdzena wielu warunkow.
+int age = 25;
+if(age <= 0)
+{
+  System.out.println("error");
+}
+else if(age <= 16)
+{
+  System.out.println("too young");
+}
+else if(age < 100)
+{
+  System.out.println("Welcome");
+}
+else {
+  System.out.println("really?");
+}
+Kod sprawdzi warunek w kazdej instrukcji i wyswietli instrukcje znajdujace sie w bloku ktorego warunek jest prawda = true.
+Mozesz dolaczyc tak wiele instrukcji else if jak tylko uwazasz.
+
+6) Instrukcja if jak wiele moze zawierac w sobie instrukcji else if?
+Odpowiedz prawidlowa: tyle ile sam chcesz (nawet nieskonczenie wiele).

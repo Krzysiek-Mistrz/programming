@@ -1,0 +1,53 @@
+1) Typy wartosci to podstawowe typy, zazwyczaj obejmujace: byte, short, int, long, float, double, boolean i char.
+Te typy danych przechpwuja przypisane im wartosci w odpowiednich lokalizacjach pamieci. Tak wiec kiedy przekazujesz je do metody zasadniczo operujesz na wartosci zmiennej a nie na samej zmiennej. Przyklad;
+public class MyClass {
+  public static void main(String[] args) {
+    int x = 5;
+    addOneTo(x);
+    System.out.println(x);
+  }
+  static void addOneTo(int num) {
+    num = num + 1;
+  }
+}
+Metoda z przykladu powyzej zabiera wartosc przesylanego parametru, dlatego orginalna zmienna nie zostaje w zaden sposob zmieniona, i 5 zostaje jej wartoscia.
+
+2) Zadanie
+Podaj output kodu:
+public static void main(String[] args) {
+  int x = 4;
+  square(x);
+  System.out.println(x);
+}
+static void square(int x) {
+  x = x*x;
+}
+Odpowiedz: 4
+
+3) Typ referencji przechowuje odniesienie (lub adres) do lokalizacji pamieci w ktorej przechowywane sa odpowiednie dane. Kiedy tworzysz obiekt za pomoca konstruktora tworzysz zmienna referencyjna. Rozwazmy na przyklad zdefiniowanie klasy Person:
+public class MyClass {
+  public static void main(String[] args) {
+    Person j;
+    j = new Person("John");
+    j.setAge(20);
+    celebrateBirthday(j);
+    System.out.println(j.getAge());
+  }
+  static void celebrateBirthday(Person p) {
+    p.setAge(p.getAge() + 1);
+  }
+}
+Metoda celebrateBirthdaybierze obiekt person jako parametr i inkrementuje jego atrybut. Poniewaz j jest typem referencyjnym, metoda ma wplyw bezposrednio na obiekt i jest w stanie zmienic aktualna wartosc jego atrybutu.
+tablice i String to takze referencyjne typy danych.
+
+4) Zadanie
+Podaj output podanego nizej kodu:
+public static void main(String[] args) {
+  Person p = new Person();
+  p.setAge(25);
+  change(p);
+  System.out.println(p.getAge());
+}
+static void change(Person p) {
+  p.setAge(10);
+}

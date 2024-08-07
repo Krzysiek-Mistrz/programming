@@ -1,0 +1,47 @@
+short wlaczony = 1
+short wylaczony = 0
+short czujnik_1 = 0, czujnik_2 = 0, czujnik_3 = 0
+int pzm_wody = 0
+char tab[6] = "stan 0"
+short on_off = 1
+
+macro_command main()
+
+GetData(on_off, "Local HMI", LB, 6, 1)
+while on_off == 1
+	GetData(on_off, "Local HMI", LB, 6, 1)
+	GetData(pzm_wody, "Local HMI", LW, 0, 1)
+	SetData(pzm_wody, "Local HMI", LW, 2, 1)
+	if pzm_wody >= 20 and pzm_wody < 50 then
+		//zalaczenie 1 stanu
+		SetData(wlaczony, "Local HMI", LB, 0, 1)
+		SetData(wylaczony, "Local HMI", LB, 5, 1)
+		SetData(wylaczony, "Local HMI", LB, 2, 1)
+		SetData(wylaczony, "Local HMI", LB, 4, 1)	
+		SetData(wylaczony, "Local HMI", LB, 1, 1)
+	else if pzm_wody > 50 and pzm_wody <= 90 then
+		//wlaczenie wszystkich stanu 0 i 1
+		SetData(wlaczony, "Local HMI", LB, 1, 1)
+		SetData(wlaczony, "Local HMI", LB, 0, 1)
+		// wlaczenie 1 silnika
+		SetData(wlaczony, "Local HMI", LB, 4, 1)	
+		SetData(wylaczony, "Local HMI", LB, 5, 1)
+		SetData(wylaczony, "Local HMI", LB, 2, 1)
+	else if pzm_wody >= 90 and pzm_wody <= 100 then
+		//wlaczenie wszystkich stanow
+		SetData(wlaczony, "Local HMI", LB, 1, 1)
+		SetData(wlaczony, "Local HMI", LB, 0, 1)
+		SetData(wlaczony, "Local HMI", LB, 2, 1)
+		// wlaczenie 1, 2 silnika
+		SetData(wlaczony, "Local HMI", LB, 4, 1)
+		SetData(wlaczony, "Local HMI", LB, 5, 1)	
+	else
+		SetData(wylaczony, "Local HMI", LB, 0, 1)	
+		SetData(wylaczony, "Local HMI", LB, 1, 1)	
+		SetData(wylaczony, "Local HMI", LB, 2, 1)	
+		SetData(wylaczony, "Local HMI", LB, 4, 1)
+		SetData(wylaczony, "Local HMI", LB, 5, 1)
+	end if
+wend
+
+end macro_command

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_13055ae376504406afaa04dca64c8162">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_8f4e89c86ecc4deda0de1cad5470950d">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_2702eb79de3344da91e72d72a5ae53cb">
+      <Program Name="RYSOWANIE_MOVE" Process="-1" />
+    </Content>
+    <Content Name="document_86c618dc07d34e6a8c7cd5ade0bd2083">
+      <Program Name="RYSOWANIE_MOVEABS" Process="-1" />
+    </Content>
+    <Content Name="document_1e18c194a87649cc92992d9e9241756e">
+      <Program Name="RYSOWANIE_MOVECIRC" Process="-1" />
+    </Content>
+    <Content Name="document_bd6847ec947e4fef866aaf958dcf5780">
+      <Program Name="SKALOWANIE" Process="21" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Vertical">
+      <LayoutPanel Orientation="Horizontal">
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="1155">
+          <LayoutAnchorablePaneGroup Orientation="Vertical">
+            <LayoutAnchorablePane Id="8828ceb9-d5c3-4927-8faa-88f2edee428b" FloatingWidth="500" FloatingHeight="300" FloatingLeft="NaN" FloatingTop="NaN">
+              <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 10:05:23" />
+            </LayoutAnchorablePane>
+            <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="500" FloatingHeight="300" FloatingLeft="74" FloatingTop="590">
+              <LayoutAnchorablePane FloatingWidth="500" FloatingHeight="300" FloatingLeft="74" FloatingTop="590">
+                <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Axis Parameters" IsSelected="True" ContentId="tool_AxisParametersControl" FloatingLeft="74" FloatingTop="590" FloatingWidth="500" FloatingHeight="300" LastActivationTimeStamp="07/23/2024 09:50:29" PreviousContainerId="8828ceb9-d5c3-4927-8faa-88f2edee428b" PreviousContainerIndex="1" />
+              </LayoutAnchorablePane>
+            </LayoutAnchorablePaneGroup>
+          </LayoutAnchorablePaneGroup>
+          <LayoutAnchorablePane DockWidth="1.57839721254355*" DockHeight="479.5" FloatingWidth="800" FloatingHeight="600" FloatingLeft="262" FloatingTop="566">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Oscilloscope" IsSelected="True" ContentId="tool_OscilloscopeControl" FloatingLeft="262" FloatingTop="566" FloatingWidth="800" FloatingHeight="600" LastActivationTimeStamp="07/23/2024 09:58:59" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+        <LayoutPanel Orientation="Vertical" DockWidth="0.42443729903537*">
+          <LayoutDocumentPaneGroup Orientation="Horizontal">
+            <LayoutDocumentPane Id="f9e84163-8009-49c7-917f-6fedec57bffa">
+              <LayoutDocument Title="SKALOWANIE 21" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_bd6847ec947e4fef866aaf958dcf5780" LastActivationTimeStamp="07/23/2024 10:05:28" />
+              <LayoutDocument Title="MC_CONFIG" ContentId="document_13055ae376504406afaa04dca64c8162" LastActivationTimeStamp="07/23/2024 10:04:57" />
+              <LayoutDocument Title="STARTUP" ContentId="document_8f4e89c86ecc4deda0de1cad5470950d" LastActivationTimeStamp="07/23/2024 10:05:03" />
+              <LayoutDocument Title="RYSOWANIE_MOVE" ContentId="document_2702eb79de3344da91e72d72a5ae53cb" LastActivationTimeStamp="07/23/2024 09:59:09" />
+              <LayoutDocument Title="RYSOWANIE_MOVEABS" ContentId="document_86c618dc07d34e6a8c7cd5ade0bd2083" LastActivationTimeStamp="07/23/2024 09:33:35" />
+              <LayoutDocument Title="RYSOWANIE_MOVECIRC" ContentId="document_1e18c194a87649cc92992d9e9241756e" LastActivationTimeStamp="07/23/2024 09:27:11" />
+            </LayoutDocumentPane>
+          </LayoutDocumentPaneGroup>
+          <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+            <LayoutAnchorablePane DockHeight="300">
+              <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 09:28:24" />
+            </LayoutAnchorablePane>
+            <LayoutAnchorablePane>
+              <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Compile/Check Results" IsSelected="True" ContentId="tool_CompileCheckControl" />
+            </LayoutAnchorablePane>
+          </LayoutAnchorablePaneGroup>
+        </LayoutPanel>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="200" FloatingHeight="600" FloatingLeft="275" FloatingTop="182">
+          <LayoutAnchorablePane Id="2ceec573-18fe-4b20-aa00-d9cd42914244" DockWidth="0.422608695652174*" FloatingWidth="200" FloatingHeight="600" FloatingLeft="275" FloatingTop="182" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+    </FloatingWindows>
+    <Hidden>
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="VR Viewer" IsSelected="True" ContentId="tool_VRViewerControl" FloatingLeft="275" FloatingTop="182" FloatingWidth="200" FloatingHeight="600" LastActivationTimeStamp="07/23/2024 09:38:54" PreviousContainerId="2ceec573-18fe-4b20-aa00-d9cd42914244" PreviousContainerIndex="0" />
+    </Hidden>
+  </LayoutRoot>
+</MotionPerfectLayout>

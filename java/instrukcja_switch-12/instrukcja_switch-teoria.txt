@@ -1,0 +1,126 @@
+1) Instrukcja switch testuje zmienna pod katem rownosci z lista wartosci. Kazda wartosc nazywana jest przyadkiem (case), a wlaczana zmienna jest sprawdzana dla kazdego przypadku (case). Wyrazenie switch moze posiadac dowolna (ustalona przez developera) liczbe przypadkow.
+Skladnia (po angielsku):
+switch (expression)
+{
+  case value_1:
+    //statements
+    break; //optional
+
+  case value_1:
+    //statements
+    break; //optional
+
+  default:
+    //optional statements
+}
+
+2) Gdy sprawdzana zmienna jest rowna wartosci z przypadku (case), wowczas instrukcje nasteopujace po tym przypadku zostaja wykonywane do momentu napotkania instrukcji przerywania.
+Po napotkaniu instrukcji break; przelacznik (switch, instrukcja warunkowa) konczy dzialanie, a przeplyw sterowania przeskakuje do nastenego wiersza po instrukcji switch.
+Nie kazdy przypadek musi zawierac przerwe. Jezeli nie bedzie uwzgledniony break; przez developera, wowczas instrukcje beda wykonywane dalej i przypadek pierwszy zostanie np. polaczony z przypadkiem 2-im, dopoki kompilator lub interpreter nie napotka w kodzie instrukcji break;
+Ponizszy przyklad sprawdza ktory z przypadkow odpowiada wartosc przypisanej do zmiennej calkowitej o id = dzien (po angielsku):
+int day = 3;
+switch(day)
+{
+  case 1:
+    System.out.println("Monday");
+    break;
+
+  case 2:
+    System.out.println("Tuesday");
+    break;
+
+  case 3:
+    System.out.println("Wednesday");
+    break;
+
+  default:
+    System.out.println("Diffrent day");
+}
+Przypominam ze mozesz w switchu umiescic dowolna liczbe przypadkow (case). Po kazdym przypadku nastepuje wartosc porownywana (comparsion value) i dwukropek (colon).
+
+3) Uzupelnij puste luki w celu "sprawdzenia" przypadkow w innstrukcji warunkowej switch.
+int x = 10;
+...(...) {
+  case 10:
+    System.out.println("A");
+    break;
+
+  ... 10:
+    System.out.println("B");
+    break;
+
+  ...:
+    System.out.print("Default case");
+}
+Rozwiazanie:
+int x = 10;
+switch(x) {
+  case 10:
+    System.out.println("A");
+    break;
+
+  case 10:
+    System.out.println("B");
+    break;
+
+  default:
+    System.out.print("Default case");
+}
+
+4) Instrukcja switch moze miec opcjonalny domyslny rozmiar liter. Domyslny przypadek moze byc uzyty do wykonania zadania, gdy zadna liczba sprawdzana nie spelnia warunku porownania.
+Dla przykladu:
+int day = 3;
+switch(day)
+{
+  case 6:
+    System.out.println("Saturday");
+    break;
+
+  case 7:
+    System.out.println("Sunday");
+    break;
+
+  case 8:
+    System.out.println("Monday");
+    break;
+
+  default:
+    System.out.println("Diffrent day");
+}
+Instrukcja break; jest zbedna w przypadku default poniewaz jest to ostatnia instruckja naszego switch-a.
+
+5) Zadanie "Emotion Detector"
+Napisz program dla twojego robota zeby potrafil rozumiec emocje.
+
+6) Podaj rezultat podanego kodu:
+int a = 11; int b = 12; int c = 40;
+switch(a) {
+  case 40:
+    System.out.println(b);
+    break;
+  default:
+    System.out.println(c);
+}
+Wyjasnienie: Wykona sie przypadek default poniewaz a != 40, zostanie wyswietlona wartosc c = 40.
+
+7) Wyrazenie switch zezwala na wiele wartosci oddzielonych przecinkami w kazdym przypadku i zwraca wartosc 'a' dla calego bloku switch-case. Dl przykladu:
+String dayType = switch(day) {
+		case 1, 2, 3, 4, 5 -> "Working day";
+		case 6, 7 -> "Weekend";
+		default -> "Invalid day";
+		};
+Wyrazenie switch sprawia ze blok switch-case jest znacznie krotszy i nie uzywa instrukcji break;.
+Zwroc uwage na "->" to tkz. "shortland" skrot po kolejnych przypadkach.
+
+8) Uzupelnij luki by stworzyc prawdziwe i poprawne wyrazenie dla ceny kawy.
+int price = ... {
+	case "Espresso", "Americano" ... 15;
+	case "Latte", "Macchiato" ... 20;
+	default -> 0;
+}
+Rozwiazanie:
+int price = switch(coffee) {
+	case "Espresso", "Americano" -> 15;
+	case "Latte", "Macchiato" -> 20;
+	default -> 0;
+}

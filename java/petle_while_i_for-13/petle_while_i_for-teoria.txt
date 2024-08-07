@@ -1,0 +1,102 @@
+1) Petla while pozwala na nastepujace, powtarzajace sie po sobie wykonywanie danych instrukcji w niej zamieszczonych. Instruckje wniej zawarte powtarzaja sie dopoki warunek zawarty w petli while jest prawdziwy.
+Przyklad:
+int x = 3;
+while(x > 0) {
+  System.out.println(x);
+  x--;
+}
+Petla sprawdza warunke x > 0. Jezeli jest on spelniony, tzn jego wartosc logiczna jest rowna = true, woczas wykonywane sa instrkcje w ciele petli while. Nastepnie petla while sprawdza warunek ponownie jezeli jest nadal spelniony to kolejny raz go wykonuje az do momentu gdy okaze sie on falszem.
+Zauwaz operator dekremenacji x--. Odpowiada on za dekrementacje zmiennej x, za kazdym razem kiedy petla bedzie wykonywana, kiedy x zdekrementuje sie juz do 0 wowczas warunkek nie bedzie spelniony i petla sie nie wykona. Bez warunku w petli while petla bedzie sie wykonywac w nieskponczonosc.
+
+2) Preorganizuj kod by otrzymac skonczona petle wypisujaca tekst na ekran w petli:
+1.x++;}
+2.whle (x < 100) {
+3. int x = 12;
+4.System.out.println("Java rocks!");
+Rozwiazanie:
+3. int x = 12;
+2. whle (x < 100) {
+4. System.out.println("Java rocks!");
+1. x++;}
+
+3) Kiedy wyrazenie jest sprawodzone i rezultat ma wartosc lgiczna "falsz", cialo petli jest pomijane i pierwsze wyraznie po petli jest wykonywane. Przyklad:
+int x = 6;
+while(x < 10)
+{
+  System.out.println(x);
+  x++;
+}
+System.out.println("Loop ended");
+/*
+6
+7
+8
+9
+loop ended
+*/
+zauwaz ze ostatnia metoda print jest poza "zasiegiem" sprawdzanego warunku petli zatem nie wyswietli sie wartosc 10 (is out of the while scope).
+
+4) Zadanie "klasa mateatyczna"
+Complete the program  to calculate the factorial of the given number and output it
+
+5) Zadanie "Being Choosy"
+Write a program that prints all numbers from 0 to the given input that are
+
+6) Jak wiele razy podana petla sie wykona? wynik podaj w postaci cyfry calkowitej.
+int x = 0;
+int y = 5;
+while(x < y)
+{
+  System.out.println("hello");
+  x++;
+}
+Rozwiaznie: Petla wykona sie: 5
+
+7) kolejna petla jaka poznamy bedzie petla o nazwie "for". Petla for pozwala ci na wydajne napisanie programu ktory musi sie wykonac okreslona przez Ciebie liczbe razy.
+for (initialization; condition; increment/decrement) {
+  statement/s
+}
+Initialization - wyrazenie wykonujace sie okreslona liczbe razy na poczatku petli.
+Condition - Warunkek jest sprawdzany ilekroc dana petla sie wykona. petla wykonuje dane instrukcje kolejno po sobie, dopoki warunek nie bedzie mial wartosci logicznej = falsz.
+Increment / decrement - Wykonuje sie po kazdej iteracji petli.
+W podanym przykladzie wyswietla sie liczby od 1 do 5.
+for(int x = 1; x <= 5; x++) {
+  System.out.println("x");
+}
+nastepuje poczatkowa inicjalizacja - przypisanie do zmiennej sterujacej wartosci 1, nastepnie powtarzajac wyswietla na ekran zmienna x, dopoki warunek x <= 5 nie stanie sie falszem. W kazdej iteracji wyrazenie x++ jest wykonywane, zwiekszajac x o 1.
+Zauwaz ze po inicjalizacji nastepuje srednik (semicolon), ale takze warunku w warunku.
+
+8) Zadanie "University admission"
+Uzupelnij program by wyswietlic "Welcome" dla kazdgo studenta.
+
+9) Uzupelnij luki w podanym programie w celu wyswietlenia "Great" 10 razy.
+...(int i = 0; i < 10; ...) {
+  System.out.println("...")
+}
+Rozwiazanie:
+for(int i = 0; i < 10; i++) {
+  System.out.println("Great")
+}
+
+10) Mozesz miec dowolny warunek i rodzaj wyrazenia zmieniajacego (Increment) w swojej petli. Przyklad ponizszy wyswietla tylko liczby parzyste miedzy 0, a 10:
+for (int x = 0; x <= 10; x = x + 2) {
+  System.out.println(x);
+}
+/*
+0
+2
+4
+6
+8
+10
+*/
+Petle for najlepiej jest zastosowac w przyppadku kiedy znamy wartosc zmiennej sterujacej - wartosc poczatkowa i wyrazenie zmieniajace (increment / decrement), ale takze wartosc koncowa wyrazenia aka chcemy osiagnac, jednak efekt taki sam tez mozemy osiagnac w petli while o ktorej dotchczas wspomnielismy.
+
+11) Zadanie "Board game players"
+Print 10 card names, based on the player roles in a board game.
+
+12) Jak wiele razy ponizsza petla sie wykona?
+for(int i = 2; i < 10; i = i*i) {
+ System.out.println(i);
+}
+Rozwiazanie: Petla wykona sie: 2 razy, poniewaz najpierw: 2, 4, 16 (4*4), gdzie 16 > 10 czyli dla 16 petla sie juz nie wykona.

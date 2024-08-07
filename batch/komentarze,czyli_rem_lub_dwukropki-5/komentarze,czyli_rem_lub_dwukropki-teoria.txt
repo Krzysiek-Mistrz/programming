@@ -1,0 +1,11 @@
+1) Do zapisania komentarza w jezyku Batch uzywamy komendy REM lub komendy ::. Obie te instrukcje pozwalaja ominac zapisany w nich tekst, przez co program, ktory stworzylismy sie spokojnie skompiluje. Pamietaj azeby nie zapisywac w swoim programie (takze w kometarzu REM lub :: polskich znakow diakrytycznych : "ą", "ę", etc...)
+Oto przyklad:
+@echo off
+REM pojawi się komunikat
+echo Hello World
+:: wstrzymanie pracy programu
+pause
+
+2) Omowie tutaj takze instrukcje zapisywania koloru - color. Sluzy ona do zmiany koloru tekstu. Moze sie ona przydac do podkreslenia waznosci danejk czesci naszego programu w konsoli DOS.
+
+3) Na tym etapie, poniewaz to de facto koniec instrukcji podstawowych, nalezy wspomniec o jeszcze jednej instrukcji - instrukcji help. Sluzy ona do wyswietlania spisu komend w jezyku batch po wpisaniu.

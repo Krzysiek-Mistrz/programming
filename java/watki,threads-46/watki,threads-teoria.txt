@@ -1,0 +1,90 @@
+1) Java jest wielowatkowym jezykiem programownia. Oznacza to ze nasz program moze optymalnie wykorzystac dostepne zasoby, uruchamiajac jednoczesnie dwa lub wiecej komponentow, przy czym kazdy komponent obsluguje inne zadanie. Mozesz podzielic okreslone operacje w ramach jednej aplikacji na poszczegolne watki, dzialajace wzgledem siebie rownolegle. Ponizszy diagram przedstawia cykl zycia watku.
+New thread() -> Start() -> run() -> End of execution lub Sleep() / Wait() -> Watek sie zamyka
+ewentualnie:
+New thread() -> Watek sie od razu zamyka
+Istnieja dwa sposoby tworzenia watku:
+1. Rozszerzenie klasy Thread:
+Dziedzicz z klasy Thread -> zastap jej metode run() i zapisz funkcjonalnosc watku w metodzie run().
+Tworzymy nastepne nowy obiekt swojej klasy i wywolujemy jego metode Start, aby uruchomic watek. Przyklad:
+class Loader extends Thread {
+  public void run() {
+    System.out.println("Hello");
+  } 
+}
+class MyClass {
+  public static void main(String[] args) {
+    Loader obj = new Loader();
+    obj.start();
+  }
+}
+Jak mozesz zauwazyc nasza klasa Leader rozszerza klase Thread i przeslania jej metode run(). kiedy tworzymy obiekt obj i wywolujemy jego metode start(), instrukcje metody run() sa wykorzystywane w innym watku.
+Kazdy watek java ma priorytet, aby pomoc systemowi operacyjnemu okreslic kolejnosc planowania watkow. Priorytety mieszcza sie w zakresie od 1 do 10, przy czym kazdy watek ma domyslnie priorytet 5. Priorytet watku mozna ustawic za pomoca metody setPriority().
+
+2) zatem podsumujmy to co zostalo powiedziane bo mozna sie w tym pogubic threads polegaja na tym ze tworzymy dana klase dziedziczaca z klasy Thread, nastepnie w stworzonej klasie tworzymy / nadpisujemy metode run() zawarta w klasie Thread. Nastepnie wywolujemy metode start na rzecz obiektu utworzonego typu tej klasy. Przyklad kolejny, zalozmy ze masz gre rysujaca obraz i grajaca muzyke w tym samym czasie wowczas:
+class DrawImage extends Thread {
+  public void run() {
+    System.out.println("drawing image...");
+  }
+}
+class PlayMusic extends Thread {
+  public void run() {
+    System.out.println("playing music...");
+  }
+}
+class MyGame {
+  public static void main(String[] args) {
+    DrawImage obj1 = new DrawImage();
+    obj1.start();
+    PlayMusic obj2 = new PlayMusic();
+    obj2.start();
+  }
+}
+
+3) Zadanie (praktyczne)
+Uzupelnij luki tak aby uruchomic metode w roznych watkach:
+class A (1)... Thread {
+  public void (2)...() {
+    System.out.println("Hello");
+  }
+  public static void main(String[] args) {
+    A object = new A();
+    object.(3)...();
+  }
+}
+(1) - extends; (2) - run; (3) - start()
+
+3) Innym sposoem tworzenia watkow jest implemetacj interfejsu Runnable. Zaimplementuj metode run(). Nastepnie utworz nowy obiekt Thread, przekaz klase Runnable do jej kontruktora i uruchom Thread wywolujac metode start(). Przyklad:
+class Loader implements Runnable {
+  public void run() {
+    System.out.println("Hello");
+  }
+}
+class MyClass {
+  public static void main(String[] args) {
+    Thread t = new Thread(new Loader());
+    t.start();
+  }
+}
+Metoda Thread.sleep() wstrzymuje thread na okreslony czas. na przyklad wywolanie thread.sleep(1000); wstrzymuje watek na jedna sekunde. pamietaj ze Thread.sleep() zglasza InterruptedException, wiec upewnij sie ze otoczyles go blokiem try i catch.
+
+4) Moze sie wydawac ze implemetacja interfejsu Runnable jest nieco bardiej skomplikowana niz rozszerzenie z klasy Thread. jednak implementacja interfejsu Runnable jest preferowanym sposobem uruchamiania watku, poniewaz umozliwia ona takze rozszerzenie z innej klasy.
+
+5) Zadanie "Welcome" (angielski)
+Write the registration program, to output the messeges in the correct order. We are writing a registration program for our app. At first it should welcome the users, then ask the users to enter their names. But program you are given executes this sequence in reverse order.
+Complete the program by extending the Thread class for Welcome and Name classes, then setting priorities for their run methods so that the program outputs the messages in the correct order.
+*Use setPriority(number) method on the objects - obj.setPriority(number). The higher the number, the higher the priority.
+
+6) zadanie (praktyka)
+Uzupelnij ponizszy kod:
+class A (1)... (2)... {
+  public void run() {
+    System.out.println("Bye");
+  }
+}
+public class "App" {
+  public static void main(String[] args) {
+    Thread ob = new Thread(new (3)...());
+    ob.(4)...;
+  }
+}
+(1) - implements; (2) - Runnable; (3) - A; (4) - start

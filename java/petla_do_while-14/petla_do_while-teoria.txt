@@ -1,0 +1,72 @@
+1) Petla do...while jest podobna do petli while. Poza tym petla do...while jest zagwarantowana ze wykona sie przynajmniej raz.
+int x = 1;
+do{
+  System.out.println(x);
+  x++;
+} while(x < 5);
+/*
+1
+2
+3
+4
+*/
+Zauwaz ze warunek pojawia sie na koncu petli Zatem instrukcje z petli wykonuja sie jeden raz zanim jeszcze warunek jest sprawdzany. Nawet z nieprawdziwym warunkiem Kod wykona sie jeden raz.
+int x = 1;
+do 
+{
+  System.out.println(x);
+  x++;
+}
+while(x < 0);
+Zauwaz ze w petlach do...while loops, the while jest tylko warunkiem, samo natomiast nie ma swojego ciala.
+
+2) Zadanie "Bezpieczenstwo przede wszystkim"
+Napisz program do stworzenia systemu bezpieczenstwa banku.
+
+3) Zadanie "Nacisnij 2 by skontaktowac sie z serwisem"
+Stworzyc program do obslugi systemu automatycznego telefonicznego dla klientow bankow.
+
+4) Jak petla do while jest rozna od petli while?
+Odpowiedz: Petla do while uruchamia kod przynajmniej raz.
+
+5) Instrukcje sterujace petla
+Instrukcja break i continue zmieniaja kolejnosc wykonywania instrukcji w petli. Instrukcja break; konczy dzialanie petli przez co wykonywane sa instrukcje znajdujace sie zaraz za petla.
+int x = 1;
+while(x > 0)
+{
+  System.out.println(x);
+  if(x == 4)
+  {
+    break;
+  }
+}
+Instrukcja sterujaca continue natomiast powoduje natychmiastowego powtorzenia wykonywania petli od danej insrukcji continue tzn. dalsze instrukcje w petli nie sa wykonywane - rozpoczyna sie jej nowy obieg.danej instrukcji, kolejna oiteracja.
+for(int x = 10; x <= 40; x += 10) {
+  if (x == 30) {
+    continue;
+  }
+  System.out.println(x);
+}
+Powyzszy kod wyswietli wartosci: 10, 20, 40. Wartosc 30 zostanie pominieta ze wzgledu na jej uwzglednienie w if, tego typu schemat zastosowania, jest najczestszym rodzajem zastosowania instrukcji continue.
+
+6) zadanie "No more threes"
+napisz program do wyswietlania numerow od N do 0, pomijajac...
+
+7) Uzupelnij luki by wyswietlic wartosci zmiennej x 5 razy:
+int x = 1;
+do
+{
+  System.out.println(x);
+  x...;
+}
+...(x <= ...);
+Rozwiazanie:
+int x = 1;
+do
+{
+  System.out.println(x);
+  x++;
+}
+while(x <= 5);
+
+8)

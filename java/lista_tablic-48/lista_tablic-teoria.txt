@@ -1,0 +1,48 @@
+1) API Javy udostepnia specjalne klasy do przechowywania i manipulowania grupami obiektow. Jedna z takich klas jest ArrayList. Standardowe tablice Javy maja stala dlugosc, co oznacza, ze po utworzeniu nie moga sie rozszerzac ani kurczyc. Z drugiej strony ArrayList sa tworzone z poczatkowym rozmiarem, ale gdy ten rozmiar zostanie przekroczony, kolekcja elementow jest automatycznie zwiekszana. Po usunieciu obiektow ArrayList moze sie zmniejszyc. Nalezy zauwazyc ze klasa ArrayList znajduje sie w pakiecie java.util, wiec przed jego uzyciem nalezy ja zaimportowac. Utworzmy zatem teraz obiekt tej klasy, do dziela!
+import java.util.ArrayList;
+//...
+ArrayList colors = new ArrayList();
+
+2) Opcjonalnie mozesz takz sprecyzowac pojemnosc i typ obiektow klasy ArrayList ktore bedzie "przechowywac":
+ArrayList<String> colors = new ArrayList<String>(10);
+Powyzszy kod definiuje ArrayList typu String z 10 elementami jako poczatkowa dlugosc tego kontenera.
+
+3) ArrayList przechowuje obiekty, dlatego nie mozesz przekazac np. int jako typu obiektow. Zamiast tego uzyj specjalanych typow klas ktore odpowiadaja zadanemu typowi wartosci. Na przyklad Integer dla int, double i tak dalej...
+
+4) Zadanie (praktyczne)
+Uzupelnij luki w ponizszym kodzie tak by zadeklarowac kontener ArrayListy zawierajacy 9 obiektow typu calkowitego:
+ArrayList<(1)...> ar = (2)... (3)...<Integer>((4)...);
+Odpowiedz: (1) - Integer; (2) - new; (3) - ArrayList; (4) - 9
+
+5) Klasa ArrayList udostepnia szereg przydatnych metod manipulowania jej obiektami. Metoda add() dodaje nowe obiekty do ArrayList. I odwrotnie, metoda remove() usuwa obiekty z ArrayList.
+Przyklad:
+import java.util.Scanner;
+public class MyClass {
+  public static void main(String[] args) {
+    ArrayList<String> colors = new ArrayList<String>();
+    colors.add("Red");
+    colors.add("Blue");
+    colors.add("Orange");
+    colors.add("Green");
+    colors.remove("Green");
+    System.out.println(colors);
+  }
+}
+Inne przydatne metody obejmuja:
+- contains() - zawrac true jesli lista zawiera wyszczegolniony element.
+- get(int index) - zwraca element z danej pozycji w tablicy.
+- size() - zwraca liczbe elemetow w kontenerze = wielkosc tablicy inaczej mowiac.
+- clear() - usuwa wszystkie elementy z listy.
+
+6) Podobnie jak w przypadku tablic zwroc uwaghe ze indeksowanie w klasie ArrayList zaczyna sie od zera.
+
+7) Zadanie "Playing keep away with 3"
+Write a code to add input numbers to ArrayList while the size of ArrayList isn't equal to 3. These numbers should be collected from the user, and the added together to get their sum, and finnaly to caluclate an average based on this sum. You can make this exercise only in the class Main / MyClass. The arrayList should be the type of iontegers.
+
+8) Zadanie (praktyka)
+Okresl rezultat ponizszego kodu:
+ArrayList<String> list = new ArrayList<String>();
+list.add("A");
+list.add("B");
+list.get("C");
+System.out.println(list.get(1));

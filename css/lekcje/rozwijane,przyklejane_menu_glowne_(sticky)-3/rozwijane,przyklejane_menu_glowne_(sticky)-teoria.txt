@@ -1,0 +1,165 @@
+1) Rozwijane menu glowne, czyli takie ktore przy scrollowaniu strony, przyklei sie nam do gornej krawedzi przegladarki i takze takie ktore po prostu sie rozwija. To bedzie tematem na dzis.
+
+2) Przyklejanie sie menu do gornej krawedzi (efekt sticky) uzyskamy dzieki bibliotece jQuery (JavaScript). Naomiast sa efekt rozwijania menu mozna osiagnac dzieki zarowno css-owi, jak i JavaScript-owi. W CSS-ie uzyskujemy ten efekt za pomoca listy wypunkowanej.
+
+3) Wszechstronnosc w programowaiu jest dzisiaj bardzo wymagana umiejetnoscia. Zwlaszcza w programowaniu zwinnym (agile).
+
+4) NES - Nintendo Entertaiment System (nazwa NES to akronim). 8-bitowa konsola gier video firmy Nintendo znana na rynku japonskim jako Famicom, po raz pierwszy zaprezentowany 15 lipca 1983 roku.
+
+5) wrapper - z angielskiego to obwoluta, opakowanie. Czyli co tak jak container, tyle ze wrapper nie ma w zaden sposob ograniczonej szerokosci width - width 100%. Poza tym reszta planu witryny raczej bez zmian, patrz plik -schemat_strony_retrogranie.docx.
+
+6) padding: 40px 0px; oznacza, ze dodaje po 40px w pionie, a 0px w poziomie.
+
+7) <span> domyslnie nie zachowuje sie tak jak element blokowy, dlatego zmieni sie nam w tym wypadku kolor slowa retro, a na sama strukture strony nie bedzie to malo wplywu.
+<span style = "color: #c34f4f">retro</span>granie.com
+
+8) Azeby ustawic <img> obok tekstu w okreslonym div-ie nalezy uzyc wlasciwosci (property) float: left;, oznaczajacego przypomnijmy oplywanie tekstu na obrazem i przyklejenie sie go do lewej strony obrazu.
+<img src = "pad.png" style = "float: left;"/>
+
+9) Przegladarka ma zawsze na sztywno ustawione kilkupikselowe marginesy. Zeby to zmienic nalezy dopisac do sekcji body zapis:
+margin: 0px !important;
+
+10) Akapit (paragraf, ustęp) tekstu, to znacznik <p> (od ang. paragraph). Znacznik <p> w prosty i skuteczny sposób pozwala stworzyć pożądany podział dłuższego tekstu na łatwiejsze do strawienia akapity:
+<p>Czy pan wie, jaka jest matematycznie obliczona szansa dowolnej kupki materii
+w kosmosie, że zostanie wciągnięta w obręb procesów życiowych, choćby jako liść,
+kiełbasa albo woda, którą wypije żywy stwór?</p>
+Ludzie stawiający swoje pierwsze kroki w HTML (siłą przyzwyczajenia z edytorów tekstowych) bardzo często zamiast stosować akapity tekstu, wstawiają co kilka zdań podwójne znaczniki <br><br>, które również tworzą wizualne wrażenie istnienia akapitu:
+Czy pan wie, jaka jest matematycznie obliczona szansa dowolnej kupki materii
+w kosmosie, choćby jako liść,
+kiełbasa albo woda, którą wypije żywy stwór?
+<br><br>
+Jako garść powietrza, którym odetchnie? Kosmos jest bezbrzeżnie martwy.
+Jedna cząstka na kwadrylion może wniknąć w koło życia, w obieg narodzin i gnić
+– jakaż to rzadkość niesłychana! 
+Tag <br> (od ang. break = złamanie linii) to w HTML odpowiednik naciśnięcia klawisza Enter na klawiaturze. Zaś dwa złamania linii, jeden po drugim, siłą rzeczy stworzą przerwę w tekście, która zachowa się podobnie jak akapit. Jednakże znacznik <p> jest dużo lepszy do tego celu, bo łatwiej stylizuje się dzięki niemu wewnętrzny tekst akapitu w CSS, z użyciem chociażby klasy, na wzór: <p class="nazwaklasy"></p>.
+Znaczników <br> wygodnie wystylizować nie sposób, gdyż stanowią po prostu złamanie linii. Paragraf to już co innego – możemy powiedzieć: odtąd dotąd tekst ma wyglądać następująco, ustawić w klasie justowanie, krój, rozmiar i kolor czcionki w CSS. W kontekście SEO również paragrafy spisują się lepiej niż <br><br>, gdyż lepiej oddają robotowi budowę witryny.
+Znacznika <br> można używać, ale wewnątrz paragrafu, żeby na przykład złamać linię gdy jest to rzeczywiście jest potrzebne. I rzeczywiście czasami jest - na przykład gdy publikujemy poezję (tam złamanie linii kończy wers wiersza):
+<p>Wiatr drzewa spienia. Ziemia dojrzała.<br>
+Kłosy brzuch ciężki w gorę unoszą<br>
+i tylko chmury - palcom czy włosom<br>
+podobne - suną drapieżnie w mrok.<br>
+Ziemia owoców pełna po brzegi<br>
+kipi sytością jak wielka misa.<br>
+Tylko ze świerków na polu zwisa<br>
+głowa obcięta strasząc jak krzyk.<br>
+Kwiaty to krople miodu - tryskają<br>
+ściśnięte ziemią, co tak nabrzmiała,<br>
+pod tym jak korzeń skręcone ciała,<br>
+żywcem wtłoczone pod ciemny strop.<br>
+Ogromne nieba suną z warkotem.<br>
+Ludzie w snach ciężkich jak w klatkach<br>
+krzyczą.</p>
+
+11) Przy tworzeniu strony internetowej mozemy sie zachowac na trzy sposoby:
+-Na sposob wojownika, konczyc wszystko po kolei, nie przechodzic do nastepnego elementu bez ukonczenia kolejnego.
+-Na sposob kochanka, dodajac ciagle gdzies kolorki i modyfikujac strone pod wzgledem graficznym, przeskakujac z jednego elementu na kolejny.
+-Na sposob magika, sprawdzajac jak sie cos prawidlowo powinno okodowac, najpierw myslac dokladnie nad sprawa. wada jego jest to ze malo jest zrobone jak zajmujemy sie problemem na dystans.
+Najwazniejsza jest equilibria. Prawidlowe proporcje moga wygladac nastepujaco: 50% wojownika, 20% kochanka, 30% magika.
+
+12) $(document).ready oznacza ze kiedy dokument jest gotowy - wczytany do przegladarki, to wykonaj wszystkie dzialania zawarte miedy klamrami. var NavY = $('.nav').offset().top; - zostaja odczytane wartosci naszej nawigacji i biezacej wartosci przewiniecia strony - var ScrollY = $(window).scrollTop(); Wlasciwosc top to po prosty wpsolrzedna
+y na ekranie, a left to wspolrzedna x, gdzie punkt (0,0) tej plaszczyzny to lewy gorny naroznik ekranu. if (ScrollY > NavY) - porownywana jest wartosc biezacego przewiniecia, ze wspolrzedna y, czyli top-em nawigacji. $('.nav').addClass('sticky'); - jesli przewinieto juz na tyle duzo strony i jest to wiecej niz top nawigacji, to przyklejamy wowczas nawigace do gornej krawedzi, a to osiagamy wlaczajac klase CSS o nzwie sticky. $('.nav').removeClass('sticky');  - w przeciwnym wypadku odklejamy nasza nawigacje, usuwjac klase sticky. stickyNav(); - wywolanie kiedy zajdzie document.ready. stickyNav(); - wywolywana kiedy zachodzi scroll okna
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	stickyNav();
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+</script>
+Kod zawsze umieszczamy ponizej pliku z podpieciem jQuery.
+
+13) position: fixed; oznacza ze pozycja bedzie stala, ustalona.
+Natomiast z-index: 100; oznacza zaslanianie sie elementow w CSS-ie. Im wieksza jest wartosc z-index elementu tym blizej oczu uzytkownika on sie znajduje (zaslaniajac przy okazji wszystkie inne elementy majace z-index). Im wiekszy z-index ma dany element tym wiecej rzeczy bedzie zaslaniac.
+
+14) Efekt sticky takze mozna osiagnac za pomoca wlasciwosci 
+position: sticky;
+Znajduje sie ona jednak dopiero w fazie eksperymentalnej, przez co wiele przegladarek nie bedzie moglo jej poprawnie obsluzyc. Stad najpewniej jest tutaj uzyc biblioteki jQuery.
+
+15) W celu przypomnienia. Jezeli chcesz stworzyc tkz. gluch link, tj linkktory nie bedzie prowadzil na inna strone tudziez podstrone, lecz bedzie dzialal tylko w obrebie strony glownej, to musisz uzyc znak #, przykladowo:
+<li><a href = "#">Strona główna</a></li>
+
+16) Wlasciwosc:
+line-height: 200%;
+odpowiada za ustawienie, jak wiele miejsca w pionie zajmuje jedna lina tekstu.
+
+17) Azeby wystylizowac znaczniki a w jezyku CSS, np wewnatrz listy ol, poniewaz moze to byc tez inny rodzaj listy, np. ul. nalezy uzyc nastepujacego zapisu:
+ol a
+{
+...
+}
+Jest to odrobinke podobne do zapisu:
+ol > li
+{
+...	
+}
+Symbolizujacego jednak zupelnie cos innego, bo to natomiast, ze bedziemy stylizowali element li znajdujacy sie wewnatrz listy ol. Jest to system kaskadowy.
+
+18) Przypomnienie. Wlasciwosc pozwalajaca na ustawienie takie zeby dany element zachowywal sie jak <div> w jezyku CSS jest:
+display: block;
+Stosuje sie to po to, bo elementowi blokowemu mozna pzypisac konkretna wysokosc i szerokosc.
+
+19) Przedstawiam jeszcze dodatkowa mozliwosc stylizacji lini w border-ze. Tym razem kreskowana zamiast stalej - solid:
+border-right: 1px dashed #751b1b;
+
+20) Do wysrodkowania bloku sluzy instrukcja zlozona z property:
+display: inline-block;
+Jest to niejako konkurencja dla wlasciwosci float: left; Zasadniczo dzieki zapisowi in-line, mozemy tworzyc elementy blokowe ktore moga sie ukladac tak jakby mialy ustawione float: left; 
+inline-block
+Jedyną wadą metody display: inline-block jest to, że w IE7 i poniżej element może być wyświetlany tylko w trybie inline-block, jeśli był już domyślnie wbudowany. Oznacza to, że zamiast używać elementu <div>, musisz użyć elementu <span>. To wcale nie jest wielka wada, ponieważ semantycznie <div> służy do dzielenia strony, podczas gdy <span> służy tylko do pokrycia zakresu strony, więc nie ma dużej różnicy semantycznej. Ogromną zaletą display: inline-block jest to, że gdy inni programiści utrzymują Twój kod w późniejszym czasie, jest o wiele bardziej oczywiste, co display: inline-block i text-align: right próbuje osiągnąć niż float: left czy float: right instrukcja. Moją ulubioną zaletą podejścia inline-block jest to, że jest łatwe w użyciu wyrównywanie w pionie: do środka, do wysokości linii i do tekstu: do środka, aby idealnie wyśrodkować elementy w intuicyjny sposób. Znalazłem świetny wpis na blogu o tym, jak zaimplementować blokowanie inline w różnych przeglądarkach, na blogu Mozilli. Oto zgodność przeglądarki.
+float
+Powodem, dla którego metoda float nie nadaje się do układu strony, jest fakt, że właściwość CSS typu float była pierwotnie przeznaczona tylko do zawijania tekstu wokół obrazu (w stylu magazynu) i zgodnie z projektem nie najlepiej nadaje się do ogólnych celów związanych z układem strony. Podczas późniejszej zmiany elementów pływających czasami mogą wystąpić problemy z pozycjonowaniem, ponieważ nie występują one w przepływie strony. Inną wadą jest to, że zazwyczaj wymaga poprawek, w przeciwnym razie może zepsuć niektóre aspekty strony. Clearfix wymaga dodania elementu za elementami pływającymi, aby powstrzymać ich rodzica przed zapadnięciem się wokół nich, co przecina linię semantyczną między oddzieleniem stylu od treści i dlatego jest anty-wzorcem w programowaniu stron internetowych.
+
+21) Azeby wystylizowac pierwszy element <li> listy <ol> nalezy uzyc zapisu:
+ol > li:first-child
+
+22) Mozemy stylizowac znacznik a wewnatrz elementu <li> listy <ol> poprzez zapis, tutaj akurat zmieniamy wyglad tekstu wewnatrz tego znacznika <a>:
+ol > li:hover > a
+{
+color: #451717;
+}
+
+23) Azeby dodac do elementow <li> wysuwane dodatkowe menu nalezy wewnatrz kazdego z tych elementow <li> umiescic liste <ul>.
+
+24) Polularne niegdys gry z niepowtarzalna grafika, ktore odmienily swiat gier. Mario Bros odmienilo na zawsze wizerunek gier typu side-scroller:
+-Contra
+-Mario Bros
+-Duck Tales
+-Legend of Zelda
+Gry oparte na filmach:
+-Home Alone - to gra oparta na filmie Kewin sam w domu
+-Dick Tracy - to gra detektywostyczna na NES-a, na podstawie filmu Dick Tracy
+-The Simpsons
+-Top Gun
+Gry o bijatykach:
+-Mortal Combat
+-Nekketsu K.D.
+-Turtles T.
+-Double Dragon
+Gry Sportowe:
+-Goal 3
+-Excitebike
+-Ike Ike Hockey
+-Tennis
+
+25) Azeby sprawic by dany element znajdowal sienad czym mozemy uzyc albo:
+z-index: 100;
+lub
+position: relative;
+Pozycja relatywna do ul czyli przed czyli ponad div-em content.
+
+26) Chcac schowac wszystkie listy <ul> nalezy najpierw odnalezc selektor dla tej listy w CSS-ie, dopisac nastepnie display: none; Nastepnie nalezy dodac wlasciwosc ze po najechaniu strona ma wyswietlic ukryta dopiero co przez nas liste, a kazdy z tych elementow to <li> listy <ol>. Czyli jak ma wygladac lista wewnetrzna <ul>, bedaca potomkiem listy <ol>, ale tylko kiedy zachodzi hover elementu ol > li.
+ol > li:hover > ul
+{
+display: block;
+}
+Mozna by jednak zadac pytanie czemu w takim razie nie pojawiaja sie wowczas wszystkie listy <ul> naraz po najechaniu. Otoz dzieje sie tak dlatego, poniewaz hover jest wlasciwoscia dystynktywna, co oznacza ze potrafi ona rozpoznac na ktorym elemencie rzeczywiscie zaszla.

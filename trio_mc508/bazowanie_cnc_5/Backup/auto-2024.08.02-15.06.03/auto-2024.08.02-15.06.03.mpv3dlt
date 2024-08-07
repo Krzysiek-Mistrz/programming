@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents />
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane />
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane Id="909b93f5-5844-4c5e-b867-4b0ae6efcedc" DockHeight="300" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden>
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="08/02/2024 15:05:31" PreviousContainerId="909b93f5-5844-4c5e-b867-4b0ae6efcedc" PreviousContainerIndex="0" />
+    </Hidden>
+  </LayoutRoot>
+</MotionPerfectLayout>

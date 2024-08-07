@@ -1,0 +1,98 @@
+1) Pamietaj ze podczas tworzenia obiektow zmienne przechowuja odniesienia do obiektow. Tak wiec gdy porownujesz obiekty za pomoca operatora testowania rownosci ==, w rzeczywistosci porownuje sie referencje a nie wartosci obiektow. Przyklad:
+class Animal {
+  String name;
+  Animal(String n) {
+    name = n;
+  }
+}
+class MyClass {
+  public static void main(String[] args) {
+    Animal a1 = new Animal("Robby");
+    Animal a2 = new Animal("Robby");
+    System.out.println(a1 == a2);
+  }
+}
+Mimo posiadania dwoch obiektow o tej samej nazwie, testowanie rownosci zwraca wartosc false poniewaz mamy dwa rozne obiekty (dwie rozne referencje do roznych lokaloizacji w pamieci).
+
+2) Zadanie (Rozumienie pojecia rownosci obiektow i zastosowanie w praktyce)
+Podaj rezultat ponizszego kodu:
+class A {
+  private int x;
+  public static void main(String[] args) {
+    A a = new A();
+    a.x = 5;
+    A b = new A();
+    b.x = 5;
+    System.out.println(a == b);
+  }
+}
+Odpowiedz: false
+Wyjasnienie: Rownosc logiczna odpowie w tym wypadku na pytanie czy oba obiekty posiadaja ta sama referencje z tego samego miejsca w pamieci jesli nie toi nie sa rowne mimo ze ich wartosc jest rowna.
+
+3) Kazdy obiekt ma predefiniowana metode equals(), ktora jest uzywana do testowania rownosci semantycznej. Aby jednak to zadzialalo na naszych klasach, musimy zmienic i sprawdzic konieczne warunki. Istnieje prosty i szybki sposob generowania metody equals(), inny niz reczne pisanie. Wystarczy kliknac prawym przyciskiem myszy w swojej klasie -> przejsc do source -> wygenerowac hashCode() i equals(). Takie dzialanie automatycznie stworzy nam niezbedne metody. Przyklad:
+class Animal {
+  String name;
+  Animal(String n) {
+    name = n;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0: name.hashCode());
+    return result;
+  }
+  @Override
+  public boolean equals(Object obj) {
+    if(this == obj)
+      return true;
+    if(obj == null)
+      return false;
+    if(getClass() != obj.getClass())
+      return false;
+    Animal other = (Animal) obj;
+    if(name == null) {
+      if(other.name != null)
+        return false;
+    }
+      else if(!name.equals(other.name))
+        return false;
+      return true;
+}
+Automatycznie generowana metoda hashCode() sluzy do okreslenia gdzie wewnetrznie przechopwywac obiekt. Ilekroc implemetujesz equals() muissz takze zaimplemtowac metode hashCode(). Przeprowadzmy zatem jeszcze raz ten sam test rownosci dwoch obiektow:
+public static void main(Stringp[] args) {
+  Animal a1 = new Animal("Robby");
+  Animal a2 = new Animal("Robby");
+  System.out.println(a1.equals(a2));
+}
+Tego tricku latwego generowania mozesz takze uzyc do zaimplemtowania w swoim kodzie takze innych wzorcowych metid takich jak gettery settery m.in. dla atrybutow klas.
+
+4) Zadanie (Praktyka)
+Uzupelnij luki w ponizszym kodzie:
+class A {
+  private int x;
+  public ... equals(Object o) {
+    ...((A)o).x == this.x;
+  }
+  public static void main(String[] args) {
+    A a = new A();
+    a.x = 9;
+    A b = new ...();
+    b.x = 5;
+    System.out.println(a....(b));
+  }
+}
+Odpowiedz:
+class A {
+  private int x;
+  public boolean equals(Object o) {
+    return ((A)o).x == this.x;
+  }
+  public static void main(String[] args) {
+    A a = new A();
+    a.x = 9;
+    A b = new A();
+    b.x = 5;
+    System.out.println(a.equals(b));
+  }
+}

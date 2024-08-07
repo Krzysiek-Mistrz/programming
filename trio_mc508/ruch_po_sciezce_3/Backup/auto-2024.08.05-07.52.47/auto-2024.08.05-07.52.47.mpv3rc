@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="6">
+  <Content Name="Project">
+    <Project>
+      <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+          <Items />
+        </Group>
+      </Groups>
+      <Items>
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="26544419-ac0c-42d7-b81a-bb7b9881cddd" />
+        <Item Type="basic" Name="MHELICAL" Id="d20d4cab-7bc1-494f-8c23-a2d97ec7fad6" />
+        <Item Type="basic" Name="MSPHERICAL" Id="32c5f6b9-5c08-42a0-a0e0-e66efd09988e" />
+        <Item Type="basic" Name="SFERYCZNA_INTERPOLACJA" Id="c645c9b8-0886-40c9-a6e0-5f907b39e98c" />
+        <Item Type="basic" Name="STARTUP" Id="2dd9ced9-85dd-4a56-90fe-f0722520a17e" />
+      </Items>
+    </Project>
+  </Content>
+</Contents>

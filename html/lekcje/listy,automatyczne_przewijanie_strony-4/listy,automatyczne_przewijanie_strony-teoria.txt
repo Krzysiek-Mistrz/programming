@@ -1,0 +1,160 @@
+1) Listy dzielimy na numerowane (ordered list) i nienumerowane (unordered list), dalej sa jeszcze style (typy) list (list-style-type), menu glowne (main menu), listy zagniezdzone (nested lists).
+
+2) Autmatyczne przewijanie takze mozna zrealizowac na wiele sposobow: natychmiastowe (skokowo, bez animacji), animowane (scroll-up button).
+
+3) Play book, portfolio to zestaw Twoich umiejetnosci, im wiecej tym masz tym lepsze projekty mozesz robic.
+
+4) Najpierw nalezy ustalic jak dana strona bedzie wygladac na kartce papieru przy okazji okreslajac np width container-a lub width poszczegolnych elementow.
+
+5) Wlasciwoscia w jezyku CSS sluzaca do wstawiania tla na strone internetowa jest: background-image: url(img/tlo.png). Bardzo fajne tla mozemy znalezc np na stronie: subtle patterns (fraza w wyszukiwarce (www.topal.com)). Musmy jednak pamietac o wstawieniu odpowiedniego podpisu, do oznaczenia ze pobralismy dane tlo z witryny w postaci credit-u.
+
+6) Wlasciwosc w jezyku CSS do zamiany czcionki na duze litery jest: text-transform: uppercase;.
+
+7) W wypadku jezeli chcemy wprowadzic padding od gory i dolu napisu to stosujemy zapis: padding: 5px 0px 5px 0px; Gdzie kolejne wartosci w pikselach to wspolrzedne ukladu kartezjanskiego. Pierwsza i trzecia wartosc okresla kolejno gore i dol, natomiast druga i czwarta to prawo i lewo. 
+
+8) Wartos jeszcze wspomniec o property letter-spacing: ypx; gdzie y to liczba pikseli. Okresla on rozstrzal miedzy literami.
+
+9) Azeby oblac litery cieniem, tutaj mozna powiedziec nadac im kolor (rame) nalezy uzyc wlasciwosci text-shadow:
+text-shadow: 
+2px 2px 0px #33402a,
+-2px 2px 0px #33402a,
+-2px -2px 0px #33402a,
+2px -2px 0px #33402a;
+
+10) Zapisywanie w jezyku HTML list:
+Istnieja dwa rodzaje liste uporzadkowana i liste nieuporzadkowana. Do zapisu listy uporzadkowanej stosujemy <ol> -  od ordered list, natomiast do nieuporzadkowanej <ul> - unordered list. 
+W obu listach pojedynczy element zamykamy w tagu <li> - od list item. W liscie uporzadkowanej elementy zostana ponumerowane. Zas w liscie nieuporzadkowanej elementy sa oznaczone ksztaltami geometrycznymi. 
+Dawniej do wybrania typu listy numerowanej, czy tez listy nieuporzadkowanej sluzyl atrybut type, zostal jednak zdeprecjonowany od standardu html 4.01. Zamiast niego poslugujemy sie kodem CSS-a. Zatem roznice sie troszke zatarly jednak ma to sens od strony technicznej bo jezeli lista jest zagniezdzona (wymieszana ol i ul) to osobno okreslamy wlasciwosci jednej i drugiej.
+<li></li> sluzy bezposrednio do okreslenia enterow miedzy elementami listy (mowi to przegladarce). Pomiedzy te znaczniki nie wstawiamy zadnych znacznikow, ani zadnej zawartosci.
+Zagniezdzenie nazywamy sytuacje kiedy wstawiamy liste do drugiej listy. Kiedy wystepuje lista wewnatrz listy. Zagniezdzenie moze byc jednokrotne lub wielokrotne. Jednokrotne oznacza ze wewnatrz jednej listy znajduje sie druga lista i tyle. Natomiast wielokrotne oznaczaja ze wewnatrz jednej listy znajduje sie wiele innych list. Nie nalezy przesadzac z zagniezdzaniem list, bo uzytkownik moze sie w tym pogubic.
+
+11) Liste stylizujemy wstawiajac do kodu CSS selektor (przykladowo dla numerowanej):
+ol
+{
+...
+}
+Natomiast elementy tej listy stylizujemy nastepujaco:
+ol > li
+{
+...
+}
+Jest to zapis typu - rodzic > potomek (parent > child). Mowimy wowczas przegladarce ze stylizujemy elementy ktore sa tylko elementami tej listy. Nalezy jednak pamietac o kaskadowosci jezyka CSS. To znaczy ze to co ma zaimplementowane tag <ol>, bedzie mial zaimplemetowane takze jego potomek - <li>, nastepnie potomek <li> - <ul> i tak dalej.... Dlatego zeby objac nowymi ustawieniami np. ul musimy w tym konkretnym przypadku uistawic tak: 
+ol > li > ul
+{
+...
+}
+Jezeli chcemy wystylizowac kolo siebie dwie osobne listy <ol> to wowczas nalezy posluzyc sie klasa, np:
+ol.chapters
+{
+...
+}
+Wowczas taki zapis dodamy wszedzie gdzie bedzie nam np. chodzic o elementy listy ol.chapters. Jezeli jednak wstawimy do kodu nowo liste <ul> nie bedaca elementem <ol>, zaraz kolo <ol>, to nie odziedziczy ona wlasciwosci <ul> bedacego elementem <ol>.
+
+12) Wlasciwosc CSS-a sluzaca do okreslania wygladu listy to: list-style-type. Okreslaja ten atrybut wartosci:
+Dla listy wypunktowanej:
+• disc (wartosc domyslna) - CSS1 / IE4, N4, O3.5
+punkty tradycyjne w postaci kropek
+• square - CSS1 / IE4, N4, O3.5
+kwadraty
+• circle - CSS1 / IE4, N4, O3.5
+kolka
+Dla listy numerowanej:
+• decimal - CSS1 / IE4, N4, O3.5
+liczby: 1, 2, 3...
+• decimal-leading-zero - CSS2 / N6
+liczby z poczatkowym zerem: 01, 02, 03...
+• lower-greek - CSS2 / N6, O6
+male litery greckie: alpha, beta, gamma...
+• lower-latin - CSS2 / N6, O6
+male litery lacinskie
+• upper-latin - CSS2 / N6, O6
+duże litery lacinskie
+• armenian - CSS2 / N6, O6
+numerowanie armenskie
+• georgian - CSS2 / N6, O6
+numerowanie gruzinskie
+• hebrew - CSS2 / N6, O6
+numerowanie hebrajskie
+• cjk-ideographic - CSS2 / N6
+numerowanie ideograficzne
+• hiragana - CSS2 / N6
+numerowanie japonskie - hiragana: a, i, u, e, o, ka...
+• katakana - CSS2 / N6
+numerowanie japonskie - katakana: a, i, u, e, o, ka...
+• hiragana-iroha - CSS2 / N6
+numerowanie japońskie - hiragana-iroha: i, ro, ha, ni, ho, he...
+• katakana-iroha - CSS2 / N6
+numerowanie japońskie - katakana-iroha: i, ro, ha, ni, ho, he...
+• lower-alpha - CSS1 / IE4, N4, O3.5
+litery: a, b, c...
+• upper-alpha - CSS1 / IE4, N4, O3.5
+litery: A, B, C...
+• lower-roman - CSS1 / IE4, N4, O3.5
+litery rzymskie: i, ii, iii...
+• upper-roman - CSS1 / IE4, N4, O3.5
+litery rzymskie: I, II, III...
+• inherit - CSS2 / N6
+przejęcie wartości "rodzica", np. list-style-type:inherit;
+Usuniecie oznaczenia itemu:
+ul, ol {list-style-type: none; }
+
+13) Mozemy zmieniac kolor punktorow poprzez okreslenie nowej klasy w ktorej bedzie nasz kolor (w css-ie). Natomiast po tym musimy jeszcze dodac tag <span> do kazdego <li>. Dodatkowo nalezy jeszcze wybrac atrybut list-style-type: disc (taka wlasciwosc, ktora da sie zakolorowac). 
+Jest jednak drugi sposob - poprzez uzycie wlasciwosci :before (tak jak przy property :hover, nalezy pamietac o tym azeby nie wstawic pomiedzy dwukropkiem przypadkiem spacji). Mozemy wowczas tez przy okazji zdefiniowac nowy ksztalt naszego punktora. 
+Przyklad:
+ol > li > ul > li:before
+{
+color: #485b3b;
+content: "☯";
+margin-right: 5px;
+}
+
+14) Komentarze w jezyku html sa zapisywane poprzez <!--...-->, element w postaci trzech kropek symbolizuje tutaj tekst. Przegladarka nie bierze tego tekstu pod uwage podczas wyswietlania strony www. W notepad-zie++ jest on zapisywany kolorem szarym, w czcionce obsydian.
+
+15) Przypomnienie: h1 stylizujemy poprzez dodanie selektora:
+h1
+{
+...
+}
+
+16) Jezeli chcemy przewinac wedlug spisu tresci do okreslonej tresci wewnatrz naszej witryny mozemy sie wowczas posluzyc tagiem <a>, zatem wstawimy po prostu hiperlacze, np. takie - <a href = "#maskicrt">Maska. Rodzaje masek</a>. Znak hash oznacza identyfikator, sluzacy do zaznaczenia ze bedziemy przewijac tresc na stronie, a nie przechodzic do zewnetrznych zrodel. 
+Pozniej musimy jedynie ustanowic sam punkt, do ktorego chcemy przewinac tresc. Wykonamy to za pomoca np. identyfikatora, jednak moze to byc takze div lub cos innego - <h1 id = "maskicrt">Rodzaje masek w monitorach CRT</h1>. Dajemy wowczas ten sam identyfikator tyle, ze bez znaku #.
+Zamiast id mozemy takze uzyc atrybutu name , jednak lepiej jest uzyc atrybutu id, poniewaz to go przegladarka najpierw wyszukuje. Przez co mozemy skrocic czas renderowania. Pzt. name jest juz niezgodny z HTML5.
+
+17) Scrollto button zrealizowal programista flesler, jest to plik "jquery.scrollTo.min.js", jednakowoz zeby dzialal musimy jeszcze podpiac biblioteke jQuery. W tym celu mozemy udac sie na "https://developers.google.com/speed/libraries" i tam skopiowac linka do biblioteki jquery, na serverach google.
+Oprocz tego musimy jednak jeszcze zalaczyc kod obslugujacy biblioteke jQuery, ktory jest nastepujacy:
+jQuery(function($)
+{
+//zresetuj scrolla
+$.scrollto(0); maskicrt
+
+$('#link3').click(function() { $.scrollto($('#maskicrt'), 500); });
+}
+);
+Po zaimplementowaniu tego kodu mozemy juz tylko dawac # przy tagach <a>, poniewaz od teraz to biblioteka jQueryu nam to teraz obsluzy.
+
+18) Property background: url("img/up") no-repeat 0px 0x; gdzie no-repeat oznacza ze jezeli dana grafika przekroczy 64pxx64px to zeby przegladarka nie powtarzala proby ponownego zaladowania obrazu. A 0px 0px oznacza ze przegladarka ma zaczac rozpoczac wypelnianie tla od lewej gornej krawedzi hiperlacza, podajac inne wspolrzedne obraz mozna przesuwac. 
+
+19) Zeby dodac scrollup-a nalezy do kodu html dodac znacznik a href a nastepnie troszke go wystylizowac, a na koncu usunac go na samej gorze:
+<a href="#" class = "scrollup"></a>
+
+.scrollup
+{
+width: 64px;
+height: 64px;
+text-decoration: none;
+background: url("img/up") no-repeat 0px 0x;
+position: fixed;
+right: 50px;
+bottom: 50px;
+display: none;
+}
+
+//pokaz podczas przewijania
+$(window).scroll(function()
+{
+	if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+	else $('.scrollup').fadeOut();		
+}
+);
+
+Gdzie this - wskaznik obiektu na rzecz ktorego dana metoda zostala wywolana. W niektorych jezykach zamiast this uzyjemy: self. Gdzie fadeIn() - funkcja stopniowo pojaw sie na ekranie. Gdzie fadeOut() - funkcja stopniowo zniknij.

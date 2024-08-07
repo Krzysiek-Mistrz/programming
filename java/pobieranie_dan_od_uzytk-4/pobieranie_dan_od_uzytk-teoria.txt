@@ -1,0 +1,33 @@
+1) Podczas gdy java zapewnia wiele metod uzyskiwania danych wejsciowych od uzytkownika, obiekt Scanner jest najpopularniejszym i najprawdopodbniej najlatwiejszy do zaimplementowania. Nalezy zaimportowac klase Scanner, aby uzyc obiektu Scanner, jak pokazano ponizej:
+import java.util.Scanner;
+W celu uzycia klasy Scanner nalezy utworzyc instancje klasy, uzywajac nastepujacej skladni:
+Scanner myVar = new Scanner(System.in);
+
+2) Mozesz teraz odczytywac rozne rodzaje danych wejsciowych, ktore wprowadzi uzytkownik. Oto kilka meto dostepnych w klasie Scanner:
+Przeczytaj bajt - nextByte()
+Przeczytaj typ short - nextShort()
+Przeczytaj int - nextInt()
+Przeczytaj typ long - nextLong()
+Odczytaj zmiennoprzecinkowa - nextFloat()
+Przeczytaj typ double - nextDouble()
+Przeczytaj wartosc logiczna - nextBoolean()
+Przeczytaj cala linie - nextLine()
+Przeczytaj slowo: next()
+
+3) Przyklad programu do odczytywania wartosci od uzytkownika:
+import java.util.Scanner;
+class MyClass {
+  public sttic void main(String[] args) {
+    Scanner myVar = new Scanner(System.in);
+    System.out.println(myVar.nextLine());
+  }
+}
+Program bedzie czekac az uzytkownik cos wprowadzi i nastepnie wyswietli to na ekran, od moze sie wydawac skomplikowany, ale wszystko jeszcze zrozumiesz w przyszlych lekcjach.
+
+4) Uzupelnij luki tak zeby otrzymac dane wejsciowe od uzytkownika:
+import java.util.Scanner;
+class test {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String st = sc.nextLine();
+}

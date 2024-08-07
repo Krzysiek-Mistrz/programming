@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="2">
+  <Content Name="Project">
+    <Project>
+      <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+          <Items />
+        </Group>
+      </Groups>
+      <Items>
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="56a449ae-75a6-426b-aa15-f98898b896bf" />
+        <Item Type="basic" Name="__MAIN" Id="3a8f29ea-e3a9-4270-bfcc-8747cb7132d4" />
+        <Item Type="basic" Name="STARTUP" Id="c349fd17-a930-4463-978c-af20c2980c60" />
+      </Items>
+    </Project>
+  </Content>
+</Contents>

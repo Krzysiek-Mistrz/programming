@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_13055ae376504406afaa04dca64c8162">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_8f4e89c86ecc4deda0de1cad5470950d">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_2702eb79de3344da91e72d72a5ae53cb">
+      <Program Name="RYSOWANIE_MOVE" Process="-1" />
+    </Content>
+    <Content Name="document_86c618dc07d34e6a8c7cd5ade0bd2083">
+      <Program Name="RYSOWANIE_MOVEABS" Process="-1" />
+    </Content>
+    <Content Name="document_1e18c194a87649cc92992d9e9241756e">
+      <Program Name="RYSOWANIE_MOVECIRC" Process="-1" />
+    </Content>
+    <Content Name="document_335f428438da4385a78eac8a9350a2b3">
+      <CamGen Library="CAMLIB.CAM" Profile="PROFILE" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Vertical">
+      <LayoutPanel Orientation="Horizontal">
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockWidth="1155">
+          <LayoutAnchorablePane Id="8828ceb9-d5c3-4927-8faa-88f2edee428b" DockWidth="0.422608695652174*" FloatingWidth="200" FloatingHeight="600" FloatingLeft="NaN" FloatingTop="NaN">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 09:33:46" />
+          </LayoutAnchorablePane>
+          <LayoutAnchorablePane DockWidth="1.57839721254355*" DockHeight="479.5" FloatingWidth="800" FloatingHeight="600" FloatingLeft="262" FloatingTop="566">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Oscilloscope" IsSelected="True" ContentId="tool_OscilloscopeControl" FloatingLeft="262" FloatingTop="566" FloatingWidth="800" FloatingHeight="600" LastActivationTimeStamp="07/23/2024 09:33:18" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+        <LayoutPanel Orientation="Vertical" DockWidth="0.42443729903537*">
+          <LayoutDocumentPaneGroup Orientation="Horizontal">
+            <LayoutDocumentPane>
+              <LayoutDocument Title="MC_CONFIG" ContentId="document_13055ae376504406afaa04dca64c8162" LastActivationTimeStamp="07/23/2024 09:33:44" />
+              <LayoutDocument Title="STARTUP" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_8f4e89c86ecc4deda0de1cad5470950d" LastActivationTimeStamp="07/23/2024 09:34:03" />
+              <LayoutDocument Title="RYSOWANIE_MOVE" ContentId="document_2702eb79de3344da91e72d72a5ae53cb" LastActivationTimeStamp="07/23/2024 09:29:44" />
+              <LayoutDocument Title="RYSOWANIE_MOVEABS" ContentId="document_86c618dc07d34e6a8c7cd5ade0bd2083" LastActivationTimeStamp="07/23/2024 09:33:35" />
+              <LayoutDocument Title="RYSOWANIE_MOVECIRC" ContentId="document_1e18c194a87649cc92992d9e9241756e" LastActivationTimeStamp="07/23/2024 09:27:11" />
+              <LayoutDocument Title="PROFILE" ContentId="document_335f428438da4385a78eac8a9350a2b3" LastActivationTimeStamp="07/23/2024 09:30:32" />
+            </LayoutDocumentPane>
+          </LayoutDocumentPaneGroup>
+          <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+            <LayoutAnchorablePane DockHeight="300">
+              <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 09:28:24" />
+            </LayoutAnchorablePane>
+          </LayoutAnchorablePaneGroup>
+        </LayoutPanel>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="200" FloatingHeight="600" FloatingLeft="275" FloatingTop="182">
+          <LayoutAnchorablePane Id="2ceec573-18fe-4b20-aa00-d9cd42914244" DockWidth="0.422608695652174*" FloatingWidth="200" FloatingHeight="600" FloatingLeft="275" FloatingTop="182" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+    </FloatingWindows>
+    <Hidden>
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="VR Viewer" IsSelected="True" ContentId="tool_VRViewerControl" FloatingLeft="275" FloatingTop="182" FloatingWidth="200" FloatingHeight="600" LastActivationTimeStamp="07/23/2024 09:33:19" PreviousContainerId="2ceec573-18fe-4b20-aa00-d9cd42914244" PreviousContainerIndex="0" />
+    </Hidden>
+  </LayoutRoot>
+</MotionPerfectLayout>

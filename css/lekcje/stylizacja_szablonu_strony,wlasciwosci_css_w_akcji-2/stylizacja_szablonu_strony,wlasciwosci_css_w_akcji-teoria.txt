@@ -1,0 +1,51 @@
+﻿1) Schemat strony: 1.logo 2. menu 3.topbar 4.sidebar i content 5.footer, a wszystko w div-ie container. sidebar i content dodamy float: left; by mogly byc kolo siebie, w szeregu, natomaist do footer clear: both;.
+
+2) Przykladowe generatory tresci to lorem ipsum, moge one nam posluzyc do koncowej oceny jakosci tekstu na stronie internetowej. Lorem ipsum to tekst skladajacy sie z lacinskich i qusi lacinskich wyrazow, majacy korzenie w klasycznej lacinie, jest uzywany do demonstracji krojow czcionek, kompozycji krojow etc... Lorem Ipsum zwany jest trakze dummy content-em.
+
+3)Linus Torvalds (ur. 28 grudnia 1969 w Helsinkach) – finski programista, tworca jadra Linux oraz systemu kontroli wersji Git. Uczeszczal na Uniwersytet Helsinski. Poprzez stworzenie jadra Linux nadal impuls do gwaltownego rozwoju wolnego oprogramowania.
+
+4) Przypomnienie - azeby podpiac arkusz styli css nalezy wpisac: <link rel = "stylesheet" href = "nazwa_pliku" type = "text/css" />. 
+
+5) Przed znakiem # mozna dopisac div, wowczas to okreslenie bedzie sie tylko odnoscic do div-ow. Natomiast gdy jest sam #, to wowczas zapis ten odnosi sie do wszystkich elementow okreslonych danym id. # oznacza id, czyli unikatowy identyfikator. Kropka (.) oznacza klase, czyli przepis na styl jakiegos elementu (na stronie moze byc wiele elementow o podanym class). 
+
+6) Dla div-a strukturalnego (wystepujacego na stronie, zastosujemy kombinacje: id #. Dla opcji w menu glownym zastosujemy klase (poniewaz opcji jest 6), kombinacja: class (HTML) i (CSS). Id jest atrybutem unikatowym, natomiast klasa moze wystepowac w pliku wielokrotnie. Uwidacznia sie tutaj reminescencja C++.
+
+7) Zamiast pisac za kazdym razem margin-left, -right..., mozemy po prostu napisac margin, wowczas dodajemy margines z kazdej strony. Oprocz font-size mamy takze font-weight, font-style. Komenda letter-spacing: ile_px; mowi jaki bedzie odstep miedzy literami.
+
+8) Kroj czcionki zastepczej moze nam zniszczyc szablon strony internetowej. Wspolne dla wszystkich systemow czcionki to times new roman, verdana, arial. Z tego powodu nie pobieramy czcionki z systemu. Mozemy ewentualnie pobrac kroj czcionki z naszego serwera, jednak jest to bardzo dlugie i klopotliwe rozwiazanie. Z tego powodu Google wymyslil serwis Googl Fonts.
+
+9) Google Fonts to biblioteka ponad tysiaca bezplatnych licencjonowanych rodzin czcionek, interaktywny katalog internetowy do przeglądania biblioteki oraz interfejsy API do wygodnego korzystania z czcionek za pośrednictwem CSS i Androida . Czcionki Google - https://pl.qaz.wiki/wiki/Google_Fonts. Przegladarka za pomoca tego serwisu casch-uje czcionki jeszcze nie zapisane w serwisie, wczyta ja z pamieci podrecznej. Aby wybrac z google fonts czcionki z polskim znakami nalezy wybrac latin extended.
+
+10) Czcionka serif, to taka czcionka, ktora posiada drobne zakonczenia liter. Natomiast sans-serif oznacza czcionke bez owych szeryfow.
+
+11) W div-ie menu, w tym projekcie, kazda opcje menu wstawimy do osobnego div-a, a kazdy z tych div-ow zostanie utworzony wedlug klasy, dla nas .option.
+
+12) Istnieje 17 barw standardowych: aqua, black, blue, fuchsia, gray,green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow oraz 123 dodatkowe (razem 140). Mozna je wszytskie znalezc wpisujac w przegladarke fraze: "CSS Color Names - W3Schools". 
+
+13) W komputerze mamy palete RGB (barw): 16 777 216 mozliwych kolorow. Kolory w CSS-ie zapisujemy w zapisie szesnastkowym, liczby po znakach hash-a. Pierwsze dwie liczby oznaczaja kolor czerwony (red), kolejne dwie to skladowa zielona (green), a ostatnie dwie to skladowa niebieska (blue), poniewaz z polaczenia tych trzech kolorow mozna zbudowac dowolny kolor w komputerze. Dla przykladu #303030. 
+
+14) Na dwoch miejscach w systemie szesnastkowym maksymalnie mozna zapisac 16*16=256 mozliwosci - FF. Stad wszystkich kolorow mamy (16*16)*(16*16)*(16*16)=16777216. Istnieja takze inne metody definiowania kolorow.
+
+15) Float: left; wpisany wewnatrz klasy zostanie zaaplikowany dla kazdego div-a utworzonego wedlug jej zapisu.
+
+16) Azeby osiagnac efekt bordera/obramowania nalezy wpisac border: po czy podajemy trzy cech owego obramowania.Najpierw grubosc, nastepnie styl linii (raczej solid/dotted), na koncu podajemy kolor linii. Mozemy okreslic takze, od ktorej strony to obramowanie ma sie pojawic, np. border-right.
+
+17) wlasciwosc hover okresla styl elementu po najechaniu na niego kursorem. Zapisujemy to tak: .class:hover {...}. W miejsce kropek mozemy wstawic np: background-color: #000000; (okreslajacy kolor po najechaniu), cursor: pointer;.(okreslajacy kursor po najechaniu). Wykorzystujemy tutaj tkz. podejscie zdarzeniowe.
+
+18) Jesli chcemy ustawic przezroczystosc danego div-a wpisujemy - opacity: 0.8;, co oznacza, ze nieprzezroczystosc bedzie w tym wypadku rowna 80%.
+
+19) Symbolem Linuxa jest pingwin TUX, TUX od Torvald's Unix. Wstawimy warstwe graficzna do naszej strony. Za pomoca dwoch nowywch div-ow dodanych do topbar: topbarleft i topbarright.
+
+20) Wyjustowanie jest to takie ulozenie tekstu, ze przykleja sie on zarowno do prawej jak i do lewej strony strony. Azeby zrobic to w CSS-ie nalezy dac: text-align: justify, text-align: left; text-align: right; text-align:center;. Jest to wyrownanie tekstu w div-ie.
+
+21) Span to znacznik, ktory tak samo jak div grupuje pewne elementy (teksty, obrazy), zazwyczaj w celu przypisania im okreslonego typu CSS, ale rozni sie tym od div-a, ze nie zmienia ich ulozenia na stronie. Nie jest zatem elementem blokowym, chyba ze uzyjemy zapisu CSS: display:block;
+
+22) Aby ustawic odstep miedzy literami dodamy zapis: letter-spacing: y px;
+
+23) Patrzac na szablon strony od strony holistycznej: jest grafika w postaci pingwina od razu kojarzaca sie z linuxem. Znajduje sie na zielonym tle, ktory natomiast kojarzy sie nam z zielony swiatlem sygnalizacji - zielone swiatlo dla korzystania z linuxa. A tresc lekko czerwona informuje o potencjalnie waznych informacjach. Layout powinien byc geometrycznie spojny i uzyteczny.
+
+24) Ludzie mysla przede wszystkim o sobie, strone tworzymy dla innych, nie dla siebie, pamietajmy o tym. Nie tworzmy wiec strony - "egopapki".
+
+25) Interfejs to warstwa, ktora uczestniczy miedzy autorami witryny, a odbiorcami tresci z tej witryny. Miedzy twarza jednego czlowieka a druga.
+
+26) Warto zeby sie czegos nauczyc obcowac z tym, caly czas. Ustawiac sobie to jako tapete to czego mamy sie nauczyc, etc...

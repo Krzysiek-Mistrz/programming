@@ -1,0 +1,37 @@
+	
+1) HTML - (HyperText Markup Language) jezyk opsiowy oparty na tzw. znacznikach (tagach) opisujacy zawartosc strony internetowej. 
+- Przykladowy tag to np: <a href="adres_strony">KLIKNIJ</a> (znacznik definiujacy hiperlacze). Nazwa tego znacznika to 'a' 		(anchor)- oznacza ona hiperlacze. Zawieraja sie w nim dwa znaczniki: otwierajacy (a) i zamykajacy (/a). Wszystko co zostanie 		zdefiniowane pomiedzy znacznikami to link. href (hypertext reference), to adres pod jaki ma nas zaprowadzic hiperlacze. Dodatkowym atrybutem moze byc takze target, mowiacy gdzie docelowo nowo otwarta strona ma trafic, np: target = "_blank". Kolejnym atrybutem hiperlacza jest "title", jest to tekst wyswietlany jako podpowiedz systemowa. Kolejnosc atrybutow nie wplywa na dzialanie kodu. Adres srony internetowej to wlasciwosc/cecha/ATRYBUT 'a'/hiperlacza, nazwa_atrybutu = "wartosc".
+
+2) Plik HTML to plik tekstowy z rozszerzeniem .html lub .htm  .
+
+3) Internet to siec globalna, rozumiem przez to, ze mozliwe powinno byc jego otwarcie na dowolnym systemie (Windows, Linux, MacOs, BSD, UNIX). Przez to strony internetowe sa zapisywane jako tekst, poniewaz kazdy system operacyjny jest go w stanie otworzyc. Ten kod przetwarza natomiast program dedykowany pod konkretnego OS-a - przegladarka internetowa.
+
+4) Graficzny interfejs uzytkownika (GUI = Graphical User Interface) czyli srodowisko prezentowania informacji przez komputer, wyglad interfejsu (okienek) oraz interakcji z userem. 
+- Windows - Aero, Linux - Unity, MacOs - Aqua, sa takze: KDE, GNOM, XFCE, LXDE.
+Celem webmastera jest napisanie strony wygladajacej praktycznie identycznej w rozych przegladarkach.
+
+5) Znacznik - definiuje element na stronie internetowej, jest zapisany z uzyciem nawiasow ostrych. Moze byc pojedynczy lub podwojny. Znacznik 'a' definiuje hiperlacze a znacznik "img" - hiperlacze. W starszych wersjach standardu HTML znaczniki mogly byc zapisywane dowolna wielkoscia liter, ale wraz z kolejnymi wersjami wprowadzono zapisywanie wszystkich tagow malymi literami.
+- np.: <a>LINK</a>. Znacznik moze byc takze pojedynczy, np.: <img width="500" height = "420" src = "homer.jpg"/> (znacznik - img, atrybuty: width, height, src (ten sam folder, w ktorym sie znajduje dkm. html - folder biezacy, uzywamy tez tylko sciezek 		wzglednych: "homer.jpg", a nie bezwzglednych: "C:\Program Files (x86)\homer.jpg"), W sciezkach dostepu do plikow, ktore wstawiamy uzywamy tylko prawego znaku slash).
+
+6) Atrybut - cecha (wlasciwosc) znacznika, zdefiniowana w jego wnetrzu, w postaci: nazwa_atrybutu = "wartosc". 
+- Niektorych atrybutow nie trzeba zapisywac: <img src = "homer.jpg"/>, w takim przypadku przegladarka pobiera je sama
+
+7) Dobre edytory html: Notepad++, SublimeSext2, geany, gedit, TextMate, Eclipse.
+
+8) W znaczniku "head" znajduja sie informacje, ktorych nie ma na stronie (widocznosc), ale sa wazne dla dzialania tej strony. Sa to np.: jaki jest jezyk strony, tytul i opis strony w wyszukiwarce, jakie mamy skrypty javascript-u, arkusze styli css, czcionki od google fonts.
+
+9) Sekcja "body", to cialo witryny, wszystko co widac: tekst, obrazki, pola edycyjne, hiperlacza, pola edycyjne, przyciski, listy wyboru, checkboxy, etc... Jest to zawartosc wizualna witryny. Piszac juz bez zadnych znacznikow w sekcji body piszemy na stronie internetowej.
+
+10) Index to specjalna nazwa jaka nadajemy stronie glownej, serwer html zawsze najpierw szuka pliku o tej nazwie, gdy ktos pierwszy raz wchodzi na nasza domene.
+
+11) Doctype, to typ dokumentu, to deklaracja informujaca przegladarke, w ktorej wersji standardu html postanowilismy okodowac nasz dokument. <!DOCTYPE HTML>, oznacza ze chcemy pisac w najnowszym, rozwijanym standardzie html 5.
+
+12) Metainformacje - wazne dla dzialania witryny, niewidoczne dla oka. charset - zestaw znakow uzywany na stronie, jednym z jego standardow jest utf-8 / iso-8859-2. <meta charset = ""utf-8" />. BOM (Byte Order Mark) - znacznik kolejnosci bajtow, jest dodawany na poczatku pliku kodowanego w UTF-8.
+
+13) Tytul strony internetowej jest wazny dla pozycji strony w wyszukiwarce. Opis natomiast takze jest bardzo wazny, ma on takze bardzo duzy wplyw na pozycjonowanie strony, najlepiej zeby mial od 155 do 160 znakow.
+
+14) <meta http-equiv = "X-UA-Compatible" content = "IE = edge, chrome = 1" /> - nakazuje internet explor-erowi renderowanie strony w najwyzszej mozliwej wersji IEQuirks mode (tryb dziwactw), zwany tez trybem osobliwosci - sposob interpretacji kodu przez przegladarke, zakladajacy wykorzystanie starych konstrukcji jezykowych, niezgodnych ze standardami W3C.
+
+15) Naglowek na stronie <h1>Najlepsze Wiadomosci!</h1>, od slowa header. W HTML-u dysponujemy 6-ma typami naglowkow od h1 (najwiekszy) do h6 (najmniejszy).
+
+16) EOL - znak lub sekwencja znakow oznaczajaca zakonczenie linii tekstu. W roznych systemach operacyjnych stosuje sie rozne znaki konca linii. Sa to kombinacje kodow CR (carriage return 0x0D) oraz LF: (W Windows: CR+LF), (W Linux/UNIX: LF), (MacOS: CR). Dlatego by wstawic znak konca linii stosuje sie tag - "<br />", od slow break line.

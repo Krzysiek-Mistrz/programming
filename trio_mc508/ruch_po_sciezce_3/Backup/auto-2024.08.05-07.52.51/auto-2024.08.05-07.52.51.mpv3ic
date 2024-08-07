@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="4">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="Document_Program_MHELICAL" />
+  <Content Name="tool_OscilloscopeControl">
+    <Tool CurrentProfile="Profile 0">
+      <Config TriggerMode="Continuous" IsProgramTriggering="false" MaxChunkSize="8" TimePerDivision="2" ViewMode="XYZ" DisplayTextInfo="false" IsExpanded="true" IsAutoHide="false" UseScopeDelay="false" ScopeDelay="0">
+        <ScopeTableInfo SamplesPerDivision="50" PointsPerDivision="10" FitToDisplay="false" IsAutoSamplesDataRangeStartAddress="true" SamplesDataRangeStartAddress="0" UseAutoReArm="true" Use_FIFO="false" FIFOName="MC_SCOPE_FIFO">
+          <BlockDataRanges>
+            <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+            <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+            <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+            <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+          </BlockDataRanges>
+        </ScopeTableInfo>
+      </Config>
+      <ViewerSettings>
+        <TraceColors Count="6" />
+        <CursorColors Count="4" />
+      </ViewerSettings>
+      <View3DSettings />
+      <TraceInfos>
+        <TraceInfo State="Automatic" ParamName="DPOS" ContextIndex="0" NullableContextIndex="0" Range="0.0001" LockRanges="true" IsInDegrees="true" Offset="0" AutoCentre="true" />
+        <TraceInfo State="Automatic" ParamName="DPOS" ContextIndex="1" NullableContextIndex="1" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="true" />
+        <TraceInfo State="Automatic" ParamName="DPOS" ContextIndex="2" NullableContextIndex="2" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="true" />
+        <TraceInfo State="Off" ParamName="DPOS" ContextIndex="3" NullableContextIndex="3" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="false" />
+        <TraceInfo State="Off" ParamName="DPOS" ContextIndex="-1" NullableContextIndex="" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="false" />
+        <TraceInfo State="Off" ParamName="DPOS" ContextIndex="-1" NullableContextIndex="" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="false" />
+      </TraceInfos>
+      <CursorInfos>
+        <CursorInfo IsVisible="false" Position="0.2" TraceIndex="-1" />
+        <CursorInfo IsVisible="false" Position="0.4" TraceIndex="-1" />
+        <CursorInfo IsVisible="false" Position="0.6" TraceIndex="-1" />
+        <CursorInfo IsVisible="false" Position="0.8" TraceIndex="-1" />
+      </CursorInfos>
+      <RecentParamNames>
+        <Param Name="DPOS" Age="0" />
+      </RecentParamNames>
+      <Profiles>
+        <Profile Name="Profile 0">
+          <Config TriggerMode="Continuous" IsProgramTriggering="false" MaxChunkSize="8" TimePerDivision="2" ViewMode="XYZ" DisplayTextInfo="false" IsExpanded="true" IsAutoHide="false" UseScopeDelay="false" ScopeDelay="0">
+            <ScopeTableInfo SamplesPerDivision="50" PointsPerDivision="10" FitToDisplay="false" IsAutoSamplesDataRangeStartAddress="true" SamplesDataRangeStartAddress="0" UseAutoReArm="true" Use_FIFO="false" FIFOName="MC_SCOPE_FIFO">
+              <BlockDataRanges>
+                <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+                <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+                <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+                <ScopeTableDataRange StartAddress="0" EndAddress="-1" Step="1" />
+              </BlockDataRanges>
+            </ScopeTableInfo>
+          </Config>
+          <ViewerSettings>
+            <TraceColors Count="6" />
+            <CursorColors Count="4" />
+          </ViewerSettings>
+          <View3DSettings />
+          <TraceInfos>
+            <TraceInfo State="Automatic" ParamName="DPOS" ContextIndex="0" NullableContextIndex="0" Range="0.0001" LockRanges="true" IsInDegrees="true" Offset="0" AutoCentre="true" />
+            <TraceInfo State="Automatic" ParamName="DPOS" ContextIndex="1" NullableContextIndex="1" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="true" />
+            <TraceInfo State="Automatic" ParamName="DPOS" ContextIndex="2" NullableContextIndex="2" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="true" />
+            <TraceInfo State="Off" ParamName="DPOS" ContextIndex="3" NullableContextIndex="3" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="false" />
+            <TraceInfo State="Off" ParamName="DPOS" ContextIndex="-1" NullableContextIndex="" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="false" />
+            <TraceInfo State="Off" ParamName="DPOS" ContextIndex="-1" NullableContextIndex="" Range="0.0001" LockRanges="false" IsInDegrees="true" Offset="0" AutoCentre="false" />
+          </TraceInfos>
+          <CursorInfos>
+            <CursorInfo IsVisible="false" Position="0.2" TraceIndex="-1" />
+            <CursorInfo IsVisible="false" Position="0.4" TraceIndex="-1" />
+            <CursorInfo IsVisible="false" Position="0.6" TraceIndex="-1" />
+            <CursorInfo IsVisible="false" Position="0.8" TraceIndex="-1" />
+          </CursorInfos>
+          <RecentParamNames>
+            <Param Name="DPOS" Age="0" />
+          </RecentParamNames>
+        </Profile>
+      </Profiles>
+    </Tool>
+  </Content>
+  <Content Name="Document_Program_MSPHERICAL" />
+  <Content Name="Document_Program_SFERYCZNA_INTERPOLACJA" />
+</Contents>

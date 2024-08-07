@@ -1,0 +1,195 @@
+C:/Users/User/Documents/Programowanie/vhdl-kurs/hello_world_1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/hello_world_1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity hello_world_1
+-- Compiling architecture sim of hello_world_1
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/for_loop_4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/for_loop_4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity for_loop_4
+-- Compiling architecture sim of for_loop_4
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_tb_15.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_tb_15.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity port_map_mux_tb_15
+-- Compiling architecture sim of port_map_mux_tb_15
+-- Loading entity port_map_mux_15
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_tb_18.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_tb_18.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity timer_tb_18
+-- Compiling architecture sim of timer_tb_18
+-- Loading entity timer_18
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/sensitivity_list_9.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/sensitivity_list_9.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity sensitivity_list_9
+-- Compiling architecture sim of sensitivity_list_9
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_tb_19.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_tb_19.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity procedure_tb_19
+-- Compiling architecture sim of procedure_tb_19
+-- Loading entity procedure_19
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_15.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_15.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity port_map_mux_15
+-- Compiling architecture rtl of port_map_mux_15
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/std_logic_10.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/std_logic_10.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity std_logic_10
+-- Compiling architecture sim of std_logic_10
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_tb_20.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_tb_20.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity finite_state_machine_tb_20
+-- Compiling architecture sim of finite_state_machine_tb_20
+-- Loading entity finite_state_machine_20
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_18.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_18.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity timer_18
+-- Compiling architecture rtl of timer_18
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/signed_uns_12.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/signed_uns_12.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity signed_uns_12
+-- Compiling architecture sim of signed_uns_12
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_19.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_19.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity procedure_19
+-- Compiling architecture rtl of procedure_19
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_20.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_20.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity finite_state_machine_20
+-- Compiling architecture rtl of finite_state_machine_20
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_flip_flop_17.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_flip_flop_17.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clocked_process_flip_flop_17
+-- Compiling architecture rtl of clocked_process_flip_flop_17
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_16.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_16.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity constants_generic_map_16
+-- Compiling architecture rtl of constants_generic_map_16
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/loop_3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/loop_3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity loop_3
+-- Compiling architecture sim of loop_3
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/while_5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/while_5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity while_5
+-- Compiling architecture sim of while_5
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/signals_6.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/signals_6.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity signals_6
+-- Compiling architecture sim of signals_6
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/wait_until_7.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/wait_until_7.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity wait_until_7
+-- Compiling architecture sim of wait_until_7
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_tb_17.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_tb_17.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity clocked_process_tb_17
+-- Compiling architecture sim of clocked_process_tb_17
+-- Loading entity clocked_process_flip_flop_17
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/delay_2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/delay_2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity delay_2
+-- Compiling architecture sim of delay_2
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_tb_16.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_tb_16.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity constants_generic_map_tb_16
+-- Compiling architecture sim of constants_generic_map_tb_16
+-- Loading entity constants_generic_map_16
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/case_when_14.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/case_when_14.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity case_when_14
+-- Compiling architecture sim of case_when_14
+
+} {} {}} C:/Users/User/Documents/Programowanie/vhdl-kurs/conditional_statements_8.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/User/Documents/Programowanie/vhdl-kurs/conditional_statements_8.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity conditional_statement_8
+-- Compiling architecture sim of conditional_statement_8
+
+} {} {}}

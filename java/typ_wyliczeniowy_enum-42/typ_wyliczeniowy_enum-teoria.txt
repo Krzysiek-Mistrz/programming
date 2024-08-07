@@ -1,0 +1,70 @@
+1) Enum to specjalny typ uzywany do definiowania kolekcji stalych. Oto przyklad:
+public enum Rank {
+  SOLDIER,
+  SERGANT,
+  CAPTAIN
+}
+Zauwaz ze wartosci oddzielone sa przecinkami. Mozesz odwolywac sie do stalych w powyzszym wyliczeniu za pomoca skladni z kropka tak tak np. wywolywales dana metode na rzecz danego obiektu :) Przyklad:
+Rank a = Rank.SOLDIER;
+Zasadniczo typ Enum sluzy do definiowania zmiennych reprezentujacych okreslony zestaw danych.
+
+2) Zadanie (teoria)
+Typ Enum sluzy do definiowania zmiennych ktore reprezentuja:
+-typ calkowity
+-klasy
+-interfejsy
+-czlonkow ustalonego zestawu  danych
+Odpowiedz: "czlonkow ustalonego zestawu danych"
+
+3) Po zadeklarowaniu Enum mozemy sprawdzic odpowiednie wartosci za pomoca instrukcji switch na przyklad.
+Rank a = Rank.SOLDIER;
+
+switch(a) {
+  case SOLDIER:
+    System.out.println("Soldier says hi!");
+    break;
+  case SERGEANT:
+    System.out.println("Sergeant says hello!");
+    break;
+  case CAPTAIN:
+    System.out.println("Captain says welcome!");
+    break;
+}
+Wyswietli sie w rezultacie wykonania powyzszego kodu komunikat: Soldier says hi!
+
+4) Zadanie (praktyka)
+Uzupelnij ponizsze luki w kodzie, tak by zdefiniowac typ Enum o nazwie "Color" z wartosciami koleno RED, BLUE, GREEN.
+public (1)... Color {
+  RED, (2)..., (3)...;
+}
+Odpowiedz: (1)enum, (2)BLUE, (3)GREEN
+
+5) Nalezy zawsze uzywac Enums, gdy zmienna (zwlasza parametr metody) moze pobrac tylko jedna wartosc z malego zestawu wartosci. Jesli uzywasz Enums zamiast liczb calkowitych (lub typow String), wowczas zwiekszasz sprawdzanie w czasie kompilacji i unikasz bledow zwiazanych z przekazywaniem nieprawidlowych stalych a takze dokumentujesz ktore wartosci sa dozwolone.
+
+6) Niektore przykladowe zastosowania Enum obejmuja nazwy miesiecy, dni tygodnia talie kart itp... Poniewaz te wartosci np miesiace sa stale i uzywajac wlasnie typu Enum zapobiegasz zmianie tych wartosci.
+
+7) Zadanie "Ile kul?" (angielski)
+Create a shooter program where player has a corresponding number of bullets for each difficulty level. There are three types of difficulties: EASY, MEDIUM, HARD. For the type: EASY -> 3000, MEDIUM -> 2000, EASY -> 1000. You can include this choice in the Player class, in which you can also include switch statements depending on the type of difficulty included in the enum enum type Difficulty.
+
+8) Zadanie (praktyka)
+Podaj rezultat ponizszego kodu:
+enum Color {
+  RED, BLUE, GREEN
+}
+class PrintColor {
+  public static void main(String[] args) {
+    Color color = Color.RED;
+    switch(color) {
+      case BLUE:
+        System.out.println("1");
+      break;
+      case GREEN:
+        System.out.println("2");
+      break;
+      case default:
+        System.out.println("0");
+      break;
+    }
+  }
+}
+Odpowiedz: Wykona sie przypadek default poniewaz nie ma uwzglednionej opcji ze argument bedacy zmienna typu enum = Color przjmie wartosc = "RED".

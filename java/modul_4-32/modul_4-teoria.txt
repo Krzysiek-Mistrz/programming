@@ -1,0 +1,61 @@
+1) Zadanie
+Uzupelnij luki by zdefiniowac metode ktora nie zwraca zadnej wartosci.
+public ... calc()
+Odpowiedz: public void calc()
+
+2) Zadanie
+Ktory modyfikator dostepu umozliwia dostep do metody / obiektu z kodu z innej klasy?
+Opdowiedz: public
+
+3) Zadanie
+Uloz kod w odpowiedniej kolejnosci tak by zadeklarowac metode zwracajaca wiekszy sposrod dwoch argumentow:
+1. return b;
+2. return a; }
+3. }
+4. if(a > b) {
+5. public int max(int a, int b) {
+Odpowiedz:
+5., 4., 2., 1., 3.
+
+4) Zadanie
+Uzupelnij luki tak by zadeklarowac metode ktora bierze jeden argument typu int:
+public int myFunc(... x) {
+  return x*10;
+}
+Odpowiedz:
+public int myFunc(int x) {
+  return x*10;
+}
+
+5) Zadanie
+Uzupelnij luki tak by stworzyc metode ktora zwraca wartosci minimum z posrod dwoch parametrow.
+public int minFunc(int n1, int n2) {
+  int min;
+  if(n1 > n2)
+    min = n2;
+  else
+    min = n1;
+  return min;
+}
+
+6) Uzupelnij luki tak by stworzyc klase z metoda o nazwie myFunc ktora nie bierze zadnych parametrow, nic nie zwraca i wyswietla "Hi" na ekran:
+public ... MyClass {
+  public ... myFunc() {
+    System.out.println("Hi");
+  }
+}
+Odpowiedz:
+public class MyClass {
+  public void myFunc() {
+    System.out.println("Hi");
+  }
+}
+
+7) Zadanie z modulu 4 "Binary converter"
+Binarny system numeryczny wykorzystuje tylko dwie cyfry: 0, 1. Komputery dzialaja w systemie binarnym, co oznacza ze przechowuja dane i wykonuja obliczenia przy uzyciu tylko zer i jedynek.
+Musisz stworzyc program do zamiany liczb calkowitych na ich reprezentacje binarna. Utworz klase Converter w ktorej znajdzie sie statyczna metoda toBinary(), ktora zwraca binarna wersje jej argumentu. Kod w main przyjumje liczbe jako dane wejsciowe i wywoluje odpowiednia metode statyczna. Upewnij sie ze kod dziala zgodnie z oczekiwaniami.
+Sample input
+42
+sample output:
+101010
+Wskazowka: Mozesz uzyc petli for lub while do zaminay liczby na jej wersje binarna a sam wynik przechowac w tablicy znakowej lub w typie String, jak wolisz...

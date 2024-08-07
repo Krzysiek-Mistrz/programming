@@ -1,0 +1,195 @@
+1) Java zapewnia bogaty zestaw operatorow do manipulowania zmiennymi. Wartosc uzywana po obu stronach operatora nazywana jest operandem. Na przyklad w ponizszym wyrazeniu liczby 6 i 3 sa operandami operatora plus:
+int x = 6 + 3;
+Operacje artmetyczne w java-ie:
++ dodawanie
+- odejowanie
+* mnozenie
+/ dzielenie
+% modulo
+
+2) Operatory artmetyczne sa uzywane w ekspresjach metematycznych w taki sam sposob w jaki sa uzywane w operacjach algebraicznych.
+
+3) Uzupelnij puste miejsca tak zeby zadeklarowac int-a i ustawic jego wartosc na 5:
+...var = ...;
+Odpowiedz: int var = 5;
+
+4) Dodawanie. Operator dodawania dodaje do siebie dwie wartosci na przyklad dwie stale, stala i zmienna, lub zmienna i zmienna. Kilka przykladow dodawania:
+int sum1 = 50 + 10;
+int sum2 = sum1 + 66;
+int sum3 = sum2 + sum2;
+Odejmowanie. Operator odejmowania odejmuje od siebie dwie kolejne wartosci liczbowe.
+int diff1 = 1000 - 10;
+int diff2 = sum1 - 5;
+int diff3 = sum2 - sum1;
+Podobnie jak w algebrze mozesz uzyc dwoch operacji w jednej linii, dla przykladu: int val = 10 + 5 - 2;
+
+5) Wypelnij puste pola tak zeby wypisac sume dwoch zmiennych:
+int x = 2; int y = 4;
+int result = x + y;
+System.out.println(result);
+Odpowiedz:
+int x = 2; int y = 4;
+int result = x ... ...;
+System.out.println(...);
+
+6) Dzielenie. Operator dzielenia '/' dzieli jedna wartosc przez druga.
+int quot1 = 1000 / 5;
+int quot2 = sum1 / 2;
+int quot3 = sum1 / sum2;
+
+7) W powyzszym przykladzie wynikiem rownania dzielenia bedie liczba calkowita, poniewaz jako typ danych uzyto int. Mozesz uzyc double aby pobrac wartosc z kropka dziesietna.
+
+8) Podaj rezultat ponizszego kodu:
+int x = 15; int y = 4;
+int result = x /y;
+System.out.println(result);
+Rezultat: 3
+
+9) Operacja matematyczna modulo lub reszta wykonuje dzielenie liczb calkowitych jednej wartosci przez druga i zwraca reszte tego dzielenia. Operatorem operacji modulo jest '%' znak procentu.
+int value = 23;
+int res = value % 6; //res jest 5
+Dzielenie 23 przez 6 zwraca iloraz = 3, z reszta = 5, dlatego wartosc '5' jest przypisana do zmiennej 'res'.
+
+10) Jak awartosc jest przechpwywana w wyniku zmiennej?
+int x = 8, y = 5;
+int result = x % y;
+Rezultat: 3
+
+Zadanie "Agencja turystyczna"
+Uzupelnij kod zeby otrzymac dystans w kilometrach i metrach w nowych liniach. Jestes menadzerem agencji turystycznej i musisz oblicyc dystans miedzy dwma miastmi. podany program bierze jako wartosc podana dystans miedzy dwoma miastami jako input.
+Zadanie:
+Uzupelnij kod zeby wyswietlic dystans w kilometrach i metrach w nastepujacych liniach.
+Sample input:
+3644
+Sample Output:
+3
+644
+Wyjasnienie:
+1 km jest to 1000 m, zatem 3644m bedzie stanowic 3km i 644m.
+Skorzystaj z operatora / w celu obliczenia ilosci kilometrow i operatora % w celu obliczenia metrow.
+1) Rozwiazanie:
+import java.util.Scanner;
+public class Program
+{
+    public static void main(String[] args) 
+    {
+        Scanner Object = new Scanner(System.in);
+
+        int distance = Object.nextInt();
+
+        int kilometers = distance / 1000;
+        int meters = distance % 1000;
+
+        System.out.println(kilometers);
+        System.out.println(meters);
+    }
+}
+
+Zad "Czas na zadanie"
+Napisz program ktory pobierze czas spedzony nad azdym przedmiotem i obliczy calkowity czas potrzebny ogolnie na wykonanie wszystkich zadan. Studenci otrzymali zadanie z historii matmy i geometrii. Napisz program ktory pobierze jak input czas spedzony przez studentow nad kazdym zadanie z kazdego przedmiotu i policzy calkowity czas w godiznach i minutach jaki studenci spedzili nad danym przedmiotem. Wynik powinien zostac wyswietlony w kazdej nastepnej linii.
+Sample Input
+35
+40
+39
+sample output
+1
+54
+Wyjasnienie: Calkowity spedzony czas w minutach jest = 114, ktory jst rowny 1h i 54 minuty. Uzyj typu calkowitego int do zmiennych reprezentujacych godziny i minuty.
+1) Rozwiazanie:
+import java.util.Scanner;
+public class Program
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int math = scanner.nextInt();
+        int history = scanner.nextInt();
+        int geometry = scanner.nextInt();
+
+        int sum = math + history + geometry;
+        int hours = sum / 60;
+        int minutes = sum % 60;
+
+        System.out.println(hours);
+        System.out.println(minutes);
+    }
+}
+
+Zad "Raz w barze"
+Oblicz i wypisz liczbe sprzedanych butelek. barman sprzedal 64 butelki piwa i 23 butelki whisky. Musisz obliczyc ile w sumie butelek sprzedal barman.
+zadanie:
+Obliczyc sume sprzedanych butelek.
+uzyj operatora + w celu dodania.
+1) Rozwiazanie:
+public class Program
+{
+    public static void main(String[] args)
+    {
+        int beer = 64;
+        int whisky = 23;
+        int sum = whisky + beer;
+
+        System.out.println(sum);
+    }
+}
+
+Zad "Budzet zasobow ludzkich"
+Napisz program wypisujacy budzey zasobow ludzkich. Masz dwoch pracownikow w swojej organizacji. Napisz program ktory pobierze wartosc ich wynagrodzenia -> zsumuje je i wypisze je na ekran.
+Smaple input:
+1500
+3200
+Sample output:
+4700
+Rda: mozesz uzyc nowej zmiennej w ktorej zssumujesz wartosc wynagrodzen pracownikow.
+1) Rozwiazanie:
+import java.util.Scanner;
+
+
+Zad "klasa rysunku"
+Oblicz i podaj calkowita liczbe olowkow w klasie. Musisz obliczyc jak duzo olowkow jest w klasie. Podany jest kod pobierajacy od uzytkownika liczbe studentow i liczbe olowkow jaka ma kazdy z nich.
+zadanie:
+oblicyc i wyswietlic calkowita liczbe olowkow.
+Sample input:
+studenci: 11
+li olowkow: 3
+Sample Output:
+33
+Skorzystaj z opeartora mnozenia.
+1) Rozwiazanie:
+import java.util.Scanner;
+public class Program 
+{
+    public static void main(String[] args)
+    {
+        Scanner Object = new Scanner(System.in);
+        int pupils = Object.nextInt();
+        int pencils = Object.nextInt();
+
+        int howMuch = pencils * pupils;
+        System.out.println("How much pencils: " + howMuch);
+    }
+}
+
+zad "2PIr"
+Napisz maly program ktory policzy i wyswietli obwod kola dla ciebie. Podczas twojej lekcji matematyki zostales poproszony o wyliczenie obwodu kola. postanowiles napsac krotki program ktory pobierze promien okregu jako input, nastepnie policzy obwod tego kola za ciebie. Wartosc pi zostala zdefiniowana odgornie.
+Sample input:
+4
+Sample output:
+25.12
+Wskazowka: obwod kola dany jest wzorem 2*pi*r.
+1) Rozwiazanie:
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner Rad = new Scanner(System.in);
+        
+        double radius = Rad.nextDouble();
+        double pi = 3.14;
+        double perimeter = 2 * pi * radius;
+        
+        System.out.println(perimeter);
+    }
+}

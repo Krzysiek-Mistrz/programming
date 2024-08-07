@@ -1,0 +1,92 @@
+1) Operator inkrementacji i dekrementacji zapewnia bardziej wygodna i kompaktowa droge do zwiekszenia lub do ziejszenia danej wartosci zmiennej o jeden Ld aprzykladu, wyrazenie x = x + 1; moze byc oproszczone do ++x;
+Przyklad: 
+int test = 5;
+++test; //test jest teraz = 6
+Operator dekrementacji natomaist (--) jest uzywanby do zmiejszenia wartosci danej zmiennej o jeden.
+Przyklad:
+int test = 5
+--test //test jest teraz rowny 4
+Pamietaj aby korzystac z operatorow dekrementacji i inkrementacji z glowo gdyz mozesz latwo polelnic blad w obliczeniach.
+
+2) Wypelnij luki tak zeby wyswietlic na ekran liczbe 11.
+int a = 10;
+...a
+System.out.println(a)
+Odpowiedz:
+int a = 10;
+++a
+System.out.println(a)
+
+3) Z operatorami inkrementacj i dkrementacji mozna uzywac dwoch form prefiksu i postfiksu. W formie przedrostkowej operator ppojawia sie przed operandem podczas gdy w formie przyrostkowej operator pojawia sie po operandzie. Ponizej znajduje sie wyjasnienie jak dzialaja te dwie formy:
+Prefiks: zwieksza wartosc zmiennej i uzywa nowej wartosci w wyrazeniu. Przyklad:
+int x = 34;
+int y = ++x; //y stanowi teraz 35
+Wartosc 'x' jest najpierw zinkrementowan ado 35 a pozniej jest przypisana do y, zatem obydwie wartosci zmiennych x i y sa od teraz rowne.
+Postfiks: wartosc danej zmiennej jest najpierw uzyta w wyraznieu a dopero poznije jest inkrementwoana.
+Przyklad:
+int x = 34;
+int y = x++; //najpierw wynik a pozniej operacja
+
+4) x jest najpierw przypisany do y, a nastepnie jest zinkrementowany o 1. Przez to x staje sie = 35, podczas gdy do y jest przypisana wartosc 34.
+To samo stosuje sie do operatora dekrementacji.
+
+6) Podaj rezultat ponizszego kodu:
+int x = 14;
+System.out.println(x++);
+Wynik: 15, poniewaz najpierw wynik a pozniej dzialanmie.
+
+7) Jestes juz zaznajomiony z operatorem przypisnia (=), ktory przypisuje do danej zmiennej wartosc.
+int value = 5;
+T przypisana wartosc = 5, jest nazywana wartoscia typu int.
+Java zapewnia wiele operatorow przypisania zeby ulatwic pisanie kodu.
+
+8) Dodawanie i przypisanie (+=):
+int num1 = 4;
+int num2 = 8
+num2 += num1;
+//num2 = num2 + num1;
+Odejmowanie i przypisanie:
+int num1 = 4;
+int num2 = 8;
+num2 -= num1;
+num2 = num2 - num1;
+Podobnie java wspiera takze zlozone operatory przypisania z mnozeniem i dzieleniem: *= i /=, ale takze z reszta %=.
+
+9) Uupelnij brakujacy tekst w lukach by program wypisal wartosc = 13:
+int x = 25, y;
+y = ... - 12;
+System.out.println(...);
+Odpowiedz:
+int x = 25, y;
+y = x - 12;
+System.out.println(y);
+
+10) Zadanie "Who scored me?"
+Napraw program tak zeby bral poczatkowa wartosc i wykonal pierwsza runde poprzez zwiekszneie wynikow toma i zmiejszenie wynikow boba o 1. Tom i bob graja w gre planszowa. Oboje gracze startuja z taka sama liczba punktow. Tom wygral pierwsza gre i zdobyl tym samym 1 punkt, ale cos jest zle w kodzie, poniewaz program wyswietla wynik bez zmian.
+Zadanie:
+Naprawic program by wyswietlal wymgana wartosc.
+Sample input
+5
+Sample output:
+Round 1 results:
+6
+4
+Wyjasnienie:
+Oboje gracze maja 5 punktow na poczatku gry po pierwszej grze Yom zdobyl jeden punkt zatem ma ich 6 i Bob stracil jeden punk na rzecz toma, zatem ma ich 4.
+Pamietaj o roznicy miedzy operatorami post i pre dekre i inkrementacji.
+import java.util.Scanner;
+public class Program
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int initScore = scanner.nextInt();
+        int scoreTom = initScore;
+        int scoreBob = initScore;
+
+        System.out.println("Round 1 results: ");
+        System.out.println(++scoreTom);
+        System.out.println(--scoreBob);
+    }
+}

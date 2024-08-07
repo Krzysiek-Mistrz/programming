@@ -1,0 +1,94 @@
+1) Metody definiuja zachowanie metoda to zbior instrukcji zgrupowanych w celu wykonania operacji. Przykladem metody jest System.out.println(). Mozesz zdefiniowac wlasne metody wykonania wykonywania zadanych zadan.
+Rozwazmy ponizszy kod:
+class MyClass {
+  static void sayHello() {
+      System.out.println("Hello World!");
+  }
+
+  public static void main(String[] args)
+  {
+      sayHello();
+  }
+}
+Kod powyzszy deklaruje metode o nazwie "sayHello", ktor Printuje tekst a nastepnie wywolujemy ja w funkcji glwonej public static void main().
+W celu wywolania danej metody - funkcji nalezy podac jej nazwe a nastepnie podac pare nawiasow okraglych.
+
+2) Zadanie
+Uzupelnij luki tak zeby wywolac metode "hello" z main:
+public static void main(String[] args)
+{
+    ...;
+}
+static void hello()
+{
+    System.out.println("hi");
+}
+1.Rozwiazanie:
+{
+    hello();
+}
+static void hello()
+{
+    System.out.println("hi");
+}
+
+3) Metode mozna wywolywac tyle razy ile jest konieczne. Po uruchomieniu metody kod przeskakuje do miejsca w ktorym jest zdefiniowana. Wykonuje zawarty w niej kod, a nastepnie wraca i przechodzi do nastepnego wiersza.
+
+4) Wywolywanie metod. Mozesz wywolywac metody tak wiele razy ile tylko bedziesz mial ochote i ile to bedzie ci potrzebne. Kiedy metoda sie uruchamia cod przeskakuje w dol tam gdzie dana metoda jest zdefiniowana. Kod sie wykonuje wewnatrz niej pozniej wraca i postepuje do nastepnej linii.
+Przyklad:
+class MyClass {
+  static void sayHello() {
+    System.out.println("Hello World");
+  }
+
+  public static void main(String[] args) {
+    sayhello();
+    sayHello();
+    sayHello();
+    sayHello();
+  }
+}
+W przypadkach takich jak powyzszy gdzie dana czynnosc jest wywokonywana ten sam efekt mozesz osiagnac za pomoica petli:
+for(int i = 0; i < 4; i++)
+{
+    sayHello();
+}
+
+5) Zadanie "Przyjazny robot"
+Stworzmy robota - "Welcomer 2000" ktorego zdanie bedzie witanie sie z ludzmi.
+
+6) Pytanie
+jak wiele razy mozesz wywolac metoda odpowiedz wpisz ponizej:
+...................
+Rozwiaznie:
+tak wiele jak tylko chcesz
+
+7) Mozesz takze utworzyc metode ktora pobiera pewne dane zwane parametrami, razem z nimi kiedy je wywolasz. Zapisz parametry w nawiasach metody. Na przyklad mozemy zmodyfikowac nasza metode sayHello() tak aby pobierala i wprowadzala parametr String.
+class MyClass {
+    static void sayHello(String name) {
+        System.out.println("Hello" + name);
+    }
+    public static void main(String[] args)
+    {
+        sayHello("David");
+        sayHello("Amy");
+    }
+}
+Metoda powyzej bierze String-a o nazwie name jako parametr ktory jest pozniej uzyty w ciele tej metody. nastpenie kiedy metoda jest wywolywna przekazujemy wartosc parametru w nawiasach. Metody moga przyjmowac wiele parametrow oddzielonych przecinkami.
+
+8) Do zalet uzywania metod zamiast prostych funkcji naleza:
+- Brak redundancji (powtarzania) - definujac metode mozesz jej uzyc wielokrotnie w dowolnym miejscu programu, bez potrzeby przepisywania kodu za kazdym razem.
+- Parametry funckji - oparte o argumenty ktore do funkcji przesylamy, metody z tymi argumentami moga robic wiele ciekawch rzeczyw swoim ciele.
+
+9) zadanie "Pole trojkata"
+Uzupelnij kod metody by wykalkulowac i wyswietlic pole prostokata.
+
+10) jaki jest rezultat ponizszego kodu?
+public static void main(String[] args){
+  doSomething(4);
+}
+static void doSomething(int x) {
+    System.outprintln(x*x);
+}
+Wynik: 16
+Wyjasnienie: 4 * 4 = 16 przesylamy do funkcji argument = 4, a w funckji dokonawa jest operacja mnozenia argumentu i przez x, zatem otrzymamy 4*4 = 16.

@@ -1,0 +1,51 @@
+1)Komenda shutdown - informacje calosciowe
+
+Sposób użycia: 
+shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/soft] [/fw] [/f]
+[/m \\komputer][/t xxx][/d [p|u:]xx:yy [/c "komentarz"]]
+
+Bez argumentów Wyświetla Pomoc. Działa tak samo jak wpisanie /?.
+/? Wyświetla Pomoc. Rezultat jest taki sam jak przy braku opcji.
+/i Wyświetla graficzny interfejs użytkownika (GUI).
+To musi być pierwsza opcja.
+/l Wylogowuje. Ten parametr nie może być używany z opcjami /m
+oraz /d.
+/s Zamyka komputer.
+/sg Wyłącz komputer. Przy następnym rozruchu, jeśli jest włączone automatyczne
+logowanie po ponownym uruchomieniu, automatycznie zaloguj i zablokuj ostatniego użytkownika interakcyjnego.
+Po zalogowaniu uruchom ponownie wszystkie zarejestrowane aplikacje.
+/r Całkowicie zamyka system i ponownie uruchamia komputer.
+/g Całkowicie zamknij system i ponownie uruchom komputer. Po ponownym rozruchu systemu,
+jeśli jest włączone automatyczne logowanie po ponownym uruchomieniu, automatycznie zaloguj
+i zablokuj ostatniego użytkownika interakcyjnego.
+Po zalogowaniu uruchom ponownie wszystkie zarejestrowane aplikacje.
+/a Przerywa zamykanie systemu.
+Do użytku tylko podczas limitu czasu.
+Dodanie parametru /fw powoduje wyczyszczenie oczekujących zadań rozruchu do oprogramowania układowego.
+/p Wyłącza lokalny komputer bez limitu czasu i ostrzeżenia.
+Do użytku z opcjami /d i /f.
+/h Przełącza komputer lokalny do trybu hibernacji.
+Do użytku z opcją /f.
+/hybrid Zamyka komputer i przygotowuje go do szybkiego uruchomienia.
+Musi zostać użyta z opcją /s.
+/fw Dodanie opcji zamknięcia spowoduje, że następny rozruch zostanie
+wykonany z interfejsem użytkownika oprogramowania układowego.
+/e Dokumentuje przyczynę nieoczekiwanego zamknięcia systemu.
+/o Przechodzi do zaawansowanych opcji rozruchu i ponownie uruchamia komputer.
+Musi zostać użyta z opcją /r.
+/m \\komputer Określa komputer docelowy.
+/t xxx Ustawia limit czasu zamknięcia systemu na xxx sekund.
+Prawidłowy zakres to 0–315360000 (10 lat), domyślna wartość to 30.
+Jeśli limit czasu jest większy niż 0, jest implikowany
+parametr /f.
+/c "komentarz" Wstawia komentarz dotyczący przyczyny ponownego uruchomienia lub zamknięcia.
+Maksymalna dozwolona liczba znaków wynosi 512.
+/f Wymusza zamknięcie uruchomionych aplikacji bez uprzedniego powiadamiania użytkowników.
+Parametr /f jest implikowany, gdy dla parametru /t określono wartość większą niż 0.
+/d [p|u:]xx:yy Podaje przyczynę ponownego uruchomienia lub zamknięcia systemu.
+Opcja p określa, że zaplanowano zamknięcie lub ponowne uruchomienie.
+Opcja u określa, że przyczyna jest zdefiniowana przez użytkownika.
+Jeśli nie określono opcji p ani u, ponowne uruchomienie
+lub zamknięcie nie jest zaplanowane.
+xx to numer przyczyny głównej (dodatnia liczba całkowita mniejsza niż 256)
+yy to numer przyczyny dodatkowej (dodatnia liczba całkowita mniejsza niż 65 536)

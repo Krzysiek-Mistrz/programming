@@ -1,0 +1,1080 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Ecase_when_14
+Z0 w1715968872
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 214
+Z4 dC:/Users/User/Documents/Programowanie/vhdl-kurs
+Z5 8C:/Users/User/Documents/Programowanie/vhdl-kurs/case_when_14.vhd
+Z6 FC:/Users/User/Documents/Programowanie/vhdl-kurs/case_when_14.vhd
+l0
+L5 1
+V2]6eUmD;ELdZ5RWC=Y[oL1
+!s100 ?LThmB9fW^?Y:`?g:dmGS3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1716116947
+!i10b 1
+Z9 !s108 1716116946.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/case_when_14.vhd|
+Z11 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/case_when_14.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Asim
+R1
+R2
+R3
+DEx4 work 12 case_when_14 0 22 2]6eUmD;ELdZ5RWC=Y[oL1
+!i122 214
+l19
+L8 59
+Vb1galm483_WC6Y6:X0L<P1
+!s100 `a4o2gJG9USPlkHC7aQeZ3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eclocked_process_flip_flop_17
+Z14 w1716110993
+R1
+R2
+R3
+!i122 219
+R4
+Z15 8C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_flip_flop_17.vhd
+Z16 FC:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_flip_flop_17.vhd
+l0
+L5 1
+VTdCAPnHOkjV8MZ4EPRkK:2
+!s100 MFDb5V=`WlE_N6717Y5kP3
+R7
+32
+Z17 !s110 1716116949
+!i10b 1
+Z18 !s108 1716116948.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_flip_flop_17.vhd|
+Z20 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_flip_flop_17.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z21 DEx4 work 28 clocked_process_flip_flop_17 0 22 TdCAPnHOkjV8MZ4EPRkK:2
+!i122 219
+l16
+L15 14
+Vh:dk1mQlkZ<4dbG^n_7aN1
+!s100 B8kBza^iU6aPGn0lDT2<n1
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Eclocked_process_tb_17
+Z22 w1716111967
+R1
+R2
+R3
+!i122 220
+R4
+Z23 8C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_tb_17.vhd
+Z24 FC:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_tb_17.vhd
+l0
+L5 1
+Vahkm18`;j7@R<jHDn56gS1
+!s100 Vh<Ri=omKfDeQbLWBRfIE0
+R7
+32
+R17
+!i10b 1
+Z25 !s108 1716116949.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_tb_17.vhd|
+Z27 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/clocked_process_tb_17.vhd|
+!i113 1
+R12
+R13
+Asim
+R21
+R1
+R2
+R3
+DEx4 work 21 clocked_process_tb_17 0 22 ahkm18`;j7@R<jHDn56gS1
+!i122 220
+l19
+L8 37
+V5bVF^6Ba[C?[<2X08bm=Q0
+!s100 9CO;cWc?G;C;dC@R_8CiR1
+R7
+32
+R17
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Econditional_statement_8
+Z28 w1715865070
+!i122 210
+R4
+Z29 8C:/Users/User/Documents/Programowanie/vhdl-kurs/conditional_statements_8.vhd
+Z30 FC:/Users/User/Documents/Programowanie/vhdl-kurs/conditional_statements_8.vhd
+l0
+L1 1
+VjT@5RGeM?m8U;j<8L]]Yl3
+!s100 T3l3XUZB3B^D4Y2D6Sl0Z0
+R7
+32
+Z31 !s110 1716116945
+!i10b 1
+Z32 !s108 1716116945.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/conditional_statements_8.vhd|
+Z34 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/conditional_statements_8.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 23 conditional_statement_8 0 22 jT@5RGeM?m8U;j<8L]]Yl3
+!i122 210
+l7
+L4 22
+V?Fg2:0i@@;NG<fVM3RNhi0
+!s100 SzzDi:YMSSNGLZ^RkU7M52
+R7
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R12
+R13
+Econstants_generic_map_16
+Z35 w1716108767
+R1
+R2
+R3
+!i122 217
+R4
+Z36 8C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_16.vhd
+Z37 FC:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_16.vhd
+l0
+L5 1
+VIeRPDIzO2e95SSiH6NWJh0
+!s100 MIBc]]LQFj7=gXQ:_=Maf1
+R7
+32
+Z38 !s110 1716116948
+!i10b 1
+R18
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_16.vhd|
+Z40 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_16.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z41 DEx4 work 24 constants_generic_map_16 0 22 IeRPDIzO2e95SSiH6NWJh0
+!i122 217
+l22
+L21 34
+VR26K=m`Wche@GQ:jQib_Y1
+!s100 >h=i>iEBnbh9I9b0US_gT2
+R7
+32
+R38
+!i10b 1
+R18
+R39
+R40
+!i113 1
+R12
+R13
+Econstants_generic_map_tb_16
+Z42 w1716109193
+R1
+R2
+R3
+!i122 218
+R4
+Z43 8C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_tb_16.vhd
+Z44 FC:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_tb_16.vhd
+l0
+L5 1
+VmnhkR8]<CAGXB_<WO@>GL1
+!s100 _5bG7b76dQQl4QXMQQPk12
+R7
+32
+R38
+!i10b 1
+R18
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_tb_16.vhd|
+Z46 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/constants_generic_map_tb_16.vhd|
+!i113 1
+R12
+R13
+Asim
+R41
+R1
+R2
+R3
+DEx4 work 27 constants_generic_map_tb_16 0 22 mnhkR8]<CAGXB_<WO@>GL1
+!i122 218
+l19
+L8 39
+VGg[L=[K6OL@eafhGjN]^F3
+!s100 ^J@=Ng0j4YC@OcNJcg[HG2
+R7
+32
+R38
+!i10b 1
+R18
+R45
+R46
+!i113 1
+R12
+R13
+Edelay_2
+Z47 w1715794631
+!i122 204
+R4
+Z48 8C:/Users/User/Documents/Programowanie/vhdl-kurs/delay_2.vhd
+Z49 FC:/Users/User/Documents/Programowanie/vhdl-kurs/delay_2.vhd
+l0
+L1 1
+VXLz9KjkjU9KQz8YWKBG:`1
+!s100 9?^6=X9P`WlQN@Z:=2G:Q3
+R7
+32
+Z50 !s110 1716116942
+!i10b 1
+Z51 !s108 1716116942.000000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/delay_2.vhd|
+Z53 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/delay_2.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 7 delay_2 0 22 XLz9KjkjU9KQz8YWKBG:`1
+!i122 204
+l5
+L4 8
+VUgAammCn7zB8]FZ0o4T9d0
+!s100 PLBQ;`FLY_YM[oZ]P@S@Q3
+R7
+32
+R50
+!i10b 1
+R51
+R52
+R53
+!i113 1
+R12
+R13
+Efinite_state_machine_20
+Z54 w1716126486
+R1
+R2
+R3
+!i122 248
+R4
+Z55 8C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_20.vhd
+Z56 FC:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_20.vhd
+l0
+L5 1
+VLMUd=HP>KI96agO6PN:ol2
+!s100 iec2=B]cW<j>6SBF5N;bg3
+R7
+32
+Z57 !s110 1716226999
+!i10b 1
+Z58 !s108 1716226998.000000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_20.vhd|
+Z60 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_20.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z61 DEx4 work 23 finite_state_machine_20 0 22 LMUd=HP>KI96agO6PN:ol2
+!i122 248
+l24
+L19 100
+V]0Y67Zeo`2I7F6mUl?ZAV1
+!s100 1C?j:gZ?_E9A6]?Vl;AIC2
+R7
+32
+R57
+!i10b 1
+R58
+R59
+R60
+!i113 1
+R12
+R13
+Efinite_state_machine_tb_20
+Z62 w1716126488
+R1
+R2
+R3
+!i122 249
+R4
+Z63 8C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_tb_20.vhd
+Z64 FC:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_tb_20.vhd
+l0
+L5 1
+VnCa7<6?];Fj8ck3l;77oh3
+!s100 1^INGFjNmIleghHT1f1aj3
+R7
+32
+R57
+!i10b 1
+Z65 !s108 1716226999.000000
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_tb_20.vhd|
+Z67 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/finite_state_machine_tb_20.vhd|
+!i113 1
+R12
+R13
+Asim
+R61
+R1
+R2
+R3
+DEx4 work 26 finite_state_machine_tb_20 0 22 nCa7<6?];Fj8ck3l;77oh3
+!i122 249
+l23
+Z68 L8 40
+Vf9WB=?JgzhWM`Gi0W6:1Z2
+!s100 e6gO1o4Z34A[R_nH__OHG0
+R7
+32
+R57
+!i10b 1
+R65
+R66
+R67
+!i113 1
+R12
+R13
+Efor_loop_4
+Z69 w1715796666
+!i122 206
+R4
+Z70 8C:/Users/User/Documents/Programowanie/vhdl-kurs/for_loop_4.vhd
+Z71 FC:/Users/User/Documents/Programowanie/vhdl-kurs/for_loop_4.vhd
+l0
+L1 1
+V:GEelNM=>P@P[b09PRDmO3
+!s100 a?N1Y6iTQ4^dCL7NbljHG3
+R7
+32
+Z72 !s110 1716116943
+!i10b 1
+Z73 !s108 1716116943.000000
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/for_loop_4.vhd|
+Z75 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/for_loop_4.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 10 for_loop_4 0 22 :GEelNM=>P@P[b09PRDmO3
+!i122 206
+l5
+L4 11
+VGT2n1Ah8^?AHR9:a[5[ZM2
+!s100 EMnb=U[ifklhJnDm[<T:o0
+R7
+32
+R72
+!i10b 1
+R73
+R74
+R75
+!i113 1
+R12
+R13
+Efunction_21
+Z76 w1716227119
+R1
+R2
+R3
+!i122 252
+R4
+Z77 8C:/Users/User/Documents/Programowanie/vhdl-kurs/function_21.vhd
+Z78 FC:/Users/User/Documents/Programowanie/vhdl-kurs/function_21.vhd
+l0
+L5 1
+VoDnY9B>jBIfAB9kXVbYjO1
+!s100 G=:g;BCL?>S1FSaO4SOzN3
+R7
+32
+Z79 !s110 1716227123
+!i10b 1
+Z80 !s108 1716227123.000000
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/function_21.vhd|
+!s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/function_21.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z82 DEx4 work 11 function_21 0 22 oDnY9B>jBIfAB9kXVbYjO1
+!i122 252
+l31
+L19 107
+VH6<djd_8VD14n22egbCYU1
+!s100 `K@<eSXPi9IhLSKmcA7AS2
+R7
+32
+R79
+!i10b 1
+R80
+R81
+Z83 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/function_21.vhd|
+!i113 1
+R12
+R13
+Efunction_tb_21
+Z84 w1716226101
+R1
+R2
+R3
+!i122 251
+R4
+Z85 8C:/Users/User/Documents/Programowanie/vhdl-kurs/function_tb_21.vhd
+Z86 FC:/Users/User/Documents/Programowanie/vhdl-kurs/function_tb_21.vhd
+l0
+L5 1
+VL]cV1T0cHa4^jcacIW6IX0
+!s100 ;fok309eX]HAHm03XRR702
+R7
+32
+Z87 !s110 1716227000
+!i10b 1
+Z88 !s108 1716227000.000000
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/function_tb_21.vhd|
+Z90 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/function_tb_21.vhd|
+!i113 1
+R12
+R13
+Asim
+R82
+R1
+R2
+R3
+DEx4 work 14 function_tb_21 0 22 L]cV1T0cHa4^jcacIW6IX0
+!i122 251
+l23
+R68
+VnPNgKzjKiJi7Uo_zESZF?0
+!s100 7MJJDKL5Q6kf;TlcmCj?41
+R7
+32
+R87
+!i10b 1
+R88
+R89
+R90
+!i113 1
+R12
+R13
+Ehello_world_1
+Z91 w1715636896
+!i122 203
+R4
+Z92 8C:/Users/User/Documents/Programowanie/vhdl-kurs/hello_world_1.vhd
+Z93 FC:/Users/User/Documents/Programowanie/vhdl-kurs/hello_world_1.vhd
+l0
+L1 1
+VzXKhde;QCb=TSRam`8X3j1
+!s100 e@XP95CnU_CJhQ>JCB@>:3
+R7
+32
+R50
+!i10b 1
+R51
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/hello_world_1.vhd|
+Z95 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/hello_world_1.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 13 hello_world_1 0 22 zXKhde;QCb=TSRam`8X3j1
+!i122 203
+l6
+L5 8
+VTDS[_o1:Q@7TAW<j9XKbE3
+!s100 b:;YYemfIa8Xa?7;Alj^T1
+R7
+32
+R50
+!i10b 1
+R51
+R94
+R95
+!i113 1
+R12
+R13
+Eloop_3
+Z96 w1715794902
+!i122 205
+R4
+Z97 8C:/Users/User/Documents/Programowanie/vhdl-kurs/loop_3.vhd
+Z98 FC:/Users/User/Documents/Programowanie/vhdl-kurs/loop_3.vhd
+l0
+L1 1
+Ve_o_Fc`BVMD5E4hbiT;[P2
+!s100 DI_9CO>zjT<6LYjYzNFWG1
+R7
+32
+R72
+!i10b 1
+R73
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/loop_3.vhd|
+Z100 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/loop_3.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 6 loop_3 0 22 e_o_Fc`BVMD5E4hbiT;[P2
+!i122 205
+l5
+L4 15
+VA0LZo;[VC1iGZhP>k<]9^1
+!s100 5LV8Rm@TYd8T=O3nUiIIo1
+R7
+32
+R72
+!i10b 1
+R73
+R99
+R100
+!i113 1
+R12
+R13
+Eport_map_mux_15
+Z101 w1715969826
+R1
+R2
+R3
+!i122 215
+R4
+Z102 8C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_15.vhd
+Z103 FC:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_15.vhd
+l0
+L5 1
+VXZNBV[RHjfXDU]DTm8=cn0
+!s100 i<OXhVF16XlIEkB4NX<8m0
+R7
+32
+R8
+!i10b 1
+Z104 !s108 1716116947.000000
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_15.vhd|
+Z106 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_15.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z107 DEx4 work 15 port_map_mux_15 0 22 XZNBV[RHjfXDU]DTm8=cn0
+!i122 215
+l21
+L20 34
+VM;6iC<j@Y^IT9[_=OL=d21
+!s100 KYXToje6z=d10iMQdLl0G2
+R7
+32
+R8
+!i10b 1
+R104
+R105
+R106
+!i113 1
+R12
+R13
+Eport_map_mux_tb_15
+Z108 w1715969824
+R1
+R2
+R3
+!i122 216
+R4
+Z109 8C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_tb_15.vhd
+Z110 FC:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_tb_15.vhd
+l0
+L5 1
+VhTWKN;7o<Im?EY1X762R81
+!s100 Va3boKC3[ZBmo;jHZ5CE72
+R7
+32
+R8
+!i10b 1
+R104
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_tb_15.vhd|
+Z112 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/port_map_mux_tb_15.vhd|
+!i113 1
+R12
+R13
+Asim
+R107
+R1
+R2
+R3
+DEx4 work 18 port_map_mux_tb_15 0 22 hTWKN;7o<Im?EY1X762R81
+!i122 216
+l18
+L8 36
+VGoMU_^LliM7VcTlhez3zM1
+!s100 NUP]GILSJ`WGmz;FnU]Jl3
+R7
+32
+R8
+!i10b 1
+R104
+R111
+R112
+!i113 1
+R12
+R13
+Eprocedure_19
+Z113 w1716119027
+R1
+R2
+R3
+!i122 236
+R4
+Z114 8C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_19.vhd
+Z115 FC:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_19.vhd
+l0
+L5 1
+V3564WBNQ?[4o4PY8IDKnK3
+!s100 fIC>a[7kPX[ZH?NACUDeO1
+R7
+32
+Z116 !s110 1716123121
+!i10b 1
+Z117 !s108 1716123121.000000
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_19.vhd|
+Z119 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_19.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z120 DEx4 work 12 procedure_19 0 22 3564WBNQ?[4o4PY8IDKnK3
+!i122 236
+l33
+L17 39
+V9gRD=`9b?nP72=MczM`;32
+!s100 [FNK=]jiE]gC?mh_6z8KP1
+R7
+32
+R116
+!i10b 1
+R117
+R118
+R119
+!i113 1
+R12
+R13
+Eprocedure_tb_19
+Z121 w1716119026
+R1
+R2
+R3
+!i122 237
+R4
+Z122 8C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_tb_19.vhd
+Z123 FC:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_tb_19.vhd
+l0
+L5 1
+VJN@mfY10o1`KbT20m:C1U0
+!s100 0kH9]_LVjl=kmeh>^`l700
+R7
+32
+Z124 !s110 1716123122
+!i10b 1
+R117
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_tb_19.vhd|
+Z126 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/procedure_tb_19.vhd|
+!i113 1
+R12
+R13
+Asim
+R120
+R1
+R2
+R3
+DEx4 work 15 procedure_tb_19 0 22 JN@mfY10o1`KbT20m:C1U0
+!i122 237
+l21
+Z127 L8 35
+VaZ^mZ0T<i50QX[Ok@8NW_3
+!s100 OzITmZFbEn1[0jR;6XXi]1
+R7
+32
+R124
+!i10b 1
+R117
+R125
+R126
+!i113 1
+R12
+R13
+Esensitivity_list_9
+Z128 w1715865714
+!i122 211
+R4
+Z129 8C:/Users/User/Documents/Programowanie/vhdl-kurs/sensitivity_list_9.vhd
+Z130 FC:/Users/User/Documents/Programowanie/vhdl-kurs/sensitivity_list_9.vhd
+l0
+L1 1
+V<IfW:F1[]WCb5`[FE=Ji^1
+!s100 >bhEe5L3QIdVZ<_Tdgglc1
+R7
+32
+R31
+!i10b 1
+R32
+Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/sensitivity_list_9.vhd|
+Z132 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/sensitivity_list_9.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 18 sensitivity_list_9 0 22 <IfW:F1[]WCb5`[FE=Ji^1
+!i122 211
+l7
+L4 24
+VeB7:[fDeelB:f98jAV9XV1
+!s100 K^LUC3O[:E?m=6lmIh:T^2
+R7
+32
+R31
+!i10b 1
+R32
+R131
+R132
+!i113 1
+R12
+R13
+Esignals_6
+Z133 w1715800118
+!i122 208
+R4
+Z134 8C:/Users/User/Documents/Programowanie/vhdl-kurs/signals_6.vhd
+Z135 FC:/Users/User/Documents/Programowanie/vhdl-kurs/signals_6.vhd
+l0
+L1 1
+V]?DhKEC7gOCMDYV>_zCAo2
+!s100 [:XjL1YbVe_[ilK`d5JZh3
+R7
+32
+Z136 !s110 1716116944
+!i10b 1
+Z137 !s108 1716116944.000000
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/signals_6.vhd|
+Z139 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/signals_6.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 9 signals_6 0 22 ]?DhKEC7gOCMDYV>_zCAo2
+!i122 208
+l6
+Z140 L4 12
+V>inFH4l^U4g6OQeVUWA]R2
+!s100 Z3?34>H422o=?am[2G<dS3
+R7
+32
+R136
+!i10b 1
+R137
+R138
+R139
+!i113 1
+R12
+R13
+Esigned_uns_12
+Z141 w1715962457
+R1
+R2
+R3
+!i122 213
+R4
+Z142 8C:/Users/User/Documents/Programowanie/vhdl-kurs/signed_uns_12.vhd
+Z143 FC:/Users/User/Documents/Programowanie/vhdl-kurs/signed_uns_12.vhd
+l0
+L5 1
+VF6YLh30=CP<8Jcl;mEK^c1
+!s100 ?=e^b;nhJUo3YIb86?42a0
+R7
+32
+Z144 !s110 1716116946
+!i10b 1
+R9
+Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/signed_uns_12.vhd|
+Z146 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/signed_uns_12.vhd|
+!i113 1
+R12
+R13
+Asim
+R1
+R2
+R3
+DEx4 work 13 signed_uns_12 0 22 F6YLh30=CP<8Jcl;mEK^c1
+!i122 213
+l15
+L8 19
+V8RTWzoNhC^<E6<9nD:bYZ1
+!s100 TH]`:B6=kG_;0ez@zWl5@0
+R7
+32
+R144
+!i10b 1
+R9
+R145
+R146
+!i113 1
+R12
+R13
+Estd_logic_10
+Z147 w1715867795
+R2
+R3
+!i122 212
+R4
+Z148 8C:/Users/User/Documents/Programowanie/vhdl-kurs/std_logic_10.vhd
+Z149 FC:/Users/User/Documents/Programowanie/vhdl-kurs/std_logic_10.vhd
+l0
+L4 1
+V5D9ej9D1kRNJ[G^NI]K`Y1
+!s100 eVRHS756iRg4lATco6DTJ3
+R7
+32
+R144
+!i10b 1
+R32
+Z150 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/std_logic_10.vhd|
+Z151 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/std_logic_10.vhd|
+!i113 1
+R12
+R13
+Asim
+R2
+R3
+DEx4 work 12 std_logic_10 0 22 5D9ej9D1kRNJ[G^NI]K`Y1
+!i122 212
+l11
+L7 29
+Vz?0QXJ3f2okLVKom[mj;X1
+!s100 6HDV9]G0VX_9^3i?eONc`1
+R7
+32
+R144
+!i10b 1
+R32
+R150
+R151
+!i113 1
+R12
+R13
+Etimer_18
+Z152 w1716119025
+R1
+R2
+R3
+!i122 234
+R4
+Z153 8C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_18.vhd
+Z154 FC:/Users/User/Documents/Programowanie/vhdl-kurs/timer_18.vhd
+l0
+L5 1
+VzGRWog?89^cLN^T]DY<nk0
+!s100 gQ[WTK]@nO6KG7Hj[@XHd1
+R7
+32
+Z155 !s110 1716123120
+!i10b 1
+Z156 !s108 1716123120.000000
+Z157 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_18.vhd|
+Z158 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_18.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z159 DEx4 work 8 timer_18 0 22 zGRWog?89^cLN^T]DY<nk0
+!i122 234
+l20
+L17 40
+VVRTV8nb;CgHI3izid1:H]2
+!s100 URM9a5>5gH2`c^DaWfi8Z2
+R7
+32
+R155
+!i10b 1
+R156
+R157
+R158
+!i113 1
+R12
+R13
+Etimer_tb_18
+Z160 w1716119024
+R1
+R2
+R3
+!i122 235
+R4
+Z161 8C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_tb_18.vhd
+Z162 FC:/Users/User/Documents/Programowanie/vhdl-kurs/timer_tb_18.vhd
+l0
+L5 1
+VlWHam;PT:5g4`IEK>RX?g2
+!s100 PzHmRkSaDTb5KgBeD4h0Y2
+R7
+32
+R116
+!i10b 1
+R156
+Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_tb_18.vhd|
+Z164 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/timer_tb_18.vhd|
+!i113 1
+R12
+R13
+Asim
+R159
+R1
+R2
+R3
+DEx4 work 11 timer_tb_18 0 22 lWHam;PT:5g4`IEK>RX?g2
+!i122 235
+l21
+R127
+VO4?L4loYnR_J2nl7O46Nd3
+!s100 =bAA`lWa8_YkGCd6MKVjW0
+R7
+32
+R116
+!i10b 1
+R156
+R163
+R164
+!i113 1
+R12
+R13
+Ewait_until_7
+Z165 w1715867739
+!i122 209
+R4
+Z166 8C:/Users/User/Documents/Programowanie/vhdl-kurs/wait_until_7.vhd
+Z167 FC:/Users/User/Documents/Programowanie/vhdl-kurs/wait_until_7.vhd
+l0
+L1 1
+VbbJn5LfOe6:h7DDnDLLiz3
+!s100 N?k?fm`mdjCE`iBK9<83j3
+R7
+32
+R136
+!i10b 1
+R137
+Z168 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/wait_until_7.vhd|
+Z169 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/wait_until_7.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 12 wait_until_7 0 22 bbJn5LfOe6:h7DDnDLLiz3
+!i122 209
+l7
+L4 23
+V1XT?;;TRaP6C6O`_7f9OK0
+!s100 kAZ=>CK;lLS4ZB^ROYVN23
+R7
+32
+R136
+!i10b 1
+R137
+R168
+R169
+!i113 1
+R12
+R13
+Ewhile_5
+Z170 w1715797916
+!i122 207
+R4
+Z171 8C:/Users/User/Documents/Programowanie/vhdl-kurs/while_5.vhd
+Z172 FC:/Users/User/Documents/Programowanie/vhdl-kurs/while_5.vhd
+l0
+L1 1
+V[a_Gm3_Ez5gP8>dOoHOT>2
+!s100 z5[hQjTzEZ^>C;<bK93eZ2
+R7
+32
+R136
+!i10b 1
+R73
+Z173 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/User/Documents/Programowanie/vhdl-kurs/while_5.vhd|
+Z174 !s107 C:/Users/User/Documents/Programowanie/vhdl-kurs/while_5.vhd|
+!i113 1
+R12
+R13
+Asim
+DEx4 work 7 while_5 0 22 [a_Gm3_Ez5gP8>dOoHOT>2
+!i122 207
+l5
+R140
+ViG>Q28nQX^3Dk4fiMNRSz2
+!s100 :h93`2cFTgWVB7C]5nZEa0
+R7
+32
+R136
+!i10b 1
+R73
+R173
+R174
+!i113 1
+R12
+R13

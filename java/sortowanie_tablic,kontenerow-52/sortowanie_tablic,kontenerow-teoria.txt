@@ -1,0 +1,60 @@
+1) Aby manipulowac danymi w roznych typach kolekcji, interfejs Java API udostepnia klase Collections, ktora jest zawarta w pakiecie java.util. Jedna z najpopularniejszych metod klasy Collections jest sort(), ktora sortuje elementy kolekcji. Metody w klasie Collections sa statyczne, wiec nie potrzebujesz obiektu Collections, aby je wywolac.
+Przyklad:
+public class MyClass {
+  public static void main(String[] args) {
+    ArrayList<String> animals = new ArrayList<String>();
+    animals.add("tiger");
+    animals.add("cat");
+    animals.add("snake");
+    animals.add("dog");
+    Collections.sort(animals);
+    System.out.println(animals);
+  }
+}
+W rezultacie otrzymamy wyswietly kontener klasy ArrayList posortiowany alfabetycznie.
+
+2) zadanie (praktyka)
+Podaj rezultat ponizszego kodu:
+List<String> list = new ArrayList<String>();
+list.add("b");
+list.add("a");
+list.add("c");
+Collections.sort(list);
+System.out.println(list.get(0));
+Odpowiedz: "a"
+Wyjasnienie: Zwroc uwage ze nasza tablica najpierw zostanie posortowana, nastepnie odwolujemy sie do elementu 0 naszego kontenera w ktorym po posortowaniu jest juz 'a'. Zwrociles uwage na to ze po lewej jest List, a nie ArrayList? Otoz jest to przyklad polimorfizmu, zwieksza to mozliwosci naszego kodu poniewaz w przyszlosci mozesz zmienic typ liusty z ArrayList na jakas inna liste takze dziedziczaca z List.
+
+3) Mozesz wywolywac metody sort() na roznych typach list takich jak liczby calkowite, czy zmiennoprzecinkowe.
+import java.util.ArrayList;
+import java.util.Collections;
+public class MyClass {
+  public static void main(String[] args) {
+    ArrayList<Integer> nums = new ArrayList<Integer>();
+    nums.add(3);
+    nums.add(36);
+    nums.add(73);
+    nums.add(40);
+    nums.add(1);
+    Collections.sort(nums);
+    System.out.println(nums);
+  }
+}
+Inne przydatne metody w klasie Collections to:
+-max(Collection c) - Zwraca maksymalna wartosc elementu w kontenerze "c" okreslona przez naturalna kolejnosc wystepowania.
+-min(Collection c) - Zwraca minimalna wartosc elementu w kontenerze c, okreslona przez naturalna kolejnosc wystepowania.
+-reverse(List list) - Odwraca kolejnosc elementow wystepujacych w liscie.
+-shuffle(Lista) - tasuje (tj. losuje) elementy w liscie.
+
+4) Zadanie "Minimum And Maximum"
+Stworz program wyswietlajacy element najwiekszy i najmniejszy z listy klasy ArrayList. The program you are given declares ArrayList of integers.
+Complete the program to take numbers as input and add them to ArrayList until its size isn't equal to 5. Then output its maximum and minimum values.
+
+5) Zadanie (praktyka)
+Uzupelnij kod tak by dodac trzy elementy do listy, nastepnie posortuj ta liste i wyswietl 2.
+List<Integer> list = new ArrayList<Integer>();
+list.(1)...(4);
+list.add(2);
+(2)....add(1);
+Collections.(3)...(list);
+System.out.println(list.get((4)...));
+Odpowiedz: (1) - add; (2) - list; (3) - sort; (4) - 1

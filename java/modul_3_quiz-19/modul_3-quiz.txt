@@ -1,0 +1,68 @@
+Zadanie 1
+Podaj output podanego nizej kodu:
+int arr[] = new int[3];
+for(int i = 0; i < 3; i++) 
+{
+    arr[i] = i;
+}
+int res = arr[0] + arr[2];
+System.out.println(res);
+
+Zadanie 2
+Podaj rezultat ponizszego kodu:
+int result = 0;
+for (int i = 0; i < 5; i++)
+{
+  if (i == 3) {
+    result += 10;
+  }
+  else {
+    result += i;
+  }
+}
+System.out.println(result);
+Wynik: "17"
+Wytlumaczenie: Poniewaz: 1+2+10+4 = 17 i i < 5.
+
+Zadanie 3
+Uzupelnij luki by nizej podany program wykalkulowal sume
+elementow w tablicy "arr" uzywajac petli for each:
+int res = 0;
+for (int el : ...) {
+  res += ...;
+}
+Rozwiazanie:
+int res = 0;
+for (int el : arr) {
+  res += el;
+}
+
+Zadanie "Zadanie Ostateczne z Modulu 3"
+Napisz program, który będzie pobierał łańcuch jako dane 
+wejściowe i wyprowadzał jego odwrotność.
+Podany kod pobiera ciąg znaków jako dane wejściowe i 
+konwertuje go na tablicę znaków, która zawiera litery 
+ciągu jako jego elementy.
+Przykładowe dane wejściowe:
+hello there
+Przykładowe dane wyjściowe:
+ereht olleh
+Możesz zapętlić tablicę char, zaczynając od końca, 
+używając arr.length, aby uzyskać rozmiar tablicy.
+1) Rozwiazanie
+import java.util.Scanner;
+public class Program
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String text = scanner.nextLine();
+		char[] arr = text.toCharArray();
+		
+		int l = arr.length;
+		
+		for (int i = (arr.length - 1); i >= 0; i--)
+		{
+            System.out.println(arr[i]);
+		}
+	}
+}

@@ -1,0 +1,52 @@
+1)  Tablice wielowymiarowe to tablice zawierające inne 
+tablice. Tablica dwuwymiarowa jest najbardziej 
+podstawową
+tablicą wielowymiarową.
+Aby utworzyć tablice wielowymiarowe, umieść każdą 
+tablicę
+we własnym zestawie nawiasów kwadratowych.
+Przyklad tablicy dwuwymiarowej:
+int [][] sample {{1,2,3},{4,5,6}};
+To deklaruje tablicę z dwiema tablicami jako jej 
+elementami. Aby uzyskać dostęp do elementu w tablicy 
+dwuwymiarowej, podaj dwa indeksy, jeden dla tablicy, a 
+drugi dla elementu wewnątrz tej tablicy.
+Poniższy przykład uzyskuje dostęp do pierwszego elementu
+w drugiej tablicy sample.
+int x = sample[1][0];
+System.out.println(x);
+Indeksy tablicy dwuwymiarowej nazywaja sie kolejno:
+indeks wiersza i indeks kolumny tablicy dwuwymiarowej. 
+
+Zadanie "podaj rezultat kodu"
+String array[][] = {{"Hey","John","Bye"},{"John","Johnson","Hello"}};
+System.out.println(array[1][1]);
+Rezultat:
+"Johnson"
+
+Możesz pobrać i ustawić elementy tablicy wielowymiarowej
+za pomocą tej samej pary nawiasów kwadratowych. Przyklad
+:
+int[][] myArr = {{1,2,3},{4},{5,6,7}};
+myArr[0][2] = 42;
+int x = myArr[1][0] //4
+Powyższa tablica dwuwymiarowa zawiera trzy tablice. 
+Pierwsza tablica ma trzy elementy, druga ma jeden 
+element, a ostatnia ma trzy elementy.
+W Javie nie ograniczasz się tylko do tablic 
+dwuwymiarowych. Tablice można zagnieżdżać w tablicach na
+tyle poziomów, ile potrzebuje program. Wszystko, czego 
+potrzebujesz, aby zadeklarować tablicę z więcej niż
+dwoma wymiarami, to dodać tyle zestawów pustych nawiasó
+, ile potrzebujesz. Są one jednak trudniejsze do
+utrzymania. Pamiętaj, że wszystkie elementy tablicy
+muszą być tego samego typu. 
+
+Zadanie "Matrix"
+Zostal Ci dany matrix 3x3 z liczbami. 
+
+Podaj output kodu:
+int [][] array = {{3,5,8},{7,54,1,12,4}};
+System.out.println(array[0][2]);
+Wynik:
+"8"

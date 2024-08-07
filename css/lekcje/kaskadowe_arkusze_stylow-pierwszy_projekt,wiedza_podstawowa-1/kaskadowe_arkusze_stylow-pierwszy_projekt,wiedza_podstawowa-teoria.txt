@@ -1,0 +1,45 @@
+1) Technologie webowe: CSS - jezyk sluzacy do opisu formy prezentacji stron internetowych w przegladarce. Okreslajacy jak dane elementy wygladaja (styl), tzn. jakie maja kolory, rozmiary, marginesy, rozmieszczenie, wypelnienie, cienie, kroje czcionek, tlo, itd... Jak strona powinna wygladac.; HTML - jezyk opisowy oparty na tkz. znacznikach (tagach), opisujacy zawartosc strony internetowej. Okreslajacy np. tekst obrazy przyciski listy wyboru, hiperlacza, itd... Co zawiera strona.
+
+2) Tworzenie witryny zarobki: 1. Projektant (designer, layout, szablon graficzny strony) PSD, PNG, BMP - 2 pieniadze; 2. Programista frontendowy (wyglad, zawartosc) HTML, CSS, JS - 2 pieniadze; 3. Programista backendowy (mechanika dzialania) - 4 pieniadze.
+
+3) Od wersji HTML 4.0 cale formatowanie strony moze zostac zdefiniowane w CSS, HTML ma zawierac tylko zawartosc witryny. Zrobiono tak, poniewaz majac wiele podstron musielibysmy dla kazdego zdefiniowac osobna warstwe graficzna, co byloby bardzo uciazlwe. Poza tym wyglad wszystkich podstron powinien byc jednolity (jednolity design = rozpoznawalnosc). Dochodzi tez pozniej kwestia zmiany - musielibysmy zmieniac kolejno 20 roznych warstw graficznych dla 20 podstron... Dlatego wlasnie robi sie tylko jeden plik css do zdefiniowania calej zawartosci graficznej witryny, by pozniej moc latwo dokonywac zmian.
+
+4) Bedziemy dolaczac/includowac plik css poprzez znacznik <link />. Podmiane w CSS zrealizujemyu w ciagu kilkunastu sekund (rozdzielene wygladu od zawartosci), dodatkowo CSS daje mozliwosc stylizacji. Zmniejsza tez ilosc linii kodu. Mozna tez w CSS dobrac metode prezentacji strony w zaleznosci od napotkanej u usera przegladarki.
+
+5) Plik CSS jest to zbior upozadkowanych sekcji, ktorych kazda ma postac:
+selector
+{
+property: value;
+property: value;
+property: value;
+}
+Selector to wybrany element strony ktorego cechy wpisujemy pomiedzy klamrami, np. moze byc to naglowek h1, wowczas selectorem bedzie h1. Property to wlasciwosc, np. wlasciwoscia h1 moze byc kolor czcionki (color), moze byc takze font-size, moze byc takze font-weight (waga czcionki). Value to wartosc wlasciwosci, np. dla wlasciwosci koloru czcionki (yellow), moze byc dla font-size 36px, dla font-weight moze byc bold (pogrubiona).
+
+6) Celem jest poznanie jak najwiekszej liczby wlasciwosci i ich mozliwych wartosci.
+
+7) Klamry mozemy ustawic na dwa sposoby, tj. jak wyglada kod wewnetrzny:
+selector{
+...
+}
+lub
+selector
+{
+...
+}
+Wlasciwosci i przypisane im wartosci zapisane sa malymi literami. Selector nie musi byc zawsze pojedynczym konkretnym elementem, mozna takze w css tworzyc klasy, czyli grupy obiektow.
+
+8) Okreslenie wygladu ciala strony zapisujemy poprzez body i klamry. Zdefiniowanie koru tla witryny robimy poprzez dodanie wlasciwosci background-color. Kolor mozna definiowac szesnastkowo. Kroj czcionki zapisujemy poprzez wlasciwosc font-family.
+Rozmiar czcionki zapisujemy poprzez font-size, mozemy dac pozniej np. 20px. Kolor czcionki definiujemy poprzez color i dalej mozemy dodac np. white. Aby dodac/zaincludowac arkusz styli css do html-a naalezy skorzystac z <link rel = "stylesheet" href = "style.css" type = "text/css" />
+Gdzie stylesheet wzielo sie od arkusza stylow, rel oznacza ze definiujemy link do konkretnego arkusza stylow, bo rownie dobrze moglibysmy incudowac java sript-a, href oznacza lokalizacje pliku, type natomiast oznacza typ dokumentu (tutaj css).
+
+9) Do stylizowania linku w css-ie mozemy uzyc trzech roznych selektorow. Poniewaz link mogl jeszcze nie byc przez nas odwiedzony, wowczas jego wlasciwosci zapiszemy "a:link {...}", jezeli juz go odwiedzilismy zapiszemy "a:visited {...}", jezeli najedziemy kursorem na link, zapiszemy: a:hover {...} (wzielo sie od hover over).
+
+10) W celu stworzenia komentarza - tekstu ignorowanego przez przegladarke piszemy "/*...*/".
+
+11) Plik CSS nie musi byc kodowany w UTF-8, kodowanie znakow w css-ie ogolnie nie ma za duzego znaczenia. Tez EOL nie ma tutaj specjalnego znaczenie, bo w CSS-ie i tak komendy stylizujace koncza sie srednikami. Stad ten problem tez znika.
+
+12) Sposoby dolaczania plikow css do pliku html to: 1. Sposob przez link, tj. dolaczenie zewnetrznego arkusza stylow, pliku css, do pliku html. 2. Tworzenie w sekcji head znacznika <style> i w nim zamieszczamy kod css-a, uniemozliwia nam to jednak ogolne korzystanie z pliku css w innych podstronach. 3. Sposob inline - w linii (znaczniku), ktorego styl dotyczy <h1 style = "...">...</h1>.
+
+13) Zapisy w CSS charakteryzuje hierarchia, bo moga sie one przeslaniac. W CSS-ie na hierarchicznosc mowimy kaskadowosc. Nazwa CSS - Cascading Style Sheets (kaskadowe arkusze stylow). Kaskada to rodzaj wodospadu w ktorym woda spada z progu po stopniach (stopniowosc). Zapisy na stronie w css beda wazniejsze od zapisow w pliku dolaczonym do html-a, bo dla kazdej strony moze on byc inny. Zapis w znaczniku jest w hierarchi css-a najwazniejszy i przeslania wszystkie pozostale. Najmniej wazne sa natomiast w hierarchii wartosci domyslne atrybutow.
+
+14) Kaskadowosc mozna zlamac poprzez zapis "!important", ktora dodajemy po wpisaniu wlasciwosci, ktora chcemy wymusic. np. color: red !important; Informujemy wowczas przegladarke, ze dany zapis jest niezwykle wazny.

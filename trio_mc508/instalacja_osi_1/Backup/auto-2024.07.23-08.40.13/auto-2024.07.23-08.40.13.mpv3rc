@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="2">
+  <Content Name="Project">
+    <Project>
+      <Items>
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="3608966f-23c0-4ab2-9bc6-4af92c60d070" />
+        <Item Type="basic" Name="STARTUP" Id="e8cc647e-e2d8-4d66-90e8-94d48659d1de" />
+        <Item Type="basic" Name="BASE" Id="4571c04e-b403-4cf8-9f26-224756d5569e" />
+      </Items>
+    </Project>
+  </Content>
+</Contents>

@@ -1,0 +1,109 @@
+Tablica to zbiór zmiennych tego samego typu.
+Gdy potrzebujesz przechowywać listę wartości, takich 
+jak liczby, możesz przechowywać je w tablicy, zamiast
+deklarować oddzielne zmienne dla każdej liczby.
+Aby zadeklarować tablicę, musisz zdefiniować 
+typ elementów w nawiasach kwadratowych.
+Dla przykladu zeby zadeklarowac tablice liczb 
+calkowitych typu int nalezy napisac: 
+int[] arr. 
+
+Nazwa tablicy to arr natomiast typ elementow ktore 
+ta tablica przechowuje to int czyli liczby calkowite.
+mozesz zdefiniowac rozmiar tablicy, inaczej nazywany 
+jej pojemnoscia, w celu zdefiniowania roxmiaru 
+tablicy nalezy uzyc instrukcji new
+int[] arr = new int[5];
+W powyzszym kodzie definiuje tablice przechowujaca 5
+liczb calkowityvh. Elementysa poustawiane i kazdy ma
+stala pozycje, ktora nazywamy indeksem. 
+Aby odwolac sie do danego elementu tablicy wpisz nazwe 
+tablicy nastepnie podaj numer indeksu w tablicy. 
+arr[2] = 42;
+Przypisujemy wartosc = 42 do epementu tablicy o indeksie
+ = 2.
+Zwróć uwagę, że elementy w tablicy są identyfikowane za 
+pomocą liczb indeksu liczonych od zera, co oznacza, że 
+indeks pierwszego elementu to 0, a nie jeden. Zatem 
+maksymalny indeks tablicy int[5] wynosi 4.
+
+zadanie 1
+w java elementy tablicy nuemrowanie indeksow zaczynane jest od zera. 
+
+Java udostępnia skrót do tworzenia instancji tablic 
+typów pierwotnych i łańcuchów.
+Jeśli już wiesz, jakie wartości wstawić do tablicy, 
+możesz użyć literału tablicowego (array literal) 
+przyjlad literalu tablicowego:
+String[] myNames = {"A", "B", "C", " D"};
+System.out.println(myNames[2]);
+Umieść wartości na liście oddzielonej przecinkami, 
+ujętej w nawiasy klamrowe.
+Powyższy kod automatycznie inicjalizuje 
+tablicę zawierającą 4 elementy i przechowuje podane 
+wartości.
+Czasami możesz zobaczyć nawiasy kwadratowe umieszczone 
+po nazwie tablicy, co również działa, ale preferowanym 
+sposobem jest umieszczenie nawiasów po typie danych 
+tablicy.
+
+Zadanie "napraw kalendarz"
+Popraw kod tak zeby twoj kalenadarz zadzialal. 
+
+Zadanie
+Podaj wynik podanego nizej kodu:
+int tmp[] = {5,8,9,3};
+System.out.println(tmp[2]);
+Rezultat: wyswietli sie wartosc 9.
+
+Możesz uzyskać dostęp do długości tablicy (liczby 
+przechowywanych przez nią elementów) poprzez jej 
+właściwość length.
+int[] arr = new int[5];
+System.out.println(arr.length) 
+Nie zapominaj, że w tablicach indeksy zaczynają się od 0
+. Tak więc w powyższym przykładzie ostatni indeks to 4.
+
+Zadanie
+Uzupelnij luki by zwrocic liczbe elementow tablicy o id 
+= "test".
+
+Teraz, gdy wiemy, jak ustawiać i pobierać elementy 
+tablicy, możemy obliczyć sumę wszystkich elementów 
+tablicy za pomocą pętli.
+Pętla for jest najczęściej używaną pętlą podczas pracy z
+tablicami, ponieważ możemy użyć długości tablicy do 
+określenia, ile razy wykonać pętlę.
+int [] myArr = {6, 42, 3, 7}
+int sum = 0;
+for (int i = 0; i < myArr.length; i++) {
+  sum += myArr[x];
+}
+System.out.println(sum);
+W powyższym kodzie zadeklarowaliśmy zmienną sum do 
+przechowywania wyniku i przypisaliśmy jej 0.
+Następnie użyliśmy pętli for do iteracji po tablicy i 
+dodaliśmy wartość każdego elementu do zmiennej.
+Warunkiem pętli for jest x < myArr.length, ponieważ 
+indeks ostatniego elementu to myArr.length-1.
+
+Zadanie "Znajdowanie mnoznikow"
+Znajdz program znajdujacy mnozniki liczb 
+przedstawionych
+w tabeli. 
+
+Zadanie
+Uzupelnij luki tak zeby obliczyc sume elementow tablicy
+uzywajac zmiennej for i wyswietlic je na ekran. gdzie 
+tablica jest typu double. 
+double sum = 0.0;
+... (int x = 0; x < 4; x...) {
+  sum += myArr[...];
+}
+System.out.println(...);
+1) Rozwiazanie:
+double [] sum = 0.0;
+for (int x = 0; x < 4; x++) {
+  sum += myArr[x];
+}
+System.out.println(sum);

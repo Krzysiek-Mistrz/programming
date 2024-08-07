@@ -1,0 +1,127 @@
+1) Nowe znaczniki HTML5:
+<header></header> naglowek
+<nav></nav> nawigacja
+<article></article> artykul
+<section></section> sekcja
+<main></main> 
+<aside></aside> poboczna zawartosc
+<footer></footer> stopka
+Uzywanie powyzszych nowych znacznikow przyczyni sie pozytywnie do tworzenia lepszych semantycznie stron internetowych.
+Sa to znaczniki semantyczne, pozwalaja one na precyzyjne definiowanie przeznaczenia poszczegolnych czesci kodu zrodlowego.
+(Semantyka to nauka badajaca znaczenie, przeznaczenie czegos). Te znaczniki najbardziej przydaja sie botom, robotom ktore analizuja strone. Mowimy woczas robotom do czego dany kod strony ma sluzyc. Umozliwia to robotowi prawidlowe pozycjonowanie naszej witryny.
+
+2) Stworzenie strony internetowej mozna przedstawic nastepujaco:
+1.RWD
+2.nowe znaczniki HTML5
+3.klasyczne struktury z uzyciem <div> float: left; albo display: inline-block;
+4.poskromienie pokusy uzycia znacznika <table>
+Model jest holistyczny i tak wlasnie warto pracowac nad struktura strony internetowej.
+
+3) Nie odnosnie HTML-a ale cos tez przydatnego: timestamps (chwile czasowe), pomagaja odnalezc w filmie poszukiwane fragmenty wiedzy.
+
+4) Warto wypracowac swoja kulture pracy. Warto cierpliwie szlifowac swoje umiejetnosci, przy tym dazyc w tym co robimy do perfekcji.
+
+5) Jest to kolejna galaz specjalizacji programistycznej w HTML. Pozwala to na wiekszy front-endowy wplyw na pozycjonowanie strony. Mozmey wowczas tworzyc internet z wieksza iloscia ulatwien dostepu.
+
+6) Znacznik <header> - zawartosc wewnatrz tego znacznika okreslamy jako wstepna, wprowadzajaca tresc do najblizszego semantycznego poprzednika tego tagu (np. artykulu, sekcji, aside'a, stopki), albo wyjatkowo jako wstep do calej podstrony (wowczas semantyczym poprzednikiem tego naglowka jest tag otwierajacay <body>. Oprocz tresci wstepnych w praktyce headery zawieraja czesto elementy nawigacyjne.
+<head>
+<h1> <h2>
+<h3> <h4>
+<h5> <h6>
+Czyli jezeli wstawimy to np. do sekcji body, to robot zrozumie to tak jakby byl to wstep calej witryny. Natomiast jezeli wstawimy to przykladowo do <article> to wowczas robot zrozumie to jako czesc wstepna tego artykulu. Zatem dochodzimy do wniosku ze robot patrzy takze na bezposredni poprzednik semantyczny tag-a <header>.
+
+7) Znacznik <nav> - zawartosc tego znacznika okreslamy jako podlinkowana tresc prowadzaca do innych podstron witryny (lub do zewnetrznych domen). Jest to zatem "wewnetrzny obszar nawigacyjny", wlasciwy danej witrynie. Docelowo moze to umozliwic robotom czytajacym szybki dostep do glownej zawartosci, z pominieciem kazdorazowego odczytywania nawigacji. Uwaga - nie wszystkie zestawienia linkow na stronie musza zostac zamkniete w nav-ie (np. linki w stopce). Jest on stosowany tylko dla kluczowych, najwazniejszych elementow nawigacyjnych naszej witryny. W tagu <nav> nie musi zawierac w sobie koniecznie listy numerowanej czy punktowanej. Znaczniki <nav> nie musza sie znajdowac wewnatrz <header>-a. Znacznikow <nav> moze byc wiecej niz jeden.
+
+8) Znacznik <article> - zawartosc wewnatrz tego znacznika okreslamy jako kompletna, dajaca sie wyroznic odrebna od innych tresc witryny. Stanowi autonomiczna calosc, czesto przyjmuje tez powtarzalna forme - np. wpis blogowy, post na forum, artykul w portalu. Znaczniki te mozna zagniezdzac, jesli wewnetrzny artykul (mimo swojej odrebnosci) jest w jakis sposob powiazany z artykulem zewnetrznym (np. stanowi komentarz do niego). Znaczniki <article> mozna w sobie zagniezdzac, przykladowo:
+<article>
+<!-watek na forum->
+<article>
+<!-post #1->
+</article>
+<article>
+<!-post #2->
+</article>
+</article>
+Znacznik <article> wykazuje zatem kaskadowosc, hierarchicznosc.
+
+9) Znacznik <section> - zawartosc wewnatrz tego znacznika okreslamy jako tematycznie zgrupowana tresc, a temat takiej sekcji powinien zostac okreslony w jej czesci naglowkowej. Sekcje stanowia w zalozeniu czesc wiekszej calosci, w przeciwienstwie do artykulu, ktory jest autonomiczna caloscia. Uzycie sekcji zamiast artykulu zalezne jest w praktyce od intencji programisty. Zatem w praktyce mozliwe jest uzycie wielu roznych typow zagniezdzenia:
+<article>
+<!-wpis blogowy->
+</article>
+<article>
+<!-komentarze->
+<article>
+<!-komentarz #1->
+</article>
+</article>
+- - - lub - - -
+<article>
+<section>
+<!-wpis blogowy->
+</section>
+<section>
+<!-komentarze->
+<div>
+<!-komentarz #1->
+</div>
+</section>
+</article>
+- - - lub - - -
+<article>
+<!-wpis blogowy->
+<section>
+<!-komentarze->
+<article>
+<!-komentarz #1->
+</article>
+</section>
+</article>
+Z tego powodu dopiero teraz przeszlismy do znacznikow HTML5, poniewaz zawsze ciezko jest syntetyzowac (zgodnie z taksonomia Blooma)
+
+10) Znacznik <main> - zawartosc wewnatrz tego znacznika okreslamy jako glowna, najwazniejsza tresc calej podstrony. Uwaga: znacznik main to nie jest tzw. sectioning content (tzn. nie zmienia zasiegow obowiazywania naglowkow i stopek, tak jak czynia to article, aside, nav i section). Na calej podstronie znacznik main moze zostac uzyty tylko jeden raz (w sensie: mozemy jeden raz uzyc dwoch tagow - otwierajacego i zamykajacego). Pozwala rozwiazac problem rozmazywania sie glownej zawartosci witryny. Wprowadzono go od wersji 5.1 . Moze byc uzyty tylko w sekcji <body>, nie moze sie znajdowac wewntarz znacznika semantycznego, ale moze byc wewnatrz <div>. Nie mozna go nazwac znacznikiem semantycznym, poniewaz spelnia on tez inne zadania zwiazane z flow witryny.
+
+11) Znacznik <aside> - zawartosc wewnatrz tego znacznika okreslamy jako tresc jedynie marginalnie powiazana z glowna zawartoscia witryny (np. reklamy, poboczna nawigacje, widgety i feedy socialmediowe itd...) Robot ta sekcje oznaczona przez znacznik <aside> odczytuje jako mniej wazna.
+
+12) Znacznik <footer> - zawartosc wewnatrz tego znacznika okreslamy jako tresc koncowa (stopke) najblizszego semantycznego poprzednika tego tagu. Zatem podobnie jak naglowkow header, rowniez tagow footer moze byc na stronie wiele (wspolczesnie stopka to nie tylko zakonczenie calej podstrony). W przypadku jesli jest ich wiele to wowczas najwazniejszy znajdzie sie na koncu tagu <body>. Uzywamy go kiedy jest potrzeba zamiescic jakos informacje koncowa nawet np. w tresci komentarz, jako zasady komentowania.
+
+13) Znaczniki semantyczne (header, nav, article, section, main, footer) nie zastapily znacznikow strukturalnych, (div(float: left; display: inline-block; responsywne siatki)), jest to jedynie nowa dodatkowa warstwa semantyczna. Znaczniki semantyczne nadaja przeznaczenie wybranym tresciom witryny. Divy pozwalaja rozmieszczac, ukladac i stylizowac tresc witryny. Nalezy zatem zaraz po opracowaniu projektu graficznego witryny opracowywac strukture i semantyke razem.
+
+14) Do poprawnego zachowania znacznikow HTML5 w IE ponizej wersji 9 potrzebny jest skrypt JS o nazwie: html5shiv:
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+jezeli less than internet explorer w wersji 9-tej, to dolaczamy takze skrypt do ktorego link jest podany ponizej. Azeby znalezc ta instrukcje w necie wystarczy wpisac HTML5 shiv.
+
+15) Projekt strony ktora przygotowujemy zostal stworzony w Photoshop-ie w stylistyce one-page design.
+
+16) Naglowek strony internetowej nie powienien byc zamkniety w znaczniku semantycznym <article>, dajemy wowczas tylko sam <header>
+
+17) Blog - (ang. web log = dziennik siecowy) strona internetowa zawierajaca uporzadkowane chronologicznie wpisy, majace zazwyczaj charakter mocno subiektywny. Blogi umozliwiaja zazwyczaj archiwizacje oraz kategoryzowanie wpisow, jak rowniez komentowanie notatek przez czytelnikow.
+Elementy bloga:
+1.kategorie tematyczne.
+2.ostatnie wpisy.
+3.kim jest autor badz autorzy bloga?
+
+18) Kategoria struktury witryny one-page design polega na planie struktury nastepujacym:
+-naglowek witryny
+-kategorie tematyczne
+-ostanie wpisy
+-informacje o autorze
+-
+Wszystko w tym planie znajduje sie pod soba, w powtarzalnych sekcjach. W pojedynczych widokach bez zadnych <aside>.
+
+19) W naszym planie witryny jest to nastepujace:
+-calosc semantyki znajduje sie pod znacznikiem <header> w znaczniku sematycznym <main>.
+-w znaczniku sematycznym <main> znajduje sie znacznik <article, a w nim znajduje sie trzy znaczniki <section>.
+-na koncu umiescimy stopke witryny.
+
+20) <figure> znacznik, ktory doskonale nadaje sie do zalaczenia w glownej tresci ilustracji. Natomiast znacznik <figcaption> to etykieta tekstowa, opisujaca co przedstawia nasza zalaczona ilustracja.
+
+21) dziesiecioprocentowa przezroczystosc opacity: 0.9; Wlasciwosc pozwalajaca ustawiac przezroczystosc w jezyku css.
+
+22) Wlasciwosc border-radius: zpx; w jezyku CSS oznacza zaokraglenie rogow przycisku o z pixeli.
+
+23) Do opisania naszej podstrony: wpis.html, posluzymy sie nastepujacym schematem - po lewej stronie wstawiamy <div class = "container">, do niego wstawiamy <div class = "west">, do niego wstawiamy - <main>, do niego <article>, a do niego dwa znaczniki semantyczne - <header> i <section>. Natomiast po prawej stronie beda reklamy czyli znacznik <div class = "east">, wewnatrz ktorego bedzie <aside>.
+Tutraj warto tez zrozumiec (przypomniec sobie) ze znacznik semantyczny <main> moze byc uzyty w znacznikach niesemantycznych - divach. Nie moze byc natomiast uzyty wewnatrz znacznikow semantycznych.
+
+24) W programie adsense, sluzacym do ustawiania reklam na stronie podstawowym, predefiniowanym wymiarem jest wymiar - 160px x 600.

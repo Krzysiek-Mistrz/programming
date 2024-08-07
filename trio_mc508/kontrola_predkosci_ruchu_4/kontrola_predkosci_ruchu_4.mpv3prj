@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" VersionMinor="1" ProductId="400" ProductName="MC400">
+    <Environment>
+        <Software SoftwareVersion="5.4.3.30464" />
+        <Controller ControllerVersion="2.0331001000" ControllerFPGAVersion="0">
+            <Modules />
+        </Controller>
+    </Environment>
+    <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+            <Items />
+        </Group>
+    </Groups>
+    <Items>
+        <Item Type="basic" Name="ELIPSA" Id="dbffa9b7-89e2-4c9a-9089-0ddf25eddfa6" FileName="ELIPSA.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="67b8ec87-324e-4634-a87b-8e6c83d1e088" FileName="MC_CONFIG.MCC" Storage="internalStorage" />
+        <Item Type="basic" Name="RUCHY_SP" Id="e84f23cc-d5c5-4a8a-9737-16ad25785256" FileName="RUCHY_SP.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basic" Name="STARTUP" Id="6b30c5d8-4458-41a7-927a-2c207306dd28" FileName="STARTUP.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basic" Name="WYKONANIE_RUCHU_O_BPREDKOSC" Id="3aa384ef-d82b-4eb1-9838-1510b68b9eae" FileName="WYKONANIE_RUCHU_O_BPREDKOSC.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basic" Name="WYKONANIE_RUCHU_O_PREDKOSC" Id="bc0b9e74-98ca-4080-bf5b-5446ec174dc0" FileName="WYKONANIE_RUCHU_O_PREDKOSC.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+    </Items>
+</Project>

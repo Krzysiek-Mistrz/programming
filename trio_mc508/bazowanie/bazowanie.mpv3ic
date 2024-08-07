@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="4">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_Program___MAIN" />
+  <Content Name="Document_Program__FUNC_BASE" />
+  <Content Name="Document_Program__FUNC_EMERGENCY" />
+  <Content Name="Document_Program__FUNC_MIDDLE" />
+  <Content Name="Document_Program__FUNC_POS" />
+  <Content Name="Document_Program__GLOBAL_VARS" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="tool_VRViewerControl">
+    <Tool IsPeriodicUpdateEnabled="true">
+      <Ranges>
+        <Range StartAddress="0" EndAddress="10" IsExpanded="true" Description="" />
+      </Ranges>
+    </Tool>
+  </Content>
+  <Content Name="TableRangeEditDlgSettings">
+    <RecentRanges_VR>
+      <Range StartAddress="0" EndAddress="10" Description="" />
+    </RecentRanges_VR>
+  </Content>
+  <Content Name="Document_Program_TEST_ANALOG" />
+</Contents>

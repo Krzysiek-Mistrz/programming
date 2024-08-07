@@ -1,0 +1,22 @@
+promien = 800
+alfa = PI/4
+start_x = 0
+start_y = 0
+start_z = 0
+koniec_x = start_x + promien * COS(alfa)
+koniec_y = start_y + promien * SIN(alfa)
+koniec_z = start_z + promien
+p_pos_x = (koniec_x - start_x) * (1 - COS(PI/4))
+p_pos_y = (koniec_y - start_y) * (1 - COS(PI/4))
+p_pos_z = (koniec_z - start_z) * SIN(PI/4)
+DEFPOS(0) AXIS(0)
+DEFPOS(0) AXIS(1)
+DEFPOS(0) AXIS(2)
+DEFPOS(0) AXIS(3)
+DEFPOS(0) AXIS(4)
+BASE(0, 1, 2, 3, 4)
+SPEED = 5000
+ACCEL = 500000
+DECEL = DECEL
+MSPHERICAL(koniec_x, koniec_y, koniec_z, p_pos_x, p_pos_y, p_pos_z, 0, 1, 1131, 1131)
+

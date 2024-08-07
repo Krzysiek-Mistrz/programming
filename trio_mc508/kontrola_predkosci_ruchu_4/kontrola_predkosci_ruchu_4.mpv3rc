@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="3">
+  <Content Name="Project">
+    <Project>
+      <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+          <Items />
+        </Group>
+      </Groups>
+      <Items>
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="67b8ec87-324e-4634-a87b-8e6c83d1e088" />
+        <Item Type="basic" Name="STARTUP" Id="6b30c5d8-4458-41a7-927a-2c207306dd28" />
+        <Item Type="basic" Name="RUCHY_SP" Id="e84f23cc-d5c5-4a8a-9737-16ad25785256" />
+        <Item Type="basic" Name="WYKONANIE_RUCHU_O_BPREDKOSC" Id="3aa384ef-d82b-4eb1-9838-1510b68b9eae" />
+        <Item Type="basic" Name="WYKONANIE_RUCHU_O_PREDKOSC" Id="bc0b9e74-98ca-4080-bf5b-5446ec174dc0" />
+        <Item Type="basic" Name="ELIPSA" Id="dbffa9b7-89e2-4c9a-9089-0ddf25eddfa6" />
+      </Items>
+    </Project>
+  </Content>
+</Contents>

@@ -1,0 +1,64 @@
+1) Instrukcje warunkowe sluza do wykonywania roznych akcji na podstawie roznych warunkow. Instrukcja if jest jedna z najczesciej uzywanych instrukjci warunkowych. Jesli wyrazenie warunku instrukjci if ma wartosc true, wykonywany jest blok kodu wewnatrz instrukcji if. Jesli okaze sie ze wyraznie jest falszywe wowczas wykonyway jest pierwszy zestaw kodu po zakonczeniu instrukcji if (po zamykajacym nawiasie klamrowym).
+if(condition)
+{
+//executes when the condition is true.
+}
+Do utworzenia warunku mozna uzyc dowolnego z nastepujacych opertorow porownania:
+< mniej niz
+> wieksze niz
+!= nie rowne
+== rowna sie
+<= mniejsze badz rowne
+>= wieksze badz rowne
+Dla przykladu:
+int x = 7;
+if(x < 42) {
+  System.out.prinln("Hi");
+}
+Pamietaj ze musisz uzyc podwojnego operatora rownosci w celu sprawdzenia rownosci dwoch wyrazen. Poniewaz pojedynczy znak rownosci to operator przypisania.
+
+2) Uzupelnij luki tak zeby wyswietlic "yeah".
+int x = 5;
+...(x == 5) {
+  System.out.println("...");
+}
+Rozwiazanie:
+int x = 5;
+if(x == 5) {
+  System.out.println("yeah");
+}
+
+3) Po if mozesz dac dodatkowa instrukcje else ktora jest wykonywana kiedy warunek ma wartosc false.
+int age = 30;
+if(age < 16) {
+  System.out.println("too young");
+}
+else
+{
+  System.out.println("Welcome");
+}
+Poki wiek rowna sie 30 warunek wewnatrz instrukcji if jest falszywy i wykona sie przez to blok zawarty wewnatrz else.
+
+4) Wypelnij luki tak zeby program wypisal wieksza liczbe:
+int x = 10, y = 5;
+...(x > y) {
+  System.out.println(...);
+}
+... {
+  System.out.println(y);
+}
+Rozwiazanie:
+int x = 10, y = 5;
+if(x > y) {
+  System.out.println(x);
+}
+else {
+  System.out.println(y);
+}
+
+zadanie "Auto w saloonie"
+Ustal koncowa cen auta w celu podjecia ostatecznej decyzji.
+
+Zadanie "Congratulations!"
+Napisz program, ktory wypisze rezultat aplikacji studentow do stypedium.
+

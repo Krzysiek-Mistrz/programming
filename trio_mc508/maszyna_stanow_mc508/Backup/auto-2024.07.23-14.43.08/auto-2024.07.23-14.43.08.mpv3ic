@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="4">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="Document_Program_MAIN" />
+  <Content Name="tool_FindReplaceWindow">
+    <Tool MainMode="QuickFind">
+      <Options MatchWholeWord="false" MatchCase="false" SearchUp="false" UseRegularExpressions="false">
+        <TargetItemTypes Mode="All" />
+      </Options>
+    </Tool>
+  </Content>
+</Contents>

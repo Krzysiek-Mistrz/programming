@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_bc9ea1cdd40d4f1492215205cc1bb0ae">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_de9229b3937b411c9a903ad479c2c392">
+      <Program Name="__MAIN" Process="-1" />
+    </Content>
+    <Content Name="document_8f766660638140a0af51f70323518251">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 14:24:16" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_bc9ea1cdd40d4f1492215205cc1bb0ae" LastActivationTimeStamp="07/23/2024 14:24:11" />
+            <LayoutDocument Title="__MAIN" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_de9229b3937b411c9a903ad479c2c392" LastActivationTimeStamp="07/23/2024 14:24:16" />
+            <LayoutDocument Title="STARTUP" ContentId="document_8f766660638140a0af51f70323518251" LastActivationTimeStamp="07/23/2024 14:24:13" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 14:19:08" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

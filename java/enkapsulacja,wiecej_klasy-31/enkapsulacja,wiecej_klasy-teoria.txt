@@ -1,0 +1,30 @@
+1) W OOP - programowaniu obiektowym istnieja 4 podstawowe pojecia: enkapsulacja, dziedziczenie, polimorfizm i abstrakcja. Idea enkapsulacji jest zapewnienie ze szczegoly implementacji nie sa widoczne dla uzytkownikow. Zmienne jednej klasy beda ukryte przd innymi klasami, dostepne tylko poprzez metody klasy obcej. Nazywamy to ukrywaniem danych. Aby osiagnac chermetyzacje danych w Javie, nalezy zadeklarowac zmienne klasy jako prywatne i udostepnic publiczne metody ustawiajace i pobierajace do modyfikowania i przegladania wartosci zmiennych. Przyklad:
+class BankAccount {
+  private double balance = 0;
+  public void deposit(double x) {
+    if(x > 0)
+        balance += x;
+  }
+}
+Implmentacja ta ukrywa zmienna salda, umozliwiajac dostep do niej tylko poprzez metode depozytowa, ktora przed modyfikacja zmiennej weryfikuje kwote do wplaty.
+Podsumowujac enapsulacja zapewnia nastepujace korzysci:
+-Kontrola sposobu dostepu lub modyfikacja danych.
+-Bardziej elastyczny i latwiejszy do zmiany kod.
+-Mozliwosc zmiany jednej czesci kodu bez wplywu na inne czesci.
+
+2) Zadanie "Welcome" (angielski)
+Create an art school management program. Create a Pupil object, then load the age of the student and assign it to the age attribute of the Pupil class using a setter. Then, if the age of the student determined by the setter is greater than 6, display the text "Welcome", otherwise the text "Sorry"
+
+3) Zadanie "Calculating Net Revenue With Taxes" (angielski)
+Complete the class with methods that calculate and refund net revenue. Load into the program the total income and the tax that you will deduct from this income to get the value of the net income. Do this in a separate "Income" class, then write this value to the screen.
+
+4) Uzupenij kod tak zeby stworzyc prawidlowy kod w javie uzywajac enkapsulacji.
+public class Person {
+    ... int age;
+    ... void setAge(... age) {
+        if(age > 0)
+            this.age = age;
+    }
+}
+Dopasuj te slowa (celowo jest ich za duzo):
+private, int, public, String, static, protected

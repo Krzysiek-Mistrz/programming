@@ -1,0 +1,12 @@
+1) Plik wsadowy - program, ktory wykonywany jest wsadowo, czyli bez wplywu uzytkownika. Lopatologicznie, lista polecen do wykonania przez interpreter polecen. Zazwyczaj konczy się rozszerzeniem .bat (od batch file).
+
+2) Pliki wsadowe w systemach Windows mozna stosowac do tworzenia prostych programów. Poniewaz dzialaja one glownie w trybie tekstowym do ich tworzenia wymagana jest znajomosc komend MS-DOS.
+
+3) Opis podstawowych komend:
+@echo off - wylaczenie wyswietlania komend na ekranie.
+echo - wyswietlenie tekstu. Jako argumenty podajemy tekst do wyswietlenia.
+pause - oczekiwanie na nacisniecie dowolnego klawisza.
+
+4) Ze znajomoscia tych kilku komend mozesz już pisac programy sluzace do robienia powtarzających się czynnosci, np. kopiowania plikow a nastepnie przetwarzania ich. Jednak taki program nie jest interakcyjny, czyli nie pozostawia wyboru uzytkownikowi co do jego dzialania.
+
+5) Historia jezyka B, jako kategori imperatywnej dla jezyka Batch. Jezyk programowania B zostal stworzony przez Kena Thompsona i Denisa Ritchie w Bell Labs w 1969 roku. W duzym stopniu opieral się na jezyku BCPL. Na przelomie lat 1971/72 jezyk B rozwinal się w New B a potem w C (składnia B bardzo przypomina wczesne C). Obecnie B nie jest rozwijany ani uzywany.

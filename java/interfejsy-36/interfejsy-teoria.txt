@@ -1,0 +1,59 @@
+1) Interfejs jest abstrakcyjna klasa zawierajaca tylko abstrakcyjne metody. Niektore specyfikacje interfejsow:
+-Zdefiniowane za pomoca slowa kluczowego interface.
+-Moze zawierac tylko statyczne zmienne koncowe.
+-Nie moze zawierac konstruktora, poniewaz nie mozna utworzyc instancji interfejsow.
+-interfejsy moga rozszerzac inne interfejsy.
+-Klasa moze zaimplemetowac dowolna liczbe interfejsow.
+Przykald prostego interfejsu:
+interface Animal {
+  public void eat();
+  public void makeSound();
+}
+Interfejsy maja nastepujace wlasciwosci:
+-interfejs jest domyslnie abstrakcyjny. Nie musisz uzywac slowa kluczowego abstract podczs deklarowania interfejsu.
+-kazda metoda w interfejsie jest niejawnie abstrakcyjna zatem nie musisz uzywac slowa kluczowego "abstract".
+-metody w interfejsie sa niejawnie publiczne.
+Jedna podklasa moze dziedzyc z tylko jednej nadklasy, jednak moze tworzyc implemetowac wiele interfejsow.
+
+2) Zadanie (teoria - rozumienie pojecia interfejsu)
+W Javie jak wiele nadklas moze "miec" twoja odziedziczona podklasa? Rozwaz i podaj przyklad tego zdarzenia. Zastanow sie czy java wspiera wielokrotne dziedziczenie klas.
+Odpowiedz: De facto podklasa moze dziedziczyc -> tzn. miec dostep do metod i zmiennych nadklasy, z tylko jednej nadklasy. Rozwazyc mozna jednak przypadek nastepujacy:
+class A {}
+class B extends A {}
+class C extends B {}
+Widzimy zatem ze klasa C nie dziedzyc tylko z klasy B ale takze z klasy A. Zatem na bazie przykladu zdarzenia podanego, stwierdzam ze java wspiera wielokrotne dziedziczenie z danej nadklasy.
+
+3) Uzyj slowa kluczowego implements, aby uzyc interfejsu ze swoja klasa. Przyklad:
+interface Animal {
+  public void eat();
+  void makeSound();
+}
+class Cat implements Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+  public void eat() {
+    System.out.println("omnomnom...")
+  }
+}
+When you implement an interface, you need to override all of its methods.
+
+4) Zadanie "Animal lovers" (angielski)
+Write a program that implements the given interfaces only for Animal class and override the respective methods. Dan are 4 classes and 2 - a interfaces. These are the following classes: Main, Animal, Cat, Dog, but also interfaces: Player, Swimmer. Two objects of the Animal Superclass subclass: Cat and Dog are defined in the Main class. They call swim () and play () in the Main class on their behalf. The swim () method (of type void) is declared in the Swimmer interface, and the method player () (of type void) is declared in the Player class. In the (abstract) Animal class, the two interfaces indicated above are implemented. In the Dog class that inherits from Animal, two methods are defined inherited from this class, play () and swim (), in order. The same is true for the Cat class. The data is what the play () and swim () functions are supposed to print:
+Dog:
+- (play) "Dog is playing"
+- (swim) "Dog is swimming"
+Cat:
+- (play) "Cat is playing"
+- (swim) "Cat is swimming"
+
+5) Zadanie (praktyka - zastosowanie wiedzy i umiejestnosci z zakresu stosowania interfejsow)
+interface Animal {
+  public void eat();
+}
+(1)... Cat implements ... {
+  public ... eat() {
+    System.out.println("Cat eats");
+  }
+}
+Odpowiedz: (1)class, (2)Animal, (3)void

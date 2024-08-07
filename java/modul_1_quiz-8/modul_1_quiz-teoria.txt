@@ -1,0 +1,44 @@
+1) Wpisz dwa typy w puste miejsca tak zeby zadeklarowac dwie zmienne typu int i wyswietlic ich sume na ekranie.
+int x = 4;
+... y = 7;
+int sum = x ... y;
+System.out.println(...);
+Odpowiedz:
+int x = 4;
+int y = 7;
+int sum = x + y;
+System.out.println(sum);
+
+2) W kazdym programie Java: (Wybierz prawidlowa odpowiedz)
+1. Musza byc co najmniej dwie zadeklarowane zmienne.
+2. Wszystkei zmienne musza byc typu calkowitego.
+3. Musi byc metoda "main".
+Odpowiedz: Musi byc metoda "main". Jest to tak zwany punkt poczatkowy programu.
+
+3) Uzupelnij puste luki w celu wyswietlenia imienia:
+String name;
+name = "Dawid";
+System.out.println(name);
+
+4) Zadanie "Konwerter czasu"
+Potrzebujesz wykonac program zamieniajacy dni na sekundy. Twoj kod powinien pobrac o uzytkownika liczbe dni i zamienic ta liczbe dni na odpowiadajaca mu liczbe sekund.
+Sample input:
+12
+Sample output:
+1036800
+Rozwiazanie:
+import java.util.Scanner;
+public class Program
+{
+  public static void main(String[] args)
+  {
+    Scanner scanner = new Scanner(System.in);
+    int days = scanner.nextInt();
+    
+    int hours = days * 24;
+    int minutes = hours * 60;
+    int seconds = minutes * 60;
+
+    System.out.println("Liczba sekund: " + seconds);
+  }
+}

@@ -1,0 +1,39 @@
+1) Hover efects to efekty ktore pojawiaja sie opo najechaniu kursorem na dany element witryny internetowej.
+
+2) W tym materialy wykorzystamy wspolnie pseudoklase:
+- :hover
+- wlasciwosc transition
+- wlasciwosc transform
+- pozycje relatywna
+- pozycje absolutna
+- wlasciwosc overflow
+
+3) transformacja - oznacza zmiane stanu / wygladu / geometrii elementu przy uzyciu CSS. wlasciwos transform wstawiamy do pseudoklasy :hover. Po dwukropku od transform piszemy co ma sie zmienic. Przyklad transformacji (zmiana rozmiaru do 50%):
+transform: scale(0.5);
+Lista funkcji transformujacych: scale(), scaleX() scaleY(), scale3d(), scaleZ(), rotate(), rotate3d(), rotateX(), rotateY(), rotateZ(), translate(), translateX(), translateY, translateZ, translate3d(), skew(), skewX(), skewY(), matrix(), matrix3d(), perspective().
+Zapis wielokrotny:
+transform: scale(0.5) rotate(5deg), skewX(30deg);
+
+4) Wlasciwosc transition pozwala na plynne przejscie pomiedzy dwoma stanami elementu CSS. Przyklad ustawienia 1-o sekundowego [przejscia transformacji:
+transition: transform 1s ease-in-out;
+Transition - przejscie ustawiamy w selektorze bez hover-a, a sam zapis ma postac:
+transition: [jaka wlasciwosc animujemy (mozna wpisac all - wszystko)] [czas przejscia] [rodzaj przejscia];
+Transition wpisujemy do selektora bez :hover-a. Okreslajacego sam wyglad danego div-a.
+
+5) skew - transformacja stosowana przy wlasciowsci transform stosowana w celu wykrzywienia danego obiektu, mamy dla tej transformacji (funkcji) dwa argumenty - 1-szy to przekrzywienie x w poziomie, drugi arguet natomiast stanowi przekrzywienie w osi OY, w pionie.
+
+6) Funkcja scale(), takze tak jak skew moze byc dwuargumentowa: 1-szy argument wowczas odpowiada za powiekszenie lub pomniejszenie obiektu w poziomie a drugi w pionie. Jednak w praktyce zadko sie tego uzywa poniewaz powoduje to zmiane rozdzielcosci danego obiektu.
+
+7) Fukcje przejscia okreslaja jak w funkcji czasu zachodzi transition, kiedy zmiana zachodzi szybciej a kiedy wolniej. Mozliwe do uzycia rodzaje przejsc sa pkazane: ease, linear, ease-in, ease-out, ease-in-out, step-start, step-end, steps(), cubic-bezier().
+
+8) Nalezy pamietac iz technlogie transition i transform jako wlasciwosci selektorow w jezyku CSS sa dopiero w fazie eksperymentalnej. Dlatego moga nie dzialac w starszych wersjach przegladarek, w tym celu bedziemy miusieli stosowac prefix-y, by umozliwic dzialanie w starszych, tudziez innych przegladarkach. jezeli interesuje nas zeby dodac zestaw transformacji i transition nalezy dodac prefix-y: -webkit-transform:, -ms-transform:, transform:.
+
+9) Efekt overlay-a - czytaj nakladki z tekstem nalozonej na obraz. Uzycie polega na odpowiednbim wykorzystaniu pozycjonowania, czyli wlasciwosci position w CSS-ie. Pozycjonujac relatywnie i absolutnie mozna nalozyc na siebie tekst i obraz, wykorzysta y przy tym opacity i tansition dla ladnego przejscia.
+
+10) Tag pozwalajacy zmienic dana liczbe na konkretna potege to <sup></sup>.
+
+11) Pozycja relatywna pozwala uzyc czterech wlasciwosci: left, right, top, bottom, za pomoca ktorych mozemy dowolnie przesuwac element wzgledem ukladu odniesienia. 
+Wartosc domyslna position: static; nie pozwala uzywac left, right, top, bottom (ustawienie ich nie odniesie skutku), pozostale wartosci position niejako wlaczaja mozliwosc uzycia left, right, top, bottom. Te wartosci to: position: relative;, position: absolute;, position:fixed
+Pozycja absolutna polega na ustaleniu sztywnego ukladu wspolrzednych, wzgledem ktorego bedziemy pozycjonowac danego div-a. W naszym przypadku to pozycja ta nie jest tak dokonca absolutna tzn tylko w zalozeniu poniewaz jest ona umieszczona wewnatrz klasy overlay, tora ma pozycjonowanie relatywne. Pozycjonowanie abslutne ma to do siebie ze we flow witryny nie pozostawia sie miejsca na zadeklarowany absolutnie blok. Zostaje on wyjety i wypozycjonowany wedlug ukladu wspolrzednych podanych.
+
+12) Efekt przyblizenia obrazu wewnatrz pojemnika polega na tym zeby przesklaowac dany obraz za pomoca funkcji transform: scale(1.15); i jednoczesnie nalezy zapobiec wyroczeniu obrazu poza ramy diva wewnatrz ktorego dany obraz sie znajduje. Robimy to poprzez zastosowanie wlasciwosci overflow: hidden;

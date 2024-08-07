@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_7b8948c3163b45d8aff5915bcee1d253">
+      <Program Name="__MAIN" Process="-1" />
+    </Content>
+    <Content Name="document_f199784b4cd14bb7b8fb0197bbbcc133">
+      <Program Name="_FUNC_BASE" Process="-1" />
+    </Content>
+    <Content Name="document_bd6fcbbb42c84d53acc77ccdd44fde1f">
+      <Program Name="_FUNC_EMERGENCY" Process="-1" />
+    </Content>
+    <Content Name="document_e728a003a450427e9717e469e7556d2a">
+      <Program Name="_FUNC_MIDDLE" Process="-1" />
+    </Content>
+    <Content Name="document_8528e3ca31374a2f87323bd07e92dffd">
+      <Program Name="_FUNC_POS" Process="-1" />
+    </Content>
+    <Content Name="document_8fd0136a6f2b4005ab237a9ea8e9e07a">
+      <Program Name="_GLOBAL_VARS" Process="-1" />
+    </Content>
+    <Content Name="document_5631860dcf7f44778dda529462aa4258">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_7d500b6629064969ac067f21a197ceba">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="08/05/2024 08:09:40" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_7d500b6629064969ac067f21a197ceba" LastActivationTimeStamp="08/05/2024 08:08:11" />
+            <LayoutDocument Title="STARTUP" ContentId="document_5631860dcf7f44778dda529462aa4258" LastActivationTimeStamp="08/05/2024 08:03:13" />
+            <LayoutDocument Title="__MAIN" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_7b8948c3163b45d8aff5915bcee1d253" LastActivationTimeStamp="08/05/2024 08:09:42" />
+            <LayoutDocument Title="_FUNC_BASE" ContentId="document_f199784b4cd14bb7b8fb0197bbbcc133" LastActivationTimeStamp="08/05/2024 07:59:45" />
+            <LayoutDocument Title="_FUNC_EMERGENCY" ContentId="document_bd6fcbbb42c84d53acc77ccdd44fde1f" LastActivationTimeStamp="08/05/2024 08:00:36" />
+            <LayoutDocument Title="_FUNC_MIDDLE" ContentId="document_e728a003a450427e9717e469e7556d2a" LastActivationTimeStamp="08/05/2024 08:01:05" />
+            <LayoutDocument Title="_FUNC_POS" ContentId="document_8528e3ca31374a2f87323bd07e92dffd" LastActivationTimeStamp="08/05/2024 08:01:43" />
+            <LayoutDocument Title="_GLOBAL_VARS" ContentId="document_8fd0136a6f2b4005ab237a9ea8e9e07a" LastActivationTimeStamp="08/05/2024 08:02:39" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="08/05/2024 08:09:45" />
+          </LayoutAnchorablePane>
+          <LayoutAnchorablePane>
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Compile/Check Results" IsSelected="True" ContentId="tool_CompileCheckControl" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

@@ -1,0 +1,59 @@
+1) Lista polaczona (LinkedList) jest bardzo podobna w skladni do ArrayList. Mozesz latwo zmienic ArrayList na liste polaczona, zmieniajac typ obiektu.
+
+2) import java.util.LinkedList;
+public class MyClass {
+  public static void main(String[] args) {
+    LinkedList<String> c = new LinkedList<String>();
+    c.add("Red");
+    c.add("Blue");
+    c.add("Green");
+    c.add("Orange");
+    c.remove("Green");
+    System.out.println(c);
+  }
+}
+Niestety nie mozesz zdefiniowac poczatkowej dlugosci klasy LinkedList, definiujac rozmiar kontenera.
+
+2) zadanie (praktyka)
+Uzupelnij kod tak by stworzyc LinkedList i dodac Hey nastpnie wyswietlic Hey na ekran.
+(1)...<String> list = new LinedList(2)...();
+list.add((3)...);
+System.out.println(list.get((5)...))
+Odpowiedz: (1) - LinkedList; (2) - <String>; (3) - "Hey"; (4) - 0
+
+3) Najbardziej zauwazalna roznica moiedzy LinkedList a ArrayList jest sposob przechowywania obiektow. ArrayList jest lepszy do przechowywania i uzyskiwania dostepu do danych, poniewaz pod wzgledem zastosowania jest bardzo podobny do zwyczajnej tablicy. LinkedList jest natomiast lepszy do manipulowania danymi, na przyklad do wielu operacji wstawiania lub usuwania. Oprocz przechowywania obiektu, LinkedList przechowuje adres pamieci lub lacze elementu, ktory nastepuje po nim. Nazwa LinkedList wziela sie od tego ze kazdy element zawiera lacze do sasiedniego elementu.
+
+4) Mozesz uzyc rozszerzonej petli for do iterownaia po elementach kontenera klasy LinkedList. Przyklad:
+LinkedList<String> c = new linkedList<String>();
+c.add("Red");
+c.add("Blue");
+c.add("Green");
+c.add("Orange");
+c.remove("Green");
+for(String s: c) {
+  System.out.println(s);
+}
+
+5) Podsumowanie:
+-Uzywaj ArrayList gduy potrzebujesz szybkiego dostepu do swoich danych.
+-Uzywaj LinkedList gdy musisz wykonac duza liczbe wstawek i/lub usuniec.
+
+6) Zadanie "Practice Makes Perfect" (angielski)
+Write a code to add input words to LinkedList until its size isn't equal to 5, then output only those words whose length is more than 4 characters.
+Sample Input:
+Java
+practice
+is
+makes
+perfect
+Sample Output:
+practice
+makes
+perfect
+
+7) Zadanie (teoria)
+Dla programu w ktorym wielokrotnie bedziemy dokonywac wielu operacji wstawiania i usuwania lepiej bedzie uzyc (wybierz odpowiedz prawidlowa): 
+-ArrayList
+-LinkedList
+Odpowiedz: Linked List
+Wytlumaczenie: Sluzy ona lepiej do tego typu zadan.

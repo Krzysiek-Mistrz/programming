@@ -1,0 +1,46 @@
+1) Celem umieszczania komentarzy w kodzie jest wyjasnienie co ten kod robi java obsluguje komentarze jedno i wielo wierszowe. Wszystkie znaki pojawiajace sie w komentarzu sa ignorowane przez kompilator Java.
+Komentarz jednowierszowy zaczyna sie od dwoch ukosnikow i trwa do konca wiersza. Dla przykladu:
+//this is a single-line comment
+x = 5; // a single-line comment after code
+
+2) Dodawanie komentarzy podczas pisania kodu jest dobra praktyka, poniewaz zapewniaja one jego przejrzystosc i zrozumienie kiedy musisz np do niego wrocic po jakims czasie ale takze dla innych osob zeby wiedzialy za co odpowiada okreslon aczesc kodu.
+
+3) Komentarze jednoliniowe single-line comment sa tworzone uzywajac:
+Odpowiedz: // na poczatku wiersza
+
+4) Komentarze wieloliniowe. Java obsulguje takze komentarze ktore obejmuja wiele wierszy. Ten typ komentarza zaczyna sie od ukosnika po ktorym nasteouje gwiazdka, po ktorej nastepuje ukosnik. Dla przykladu:
+/* 
+This is also
+comment spanning
+multiple lines
+*/
+Pamietaj o tym ze java nie obsluguje zagniezdzonych komentarzy wielowierszowych mozna jedynie zagniezdzac komentarze jednowierszowe w komentarzach wielowierszowych. Przyklad:
+/*
+This is a single-line comment
+//a single-line comment
+end of the multi-line comment
+*/
+Inna nazwa na komentarz wielowierszowy jest komentarz blokowy.
+
+5) Zadanie "Wyswietlanie liczb"
+Zakomentuj w odpowiednich miejscha kod tak zeby wyswietlal on wymagane cyfry.
+
+6) Uzupelnij luki tak zeby powstal komentarz wielowierszowy:
+/*
+some *
+comment text
+*/
+
+7) Komentarze dokumentacji to specjalne komentarze ktore wygladaja jak komentarze wieloliniowe z ta roznica ze generuja zewnetrzna dkumentacje kodu zrodlowego. Zaczynaja sie one ukosnikiem po ktorym nastepuja dwie gwiazdki, a koncza dwie gwiazdki po ktorych nastepuje konczacy ukosnik. Przyklad:
+/** This is a documentation comment */
+/** This is also a documentation comment */
+
+8) Javadoc jest narzedziem dostarczanym z JDK i sluzy do generowania dokumentacji kodu Java w formacie HTML z kodu zrodowego Java, ktory posiada wymagana dokumentacje w predefiniowanym formacie.
+Gdy komentarz dotyczacy dokumentacji zaczyna sie od wiecej niz jednej dwoch gwiazdek Javadoc zaklada ze chcesz utworzyc ramke wokol komentarza w kodzie zrodlowym, po prostu ignoruje dodatkowe gwiazdki. Przyklad:
+/*************************
+This is the start of a method
+*************************/
+Zachowea to tekst "This is the start of a method" na dokumentacji.
+
+9) Mozesz dodac komentarz dokumentacji uzywajac:
+Odpowiedz: /** i */ w celu zawiniecia tekstu

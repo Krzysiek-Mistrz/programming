@@ -1,0 +1,66 @@
+1) Systemy linkow - polaczenia miedzy podstronami, tu calego serwisu + stylizacja tagow <a> href </a>. Czy div-y powinny sie znajdowac wewnatrz linkow, czy na odwrot?
+
+2) Przyjazne adresy - adresy lepiej pozycjonowane w przegladarce. Zwykly klasyczny adres - http://jankowalski.com/oferta.html i przyjazna wersja http://jankowalski.com/oferta-tworzenie-stron-www.
+
+3) Webfonty - Fontello - czcionka zawierajaca setki ikon do wykorzystania, ktorych mozemy uzyc darmowo na naszej stronie. Czyli nie sa to zadne obrazy typu png, ani jpg. Aby je dodac nalezy: 1) Wybrac zestaw ikon. 2) Przekopiowac zawartosc archiwum do swojego folderu. 3) Podpiac arkusz stylow css/fontello.css. 4) Uzyc zapisu w postaci <i class = "icon-xyz"></i>
+
+4) holistyczne - calosciowe i harmonijne - jedno ma wynikac z drugiego.
+
+5) Znak hash w CSS-ie oznacza, ze tworzymy pojedyncze elementy majace swoje id. Natomiast kropka w CSS-ie oznacza klase, czyli slowo kluczowe class.
+
+6) Schemat strony: #container, .rectangle (wewnatrz: #logo, #zegar), .square (wewnatrz: .tile1, .tile1, .tile2, .tile3, .tile5, podwojny, by przelamac monotonnie), .square (wewnatrz: .tile5, jako polaczenie czterech kafelkow naraz, #yt, #fc, #tw, #gp), .rectangle.
+
+7) Bardzo wazna w programowaniu jest duza cierpliwosc, a takze pozytywne emocje do naszej tresci. By sie nie zniechecac tylko ciagle przec do przodu, taki mindset potrafi przenosic gory.
+
+8) Bardzo dobra czcionka na stronie jest czcionka josephine sans.
+
+9) Jezeli nie okreslamy width w konkretnym div-ie to zajmuje on wowczas tyle miejsca ile sam potrzebuje. Ctrl+D duplikuje biezaca linie, zadziala w N++ ze scintilla.
+
+10) Kolory roznych stron spolecznosciowych w systemie heksadecymalnym: facebook - #4668b3, youtube - #d94348, twitter - #3095d3, google plus - #d95333.
+
+11) Azeby wstawic encje HTML-a, w postaci znaku copyright-u nalezy uzyc kodu: &copy;.
+
+12) Strona umozliwiajaca naszybsze wstawianie webfontow do programu jest fontello.com. Mozemy sobie dobrac kilka ikon naraz i nastepnie sobie to sciagnac. W pliku demo.html znajduje sie spis naszych fontow i ich wlasciwosci, natomiast w pliku fontello.css, znajduje sie spis nazw font-ow, ktore powinnismy wstawic.
+
+13) Znacznik, tag - i, wykorzystujemy do wstawienia webfont-ow (zazwyczaj sluzy do zrobienia pochylej czcionki), jednak my mu nadajemy klase gdzie zawsze bedzie slowo icon. W naszy przypadku beda to fonty.
+
+14) Aby wstawic font-y na nasza strone wystarczy otworzyc plik demo html do skopiowania nazwy do div-ow i plik fontello.css, by moc konfigurowac wyglad czcionki.
+
+15) Nie nalezy dawac spacji w przypadku stosowania wlasciwosci hover. Wszystko piszemy lacznie, e.g. xyz:hover.
+
+16) Przyciemnianie i podjasnianie. Skoro kolor czarny to: #000000, a kolor bialy to: #ffffff. Zatem nieznaczne przyciemnienie koloru uzyskamy zmniejszajac kazda cyfre o wartosc np. rowna 1 (dokonujemy dekrementacji). Wartosci a-f to liczby szesnastkowe: a=10, b=11, c=12, d=13, e=14, f=15. Dlatego ff oznacza wartosc 255, czyli 15x15. E.g. #3095d3; -> #2084c2;
+
+17) Lacznie mamy 5 podstron do podlinkowania. 
+Pierwszy sposob uwzglednia uzycie czystego html-a - dla kazdej podstrony tworzymy nowy dokument html. Wowczas do kazdego kafelka podlinkujemy kazda kolejna podstrone xyz.html. Nastepnie kopiujemy tyle razy ile bedziemy mieli podstron kazda kolejna podstrone. Ten sposob sprawdza sie dla malych witryn, jednak dla bloga z iloscia 70-ciu podstron, to rozwiazanie nie jest juz dobre.
+Drugim sposobem jest uzycie jezyka php. Wowczas mozna to zrealizowac troszke prosciej. Szablon dokumentu przygotowujemy raz (layout) - w pliku index.php. W srodku tego pliku jest takze skrypt php, ktory na podstawie zadania http, podepnie nam/zainkluduje zawartosc podstrony, w tym wypadku tylko zawartosc tego co sie zmieni. Pozwala to uniknac redundancji.
+Trzecim sposobem jest zapisanie danych nie w plikach php tylko w bazie mysql. Umozliwia to calkowite rozdzielenie zawartosci glownej od dodawanej. Wymaga jednak znajomosci jezyka PHP i MySQL.
+Czwartym sposobem jest zatrudnienie do pracy techonolegie AJAX - asynchroniczny javascript i XML. W praktyce to podmiana zawartosci .tilex, bez potrzeby przeladowania calej strony
+Sa to sposoby sklejenia strony w jeden holistycznmy twor.
+
+18) Mozemy zarowno podlinkowywac calego div-a wstawiajac go w znacznik <a>, jak i wstawic znacznik <a> do div-a. Jednak w HTML 4 i nizej sposob zamykania w znaczniku <a> calego div-a jest uznawany powszechnie za niepoprawny, poniewaz div ma sluzyc do budowy struktury strony, a nie jako link. Jednak od HTML-a 5 mozna juz nakladac na div-a linka.
+
+19) Validator-y kodu zglosilyby zamkniecie div-a w linku jako blad kodu. Z tego powodu musimy sprawic by to link a href zachowywal sie jak blok, co jest juz dozwolone w annalach w3c.
+
+20) Wlasciwosc mowiaca o dekorowaniu tekstu - text-decoration ; dla podkreslenia: underline ; text-decoration: none;
+
+21) Niezwykle wazne jest stworzenie przyjaznych adresow. Wowczas przegladarka wie od razu kiedy i jak odpowiedziec na wyszukanie uzytkownika, ktory np. zapytal sie o cos wpisujac fraze ze spacjami. Dziala to tak: ktos sie zwraca o adres strony, a server w tle kieruje ruch do odpowiedniej podstrony, do jednego z plikow html. Zatem mozna powiedziec ze te przyj. adresy to tak naprawde aliasy. Informacja ktory plik odpowiada danemu aliasowi znajduje sie w pliku .htacces na serverze. Aliasy te sa wazne dla SEO (pozycjonowanie).
+
+22) Aliasy dodajemy pozniej zamiast zwyczajnych linkow xyz.html podstron. E.g. <a href = "kontakt-programista-php" class = "tilelink">.
+
+23) Atrybut onload wczytujemy do sekcji body. Umozliwia on prawidlowe wywolanie funkcji z pliku np. .js.
+
+24) Nazwy plikow mozna latwo wywolac klikajac F2. 
+
+25) Zasada pozycjonowania div-ow. Do wszystkich blokow ulozonych szeregowo dodajemy zapis CSS: float: left; Do pierwszego div-a, ktory znowu ma ukladac sie pod spodem poprzednika, dodajemy linie CSS: Jesli takiego div-a nie ma, to dodajemy go: <div style = "clear:both;"></div>.
+
+26) Class powinienes uzywac w systuacji kiedy potrzebujesz kilka elementow ktore beda mialy takie same wlasciwosci. Id natomiast uzywa sie do elementow wyjatkowych, wystepujacych na stronie tylko raz.
+
+27) Znaczniki w HTML5 to: <header>; <nav>; <section>; <aside>; <footer>.
+
+28) Interfejs Metro / Modern. Interfejs tego typu charakteryzuje sie przejrzystymi napisami, ascetycznymi piktogramami, minimalizmem, brakiem ozdobnikow i kontrastrowa kolorystyka. Styl ten inspirowany jest znakami, ktore mozna znalezc wsrod infrastruktury transportowej czy lotniskach. Na poczatku 2012 roku Microsoft poinformowal developerow by zaprzestali uzywac nawy metro, wprowadzajac nazwe modern.
+
+29) Leonardo z Pizy to wloski matematyk dzieki niemu znamy ciag fibonnaciego i poslugujemy sie w Europie cyframi arabskimi. Zlota licxzba to 1.61803398.
+
+30) Wyrownanie tekstu w div-ie nastepuje poprzez: text-align: left; text-align: right; text-align: center; text-align: justify;
+
+30 Stylizacja hiperlacza zostala opisana w pop. lekcji. Nieodwiedzony link: a:link. Odwiedzony link: a:visited. Link po najechaniu: a:hover.

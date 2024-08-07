@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_13055ae376504406afaa04dca64c8162">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_8f4e89c86ecc4deda0de1cad5470950d">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+    <Content Name="document_2702eb79de3344da91e72d72a5ae53cb">
+      <Program Name="RYSOWANIE_MOVE" Process="-1" />
+    </Content>
+    <Content Name="document_86c618dc07d34e6a8c7cd5ade0bd2083">
+      <Program Name="RYSOWANIE_MOVEABS" Process="-1" />
+    </Content>
+    <Content Name="document_1e18c194a87649cc92992d9e9241756e">
+      <Program Name="RYSOWANIE_MOVECIRC" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane DockWidth="260">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 09:28:21" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_13055ae376504406afaa04dca64c8162" LastActivationTimeStamp="07/23/2024 09:24:32" />
+            <LayoutDocument Title="STARTUP" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_8f4e89c86ecc4deda0de1cad5470950d" LastActivationTimeStamp="07/23/2024 09:27:59" />
+            <LayoutDocument Title="RYSOWANIE_MOVE" ContentId="document_2702eb79de3344da91e72d72a5ae53cb" LastActivationTimeStamp="07/23/2024 09:27:40" />
+            <LayoutDocument Title="RYSOWANIE_MOVEABS" ContentId="document_86c618dc07d34e6a8c7cd5ade0bd2083" LastActivationTimeStamp="07/23/2024 09:27:20" />
+            <LayoutDocument Title="RYSOWANIE_MOVECIRC" ContentId="document_1e18c194a87649cc92992d9e9241756e" LastActivationTimeStamp="07/23/2024 09:27:11" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" DockHeight="300">
+          <LayoutAnchorablePane DockHeight="300">
+            <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Output" IsSelected="True" ContentId="tool_OutputWindow" LastActivationTimeStamp="07/23/2024 09:28:24" />
+          </LayoutAnchorablePane>
+        </LayoutAnchorablePaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows />
+    <Hidden />
+  </LayoutRoot>
+</MotionPerfectLayout>

@@ -1,0 +1,28 @@
+1) Pakiety sluza do unikania konfiktow nazw i kontrolowania dostepu do klas. Pakiet mozna zdefiniowac jako grupe zlozona z podobnych typow klaas wraz z podpakietami. Tworzenie pakietu wjavie jest dosc proste. Klikamy prawym przyciskiem myszy na swoj katalog src w kompilatorze i klikamy nowy -> pakiet. Nadajaemy swojemu pakietowi nazwe i klikamy zakoncz. Zauwazymy wowczas ze nowy pakiet pojawia sie w katalogu projektu. Teraz mozesz przenosic i tworzyc klasy wewnatrz tego pakietu. Przeniesmy nasze klasy Vehicle, Counter i Animal do probek pakietu.
+
+2) Kiedy przeniesiesz / stworzysz nowe klasy wewnatrz pakietu, powinienes otrzymac cos takiego:
+-default package
+  -MyClass.java
+-samples
+  -Animal.java
+  -Counter.java
+  -Vehicle.java
+Natomiast wewnatrz kodu:
+package samples;
+
+3) To wskazuje pakiet do ktorego nalezy klasa. Teraz musimy zaimportowac klasy, ktore znajduja sie w pakiecie w naszej glownej funkcji main(), by moc uzywac pozostalych. Pokazuje jak mozna uzyc klasy Vehicle z pakietu samples. Przyklad:
+import samples.Vehicle;
+class MyClass {
+  public static void main(String[] args) {
+    Vehicle v1 = new Vehicle();
+    v1.horn();
+  }
+}
+
+4) Gdy klasa jest umieszczona w pakiecie pojawiaja sie dwa glowne wyniki. Nazwa pakietu staje sie czescia nazwy klasy. Po drugie nazwa pakietu musi byc zgodna z struktura katalogow, w ktorych znajduje sie odpowiedni plik.
+
+5) Mozesz uzyc symbolu wieloznaczego aby zaimportowac wszystkie klasy w pakiecie. Na przyklad import sample.* zaimportuje wszytskie klasy z akietu sample.
+
+6) Pytanie
+jak wiele pakietow moze byc w programie w javie?
+Odpowiedz: tyle ile uwazasz :)

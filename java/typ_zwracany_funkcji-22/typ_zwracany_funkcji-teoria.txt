@@ -1,0 +1,87 @@
+1) slowo kluczowe return moze byc uzywane w metodach zwracania wartosci. na przyklad mozemy zdefiniowac metode o nazwie sum, ktora zwraca sume jej woch parametrow.
+Przyklad:
+static int sum(int val1, int val2) {
+    return val1 + val2;
+}
+Zauwaz ze w definicji metody zdefiniowalismy takze typ zwracany przed zdefiniowaniem nazwy naszej metody. Dla naszej metody sum jest to typ zwracany int. Poniewaz "pobiera" dwa parametry typu int i wyswietla ich sume, ktora jest takze typu int.
+Slowo kluczowe static bedzie natomiast omowione dokladniej w jednej z kolejnych lekcji.
+Teraz powiedzmy ze chcemy wywolac nasza metode w funkcji main, wystarczy zatem:
+class MyClass 
+{
+    static int sum(int val1, int val2)
+    {
+        return val1 + val2;
+    }
+    public static void main(String[] args)
+    {
+        int x = sum(2, 5);
+        System.out.println(x);
+    }
+}
+Kiedy metoda zwraca jakas wartosc przykladowo typu int to wowczas mozemy sobie ta zwrocona wartosc przypisac do innej zmiennej takze typu int.
+Kiedy natomiast nie chcemy zwracac zadnej konkretnej wartosci z funkcji wowczas uzyjemy slowa kluczowego void. Zwroc uwage ze slowo kluczowe void w definicji funkcji okresla ze typem wartosci zwroconej jest void czyli wartosc nieokreslona.
+
+2) Pytanie
+Kiedy nie chcesz zeby twoja funkcja zwracala jakakolwiek wartosc uzyjesz jakiej instrukcji w definicji tej funkcji. Odpowiedz zapisz w miejscu kropek.
+...........................................
+Odpowiedz: void
+
+3) Spojrz teraz na ten sam kod z poprzedniej lekcji ale z objasnieniem z komentarzy aby lepiej zrozumiec w jaki sposob to dziala.
+//zwraca wartosc typu int rowna 5
+static int returnFive() {
+    return 5;
+}
+//funckja ma parametr formalny typu String ktory przeslemy do funckji przy jej wywolaniu
+static void sayHello(String name) {
+    System.out.orintln("Hello" + name);
+}
+//po prostu wypisuje na ekran "Hello World"
+staic void sayHello() {
+     System.out.println("Hello World");
+}
+Posiadajac juz wiedze odnosnie typu zwracanych funckji a takze jej parametrow mozemy powiedziec cos niecos juz o funckji main():
+public static void main(String[] args)
+{
+...
+}
+Ta definicja wskazuje ze glowna metoda przyjmuje jako parametry tablice String (String[]) i nie zwraca warosci (void).
+
+4) Uzupelnij luki by zadeklarowac zmienna calkowita typu int i przesac ja jako parametr lokalny funckji do funckji test().
+public static void main(String[] args){
+    int x = 10;
+    test(x);
+}
+static void test(int x)
+{
+   System.out.println(x);
+}
+
+5) Stworzmy teraz metode ktora wezmie dwa parametry typu int i zwroci nam wiekszy, nastepnie wywolajmy ja w funckji main().
+public static void main(String[] args) {
+    int res = max(7, 42);
+    System.out.println(res); //42
+}
+static int max(int a, int b) {
+    if(a > b) {
+        return a;
+    }
+    else {
+        return b;
+    }
+}
+Metoda moze miec jeden typ parametrow i zwrocic inny inego typu. Dla przykladu moze brac dwie zmienne przykladowo typu double i zwrocic wartosc typu int.
+
+6) Zadanie "Zatem myslisz ze potrafisz tanczyc?"
+Uzupelnij funckje tak aby obliczala i zwracala sredni wynik z konkursu tanecznego.
+
+7) Podaj output podanego nizej kodu:
+public static void main(String[] args)
+{
+    int x = 10;
+    int y = myFunc(x);
+    System.out.println(y);
+}
+public static int myFunc(int x) {
+    return x * 3;
+}
+Wynik: 30

@@ -1,0 +1,35 @@
+TABLE(1000, 0, 0, 0, 0, 1200, 0)
+TABLE(1010, 300, 0, 0, 300, 1200, 0)
+TABLE(1020, 300, 300, 0, 300, 300, 300)
+TABLE(1030, 600, 300, 0, 600, 300, 0)
+TABLE(1040, 600, 0, 0, 600, 1200, 0)
+TABLE(1050, 600, 0, 450, 600, 1200, 450)
+
+BASE(0, 1, 2, 3, 4, 5)
+UNITS = 1
+SPEED = 75
+ACCEL = 5000
+DECEL = ACCEL
+
+‘ wyzerowanie parametru przechowującego liczbę komend załadowanych do bufora MTYPE
+MOVE_COUNT = 0
+
+‘ definicja pozycji startowej
+DEFPOS(0, 300, 0, 0, 300, 0)
+
+‘ a mnozenie przez 256 uwzglednia przesuniecie o pierwszych 8 bitow
+opcje = 10 * 256
+
+adres_startowy = 1000
+liczba_osi = 6
+liczba_punktow = 6
+promien = 80
+
+MERGE = ON
+
+MOVEABSSEQ(adres_startowy, liczba_osi, liczba_punktow, opcje, promien)
+‘ ruch MOVEABS który zostanie połączony (MERGE = ON) z MOVEABSSEQ
+MOVEABS(800, –200, 200, 800, 1300, 200)
+
+WAIT IDLE
+MERGE = OFF

@@ -1,0 +1,28 @@
+1) Przypisywanie wartosci zmiennej jednego typu do zmiennej innego typu nazywamy rzutowaniem tej zmiennej danego typu.
+Aby rzutowac wartosc na okreslony typ, umiesc typ w nawiasach i umiesc go przed wartoscia. Jesli uczyles sie przed tem jezyka c++ wiesz zapewne ze bardzo podobny model rzutowania wystepuje takze i tam.
+Przyklad:
+int a = (int) 3.14;
+System.out.println(a);
+Powyzszy kod rzutuje wartosc 3.14 na wartosc calkowita, zatem w rezultacie otrzymamy wartosc 3, poniewaz przy rzutowaniu teg otypu obcinana jest koncowka dane liczby.
+Przyklad:
+double a = 42.571;
+int b = (int) a;
+System.out.println(b);
+W rezultacie otrzymamy wartosc zmiennej a, tzn. 42 przypisana do zmiennej b i wyswietlona. Pamietaj ze nawet jesli rzutujesz wartosc 50.9999 na typ calkowity to nie zostanie ona zaokragraglona do wartosci 51, zstanie zwrocona wartosc 50 w wyniku rzutowania, zostanie po prostu obcieta koncowka.
+Java obsluguje automatyczne rzutowanie typow liczb calkowitych na zmiennoprzecinkowe, nie powoduje przy tym utraty zadnej precyzji. Z drugiej strony rzutowanie typu jest obwiazkowe podczas przypisywania wartosci zmiennoprzeckowych do zmiennych calkowitych poniewaz jak widzisz moze zostac utracona prezycja takiej "obcietej" cyfry.
+
+2) Zadanie "Computer Speak" (angielski)
+Wrtie a program to output its numeric value of inputs, since computers understand only numbers. You need to load char character from user, then you need to convert / cast it to int type. As a result, write on the screen the character downloaded from the user, minced in number. To get a char character use the following instructions: char a = read.next (). CharAt (0);
+
+3) Zadanie (praktyka - rozumienie pojecie rzutownaia i zastosowanie w praktyce)
+Podaj rezultat ponizszego kodu:
+public static void main(String[] args) {
+  double x = 1.5;
+  double y = 2.65;
+  sum((int) x, (int) y);
+}
+static void sum(int x, int y) {
+  System.out.println(x + y);
+}
+Rezultat: 3
+Wyjasnienie: Zostanie obcieta w wyniku rzutowania wartosc po przecinku (NIE ZOSTANIE ZAOKRAGLONA!!!) nastepnie obie wartosci zostaja zsumowane wewnatrz funkcji static void sum().

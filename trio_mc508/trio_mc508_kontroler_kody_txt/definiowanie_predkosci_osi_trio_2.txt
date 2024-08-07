@@ -1,0 +1,10 @@
+'opcja nr 1
+BASE(x)
+UNITS = 10 'definicja przelicznika jednostek dla osi x
+SPEED = 200 'definicja predkosci osi x
+ACCEL = 500 'definicja przyspieszenia osi x
+DECEL = 500 'definicja opoznienia osi x
+'opcja nr 2
+SPEED AXIS(x) = 200 'definicja predkosci osi x
+ACCEL AXIS(x) = 500 'definicja przyspieszenia osi x
+DECEL AXIS(x) = 500 'defincija opoznienia osi x

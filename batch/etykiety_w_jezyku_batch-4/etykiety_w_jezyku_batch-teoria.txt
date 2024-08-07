@@ -1,0 +1,30 @@
+1) Etykieta to narzedzie pozwalajace na "skakanie" po kodzie. Wykorzystuje sie ja najczesciej do zapetlenia programu - np. pytanie o numer strony bedzie sie pojawiac dopoty, dopoki nie poda sie jako numer strony litery q (od quit). 
+Poprzez etykiety i instrukcje skoku goto mozna zmienic kolejnosc wykonywania instrukcji programu. Etykieta tworzy miejsce w kodzie do ktorego przeskakuje instrukcja goto.
+
+2) Instrukcja goto sluzy do "skakania" miedzy etykietami. Po sprawdzeniu argumentu program wraca się do etykiety za pomoca instrukcji goto. 
+Jezeli argumentem było q program idzie od razu do etykiety wyjscie - program sie konczy, jezeli "t" program wraca do poczatku i ponownie wyswietla polecane strony.
+
+3) Instrukcja cls sluzy do czyszczenia ekranu wiersza polecenia. Stosujemy go czesto na poczatku w celu usuniecia ewentualnych napisow poczatka konsoli.
+
+4) Podam teraz przyklad programu obslugujacego etykiety i instrukcje goto:
+@echo off
+:poczatek
+echo WYBIERZ 1 JEZELI CHCESZ SIE PRZENIESC DO TEKSTU
+echo WYBIERZ 2 JEZELI CHCESZ SIE PRZENIESC DO POCZATKU
+echo WYBIERZ 3 JEZELI CHCESZ SIE PRZENIESC DO KONCA
+set /p zmienna=
+if %zmienna%=="1"
+(
+  goto tekst
+)
+if %zmienna%=="2"
+(
+  goto poczatek
+)
+if
+(
+  goto konca
+)
+:tekst
+echo TEKST TEKST TEKST TEKST TEKST TEKST TEKST TEKST TEKST
+:koniec

@@ -1,0 +1,17 @@
+1) Java to nowoczesny jezyk zewnetrzny wysokiego poziomu, sluzacy do programowania. Zaporojektowanby zostal n poczatku lat 90 przez Sun Microstystems, a obecnie nalezacy do Oracle.Java jest niezalezna od platformy, co oznacza ze wystarczy napisac program tylko raz aby moc go uruchomic na wielu roznych platformach. Java jest przenosna solidna i dynamiczna z mozliwoscia dopasowania do potrzeb praktycznie kazdego rodzaju aplikacji.
+Reasumujac programujac w Java-ie masz gwarancje ze swoj program uruchomisz jednokrotnie i wszedzie gdzie tylko bedziesz chcial.
+
+2) Do dystrybucji Twojej aplikachji jak wiele wersji Java-y musisz uzyc? Odpowiedz samodzielnie.
+Odpowiedz: tylko jednej ogolnie do kazdej platformy.
+
+3) Wiecej niz 3 miliardy urzadzen chodzi na jav-ie. Java jest uzywana do tworzenia aplikacji na systemy android, do aplikacji google,ale takze do wielu innych aplikacji takich jak playery video antywirusy, aplikacji webowych, systemow bankowych i innych systemow firmowych i wiele wiele innych...
+Naucz sie jav-y i dolacz do develoiperow jav-y na calytch swiecie i do ich spolecznosci!
+
+4) Ktore z podanych twierdzen jest prawdziwe?
+1. Java jest tylko uzywana do tworzenia aplikacji na system android i do aplikacji webowych.
+2. Java jest tylko uzywana do aplikacji tworzonych przez nasa.
+3. Java ma duze srodiwsko developerow na calym swiecie.
+Odpowiedz: Zdanie 3. jest prawdziwe.
+
+5) Dobrze przejdzmy teraz do instalacji srodowiska programistycznego IDE. Zacznamy od oficjalnej strony Oracle i sciagamy z niej JDK - Java Development Kit, sluzacy za instalcji podstawowych bibliotek jezyka Java do naszego systemu. Podaje jeszcze najnowszego linka do JDK SE 17.01: "https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html", jednak jesli czytasz to pare lat pozniej, wpisz w wyszukiwarke kolejno JDK SE 18, JDK SE 19, JDK SE 20 i tak dojdziesz do najnowszej wersji. Naszym kompilatorem bedzie srodowisko o nazwie Intelli Idea: "https://www.jetbrains.com/idea/", od firmy JetBrains. Tak tej samej ktora wydala PyCharm-a.
+Po instalcji dodajemy Zmienna srodowiskowa naszego JDK do zmiennych srodowiskowych, w tym celu wpisujemy w lupce w windowie zmienne srodwiskowe, otieramy klikamy na path i dodajemy nowa sciezke prowadzaca do folderu instalacji naszego JDK dokladni do jego folderu bin. Od teraz mozemy programu w javie uruchamiac z poziomu konsoli.

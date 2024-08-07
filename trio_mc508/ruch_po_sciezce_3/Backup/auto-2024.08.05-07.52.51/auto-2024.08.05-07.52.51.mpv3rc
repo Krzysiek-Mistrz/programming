@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="23">
+  <Content Name="Project">
+    <Project>
+      <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+          <Items />
+        </Group>
+      </Groups>
+      <Items>
+        <Item Type="basicLibrary" Name="_FUNC_BASE" Id="12ab583c-6813-48b8-affe-c9d8c897a2fd" />
+        <Item Type="basicLibrary" Name="_FUNC_EMERGENCY" Id="56106ccf-0291-4e6e-9632-4944a055d1be" />
+        <Item Type="basicLibrary" Name="_FUNC_MIDDLE" Id="59c0003f-733f-44f9-bbb1-6b0ccf06b31f" />
+        <Item Type="basicLibrary" Name="_FUNC_POS" Id="112b9fea-381e-439f-b111-f437a7f84fc3" />
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="97579faf-8784-4c07-ae12-b51242366888" />
+        <Item Type="basic" Name="__MAIN" Id="dcec7f7a-13d6-48e4-9ffd-aa48a83e5a5b" />
+        <Item Type="basic" Name="_GLOBAL_VARS" Id="6675b89a-8619-4216-bbb2-adc503243ef4" />
+        <Item Type="basic" Name="STARTUP" Id="95f55679-28da-4b6d-a6cd-5e2d5c00ebfc" />
+        <Item Type="basic" Name="TEST" Id="99ed0c1f-c060-4337-8e8b-0c603e25773a" />
+      </Items>
+    </Project>
+  </Content>
+  <Content Name="Controller">
+    <Controller>
+      <PropertyRepository>
+        <Item id="VR9">
+          <Property Name="Description" Value="on/off" />
+        </Item>
+        <Item id="VR1">
+          <Property Name="Description" Value="base" />
+        </Item>
+        <Item id="VR2">
+          <Property Name="Description" Value="middle" />
+        </Item>
+        <Item id="VR3">
+          <Property Name="Description" Value="pos" />
+        </Item>
+        <Item id="VR0">
+          <Property Name="Description" Value="limit_sw" />
+        </Item>
+        <Item id="VR8">
+          <Property Name="Description" Value="emergency" />
+        </Item>
+        <Item id="VR4">
+          <Property Name="Description" Value="posx" />
+        </Item>
+        <Item id="VR5">
+          <Property Name="Description" Value="posy" />
+        </Item>
+        <Item id="VR6">
+          <Property Name="Description" Value="posz" />
+        </Item>
+        <Item id="VR10">
+          <Property Name="Description" Value="resetting" />
+        </Item>
+        <Item id="VR7">
+          <Property Name="Description" Value="def_speed" />
+        </Item>
+      </PropertyRepository>
+    </Controller>
+  </Content>
+</Contents>

@@ -1,0 +1,76 @@
+1) Formatter to kolejna uzyteczna klasa w pakiecie java.util. Jest ona uzywana do tworzenia tresci i zapisywnia jej do plikow. Przyklad:
+import java.util.Formatter;
+public class MyClass {
+	public static void main(String[] args) {
+		try {
+			Formatter f = new Formatter(C:\\sololearn\\test.txt);
+		}
+		catch(Exception e) {
+			System.out.println("Error");
+		}
+	}
+}
+Za pomoca tej komendy tworzymy nowy plik w okreslonej sciezce, jesli plik juz istnieje ta operacja nadpisze ten plik.
+Przypominam jeszcze raz jesli spodziewasz sie jakichkolwiek bledow z kategorii tych bardziej niebezpiecznych (niewlasciwy zapis) ze strony swojej aplikacji, woczas lepiej zawsze otoczyc kod blokiem try i pododwac wyjatki w catch.
+
+2) Zadanie (teoria)
+Podaj nazwe klasy sluzacej do tworzenia nowej tresci i zpisywania jej do plikow:
+-Formatter
+-Formmater
+-ArrayList
+-Scanner
+Odpowiedz: Formatter
+
+3) Kiedy plik jest juz utworzony mozesza zapisac do niego dana tresc uzywajac nowo utworzonego obiektu tej wlasnie klasy, z metoda o nazwie format().
+import java.util.Formatter;
+public class MyClass
+{
+	public static void main(String[] args)
+	{
+		try
+		{
+			Formatter f = new Formatter(C:\\sololearn\\test.txt);
+			f.format("%s %s %s", "1", "John", "Smith\r\n");
+			f.format("%s %s %s", "Amy", "Brown");
+			f.close();
+		}
+		catch (Exception e)
+		{
+			System.out.println("Error");
+		}
+	}
+}
+Metoda format() formatuje swoje parametry zgodnie z pierwszym parametrem. %s oznacza ciag i jest zastepowany przez parametr po formacie, drugi %s zostaje zastapiony przez kolejny parametyr i tak dalej, zatem w ten sposob okreslamy liczbe slow zapisanych do danego pliku, "%s %s %s", oznacza ciag trzech Ciagow znakow oddzielonych spacjami.
+Przypomnienie: \r i \n to znaki specjalne wystepujace w kazdym lepszym jezyku programownaia - python, c++, c#, etc...
+Tworzymy zatem plik o nastepujacej zawartosci:
+1 John Smith
+2 Amy Brown
+
+4) Umieszcze ta informacje jeszcze raz w osobnym paragrafie, zebys wiedzial jak jbardzo jest ona wazna: ZAWSZE! zamykaj plik po skonczeniu zapisu lub odczytu lub obu naraz. Niestety jesl;i go nie zamkniesz przypominam metoda close() wowczas moze cos zostac corrupted i beda klopoty...
+
+5) Zadanie "Getting Things done" (angielski)
+Create a code to take the names of N tasks and write down them in the certain file. Zadanie "Getting things done" (angielski)
+Take the names of N tasks and write down them in the file. You want to plan your day and create your to do list.
+Complete the program to take the names of 3 tasks as input and write them down in the file "tasks.txt", each on a new line.
+Then use the readFile() method to output the tasks.
+Sample Input:
+Workout
+Report
+Pool
+Sample Output:
+Workout
+Report
+Pool 
+
+6) zadanie (praktyka)
+Uzloz podane czesci kodu w jedna spojna calosc:
+1.import java.util.Formatter;
+2.Formatter f = new Formatter("a.txt");
+3.f.close();
+4.public class Main{}
+5.public static void main(String[] args) {}
+6.f.format("%s", "there");
+7.f.format("%s", "Hi");
+8.try {}
+9.catch (Exception e) {}
+Odpowiedz (w kolejnosci): 1, 4, 5, 8, 2, 6, 7, 3, 9 (ZAWSZE	zamykaj plik!)

@@ -1,0 +1,64 @@
+1) Zadanie (praktyka)
+Podaj rezultat ponizszego kodu:
+class A {
+  System.out.println("a");
+}
+private void print(String str) {
+  System.out.println("b");
+}
+private void println(int x) {
+  System.out.println("c");
+}
+public static void main(String[] args) {
+  A object new A();
+  object.print(12);
+}
+Odpowiedz: c
+Wyjasnienie: Poniewaz do funkcji print przesylamy argument = 12 zatem jest  to liczba calkowita, zatem wykonas sie funkcja:
+private void println(int x) {
+  System.out.println("c");
+}
+
+2) Zadanie (teoria)
+Uzupelnij luki tak zeby nowa klasa Falcon dziedziczyla z nadklasy Bird:
+... Falcon ... Bird {...}
+Odpowiedz: class Falcon extends Bird {...}
+Wyjasnienie: Jesli tego nie rozumiesz to koniecznie powinienes przeczytac jeszcze raz cala lekcje o dziedziczeniu.
+
+3) Zadanie (teoria)
+Wybierz wlasciwa odopwiedz:
+Zmienne obiektow przechowuja:
+-referencje
+-klasy
+-stringi lub inty
+-obiekty
+Odpowiedz: referencje
+Wyjasnienie: Pamietasz jak porownywalismy wartosci obiektow?
+
+4) Zadanie (teoria)
+Podaj nazwe instrukcji do ukrywania detali odnosnie obiektow innych czesci programu.
+Odpowiedz: Enklapsulacja
+Wyjasnienie: Jesli nie znasz terminu enkapsulacja koniecznie musisz sie cofnac i solidnie przepracowac ten temat, bo jest to podstawa podstaw w obiektowce.
+
+5) Zadanie (teoria)
+Klasa Car i jej podklasa BMW maja metode run(), ktora zostala napisana przez developera jako czesc definicji klasy. Jesli CarObj odwoluje sie do podklasy BMW, co zatem zrobi funckja CarObj.run(); ? Napisz odpowiedz.
+Odpowiedz (przykladowa): Poniewaz nasz obiekt CarObj jest obiektem klasy BMW nie wazne ze jest ona podklasa klasy Car, gdyz wazne jest ze jej obiektem jest CarObj, zatem to z niej zostanie wywolana funckja run().
+
+6) Zadanie (praktyka)
+Podklasy Valentine, Holiday i Birthday dziedzicza z nadklasy Card. Tak zeby ponizszy kod byl poprawny, jakiego typu zmienna referencyjna "card" musi byc? 
+card = new Valentine("A", 14);
+card.greeting();
+card = new Holiday("B");
+card.greeting();
+card = new Birthday("C", 12);
+card.greeting();
+Odpowiedz (Przyklad): Musi ona byc typu Card, poniewaz wywolujemy ja kolejno dla podklasy Valentine, Birthday, Holiday, zatem nie moze byc ona tych typow bo jesli bedzie dla jednego poprawna to dla reszty juz nie, zatem musi byc ona typu Card zeby wszystkie te wywolania mogly sie wykonac.
+
+7) ZADANIE KONCOWE MODUL 5:
+Pracujesz nad aplikacja graficzna, zawierajaca wiele roznych ksztaltow. Podany kod deklaruje podstawowa klase Shape z abstrakcyjna metoda area() i atrybutem szerokosci. Musisz utworzyc dwie podklasy Shape: Square i Circle, ktore inicjuja atrybut szerokosci, za pomoca ich konstruktora i definiuja ich metody area(). Funkcja area() dla klasy Square powinna wyprowadzac pole kwadratu, podczas gdy klasa Circle powinna wyprowadzac pole danego okregu. Kod w main tworzy dwa obiekty z danymi wejsciowymi uzytkownika i wywoluje metody area().
+Przykladowe dane wejsciowe:
+5
+2
+Dane wyjsciowe:
+25
+12.5663706

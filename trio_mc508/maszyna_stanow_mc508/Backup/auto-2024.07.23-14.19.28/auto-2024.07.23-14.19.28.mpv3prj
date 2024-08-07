@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="1" VersionMinor="1" ProductId="508" ProductName="MC508">
+    <Environment>
+        <Software SoftwareVersion="5.4.3.30464" />
+        <Controller ControllerVersion="2.0320004001" ControllerFPGAVersion="11">
+            <Modules />
+        </Controller>
+    </Environment>
+    <Items />
+</Project>

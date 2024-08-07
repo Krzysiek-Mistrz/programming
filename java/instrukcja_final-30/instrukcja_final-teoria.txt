@@ -1,0 +1,13 @@
+1) Mozesz uzyc instrukcji / slowa kluczowego final aby oznaczyc stala zmiennej, aby mozna ja bylo przypisac tylko raz. Przyklad:
+class MyClass {
+  public static final double PI = 3.14;
+  public static void main(String[] args) {
+    System.out.println(PI);
+  }
+}
+Pi jest teraz stala zmienna. Jakakolwiek proba do niej przypisania jakiejs wartosci zostanie zakonczona zwroceniem bledu.
+Metody i klasy takze moga byc opatrzone instrukcja final. Wowczas sluzy ona do okgraniczenia, nadania restrykcji, tak zeby metoda nie mogla byc nadpisana i do klas tak zeby nie mogly byc zastapione innymi klasami, kolejno: overriden i subclassed z ang.. ten temat poruszymy jednak dopiero w nastepnym module.
+
+2) Zadanie
+Jakie slowo kluczowe / instrukcja czyni dana zmienna stala, tzn. taka do ktorej nie mozna przypisac zadnej innej wartosci (any other value):
+Odpowiedz: final

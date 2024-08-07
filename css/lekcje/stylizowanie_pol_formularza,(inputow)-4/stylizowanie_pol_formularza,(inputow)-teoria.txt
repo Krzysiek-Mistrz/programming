@@ -1,0 +1,105 @@
+1) Tworzenie formularza w jezyku CSS jest niestety bardz zmudne jenak i tak warto miec na wzgledzie efekt koncowy jakim bedzie piekna witrynka.
+
+3) W celu stworzenia podstawowego formularza w jezyku HTML wystarczy nam zapisac:
+<form>
+Login
+<input type = "text">
+<br /><br />
+Hasło
+<input type = "submit" value = "Zaloguj się">
+</form>
+Definicja i użycie
+Znacznik <form> służy do tworzenia formularza HTML do wprowadzania danych przez użytkownika.
+Element <form> może zawierać jeden lub więcej z następujących elementów formularza:
+<input>
+<textarea>
+<button>
+<select>
+<option>
+<optgroup>
+<fieldset>
+<label>
+<output>
+
+4) Wlasciwosc box-shadow w jezyku CSS odpowiada za cien rzucany przez dany element, stylizujemy go poprzez dodanie parametrow horizontal length, vertical length, blur radius, spread radius, shadow color. Calosc zapisujemy tak:
+-webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+-moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+Dlaczego trzy linie? Ze wzgledu na kompatybilnosc. moz to skrot od mozilla firefox, webkit to silnik (engine) renderowania stron www, uzyty m.in. w chromie i Safari, Operze. Dlatego te dwie pierwsze linie webkit i moz umieszcza sie dla prewencji.
+
+5) Input to takze znacznik, z tego powodu w jezyku CSS takze mozna go stylizowac. Input nie odziedziczy rozmiaru czcionki po znaczniku bdy (bylby to problem w wielu przypadkach dlatego czcionka elementow interfejsu jest poza kaskada):
+
+6) Przycisk submit ma inny sposob naliczania rozmiaru. W polach edycyjnych stosuje sie zasade obliczania rozmiaru wzgledem contentu. Stosujemy wowczas box-sizing: content-box; do maksymalnej szerokosci pol dolozono 10px paddingu, box-sizing: border-box; przycisk uzywa innego sposobu liczenia rozmiaru. Dlatego zeby naprawic owa niedokladonosc przegladarki wpisujemy border-sizing taki jak przycisku:
+box-sizing: border-box;
+
+7) Wybrane rodzaje inputow: text, password, submit, button, file, color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week.... Selektor input wplywa na wyglad kazdego znich. Dlatego nalezy stylizowac te elementy dystynktywnie. W celu wlasnie takiego dystynktywnego wystylizowania nalezy uzyc zapisu:
+input[type=text],
+input[type=password]
+{
+width: 300px;
+background-color: #efefef;
+color: #666666;
+border: 2px solid #dddddd;
+border-radius: 5px;
+font-size: 20px;
+padding: 10px;
+box-sizing: border-box;
+}
+Wybieramy konkretne elementy za pomoca nawiasow klamrowych, ktore chcemy wystylizowac. 
+
+8) Warto by podczas wejscia na dana podstrone z logowaniem wzrok danej osoby sfocusowal sie na newralgicznym punkcie jakim jest "zaloguj sie".
+
+9) Wlasciwosc sluzaca do usuwania obwodki w przypadku konkretnego elementa formularza to wlasciwosc outline:
+outline: none;
+
+10) Wlasciwosc sluzaca do okreslenia wlasnego stylu podkreslenia ze dany element w formularzu jest aktywny to - focus. Przy zyskaniu aktywnosci, skupieniu uwagi na elemencie podkresla on element formularza.
+
+11) Atrybut HTML placeholder to tekst lub symbol zastepczy, tymczasowo umieszczony w polu edycyjnym (do czasu wpisania "prawdziwej" zawartosci pola). Powoduje, ze trzymana jest rezerwacja, co wyglada jekby np. tekst login byl w srodku elementu:
+<input type = "text" placeholder = "login">
+
+12) Azeby ustawic odpowiedni odstep miedzy wierszami na danej stronie, w zaleznosci od layoutu, raczej nie warto poslugiwac sie znacznikiem <br /><br />. Zwlaszcza ze wysokosc dwoch br-ow bedzie rozna w innych przegladarkach. Takze nie powinnismy tego robic ze CSS umozliwia nam pelne oddzielenie warstwy graficznej strony od warstwy stanowiacej zawartosc - HTML-a. Z tego powodu duzo lepiej uzyc wlasnie wlasciwosci margin-top, lub bottom w jezyku CSS, rzy danym elemencie.
+
+13) Efekt zmieniania koloru zawartosci placehoder-a w jezyku CSS realizujemy poprzez kod:
+input::-webkit-input-placeholder
+{
+color: #999;
+}
+
+input:focus::-webkit-input-placeholder
+{
+color: #428C42;
+}
+/* Firefox < 19 */
+input:-moz-placeholder
+{
+color: #999;
+}
+input:focus:-moz-placeholder
+{
+color: #428C42;
+}
+/* Firefox > 19 */
+input::-moz-placeholder
+{
+color: #999;
+}
+input:focus::-moz-placeholder
+{
+color: #428C42;
+}
+/* Internet Explorer 10 */
+input:-ms-input-placeholder
+{
+color: #999;
+}
+input:focus:-ms-input-placeholder
+{
+color: #428C42;
+}
+Mozemy zauwazyc w owym kodzie przedrostki moz, webkit, ms (internet explorer), omawialismy je ponizej w dokumencie... Z kolei oprator podwojnego dwukropka (w C++ oznacza operator zasiegu klas). Kod bez :focus to kod okreslajacy kolor font-a kedy dane pole nie jest aktywne, natomiast ze slowem focus - okreslaja kolor input-a kiedy pole jest aktywne.
+
+14) Zeby uzyskac efekt znikania tekstu placeholder-a zaraz po kliknieciu nalezy w tym celu uzyc kodu JS-a. Odpowiada za to zdarzenie onfocus, ktore zachodzi w momencie zyskania aktywnosci przez danyc obiekt - u nas pole edycyjne. Bedzie to kod:
+<input type = "text" placeholder = "login" onfocus = "this.placeholder=''">
+this - wskaznik (referencja) obiektu na rzecz ktorego dana metoda zostala wykonana, zwalnia z podania id pola. I dalej jest placeholder - oznacza obiekt, ktorego wlasciwoscia jest placeholder. Wowczas jednak placeholder traci swoj tekst, zeby go przywrocic nalezy wpisac:
+<input type = "text" placeholder = "login" onfocus = "this.placeholder=''" onblur = "this.placeholder='login'">
+Zostalo uzyte zdarzenie przeciwne do zdarzenia onfocus - onblur - zdarzenie utraty aktywnosci przez obiekt. Wywola to przywrocenie loginu po braku aktywnosci za pomoca zdarzenia onblur.

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="6">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="tool_FindReplaceWindow">
+    <Tool MainMode="QuickFind">
+      <Options MatchWholeWord="false" MatchCase="false" SearchUp="false" UseRegularExpressions="false">
+        <TargetItemTypes Mode="All" />
+      </Options>
+    </Tool>
+  </Content>
+  <Content Name="tool_VRViewerControl">
+    <Tool IsPeriodicUpdateEnabled="true">
+      <Ranges>
+        <Range StartAddress="0" EndAddress="3" IsExpanded="true" Description="" />
+      </Ranges>
+    </Tool>
+  </Content>
+  <Content Name="TableRangeEditDlgSettings">
+    <RecentRanges_VR>
+      <Range StartAddress="1" EndAddress="1" Description="" />
+      <Range StartAddress="10" EndAddress="14" Description="" />
+      <Range StartAddress="0" EndAddress="3" Description="" />
+    </RecentRanges_VR>
+  </Content>
+  <Content Name="Document_Program___MAIN" />
+  <Content Name="Document_Program__GLOBAL_VARIABLES" />
+  <Content Name="Document_Program__FUNC" />
+  <Content Name="tool_WatchVariablesControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+</Contents>

@@ -1,0 +1,53 @@
+1) Kiedy deklarujesz zmienna albo metode jako statyczna nalezy ona do klasy, a nie do okreslonej instancji. Oznacza to ze istnieje tylko jedna instancja statycznego elementu czlonkowskiego istnieje, nawet jesli tworzysz wiele obiektow klasy lub nie tworzysz zadnego. Bedzie wspoldzielona przez wszystkie obiekty. Przyklad:
+public class Counter {
+  public static int COUNT = 0;
+  Counter() {
+    COUNT++;
+  }
+}
+Zmienna COUNT bedzie od teraz wspoldzielona przez wszystkie obiekty danej klasy. Teraz mozemy stworzyc obiekt naszej klasy Counter w funkcji main i uzyskac dostep do naszej static zmiennej.
+public class MyClass {
+  public static void main(String[] args) {
+    Counter c1 = new Counter();
+    Counter c2 = new Counter();
+    System.out.println(Counter.COUNT);
+  }
+}
+Output jest rowny 2 poniewaz zmienna COUNT jest inkrementowana o 1 za kazdym razem kiedy nowy obiekt klasy Counter jest tworzony. W kodzie powyzej stworzono dwa obiekty. Mozesz takze uzyskac dostep do zmiennej statycznej uzywajac obiektu danej klasy, np.: c1.COUNT.
+
+2) Ciekawostka
+To czesty zwyczaj u programistow/deweloperow javy, by uzywac duzych liter przy nazywaniu zmiennych statycznych, nie jest to jednak obowiazkowe, jednak kiedy stary wyjadacz spojrzy na Wasz kod na pewno latwiej bedzie sie mu polapac. W tym kursie jednak do zmiennych statycznych bedziemy sie odnosci z duzych liter.
+
+3) Zadanie
+Uzupelnij luki w kodzie tak by zadeklarowac zmienna statyczna:
+public ... int X = 0;
+Odpowiedz:
+public static int X = 0;
+
+4) Taki sam kocept przyswieca metodom statycznym.
+public class Vehicle {
+  public static void horn() {
+    System.out.println("Beep");
+  }
+}
+Teraz metoda horn moze zostac wywolana bez potrzeby tworzenia obiektu. Przyklad:
+public class MyClass {
+  public static void main(String[] args) {
+    Vehicle.horn();
+  }
+}
+Kolejnym przykladem metod statycznych sa metody uwzglednione w klasie Math ktora niedawno omawialismy w lekcji "Matma", dlatego wlasnie mozesz je sobie bez problemu wywolac bez potrzeby tworzenia obiektow typu Matma objekt1 = new Matma();,itd...
+
+5) Metoda main odgornie zawsze, swiecie, niepodzielnie musi byc statyczna wbij sobie to do glowy to jest po prostu egulka, twierdzenie i tak musi byc bo tak to zostalo pomyslane.
+
+6) zadanie
+Podaj rezultat ponizszego kodu:
+class Person {
+  public static int PCOUNT;
+  public static void main(String[] args){
+    Person.PCOUNT = 1;
+    Person.PCOUNT++;
+    System.out.println(Person.PCOUNT);
+  }
+}
+Odpowiedz: Poniewaz najpierw zmienna statyczna PCOUNT = 1 nastepnie postinkrementujemy ja o 1 zatem ostateczna wartosc tej zmiennej bedzie rowna = 2.

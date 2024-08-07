@@ -1,0 +1,77 @@
+1) Zacznijmy od komendy, ktora juz z pewnoscia znales - shutdown. To dlatego tak wiele ludzi siega po ten jezyk. Latwy dostep do niebezpiecznych instrukcji, zadnej biblioteki, nie ma niczego co zabroniloby Ci jej uzyc. Pamietaj jednak ze nie nalezy tej komendy uzywac w zlych celach. Zostawiam to jednak na Twoich barkach, od Ciebie zalezy jak uzyjesz tej komendy (dla dobra czy zla)...
+Komenda shutdown sluzy do wylaczania komutera, odlaczenia myszki od komputera, czy tez klawiatury. Jest to komenda bardzo zaawansowana, opisuje ja szereg operatorow, najwazniejsze z nich to: parametr /s - okresla czas do wylaczenia ,parametr /t - sluzy do wyswietlania tekstu, parametr /c - sluzy za skonstrulowanie komentarza (wpisujemy w cudzyslowie).
+
+2) Dobrze, przedstawie teraz inne bardzo zaawansowane komendy (najbardziej w tym jezyku) w jezyku Batch:
+@chcp [strona kodowa] - Ustawia strone kodowa w pliku wsadowym (szczegolnie wazne w przypadku jezeli mamy stary komputer z mozliwym dziwnym zestawem znakow)
+echo. - Wyswietla pusta linie (jak widzisz dodalismy tylko kropke do instrukcji echo)
+title - Tytul okna wiersza polecen
+cls - Wyczyszczenie wiersza polecen (wiem, ze juz ja omawialem jednak drugi raz nie zaszkodzi)
+start [sciezka docelowa pliku] - Uruchamia program zewnetrzny (omawialem, jednak drugi raz nie zaszkodzi)
+>nul - Ukrywa informacje zwrotna od danego polecenia (omawialem, jednak drugi raz nie zaszkodzi)
+type [argumenty] - Wyswietla zawartość dokumentu
+del - Usuwa pliki (jedna z bardziej zaawansowanych komend, zaraz obok shutdown)
+xdel - Usuwa foldery i pliki (potezniejsza od instrukcji del, jedna z bardziej zaawansowanych komend, zaraz obok shutdown)
+copy - Kopiuje pliki
+xcopy - Kopiuje foldery i pliki
+dir - Wyswietla liste plikow i katalogow wskazanego folderu/dysku
+md - Tworzy katalog
+mkdir - Tworzy katalog (jako zamiennik md)
+ping - Odpytuje okreslonego hosta, czy posiadam z nim polaczenie (w wiekszosci przypadkow to niestety nie dokonca prawda...)
+call - Wywoluje jeden plik wsadowy w drugim (szczegolnie przydatne w przypadku duzych programow funkcyjnych i podprogramow w nich umieszczonych)
+exit - Zakonczenie dzialania pliku wsadowego (dzialanie niewykle podobne do pause, jednak nie pyta sie on o to, czy mozna wylaczyc)
+
+3) Omowie teraz nieco dokladnie dzialanie powyzszych instrukcji @chcp, echo., cls, exit, title:
+@echo off
+title Hello World!
+@chcp 852
+cls
+echo.
+echo Hello World!
+echo.
+pause
+exit
+Jak widzisz komenda title, musi byc na samym poczatku programu (ma to sens logiczny, bo jakbys sie nad tym zastanowil to program musi na samym poczatku wiedziec, jak sie sam nazywa). 
+Dalej mamy komende @chcp ustawia ona zestaw znakow na OEM 852, sprawa z tym jest troche skomplikowanam, jednak postaram Ci sie o tym opowiedziec jak najkrocej sie tylko da: zestaw znakow to zestawienie znakow pisma z odpowiadającymi im kodami binarnymi lub liczbowymi. Tabele take można nastepnie wykorzystac do przeksztalcenia tekstu na postac cyfrowa, w szczegolnosci w komputerze, obecnie powszechny we wszystkich nowoczesnych aplikacjach i systemach operacyjnych jest miedzynarodowy standard Unicode (najczesciej w polaczeniu z kodowaniem UTF-8), zdolny przedstawic kazdy znak ze wszystkich pism swiata, przyklady zestawow znakow to ASCII, Base32, Base64, EBCDIC, ISO 8859-2, JIS, KOI8-R, Base16, Unicode, OEM 852.
+Komenda cls to nic szczegolnego -czysci po prostu ekran.
+Instrukcja echo. przechodzi do nastepnej linii (dla przejzystosci kodu)
+pause i exit najpierw stopuje program (komenda pause), by dac uzytkownikowi wybor, czy chce go zamknac, nastepnie zamyka go instrukcja exit.
+
+4) Z racji, iz najlepiej uczyc sie na przykladach przygotowalem dla Ciebie kolejny program:
+@echo off
+title PROGRAM
+@chcp 852
+set nazwa_programu="Prosty program napisany w języku Batch"
+echo --------------------------------------------------------------------------------------
+echo Ja jestem %nazwaprogramu%.
+echo --------------------------------------------------------------------------------------
+echo Wpisz swoje imie:
+echo.
+set /p imie=">> "
+echo Witaj %imie%
+echo --------------------------------------------------------------------------------------
+ping 1.1.1.1 -n 1 -w 705 > nul
+echo PARAMETRY TEGO DNIA: %time% ; %date%
+ping 1.1.1.1 -n 1 -w 705 > nul
+timeout /t 10>nul
+echo --------------------------------------------------------------------------------------
+echo.
+echo KONIEC DZIALANIA
+echo.
+echo --------------------------------------------------------------------------------------
+pause
+exit
+Przypomnienie:
+set nazwaprogramu="Prosty program napisany w jezyku Batch" - przypisanie zmiennej %nazwaprogramu% tekstu: Prosty program napisany w języku Batch. W znakach %% wstawia się nazwe zmiennej, ktora zostaje interpretowana w innych poleceniach np. echo.
+set /p imie=">> " - Interakcja z uzytkownikiem. Uzytkownik nadaje wlasciwosc zmiennej %imie%.
+echo Ja jestem %nazwaprogramu%. - Echo nie bede objasnial. W znakach %% umieszczono nazwe zmiennej nazwaprogramu, ktora zostala nadana na samym poczatku kodu. Dzieki tej interpretacji nadany tekst tej zmiennej zostanie wyswietlony w oknie programu.
+
+Nowe:
+ping 1.1.1.1 -n 1 -w 705 > nul - Odpytuje host 1.1.1.1 przez 705ms. Jest to taki okres oczekiwania miedzy pojawieniem się jednej linijki kodu w pliku wsadowym.
+Zmienne %time% i %date%. Sa to systemowo ustawione zmienne, ktore pokazuja aktualna date i aktualny czas z komputera.
+timeout /t 10>nul - czas, po ktorym ma nastapic dana czynnosc. Po uzyciu tej komendy, po 10 sekundach zostanie dopiero przetworzona następna czesc kodu. Jest bardziej "ograniczony" od ping. Odmierza czas w sekundach, a ping w milisekundach.
+
+5) Tej komendy w sumie nie przedstawiale wczesniej - msgbox - Funkcja MsgBox wyświetla okno dialogowe z komunikatem i czeka na wciśnięcie przycisku przez użytkownika, po czym zwraca wartość typu Integer określającą ... Zapetlona moza prowadzic do niemoznsci zamkniecia okna w sposob tradycyjny. 
+
+6) Kolejna ciekawa: rund1132 mouse.disabled; rund1132 keyboard.disabled - Rundll – program ten umożliwia uruchomienie funkcji wyeksportowanych z plików DLL. Działa on w środowisku Microsoft Windows. Tzn tworzy np nowy plik funkcyjny, systemowy .dll i nadaje mu nazwe mouse disabled, co wylacza myszke.
+
+7)I jeszcze ostatnia: regedit /e ksyf - umozliwia edycje rejestru systemowego, tutaj dodawanie nowych opcji lub zmienianie istniejacych. W praktyce zmieniona moze prowadzic do zepsucia komputera.

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="12" Owner="C:\Users\User\Home\Programowanie\trio_mc508\bazowanie_cnc_5\bazowanie_cnc_5.mpv3prj">
+  <Content Name="tool_ControllerTreeControl">
+    <Tool IsPeriodicUpdateEnabled="true" />
+  </Content>
+  <Content Name="Document_Program___MAIN" />
+  <Content Name="Document_MC_CONFIG_MC_CONFIG" />
+  <Content Name="Document_Program_STARTUP" />
+  <Content Name="Document_Program__GLOBAL_VARS" />
+  <Content Name="Document_Program__FUNC_EMERGENCY" />
+  <Content Name="Document_Program__FUNC_POS" />
+  <Content Name="Document_Program__FUNC_BASE" />
+  <Content Name="Document_Program__FUNC_MIDDLE" />
+  <Content Name="tool_VRViewerControl">
+    <Tool IsPeriodicUpdateEnabled="true">
+      <Ranges>
+        <Range StartAddress="0" EndAddress="0" IsExpanded="true" Description="" />
+        <Range StartAddress="1" EndAddress="3" IsExpanded="true" Description="" />
+        <Range StartAddress="4" EndAddress="6" IsExpanded="true" Description="" />
+        <Range StartAddress="7" EndAddress="7" IsExpanded="true" Description="" />
+        <Range StartAddress="8" EndAddress="9" IsExpanded="true" Description="" />
+        <Range StartAddress="10" EndAddress="10" IsExpanded="true" Description="" />
+      </Ranges>
+    </Tool>
+  </Content>
+  <Content Name="TableRangeEditDlgSettings">
+    <RecentRanges_VR>
+      <Range StartAddress="0" EndAddress="0" Description="" />
+      <Range StartAddress="1" EndAddress="3" Description="" />
+      <Range StartAddress="4" EndAddress="6" Description="" />
+      <Range StartAddress="7" EndAddress="7" Description="" />
+      <Range StartAddress="8" EndAddress="9" Description="" />
+      <Range StartAddress="10" EndAddress="10" Description="" />
+    </RecentRanges_VR>
+  </Content>
+  <Content Name="tool_JogAxesControl">
+    <Tool IsPeriodicUpdateEnabled="true">
+      <AxesInUse>
+        <Index>0</Index>
+        <Index>1</Index>
+        <Index>2</Index>
+      </AxesInUse>
+    </Tool>
+  </Content>
+  <Content Name="Document_Program_TEST" />
+  <Content Name="Document_Program_MC_CONFIG" />
+  <Content Name="tool_AxisParametersControl">
+    <Tool IsPeriodicUpdateEnabled="true" DisplayAs="0">
+      <Groups>
+        <Group Name="Misc" IsExpanded="false" />
+      </Groups>
+    </Tool>
+  </Content>
+  <Content Name="tool_FindReplaceWindow">
+    <Tool MainMode="FindInProject">
+      <Options MatchWholeWord="false" MatchCase="false" SearchUp="false" UseRegularExpressions="false">
+        <TargetItemTypes Mode="All" />
+      </Options>
+    </Tool>
+  </Content>
+</Contents>

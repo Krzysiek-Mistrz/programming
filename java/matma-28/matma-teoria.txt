@@ -1,0 +1,23 @@
+1) JDK definiuje szereg uzytecznych klas jedna z nich jest klasa math, ktora zapewnia predefiniowane metody operacji metematycznych. Nie musisz tworzyc obiektu klasy Math, aby z niego korzystac. Aby uzyskac dostep, po prostu musisz wpisac nazwe math i operatorem kropki docierasz do odpowiedniej metody.
+1.Math.abs() zwraca wartosc bezwzgledna danej wartosci przeslanego parametru.
+int a = Math.abs(10); //10
+int b = Math.abs(-20); //20
+2. Math.ceil zaokragla wartosc zmienno przecinkowa w gore do najblizszej liczby calkowitej:
+double c = Math.ceil(7.342); //8.0
+3. Podobnie math.floor() zaokragla wartosc zmiennoprzecinkowa w dol do najblizszej wartosci calkowitej.
+double f = Math.floor(7.343); //7.0
+4. Math.max() zwraca najwieksza wartosc z podanych jej parametrow.
+int m = Math.max(10, 20); //20
+5. math.min() zwraca natomiast najmniejszy z podanych sobie parametrow.
+int m = Math.min(10, 20); //10
+6. Math.pow() bierze dwa parametry i zwraca pierwszy parametr podniesiony do potegi drugiego parametru.
+double p = Math.pow(2, 3); //8.0
+W klasie Math sa takze inne bardzo ciekawe funkcje do ktorych zapoznania serdecznie Cie zachecam :) Przykladowo:
+sqrt() - pierwiastek kwadratowy, sin() - wartosci sinus, cos() - wartosc cosinus i wiele wiele innych...
+
+2) Zadanie "Exponents" (angielski)
+napisz program ktory zwroci wartosc pierwszego parametru do potegi drugiego parametru drugiej zmiennej w programie. Create a program that will download a double variable from the user, then read another variable of this type and raise the first variable to the power of the second variable. Use the math library. Write everything to the screen.
+
+3) Podaj wartosc ponizszego wyrazenia:
+Math.abs(Math.min(-6, 3));
+odpowiedz: Math.abs(Math.min(-6, 3)); -> math.abs(-6); -> wartosc bezwgledna z |-6| = 6.

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" VersionMinor="1" ProductId="508" ProductName="MC508">
+    <Environment>
+        <Software SoftwareVersion="5.4.3.30464" />
+        <Controller ControllerVersion="2.0320004001" ControllerFPGAVersion="11">
+            <Modules />
+        </Controller>
+    </Environment>
+    <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+            <Items />
+        </Group>
+    </Groups>
+    <Items>
+        <Item Type="basic" Name="__MAIN" Id="d74a080e-b33d-45f6-b5b0-6443fe24773d" FileName="__MAIN.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="basicLibrary" Name="_FUNC" Id="1c802264-6113-4fe6-a61a-ca719ce18915" FileName="_FUNC.BAL" Storage="internalStorage" />
+        <Item Type="basic" Name="_GLOBAL_VARIABLES" Id="c69ff9c2-cc28-43f6-b67d-dc35446a4805" FileName="_GLOBAL_VARIABLES.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="a7e295ae-069c-4480-9837-c83a1db88f54" FileName="MC_CONFIG.MCC" Storage="internalStorage" />
+        <Item Type="basic" Name="STARTUP" Id="eb1b7719-f382-4b6e-b739-f625b0841962" FileName="STARTUP.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+    </Items>
+</Project>

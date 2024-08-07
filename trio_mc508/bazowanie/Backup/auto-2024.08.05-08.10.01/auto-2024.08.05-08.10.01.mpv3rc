@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contents Version="2">
+  <Content Name="Project">
+    <Project>
+      <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+          <Items />
+        </Group>
+      </Groups>
+      <Items>
+        <Item Type="basic" Name="__MAIN" Id="0558bbca-c255-494e-8409-9966ca0ae6a0" />
+        <Item Type="basicLibrary" Name="_FUNC_BASE" Id="b11e9464-a856-4c23-a285-38e7e2149f13" />
+        <Item Type="basicLibrary" Name="_FUNC_EMERGENCY" Id="e7b00b60-dfd4-4057-bf90-00117fd0c13e" />
+        <Item Type="basicLibrary" Name="_FUNC_MIDDLE" Id="40bcfac2-4982-4a02-946a-058cb5c8d7e8" />
+        <Item Type="basicLibrary" Name="_FUNC_POS" Id="996573fe-a5a3-467c-b4b3-dd2cd423ba8c" />
+        <Item Type="basic" Name="_GLOBAL_VARS" Id="28645fce-2c1f-487a-8ff1-bee214daae9f" />
+        <Item Type="basic" Name="STARTUP" Id="3544220c-45ee-4da0-ac81-eca11845be8e" />
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="920931ce-c0cb-4db8-acff-ffb0f02a398a" />
+      </Items>
+    </Project>
+  </Content>
+</Contents>

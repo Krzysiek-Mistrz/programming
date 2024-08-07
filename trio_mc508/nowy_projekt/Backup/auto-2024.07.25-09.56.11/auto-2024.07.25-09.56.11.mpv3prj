@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" VersionMinor="1" ProductId="508" ProductName="MC508">
+    <Environment>
+        <Software SoftwareVersion="5.4.3.30464" />
+        <Controller ControllerVersion="2.0320004001" ControllerFPGAVersion="11">
+            <Modules />
+        </Controller>
+    </Environment>
+    <Groups>
+        <Group Name="" Type="RobotProject" GroupId="5888AAC2-AA0A-4259-B826-0E99306F148C">
+            <Items />
+        </Group>
+    </Groups>
+    <Items>
+        <Item Type="basic" Name="__MAIN" Id="594f1ea1-1c17-4c79-8cf8-6e5d08c52d2e" FileName="__MAIN.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+        <Item Type="mcConfig" Name="MC_CONFIG" Id="d6381fe5-90c1-45cb-9f68-9de3945f9857" FileName="MC_CONFIG.MCC" Storage="internalStorage" />
+        <Item Type="basic" Name="STARTUP" Id="52b6954a-33b4-4c4c-be19-56fb5cbba0b5" FileName="STARTUP.BAS" Storage="internalStorage" Autorun="0" IsAutorun="False" />
+    </Items>
+</Project>

@@ -1,0 +1,13 @@
+WDOG=ON
+
+FOR x=0 TO 1
+  BASE(x)
+  SERVO=ON
+  SPEED=200	'ustawienie predkosci osi
+  ACCEL=10000	'ustawienie przyspieszenia osi
+  DECEL=10000	'ustawienie opoznienia osi
+  CREEP=5		'okreslenie predkosci bazowania
+  DATUM(3)	'wybor trybu bazowania
+NEXT x
+WAIT IDLE AXIS(0)	'oczekiwania az os zakonczy prace
+WAIT IDLE AXIS(1)	'oczekiwania az os zakonczy prace

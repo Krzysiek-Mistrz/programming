@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MotionPerfectLayout>
+  <Contents>
+    <Content Name="document_2573fd792a1c4878a4f134367f8f854d">
+      <MC_CONFIG>
+        <ActivePage Title="(All)" />
+      </MC_CONFIG>
+    </Content>
+    <Content Name="document_72ae945210a54202b2e6b7d9e2a66563">
+      <Program Name="__MAIN" Process="-1" />
+    </Content>
+    <Content Name="document_91188402d8e849f1bb0375eb2435ef7b">
+      <Program Name="STARTUP" Process="-1" />
+    </Content>
+  </Contents>
+  <LayoutRoot>
+    <RootPanel Orientation="Horizontal">
+      <LayoutAnchorablePaneGroup Orientation="Vertical" DockWidth="260">
+        <LayoutAnchorablePane Id="ab74d448-9087-4cc1-90f5-454192c6428b" DockWidth="260" FloatingWidth="200" FloatingHeight="600" FloatingLeft="NaN" FloatingTop="NaN">
+          <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Controller" IsSelected="True" ContentId="tool_ControllerTreeControl" LastActivationTimeStamp="07/23/2024 14:05:14" />
+        </LayoutAnchorablePane>
+      </LayoutAnchorablePaneGroup>
+      <LayoutPanel Orientation="Vertical">
+        <LayoutDocumentPaneGroup Orientation="Horizontal">
+          <LayoutDocumentPane>
+            <LayoutDocument Title="MC_CONFIG" ContentId="document_2573fd792a1c4878a4f134367f8f854d" LastActivationTimeStamp="07/23/2024 12:53:50" />
+            <LayoutDocument Title="__MAIN" IsSelected="True" IsLastFocusedDocument="True" ContentId="document_72ae945210a54202b2e6b7d9e2a66563" LastActivationTimeStamp="07/23/2024 14:10:49" />
+            <LayoutDocument Title="STARTUP" ContentId="document_91188402d8e849f1bb0375eb2435ef7b" LastActivationTimeStamp="07/23/2024 14:05:15" />
+          </LayoutDocumentPane>
+        </LayoutDocumentPaneGroup>
+      </LayoutPanel>
+    </RootPanel>
+    <TopSide />
+    <RightSide />
+    <LeftSide />
+    <BottomSide />
+    <FloatingWindows>
+      <LayoutAnchorableFloatingWindow>
+        <LayoutAnchorablePaneGroup Orientation="Horizontal" FloatingWidth="200" FloatingHeight="600" FloatingLeft="353" FloatingTop="260">
+          <LayoutAnchorablePane Id="417dadcf-db6d-4712-89db-72ebf7762660" FloatingWidth="200" FloatingHeight="600" FloatingLeft="353" FloatingTop="260" />
+        </LayoutAnchorablePaneGroup>
+      </LayoutAnchorableFloatingWindow>
+    </FloatingWindows>
+    <Hidden>
+      <LayoutAnchorable AutoHideMinWidth="100" AutoHideMinHeight="100" Title="Table Viewer" IsSelected="True" ContentId="tool_TableViewerControl" FloatingLeft="353" FloatingTop="260" FloatingWidth="200" FloatingHeight="600" LastActivationTimeStamp="07/23/2024 14:08:49" PreviousContainerId="417dadcf-db6d-4712-89db-72ebf7762660" PreviousContainerIndex="0" />
+    </Hidden>
+  </LayoutRoot>
+</MotionPerfectLayout>
