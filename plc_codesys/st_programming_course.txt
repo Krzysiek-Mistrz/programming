@@ -1,0 +1,157 @@
+in st we have expressions and instructions. expressions can be cmposed of operators and assignments. an operand can be constant variablea function or other. instructions tell what to do with given expressions. we canuse:
+FOR, WHILE, REPEAT, EXIT, CONTINUE, JMP.
+we can do assignments in st where on the left side id operand (variable address) to which the value on the right side is assigned by :=
+var1 := var2 + 10;
+after declaring the types of variables to bool, bool to motor and switch, we can execute the code: 
+motor := switch
+
+we can set and reset variables in st. Set operator 'S=' - the value will be set that means if set to True the variable will remain True. Reset operator however 'R=' will set variable state to False and the variable will remain false.
+motor S= start;
+motor R= stop;
+when you give start 1 it will set up motor to always 1 (start may change but after setting motor wont change until reset so when stop variable will be set to 1.
+
+we can write simple program to use a motor using stop, start switches and motor coil.
+motor := (start OR motor) AND stop;
+where stop is nc type and start is no type so after tapping will change to 1. and stop is always enabled when no tap. motor variable on the other hand saves the previous state.
+
+we can use for loop in st. we first need to declare variables:
+PROGRAM PLC_PRG
+VAR
+   F: ARRAY[0..4] OF REAL := [12, 23.5, 10, 2.4, 5];
+   I: INT := 0;
+   AVG: REAL := 0;
+END_VAR
+and in the code:
+AVG := 0;
+FOR I := 0 TO 4 DO
+   AVG := AVG + F[I];
+END_FOR
+AVG := AVG / 5;
+
+In st we can differentaite ton and ctu which are timer and counter. the parameters for timer are: IN, PT, Q, ET where IN is the signal on which when rising edge then after 1 second the Q will be 1 and after IN changes to 0 the output of Q will reset immediately, PT however is the time to wait. For the counter however are: CU, RESET, PV, Q, CV which arethe signal on which the counter will increment by 1 when rising edge, reset is the variable on which when its one the ctu will reset, PV is the upper limit that when CV > PV Q will output 1.
+
+We can have structures in st. We just have to clik on application and add dtu object and make it be a stucture. In the structure we can declare fileds responsible for holding certain variables to which we can relate by typing: <structname>.<fieldnameinsruct>
+
+We can also use do while funtion in st:
+WHILE time_out > 0 DO
+	timer1 (IN := start AND (NOT timer2.Q), PT := T#500MS);
+	timer2(IN := timer1.Q, PT := T#500MS);
+	IF timer2.Q THEN
+		time_out := time_out - 1;
+	END_IF
+	IF reset THEN
+		time_out := 10;
+	END_IF
+END_WHILE
+IF reset THEN
+	time_out := 10;
+END_IF
+
+repeat until loop is very similar to dhile do loop with that difference that the condition is checked at the end.
+REPEAT
+	timer1(IN := start AND (NOT timer2.Q), PT := T#500MS);
+	timer2(IN := timer1.Q, PT := T#500MS);
+	IF timer2.Q THEN
+		time_out := time_out - 1;
+	END_IF
+	IF reset THEN
+		JMP res;
+	END_IF
+UNTIL time_out < 1
+END_REPEAT
+res: time_out := 10;
+we can write comments as well using //... and multiline comments using (*...*). Wykonuj dopoki timeout > 1.
+
+we were using jmp and comments in the previous program jmp s equivalent to goto from many low level languages.
+lab2:
+IF sw_x THEN
+	JMP lab1;
+END_IF
+
+lab1:
+IF sw_y THEN
+	JMP lab2;
+END_IF
+
+IF sw_z THEN
+	JMP lab1;
+END_IF
+
+return instruction when you add it to the main program the part of the code below the return istruction wont execute, however when you add it to the funtion, the function will be executed.
+REPEAT
+	IF time_out < 1 THEN
+		RETURN;
+	END_IF
+	timer1(IN := start AND (NOT timer2.Q), PT := T#500MS);
+	timer2(IN := timer1.Q, PT := T#500MS);
+	IF timer2.Q THEN
+		time_out := time_out - 1;
+	END_IF
+	IF reset THEN
+		time_out := 10;
+	END_IF
+UNTIL time_out < 1
+END_REPEAT
+IF reset THEN
+	time_out := 10;
+END_IF
+so the code after this condition IF time_out < 1 THEN RETURN; END_IF wont be executed.
+
+Mozemy takze uzywac operacji przesuniec bitowych: SHL i SHR -> shift left i shift right.
+ton(IN := NOT ton.Q, PT := T#1S);
+IF ton.Q AND rotate_l THEN
+	out_bit.0 := x.7;
+	x := SHL(x, n);
+	x.0 := out_bit.0;
+ELSIF ton.Q AND rotate_r THEN
+	out_bit.0 := x.0;
+	x := SHR(x, n);
+	x.7 := out_bit.0;
+END_IF
+after 1 second if the button representing boolean variable rotate l is pressed then the value of byte x will shift (with rotation) to the left. and analogously with shift to the right.
+
+we can make unit conversions in st in code sys using unit conversion object which is added to our main application. In unit conversion module wechange scaling factor which is actually a function. This module also create the objects which ar names of what is converted to what like: km_to_mil. Example code is given below:
+temp_f1 := c_to_f.Convert(temp_c1);
+temp_c2 := c_to_f.Reverse(temp_f1);
+dist_km1 := mile_to_km.Convert(dist_mile1);
+dist_mile2 := mile_to_km.Reverse(dist_km1);
+
+functions are also available in st. we need first to create object of POU (function) and assign a name and type of funtion. implementation of function:
+FUNCTION_BLOCK arithmetic_function
+VAR_INPUT
+	num1 : REAL;
+	num2 : REAL;
+END_VAR
+VAR_OUTPUT
+	add_res : REAL;
+	sub_res : REAL;
+	mul_res : REAL;
+	div_res : REAL;
+END_VAR
+VAR
+END_VAR
+add_res := num1 + num2;
+sub_res := num1 - num2;
+mul_res := num1 * num2;
+div_res := num1 / num2;
+main code:
+PROGRAM PLC_PRG
+VAR
+	a : REAL := 20;
+	b : REAL := 3;
+	add_res : REAL;
+	sub_res : REAL;
+	mul_res : REAL;
+	div_res : REAL;
+	arithmetic : arithmetic_function;
+END_VAR
+arithmetic(num1 := a, num2 := b);
+add_res := arithmetic.add_res;
+sub_res := arithmetic.sub_res;
+mul_res := arithmetic.mul_res;
+div_res := arithmetic.div_res;
+One thing to note is that function block is a class where you need to instantite a object from it. However the funtcion with return type in main program looks like this where func_output is of type real. func_output := func(num1 := a, num2 := b);
+
+in st, similar to ladder we also ave rising edge and falling edge instruction to detect specific of the signal. rising edge -> R_TRIG; falling edge -> F_TRIG. Declaration looks like this: RTRIGInst : R_TRIG; RTRIGInst(CLK := VarBOOL1); VarBOOL2 := RTRIGInst.Q;
+
+There exist also hysteresis function for control to keep the control in certain limits (for the process to have oscilating values between 2 limits (not as in the bang bang only one limit and checking whether above or ower certain control value. usage: hysteresis(in:=current_val, high:=val_high, low:=val_low, out=>control)

@@ -1,0 +1,219 @@
+each module in rapid must have main procedure. In main proc we can call other procedures from the modules. In each module there is a set of instructions. in the beginning of each module you can add variables and constants. You can also place instructions directly in the main procedure. but its advised to use other proceduredures instead of that.
+code structure in rapid:
+!example of rapid code
+MODULE module1
+   !variables and constants
+   PROC main()
+      my_procedure;
+   ENDPROC
+   PROC my_procedure()
+      !set of instructions
+   ENDPROC
+ENDMODULE
+
+Instructions end with ';'. Keywords such as PROC, WHILE, ... dont end with ;, they have specific keyword to indicate the end : ENDPROC, ENDWHILE, etc... You can write comments with !. As most concurrent languages isnt case sensitivebut its recommended to use upper case letters for keywords. use indentation for better code readability and organization.
+module module1
+   var num sum := 0;
+   var num i := 0;
+   proc main()
+      while sum <= 100 do
+         i := i + 1;
+         sum := sum + i;
+      endwhile
+   endproc
+endmodule
+
+rapid include 4 basic datatypes which are: num (10, -5, 3.1415), string ("hello world"), bool TRUE, FALSE, byte (0..255). You can declare VAR which is just a normal variable which is killed after the execution of the program. PERS is a variable which is stored even after the program is stopped. CONST cant be modified as usuall. Variable assignment operator is :=. Examples:
+VAR num length;
+length := 10;
+VAR string name;
+name := "robot";
+PERS num nbr = 1;
+CONST num PI := 3.1415
+You can do math in rapid by using arithmetic operators such as +, -, *, /, relational operators: =, <, >, <=, >=, <> VAR bool equal; equal := (var1 = var2); You can also use concatenation operator using +.
+
+As we said you can declare procedures and functions in rapid, fe.:
+PROC procedure_name(arg_type arg1, ...)
+!instructions
+ENDPROC
+you can also declare functions like that:
+FUNC function(arg_type arg1, ...)
+!instructions
+RETURN [return_value];
+ENDFUNC
+calling a procedure:
+procedure_name[argument_list];
+function_name[argument_list];
+
+Rapid also includes many build in functions like for example:
+Math:
+Abs, Sqrt, Pow, ACos, ASin, ATan, ATan2, Cos, Sin, Tan
+Bitwise operations: 
+BitAnd, BitOr, BitCheck, BitLSh, BitRSh, BitNeg, BitXor
+
+Rapid can read upt to 15 digital input signals and up to 15 output signals from DI1..DI15 and DO1..DO15. We can fe. SetDO DO15, 1;
+You can also show text on flex pendant using TPWrite:
+TPWrite "Hello world!"
+We can also read the time, date, and system clock using: 
+VAR string time;
+time := CTime();
+VAR string date;
+time := CDate();
+VAR num time;
+time := ClkRead(clock);
+
+we can also control the flow control of the program using conditional statements and jumps: IF.. THEN.. ELSEIF.. THEN.. ELSE.. ENDIF, GOTO
+IF partnum = 1 THEN
+   Part1;
+ELSEIF partnum = 2 THEN
+   Part2;
+ELSE
+   TPwrite "Error"
+ENDIF
+and also jump instructions:
+Repeat:
+   <instructions>
+IF DI1 = TRUE THEN
+   GOTO Repeat;
+ENDIF
+
+You can use loops as well:
+while loop:
+VAR num repeat := 3;
+WHILE repeat > 0 DO
+   repeat := repeat - 1;
+   IF repeat = 1 THEN
+      BREAK;
+   ENDIF
+ENDWHILE
+for loop:
+FOR i FROM 1 TO 10 DO
+   TPWrite i;
+ENDFOR
+And as always very useful time instructions:
+WaitTime 1; -> wait for 1s
+WaitUntil flag = TRUE; -> wait for the fla var bool to be true
+WaitDI di4, 1; -> wait for input signal di4 to be 1
+
+We can also connect a digital input signal to interrupt certain subroutines:
+VAR intnum ihandler;
+PROC main()
+   CONNECT ihandler WITH iroutine;
+   ISignalDI DI1, 1, ihandler;
+ENDPROC
+TRAP iroutine
+   !execute interrupt instructions
+ENDTRAP
+ISignalDI connects a digital input with an interrupt handle
+ISignalDI Signal, TrigValue, Interrupt;
+CONNECT connects interrupt handler with a trap routine.
+
+Composite data types are used to define working conditions and config of robot movements:
+position, orientation, posture + definition of robot config, zoneand speeds data. definition of robot tool, definition of joint and robot targets.
+VAR ctype var1;
+VAR ctype var2;
+var2.name1 := value1;
+var2.name2 := value2;
+var1 := [TRUE, [0, 0]];
+var1.name_1 := FALSE;
+reference frame data type are: pos, orient, pose.
+VAR pos p1 := [400, 0, 200];
+VAR orient o1 := [1, 0, 0, 0]; !quaternions
+VAR pose target1 := [p1, o1];
+target1.trans.x := target.trans.x + 10;
+
+Robot can reach a destination declared using composite data types using diffrent config data. to define this configuration we actually use confdata:
+VAR confdata cd1 := [1, -1, 0, 0]; ! 3 first numers are for joints 1, 4, 6.
+The axis configuration of the robot (cf1, cf4, cf6, and cfx). This is defined in the form of 
+the current quarter revolution of axis 1, axis 4, and axis 6. The first positive quarter revolution 
+0 to 90° is defined as 0. The meaning of the component cfx is dependent on robot type. it is controlling the rotation of axis (initial)
+
+We can define stopping points or flyby points. When detecting stopping point th erobot will stoip when it will reach the point. When reaching the flyby point the robpot will change its speed and accuracy when passing that point. To define diffrent points we will use zone data type, which takes: [bool, num, num, num, num, num, num]. 
+var zonedata path := [TRUE, 25, 40, 40, 10, 35, 5];
+var zonedata stop_path := fine;
+zonedata is used to specify how a position is to be terminated, i.e. how close to the 
+programmed position the axes must be before moving towards the next position. 
+arg1: TRUE: The movement terminates as a stop point, and the program execution will not 
+continue until robot reach the stop point. The remaining components in the zone data 
+are not used.
+arg2: The extended zone will be defined as the smallest relative size of the zone based upon the 
+following components pzone_ori...zone_reax and the programmed motion.
+arg3: The zone size (the radius) for the tool reorientation. The size is defined as the distance of the 
+TCP from the programmed point in mm.
+arg4: The zone size (the radius) for external axes. The size is defined as the distance of the TCP 
+from the programmed point in mm
+arg5 The zone size for the tool reorientation in degrees. If the robot is holding the work object, this 
+means an angle of rotation for the work object.
+arg6: The zone size for linear external axes in mm.
+arg7: The zone size for rotating external axes in degrees 
+
+We can also adjust the speed data of particular moevements of certain joints (robot and external axes). speeddata which takes: [num, num, num, num] first takes speed of orientation point in mm/s, second to define speed of tool center point in deg/s third to define speed of linear movement, 4-th defines rotational speed. We can also use predefined speed using certain variablesfrom v5 -> 5mm/s to v500 -> 500mm/s.
+VAR speeddata vmedium := [100, 300, 300, 500];
+VAR speeddata vslow := v10; !defining speed
+Speed data defines the velocity: 
+*at which the tool center point moves,
+*the reorientation speed of the tool,
+*at which linear or rotating external axes move.
+
+We can define a tool as well using rapid. Tool has its own coorditional system which is used to define positions of the tip of the tool to reach. Tool is defined using data type of tooldata [bool -> tool to be used or not, pose -> position to indicate the referance frame of the tool tip, loaddata -> indicate the mass of the tool, position and orientation of center of mass]. Example:
+PERS tooldata gripper := [TRUE, [[97.4, 0, 223.1], [0.924, 0, 0.383, 0]], [5, [23, 0, 75], [1, 0, 0, 0], 0, 0, 0]];
+arg1:Defines whether or not the robot is holding the tool: TRUE: The robot is holding the tool
+arg2:The tool coordinate system, i.e.: The position of the TCP (x, y and z) in mm, expressed in the wrist coordinate system.
+arg3:The load of the tool, i.e.: The weight of the tool in kg. The center of gravity of the tool load (x, y and z) in mm, expressed in the wrist 
+coordinate system The moments of inertia of the tool relative to its center of mass around the tool load 
+coordinate axes in kgm2.
+
+Jonit target data robjoint [num, num, num, num, num, num] is used to join target values of 6 pos of joints (in deg) (6 axis). we can also include externaljoints using extjoint [num, num, num, num, num, num], jointtarget is composite type data used. If the robot doesnt have external exis then in extjoint we add 9E9, ...
+jointtarget is used to define the position that the robot and the external axes will move to 
+with the instruction MoveAbsJ.
+
+Robot target i used to define position to which the robot should move. parameters are [pos, orient, confdata, extjoint]:
+CONST robtarget t10 := [[-, 0, 20], [0.707, 0, 0, 0.707], [0, 0, 0, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+Data type: confdata
+The axis configuration of the robot (cf1, cf4, cf6, and cfx). This is defined in the form of 
+the current quarter revolution of axis 1, axis 4, and axis 6. The first positive quarter revolution 
+0 to 90° is defined as 0. The meaning of the component cfx is dependent on robot type.
+
+Previous we talked about config. Now we will learn motion instructions.
+moveabsj tojointpos, speed, zone, tool;
+tojointpos -> jointtarget
+speed -> speeddata
+zone -> zonedata
+tool -> tooldata
+nonlinear joint movement joint target:
+const jointtarget jt1 := [[25, 30, -10, 45, -20, 50], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+const jointtarget jt2 := [[-25, 30, 10, -30, 20, 20], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+const jointtarget jt3 := [[150, -40, 50, 30, 30, 60], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+moveabsj jt1, v1000, z100, gripper\WObj := wobj;
+moveabsj jt2, v1000, z100, gripper\WObj := wobj;
+moveabsj jt3, v1000, z100, gripper\WObj := wobj;
+
+Joint movement can be also executed using movej topoint, speed, zone, tool: the diffrenece beetwen movej and moveabsj is that movej takes rob position which is the tip of the tool, and the moveabs takes jointtarget position.
+const robtarget p1 := [[0, 0, -20], [1, 0, 0, 0], [0, 0, 0, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+pers tooldata gripper := [true, [[97.4, 0, 223.1], [0.924, 0, 0.383, 0]], [5, [23, 0, 75], [1, 0, 0, 0], 0, 0, 0]];
+movej p1, v1000, z10, gripper;
+
+movel to point, speed, zone, tool is also used to move the robot but this time the linear motion of the robot is executed
+const robtarget p1 := [[0, 0, -20], [1, 0, 0, 0], [0, 0, 0, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+pers tooldata gripper := [true, [[97.4, 0, 223.1], [0.924, 0, 0.383, 0]], [5, [23, 0, 75], [1, 0, 0, 0], 0, 0, 0]];
+movel p1, v1000, z10, gripper;
+
+movec circpoint, topoint, speed, zone, tool. The move c instruction defines a circular motion. The movement is defined from the current robot position and the middle point in the circle and also the target point.
+const robtarget t1 := [[250, -75, 400], [0, -0.707, 0.707, 0], [0, 0, 0, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+const robtarget t2 := [[250, 75, 400], [0, -0.707, 0.707, 0], [0, 0, 0, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+pers tooldata gripper := [true, [[97.4, 0, 223.1], [0.924, 0, 0.383, 0]], [5, [23, 0, 75], [1, 0, 0, 0], 0, 0, 0]];
+movec t1, t2, v1000, z10, gripper;
+
+move instructions have a number of optionalarguments
+moveabsj jt1, v1000\V:=800, z10\Z:=12, gripper;
+for example in the example up we can adjust speed, or a time of making the movemnt by typing \t next to speed. w parameter is the name of a reference frame  that allows reactor to be readjusted based on working object frame.
+
+when conrolling robot we can aslo limit the accelaration using accset acc, ramp. acc is the value of accel and the higher the ramp is the faster robot will meet the set value of accel.
+accset 100, 30;
+
+we can use point approximation as well when reaching the point:
+offs(topoint, xoffset, yoffset, zoffset)
+example:
+const robtarget t1 := [[200, -150, 400], [0, -0.707, 0.707, 0], [0, 0, 0, 0], [9e9, 9e9, 9e9, 9e9, 9e9, 9e9]];
+movej offs(t1, 0, 0, -20), v200, z5, gripper;
+movel t1, v50, fine, gripper;
