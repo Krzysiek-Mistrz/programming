@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:simple_calc.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Background="Gray"
+        x:Class="simple_calc.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="simple_calc">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel>
+        <Border Margin="5" Background="Blue" CornerRadius="10">
+            <TextBlock FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top">BASIC INPUT</TextBlock>
+        </Border>
+
+        <Grid HorizontalAlignment="Center" ShowGridLines="False" Margin="5" ColumnDefinitions="120, 100" RowDefinitions="Auto, Auto, Auto">
+            <Label Grid.Row="0" Grid.Column="0">FIRST NUMBER</Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Name="first_num"/>
+            <Label Grid.Row="1" Grid.Column="0">SECOND NUM</Label>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="second_num"/>
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <Button Margin="5" Padding="3" Background="Cyan" Click="button_clicked">Calculate</Button>
+                <TextBox IsReadOnly="True" Background="Blue" Padding="3" Margin="5" Name="output"/>
+            </StackPanel>
+        </Grid>
+        
+    </StackPanel>
+</Window>

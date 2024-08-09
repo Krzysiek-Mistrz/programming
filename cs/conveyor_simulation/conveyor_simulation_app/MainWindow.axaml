@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ConveyorSimulation.MainWindow"
+        Title="Conveyor Simulation" Width="800" Height="600">
+    <Canvas>
+        <!-- Taśmociąg -->
+        <Rectangle Name="ConveyorBelt" Width="600" Height="50" Fill="Gray" Canvas.Left="100" Canvas.Top="300"/>
+        
+        <!-- Paczka -->
+        <Rectangle Name="Package" Width="50" Height="50" Fill="Brown" Canvas.Left="100" Canvas.Top="275"/>
+
+        <!-- Czujniki -->
+        <Ellipse Name="Sensor1" Width="20" Height="20" Fill="Black" Canvas.Left="200" Canvas.Top="250"/>
+        <Ellipse Name="Sensor2" Width="20" Height="20" Fill="Black" Canvas.Left="400" Canvas.Top="250"/>
+
+        <!-- Diody LED -->
+        <Ellipse Name="LED1" Width="20" Height="20" Fill="Red" Canvas.Left="200" Canvas.Top="200"/>
+        <Ellipse Name="LED2" Width="20" Height="20" Fill="Red" Canvas.Left="400" Canvas.Top="200"/>
+    </Canvas>
+</Window>
