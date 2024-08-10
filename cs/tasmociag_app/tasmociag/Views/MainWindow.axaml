@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:tasmociag.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="tasmociag.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="tasmociag">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Canvas Name="canvas" Background="White">
+        <Image Width="1000" Canvas.Top="150" Canvas.Left="0" Source="/Assets/tasma.jpg"></Image>
+
+        <Image x:Name="led1" Margin="20" Height="50" Canvas.Top="290" Canvas.Left="300" Source="/Assets/led_off.png"></Image>
+        <Image x:Name="led2" Margin="20" Height="50" Canvas.Top="290" Canvas.Left="600" Source="/Assets/led_off.png"></Image>
+
+        <Image x:Name="paczka" Margin="20" Height="100" Width="100" Canvas.Top="480" Canvas.Left="100" Source="/Assets/paczka.png"></Image>
+
+        <Image Margin="20" Height="50" Canvas.Top="360" Canvas.Left="300" Source="/Assets/sensor.png"></Image>
+        <Image Margin="20" Height="50" Canvas.Top="360" Canvas.Left="600" Source="/Assets/sensor.png"></Image>
+    </Canvas>
+
+</Window>
