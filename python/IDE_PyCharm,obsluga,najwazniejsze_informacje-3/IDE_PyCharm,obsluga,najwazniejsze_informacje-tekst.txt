@@ -1,0 +1,13 @@
+1) Po zainstalowniu Python-a i programu PyCharm, nalezy otworzyc program PyCharm.
+
+2) Tworzymy nowy projekt. W lewej stronie po utworzeniu projektu w sciezce ktora podamy i wybraniu interpretera ukaze sie nam po lewej stronie struktura katalogow. Po kliknieciu na glowny katalog w ktorym utworzylismy projekt prawym przyciskiem myszy/prawym klawiszem klikamy -> new -> python file i nadajemy nazwe temu plikowi. Przy nazywaniu plikow wazna jest koncowka .py, sygnalizujaca o typie pliku.
+
+3) Po wpisaniu juz potrzebnego kodu powinnismy stworzyc jakas konfiguracje do naszego pliku, tak zeby mozna go bylo uruchomic. Normalnie uruchamiamy klikajac strzalke w prawym gornym rohu programu PyCharm. Przejdzmy jednak do konfiguracji... Bedziemy musili wskazac w niej ktory plik bedziemy uruchamiac. Po wybraniu "Add Configuration" w pr. gornym rogu klikamy na plus - "+" i wybieramy "Python". Po wybraniu "Python" pozostaje nam tylko wskazac lokalizacje pliku ktory chcemy uruchomic w polu "Script:" Jezeli interpreter nie jest wybrany nalezy go wybrac.
+
+4) W sekcji view - > appearance mozemy sobie wyswietlac dodatkowe okienka programu PyCharm w celu badania pisania kodu.
+W sekcji File -> save as / save all / new file mamy typowe opcje znane chociazby z CodeBlocks.
+Wystepuja w programie i mozna ich spokojnie uzywac skroty klawiszowe jak np. ctrl+c, ctrl+v, ctrl+x, ctrl+d, etc...
+
+5) W prawym polu naszego pola w ktorym mozemy wpisywac nasz kod jest umieszczony wskaznik o bledach oznaczony trojkatami z wykrzyknikami.
+
+6) KONIEC! Od tego momentu mozemy juz pisac w programie PyCharm.

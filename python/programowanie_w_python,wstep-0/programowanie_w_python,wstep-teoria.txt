@@ -1,0 +1,32 @@
+1) Python to popularny język programowania, stworzony przez Guido van Rossuma w 1991 roku. Chcesz zbudowac fajna strone internetowa? Stworzyc gre video? Czy moze stworzyc gre video? Python zda tutaj swoja role!
+Python to jezyk programowania wysokiego poziomu z mnostwem aplikacji. Jest bardzpo elastyczny i dostepny, co czyni go popularnym wsrod niektorych najwiekszych organizacji na swiecie. Google, NASA, Disney, CIA, etc.... W tym kursie omowimy sobie podstawowe koncepvcje jezyka Python, a takze stworzymy rzeczywiste projekty i rozwiazemy rozne wyzwania zwiazane z kodowaniem.
+
+1') Aby zacząć tworzyć programy w języku Python, należy zainstalować darmową aplikację Python, którą można pobrać bezpośrednio ze strony internetowej tego środowiska programistycznego.
+Wchodzimy w tym celu na stronę python.org i sekcji Downloads pobieramy aktualnie najnowszą wersję Pythona
+Uruchamiamy pobrany plik i, wybierając odpowiednie opcje, instalujemy Pythona na naszym komputerze. Po tej czynności można już zacząć programowanie z wykorzystaniem interpretera lub wbudowanego IDLE.
+Żeby sprawdzić, czy wszystko działa poprawnie, możemy uruchomić interpreter (nazywany też trybem interaktywnym) Pythona, wyszukując w Menu Start frazę „Python”.
+IDLE i jego instalacja
+Podstawowym IDE (środowiskiem programowania) jest w Pythonie aplikacja o nazwie IDLE. Jest ona prosta w obsłudze i szybka w działaniu, ale z punktu widzenia użyteczności, o wiele lepszym wyborem będzie PyCharm – środowisko programistyczne przystosowane do pracy z językiem Python.
+
+2) Bedziemy uzywac wersji Python 3, ktora jest obecnie najczesciej uzywana i najnowsza wersja Pythona.
+
+3) Zacznijmy od stworzenia prostego programu wyswietlajacego tekst "Witaj Swiecie". W Pythonie do wypisywania tekstu uzywam funkcji print. Aby wygenerowac nasza wiadomosc napiszemy wiec:
+print('Hello World')
+Po instrukcji print zawsze znajduja sie nawiasy zawierajace dane wyjsciowe, ktore chcemy wygenerowac, sa one dodatkowo w apostrofach.
+
+4) Napiszmy teraz program wypisujacyt "Learning Python" na ekranie.
+print('Learning Python')
+
+5) Mozna uzyc instrukcji print do tego aby wypisac wiele wierszy tekstu, dla przykladu:
+print('Witaj Swiecie 1')
+print('Witaj Swiecie 2')
+print('Witaj Swiecie 3')
+print('Witaj Swiecie itd...')
+Kazda instrukcja "print" wypisze zadany tekst w nowej linii.
+
+6) Kod Pythona zawiera wiele odniesien do Monty Pythona. Zobaczymy wiec "spam" i "eggs" jako zmienne zastepcze.
+
+7) Napisac program wypisujacy w kolejnych liniach litery A, B, C.
+print('A')
+print('B')
+print('C')

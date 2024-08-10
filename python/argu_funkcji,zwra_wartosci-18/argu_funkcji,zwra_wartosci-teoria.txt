@@ -1,0 +1,87 @@
+1) Funckje moga brac argumentry ktore pozniej moga byc uzyte do zwracania wartosci przez funckje.
+Przyklad:
+def print_with_exclamation(word):
+  print(word + "!")
+print_with_exclamation("spam")
+print_with_exclamation("eggs")
+print_with_exclamation("python")
+Jak widzisz na tym prztkladie argument jest zdefiniowany wewnatrz nawiasow okraglych i jest nazwany "word".
+
+2) Podaj rezultat kodu:
+def print_double(x):
+  print(2 * x)
+print_double(3)
+Rezultat:
+6
+
+3) Mozesz takze zdefiniowac wiecej argumentow wewnatrz danej funckji, jednak musisz wowczas pamietrac by oddzielic je przecinkiem, tak jak to:
+def print_sum_twice(x, y):
+  print(y + x)
+  print(x + y)
+print_sum_twice(5, 8)
+W rezultacie wykonania kodu na ekranie powinno sie wyswietlic kolejno 13 i 13 w dwoch kolejnych linijkach.
+
+4) Zadanie "Z_feet_na_inches"
+Stworz program zawierajacy funckje zamieniajaca / konwertujaca foot na inches, oczywiscie na wartosciach... 1 foot = 12 inches. Zdefiniuj funckje convert(), ktora bierze wartosc w foot jako argument i zwraca wartosc w inches.
+1.Rozwiazanie:
+wart_feet = float(input("Podaj wartosc w feet: "))
+def convert(arg_1):
+  inches = arg_1 * 12
+  return inches
+print("wartosc w inches: " + convert(wart_feet))
+
+5) Wypelnij puste miejsca ta zeby powtala fuckja bioraca dwa argumenty i wypisujaca ich iloczyn na ekran.
+...print_multi(x, y)...
+  print(x*...)
+Odpowiedz:
+def print_multi(x, y):
+  print(x*y)
+
+6) Konkretne funckje takie jak int() i str() zwracaja konkretna wartosc a nie wypisuja niejako te wartosci. Zwrocona wartosc moze byc pozniej uzyta w kodzie dla przykladu do przypisania jj do zmiennej. Zeby taki efekt uzyskac i moc zwrocic wartosc w denej funckji nalezy uzyc instrukcji return.
+Przyklad:
+def max(x, y):
+  if x >= y:
+    return x
+  else:
+    return y
+print(max(4, 7))
+z = max(8, 5)
+print(z)
+Przedstawiona wyzej funkcja jak jej nazwa wskazuje zwraca najwieksza sposrod podanych wartosci. 
+Jeszcze jedno: PAMIETAJ ze instrukcja return nie moze byc uzywana na zewnatrz definicji funkcji.
+
+7) Uzupelnij luki zeby zdefiniowac funkcje ktora porowna dlugosci jej argumentow i zwroci najkrotszy.
+def shortest_string(x, y):
+  if len(x) < len(y):
+    return x
+  else
+    return y
+
+8) W momencie kiedy zdecydujesz sie zwrocic jakas wartosc z funckji jest ona automatycznie przerywana (jej dzialanie). Kazdy kod ktory bedzie ustawiony po instrukcji return zostanie prze to zignorowbny i nie zostanie wykonany.
+def add_numbers(x, y):
+  total = x + y
+  return total
+  print("To nie zostanie wyswietlone")
+print(add_numbers(4, 5))
+Rezultat: 9
+Nie zostani wysiwtlony napis ktory znalazl sie po instrukcji return.
+
+9) Zadanie "Jak duzo liter"
+Napisz funckje ktora zwroci ilosc wystapien danego znaku wewnatrz danego lancucha znakow. Lancuch znakow pobierasz od uzytkownika i znak ktorego wystapienia masz zliczyc w tym ciagu znakow, takze pobierasz od uzytkownika.
+znak = input("Podaj znak: ")
+lancuch = input("Podaj lancuch znakow: ")
+def zliczaj(arg_1, arg_2):
+  wystapienia = arg_1.count(arg_2)
+  return wystapienia
+print("Ilosc wystapien: " + zliczaj(lancuch, znak))
+
+10) Jaki bedzie najwiekszy argument wywolany funckji.
+def print_numbers():
+  print(1)
+  print(2)
+  print(3)
+  return  
+  print(4)
+  print(6)
+Odpowiedz: 2
+Wyjsnienie: Po instrukcji return juz nic sie nie wykona.

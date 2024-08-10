@@ -1,0 +1,63 @@
+1) Zmienna umozliwia przechowywanie wartosci poprzez przypisanie jej do nazwy. Nazwa moze sluzyc do pozniejszego odwolywania sie do wartosci w programie.
+Na przyklad podczas tworzenia gier uzyjesz zmiennej do przechowywania punktow gracza. jaki jest sens grania, jesli nie wiesz kto wygrywa? Przypisywanie zmiennej odbywa sie za pomoca jednego znaku rownosci.
+W przykladzie ponizej przypisalismy string "james" do zmiennej "user":
+user = "James"
+
+2) Stworz zmienna "wiek" i przypisz do niej wartosc 42.
+wiek = 42
+
+3) Nazywanie zmiennych jest dosc elastyczne. W nazwach zmiennych mozna uzywac liter, cyfr, podkreslen. Nie mozna jednak uzywac specjalnych symboli, ani zaczynac nazwy zmiennej od liczby.
+
+4) Python jest jezykiem rozrozniajacym wielkosc liter (case sensitive). Co oznacza, ze: "Lastname" i "lastname", pisane kolejno z duzej i z malej litery sa dwiema roznymi zmiennymi.
+
+5) Ktore z ponizszych jest poprawna nazwa zmiennej?
+A) a-variable%name
+B) A_VARIABLE_NAME
+C) 123
+Poprawna Odpowiedz: B (A_VARIABLE_NAME)
+
+6) Zmiennych mozna uzywac do wykonywania odpowiednich operacji, tak jak to robimy z liczbami i ciagami znakow, przykladowo:
+x = 7
+print(x)
+print(x + 3)
+print(x)
+Rezultat:
+7
+10
+7
+Mozesz zaobserwowac, iz zmienne przechowuje swoja wartosc przez caly program.
+
+7) Napisz program wypisujacy "eggseggseggs", skorzystaj z operacji mnozenia typu string i typu integer.
+spam = "eggs"
+print(spam * 3)
+
+8) Jezeli potrzebujesz zmienic wartosc zmiennej mozesz to zrobic bardzo latwo, po prostu przypisujac do zmiennej nowa liczbe, mozesz takie przypisanie wykonac dowolna liczbe razy. Przyklad:
+x = 123.456
+print(x)
+x = "This is a string"
+print(x + "!")
+Rezultat:
+123.456
+This is a string!
+Jednak strzez sie! Nadpisywanie tej samej zmiennej roznymi typami danych nie jest dobra praktyka. Aby uniknac bledow, staraj sie tego nie robic.
+
+9) Napisz program wypisujacy x + y gdzie x = 5, a y = 7.
+x = 5
+y = 7
+print(x + y)
+
+10) Zadanie "Wizytowka"
+Napisz kod do do zarzadzania systemem kontaktow, gdzie imie, nazwisko, nr_tel i wiek sa zadeklarowanymi wartosciami zmiennych. Przypisz do zmiennych dowolne dane nastepnie wypisz je na ekran.
+Rozwiazanie:
+imie = "Jacek"
+wiek = 25
+nr_tel = 555666777
+nazwisko = "Kowalski"
+print("imie: ")
+print(imie)
+print("\nnazwisko: ")
+print(nazwisko)
+print("\nwiek: ")
+print(wiek)
+print("\nnr. telefonu: ")
+print(nr_tel)

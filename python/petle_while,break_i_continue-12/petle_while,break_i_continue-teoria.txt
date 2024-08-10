@@ -1,0 +1,168 @@
+1) Petli while mozemy uzywac do powtarzania bloku kodu wiele razy. Przykladowo - powiedzmy ze muismy wiele razy pobrac jakies informacje od uzytkownika, wiec za kazdym razem jak user cos wpisuje, to ten sam blok kodu powinienien byc wykonany.
+2) Przedstawiam petle while posiadajaca zmienna ktora liczy od 1 do 5, nastepnie powiadamia uzytkownika ze "skonczone".
+i = 1
+while 1 <= 5:
+  print(i)
+  i = i + 1
+print("Skonczone")
+Podczas kazdego obiegu petli while zmienna i jest inkrementowana o 1, dopoki nie dotrze do 5. Do wykonania instrukcji print() dojdzie zatem po wykonaniu pieciu obiegow petli while dopoi i jest mniejsze, rowne 5.
+Takie powtarzani kodu w ciele petli while jest nazywane iteracja.
+
+2) Jak duzo liczb ten kod wydrukuje na ekran?
+i = 3
+while i >= 0:
+  print(i)
+  i = i - 1
+Rozwiazanie: Petla wyrzuci na ekran w sumie cztery liczby: 3, 2, 1, 0.
+
+3) Mozesz takze uzywac wielu instrukcji  wewnatrz petli while. Powiedzmy ze potrzebujesz uzyc w petli while warunku if, by dokonac jakiejs decyzji.. Jest to bardzo przydatne w grach, gdzie musisz niekiedy zapetlic wiele akcji gracza i dodac punkty do wyniku gracza. Kod ponizej uzywa instrukcji if / else wewnatrz petli while do oddzielenia liczb parzystych i nieparzystych w zakresie od 1 do 10.
+x = 1
+while x < 10:
+  if x % 2 == 0:
+    print(str(x) + "is even")
+  else:
+    print(str(x) + "is odd")
+  x += 1
+str(x) jest uzywane do przekonwertowania liczby x na string, tak zeby mogla byc uzyta do konkatenacji.
+
+4) Wypelnij luki tak zeby stworzyc petle ktora inkrementuje wartosci x o 2 i wyswietla liczby parzyste.
+x = 0
+(1)... x <= 20:
+  print(x)
+  (2)... += 2
+Wynik: w (2) wpisujemy x, natomiast w (1) wpisujemy while.
+
+5) W celu calkowitego zamkniecia petli wystarczy uzyc instrukcji break. Mozemy na przyklad przerwac nieskonczona petle jesli spelniony jest jakis warunek. Przyklad:
+i = 0
+while True:
+  print(i)
+  i += 1
+  if i >= 5:
+    print("Breaking")
+    break
+print("Finished")
+while True jest prostym i szybkim sposobem na stworzenie nieskonczonej petli. Przykladowy przypadek uzycia przerwy: Nieskonczona petla while moze byc uzywana do ciaglego pobierania danych wejsciowych od uzytkownika. Przykladowo podczas projektowania programu kalkulatora, nalezy pobrac liczby od uzytkownika, aby dodac i zatrzymac gdy uzytkownik wprowadzi "stop". W takim przypadku instrukcja break moze zostac uzyta do zakonczenia petli nieskonczonej, gdy dane wejsciowe od uzytkownika = stop.
+uzywanie instrukcji break poza petla powoduje blad.
+
+6) Jak wiele liczb wyswietli ponizszy kod?
+i = 5
+while True:
+  print(i)
+  i = i - 1
+  if i <= 2:
+    break
+Wynik: Program wyswietli tylko 3 liczby nie cztery z powodu takiego iz jezeli i = 3 to i = 3 - 1 = 2 przez co na i = 2 petla sie zakonczy.
+
+7) Inna instrukcja ktora mozna uzywac w petlach jest instrukcja Continue. W przeciwienstwie do break, continue skacze z powrotem na poczatek petli zamiast ja zatrzymywac. Zasadniczo instrukcja continue zatrzymuje biezaca iteracje i przechodzi do nastepnej.
+i = 1
+while i <= 5:
+  print(i)
+  i += 1
+  if i == 3:
+    print("Skipping 3")
+    continue
+Przykladowy przypadek uzycia kontynuacji: system sprzedazy biletow lotniczych musi obliczyc calkowity koszt wszystkich zakupionych biletow. Bilety dla dzieci do 3 lat sa bezplatne. Mozemy uzyc petli while, aby przejsc przez liste pasazerow i obliczyc calkowity koszt ich biletow. Tutaj mozna uzyc instrukcji continue aby pominac dzieci.
+Podobnie jak przy instrukcji break uzywanie instrukcji continue na zewnatrz petli powoduje blad.
+
+8) Pytanie Kontrolne: Czy mozesz uzyc instrukcji continue aby zatrzymac nieskonczona petle?
+Odpowiedz: Nie, gdyz jest to zadaniem instrukcji break.
+
+9) Zadanie "Porob Matme!"
+Stworz kalkulator, ktory powinien dodawac wiele liczb pobranych od uzytkownika, nastepnie zwroc wynik na ekran. Zakoncz petle gdy uzytkownik poda napis "stop" na wejsciu
+Rozwiazanie:
+suma = 0
+while True:
+  liczba = float(input("Podaj liczbe: "))
+  suma += liczba
+  print("twoja suma wynosi: " + str(suma) + "\n")
+  interakcja_2 = input("Czy chcesz zakonczyc program? Napisz \'stop\' jezeli chcesz")
+  if interakcja_2 == "stop":
+    break
+
+10) Zadanie "Ceny Biletow"
+Stworz system biletowy ktory obliczy sume cen biletow dla pieciu kolejnych pasazerow, bazujac na ich wieku. Tzn. dla osob w wieku ponizej trzech lat nie licz ceny biletu, natomiast dla osoby w obojetnie jakim innym wieku daj cene = 100.
+Rozwiazanie:
+suma_cen = 0
+i = 1
+while i <= 5:
+  wiek = int(input("Podaj wiek " + str(i) + " pasazera: "))
+  i += 1
+  if wiek < 3:
+    continue
+  else:
+    suma_cen += 100
+print("Suma cen biletow: " + str(suma_cen))
+
+11) Jak wiele linii wyswietli ponizszy kod?
+While False:
+print("Looping...")
+Wynik: Wyswietli zero linii gdyz jako warunek wykonywania petli while jest falsz czyli 0, zatem petla nie wykon asie ani razu.
+
+12) Wypelnij ... tak aby po wpisaniu przez uzytkownika wartosci '0' przerwac nieskonczona petle while.
+while True:
+  x = input()
+  ... x == '...':
+    ...
+Rozwiazanie:
+while True:
+  x = input()
+  if x == '0':
+    break
+Wyjasnienie: Jezeli wartosc x podana przez uzytkownika bedzie rowna 0 przerwij wykonywanie petli.
+
+13) Uzupelnij ... tak aby wziasc numer funckja input() od uzytkownika, a nastepnie wyswietlic "pass", jezeli ta wartosc jest wieksza od 70.
+grade = ...(input())
+... grade > ...:
+...("Pass")
+Rozwiazanie:
+grade = int(input())
+if grade > 70:
+print("Pass")
+
+14) Podaj rezultat kodu:
+i = 0
+x = 0
+while i < 4:
+  x += i
+  i += 1
+print(x)
+Wynik: 6
+Wyjasnienie: Dla kolejnych iteracji zachodzi zaleznosc:
+x=0+i
+x=0+1
+x=1+1
+x=2+2
+x=3+3
+
+15) Podaj rezultat kodu w przypadku jesli uzytkownik poda wartosc 9 jako nasz input value.
+x = int(input())
+if x > 5:
+  if x < 8:
+    print(x + 1)
+  else:
+    print(x - 1)
+else:
+  print(x)
+Rezultat: Jako wynik dzialania tego programiku okaze sie liczba 8.
+Wyjasnienie: 9 jest wieksze od 5 zatem if1 sie wykonuje, nastepnie 9 > 8 zatem if2 nie zostaje wykonany, przze co zostaje wykonana instrukcje else stojaca ponizej i zostaje zwrocona wartosc 9 - 1.
+
+16) Zadanie "Kalkulator BMI"
+Sledzenie Twojego wlasnego BMI jest przydatne do powiedzenia czy utrzymujesz dobra wage. Jest obliczane poprzez stopsunek wagi danej osoby do kwadratu jej wzrostu.
+Wartosci BMI interpretujemy nastepujaco:
+-niedowaga: BMI < 18.5
+-normalna: BMI >= 18.5 i BMI < 25
+-nadwaga: BMI >= 25 i BMI < 30
+-otylosc: BMI >= 30
+Stworzmy zatem progranm ktory ulatwi nam sprawdzenie naszego BMI poprzez pobranie wagi i wzrostu danej osoby jako input value, nastepnie jako rezultat wyswietli korespondujaca kategorie BMI do ktorej nalezy dana osoba. Pamietaj ze Twoj program musi byc user-friendly, w przeciwnym przypadku nie zaliczam! Pamietaj tez ze wage i wzrost nalezy wstawic jako typ float.
+weight = float(input("Podaj swoja wage: "))
+height = float(input("Podaj swoj wzrost: "))
+bmi = weight / (height ** 2)
+print("Twoje BMI: " + str(bmi))
+if bmi < 18.5:
+  print("niedowaga")
+elif (bmi >= 18.5) and (bmi < 25):
+  print("normalna")
+elif (bmi >= 25) and (bmi < 30):
+  print("nadwaga")
+else:
+  print("otylosc")

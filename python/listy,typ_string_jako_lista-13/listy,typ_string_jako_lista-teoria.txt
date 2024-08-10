@@ -1,0 +1,77 @@
+1) Listy = tablice sluza do magazynowania przedmiotow. Liste mozemy stworzyc poprzez dodanie nawiasow kwadratowych z przecinkami oddzielajacymi przedmioty. Przyklad:
+words = ["Hello", "world", "!"]
+W tym przykladzie lista zawiera 3-y ciagi znkaow typu string: hello, world, !. Jezeli chcesz sie dotac do konkretnego przedmiotu na liscie mozesz to zrobic poprzez wziecie jego numeru w nawias kwadratowy. W naszym przypadku bedzie to wygladalo tak:
+words = ["Hello", "world", "!"]
+print(words[0])
+print(words[1])
+print(words[2])
+Pierwszym indeksem odnosnie listy jest numer zero i od niego musimy zaczac nasze wywolanie.
+
+2) Podaj rezultat kodu:
+nums = [5, 4, 3, 2, 1]
+print(nums[1])
+Rezultat: 4
+Wyjasnienie poniewaz zaczynamy numerowac w tablicy od [0], to [1] bedzie stanowic 4.
+
+3) List = tablic mozemy uzyc w Pythonie do zrbienia naprawde ciekawych rzeczy np. mozna uzyc list zagniezdzonych do reprezentowania siatek 2D takich jak macierze.
+m = [
+    [1, 2, 3]
+    [4, 5, 6]
+    ]
+print(m[1][2])
+Rezultat: 6 <-> drugi wiersz trzeci element (ale zaczynamy numerowac od zera)
+Wyjasnienie: Odwolujemy sie do tablicy [1] zagniezdzonej wewnatrz m, poniewaz zaczynamy numerowac od 0 to jest to odwolanie do [4, 5, 6], i wtej tablicy odwolujemy sie do elementu [2], czyli do szostki rozumujac tak jak poprzednio.
+Cos takiego jest bardzo bardzo przydatne. Poniewaz struktura podobna do macierzy umozliwia przechowywanie danych w formacie weirsz-kolumna, tak jak w programach biletowych, ktore musza przechowywac numery miejsc dla pasazerow w macierzy wraz z odpowiadajacymi im wierszami i numerami.
+
+4) Uzupelnij kod tak aby stworzyc tablice i wyswietlic na ekranie jej trzeci element.
+list = ...42, 55, 67]
+print(list[...])
+Rozwiazanie:
+list = [42, 55, 67]
+print(list[3])
+
+5) Stworz program biletowy zawierajacy dane siedzen (kolumna i weirsz w ktorym dane siedzenie jest umieszczone). Powinines dac cztery wiesze w kazdym po 3 kolumny, elementy maja byc we wszystkich kolumnach kolejno: a, b, c, d, e, f.... Nastepnie zapytaj uzytkownika o podanie wiersza i kolumny nastepnie zwroc odpowiedni element zawieracy sie w tym iwerszu i kolumnie.
+Rozwiazanie:
+seats = [
+        ['a', 'b', 'c'],
+        ['d', 'e', 'f'],
+        ['g', 'h', 'i'],
+        ['j', 'k', 'l'],
+        ]
+row = int(input("Podaj Odpowiedni Wiersz: "))
+column = int(input("Podaj Odpowiednia Kolumne: "))
+print(seats[row][column])
+
+6) Ciagi znakow mozemy takze indeksowac jako listy/tablice. Indeksowanie ciagu znakow typu string przypomina tworzenie listy zawierajacej kazdy znak w ciagu.
+Przyklad:
+str = "Hello world"
+print(str[6])
+Rezultat:
+'w'
+Spacja (" ") jest takze symbolem i ma swoj wlasny indeks.Proba uzyska ia dostepu do nie isniejacego indeksyu tablucy skonczy sie wyswietleniem bledu.
+
+7) Podaj rezultat kodu:
+x = "Python"
+print(x[1] + x[4])
+Rezultat:
+'yo'
+Wyjasnienie poniewaz zaczynamy indeksowanie w tablicy od zera to 1-ym elementem bedzie 'y' i 4-tym bedzie 'o'.
+
+8) Lista rzeczy ktore mozemy wykonac za pomoca list stale rosnie, listy/tablice moga byc takze mnozone w taki sam sposob jak typ string.
+Przyklad:
+nums = [1, 2, 3]
+print(nums + [4, 5, 6])
+print(nums * 3)
+Ciagi znakow i tablice maja bardzo duzo wspolnego, mozesz myslec o ciagach znakow jako liscie znakow ktore nie moga bvyc zmienione.
+O ciagu string "hello" mozemy pomyslec jako o liscie, gdzie kazdy element jest elementem tej tablicy. Pierwszym - zerowym elementem jest 'H', kolejnym 'e' i tak dalej...
+
+9) Podaj rezultat podanego nizej kodu:
+x = [2, 4]
+x += [6, 8]
+print(x[2]//x[0])
+Rezultat:
+6 / 2 = 3
+Wyjasnienie: Do tablicy x = [2, 4] zostaja dopisane kolejne dwa elementy [6, 8]. Nastepnie indeksujemy elementy i wypisujemy wynik floor division czyli dzielenia z zaokragleniem w dol.
+
+10) Poprosze imie? 
+Stworz program ktory pobierze od uzytkownika jego pierwsze i ostatnie imie i wyswietli inicjaly tego imienia.

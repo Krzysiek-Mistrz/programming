@@ -1,0 +1,45 @@
+1) Python sprawia ze tworzenie sekwencji loczbowych za pomoca funkcji range() jest bardzo latwe. Domyslnie zaczyna sie od 0, zwieksza 1 i konczy przed okreslona liczba. Ponizszy kod generuje liste zawierajaca wszystkie liczby calkowite, do 10.
+numbers = list(range(10))
+print(numbers)
+Wcelu wyswietlenia zakresu jako listy musimy jawnie przekonwertowac go na liste za pomoca funkcji list().
+
+2) Podaj rezultat kodu:
+nums = list(range(5))
+print(nums[4])
+Wynik: 4
+Wyjasnienie: nums = list(range(5)) = [0, 1, 2, 3, 4] i nums[4] = 4
+
+3) Jesli range zostanie wywolany z jednym argumentem, wytworzy obiekt z wartosciami od 0 do tego argumentu. Jesli zostanie wywolany z dwoma argumentami, wygeneruje wartosci od pierwszego do drugiego. Dla przykladu:
+numbers = list(range(3, 8))
+print(numbers)
+Pamietaj ze drugi argument nie jest zawarty w zasiegu, dlatego range(3, 8) nie bedzie zawierac numeru 8.
+
+4) Podaj rezultat kodu ponizej:
+print(range(20) == range(0, 20))
+Rezultat: True
+Wyjasnienie: Poniewaz zaczynamy numerowac od 0 zarowno w range(20) jak i w drugim to obie te instrukcje sa sobie rownowazne.
+
+5) Istnieje takze trzeci argument ktorego mozesz uzyc z range() i jest on naprawde przydatny. nazywa sie Step i okresla interwal tworzonej sekwencji:
+numbers = list(range(5, 20, 2))
+print(numbers)
+Chcesz sie cofnac? Nie ma problemu. Mozemy utworzyc liste malejacych liczb,uzywajac liczby ujemnej jako trzeciego argumentu. Na przyklad list(range(20, 5, -2)).
+
+6) Podaj rezultat kodu:
+nums = list(range(3, 15, 3))
+print(nums[2])
+Rezultatem kodu bedzie liczba '9', poniewaz zaczynamy indeksowanie o liczby = 3 nastepnie dokonujemy 2 razy interwalu zeby dostac sie do drugiego wyrazu.
+
+7) Wrocmy teraz do petli for i jej wspoldzialania z funkcja range().  Jest powszechnie uzywana w celu powtarzania kodu okreslonej liczby razy, co jest dokonywane przez wspoldzialanie petli for funkcji range().
+for i in range(5)
+  print("hello")
+Nie przejmuj sie wywolywaniem listy w obiekcie range, gdy jest on uzywany w petli for, poniewaz nie jest indeksowany, wiec lista nie jest potrzebna.
+
+8) Zadanie "Najblizsza lazienka"
+Grupa budynkow ma ubikacje na kazdym z 12 pieter, dla przykladu budynek z 12 pietrami bedze mial ubikacje n 5 i 10 PIETRZE. Stworz program ktory wezmie calkowita liczbe podlug w budynku, a nastepnie wyswietli lczbe podlug w budynku ktore stanowia ubikacje.
+floors = int(input("Give the number of floors: "))
+for room in range(5,floors,5)
+  print(room)
+
+9) Wypelnij pola tak zeby powstala petla for wyswietlajaca na ekran tylko wartosci parzyste z zadanego przedzialu:
+for i in range(0, 20, 2):
+print(i)

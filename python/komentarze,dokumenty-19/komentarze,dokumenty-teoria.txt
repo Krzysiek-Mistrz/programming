@@ -1,0 +1,33 @@
+1) Komentarze to adnotacje do kodu uzywane w celu ulatwienia zrozumienia. Nie wplywaja na sposob uruchamiania kodu. W pythnie komentarz tworzony jest poprzez wstawienie do kodu znaku hash '#'. Caly tekst po nim w wierszu w ktorym go postawimy zostanie przez kompilator lub interpreter zignorowany.
+Dla przykladu:
+x = 365
+y = 7
+#this is a comment
+print(x % y) #find the remeinder
+#print(x // y)
+#another comment
+W pzeciwienstwie do jezykow programowania takuh jak C, Python niestety nie posiada wielowierszowych komentarzy ogolnego przeznaczenia.
+
+2) Uzupelnij luke w kodzie takz zeby powstal komentarz:
+x = 8
+...printing x
+print(x)
+Odpowiedz:
+x = 8
+#printing x
+print(x)
+
+3) Docstrings (ciagi dokumentacji) sa podobne do komentarzy, poniewaz maja na celu wyjasnienie kodu. Ale sa bardziej szczegolowe i maja inna skladnie.
+Sa one tworzone przez umieszczenie wielowierszowego ciagu zawierajacego wyjasnienie funckji ponizej pierwszego wiersza funckji, na przyklad:
+def shout(word):
+  """
+  Print a word with an
+  exclamation mark following it.
+  """
+  print(word + "!")
+shout("spam")
+W przeciwniestwie do konwencjonalnych komentarzy docstringi sa zachowywane przez caly czas wykonywania programu. Pozwala to programiscie na sprawdzenie tych komentarzy w czasie wykonywania.
+
+4) Czy ciagi dokumentacji moga zawierac wiele linii tekstu?
+Tak / Nie
+Odpowiedz: Tak

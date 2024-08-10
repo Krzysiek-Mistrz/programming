@@ -1,0 +1,83 @@
+1) W jezyku Python matematyka dziala zarowno ze slowami, jak i liczbami. Mozemy zatem nie tylko dodawac liczby roznych typow (integer, float), lecz takze dodawac lancuchy, uzywajac konkatenacji. Konkatenacje mozemy zastosowac na dowolnych dwohc lancuchach. Przyklad:
+print("Spam" + 'eggs')
+Wynik:
+-Spameggs
+
+2) Konkatenacja dziala nawet z liczbami. Ciagi zawierajace liczby sa nadal dodawane jako ciagi, a nie liczby calkowite. Przyklad:
+print("2" + "2")
+Wynik:
+-22
+
+3) Konkatenacja ciagu znakow i liczby jest jednak zabroniona. Nie mozna tego zrobic gdyz ciag znakow i liczba sa to dwa rozne typy, zatem wykonanie konkatenacji na typie string i integer spowoduje blad - "wll break the code".
+
+4) Napisz instrukcje wypisujaca: "Pythonrocks" na ekran.
+print("Python" + "rocks")
+
+5) Mozesz nie byc w stanie dodac lancuchow do liczb calkowitych, ale mozesz je pomnozyc. Pomnozenie ciagu znakow przez liczbe calkowita daje w wyniku powtarzajaca sie wersje orginalnego ciagu znakow, przykladowo:
+print("spam" * 3)
+Wynik: spamspamspam
+print(4 * '2')
+Wynik: 2222
+
+6) Niemozliwym jest pomnozenie typu string przez kolejny typ string, poniewaz to spowoduje blad, podobnie blad takze spowoduje sytuacja kiedy bedziemy chcieli pomnozyc ciag znakow przez wartosc typu float.
+
+7) Napisz program wyswietlajacy liczbe 777, uzyj operacji mnozenia typu string przez wartosc typu integer.
+print('7' * 3)
+
+8) Zadanie "Po prostu powiedz czesc"
+Stworz program, ktory w wyniku wyswietli sentencje "hi" 42 razy. 
+print("hi" * 42)
+
+9) Ktora odpowied zreprezentuje typ string?
+A)'42'
+B)42.0
+C)42
+Prawidlowa odpowiedz: A
+
+10) Napisz instrukcje wypisujaca: "Welcome".
+print("Welcome")
+
+11) Jaki jest rezultat kodu: print("42" + '5')
+Rezultat: 425
+
+12) Napisz instrukcje wypisujaca: "ABC". Skorzystaj z operacji dodawania typow string - konkatenacja.
+print("A"+"B"+"C")
+
+13) Ktory z podanych znakow jest "znakiem ucieczki" - "escape character"
+A)\
+B)*
+C)/
+D)+
+Prawidlowa odpowiedz: A
+
+14) Zadanie kontrolne
+Stworz program do tablicy wynikow. Program musi wypisac liczby od 1 do 9, kazda w osobnym wierszu, po ktorych nastepuje kropka:
+1.
+2.
+3.
+...
+Mozesz uzyc znaku \n nowego wiersza, aby utworzyc podzialy wierszy lub alternatywnie utworzyc zadane wyjscie za pomoca 3-ch podwojnych cudzyslowow """.
+Rozwiazanie:
+print("1.\n2.\n3.\n4.\n5.\n6.\n7.\n8\n9.")
+lub
+print("""1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+""")
+Rezultat:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+Wyjasnienie: calosc wyrazenia zamykam w cudzyslowie, nastepnie do kolenych liczb z kropkami dodaje znak konca linii \n i od razu dopisuj ekolejna liczbe z kropka.

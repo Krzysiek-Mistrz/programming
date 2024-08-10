@@ -1,0 +1,104 @@
+1) Spotkalismy juz lancuchy, liczby calkowite i zmiennoprzecinkowe. Dzisiaj dodamy jeszcze do nasze madrosci jeszcze wiedze o wartosciach logicznych, dobrze?
+Zatem zmienne logiczne (booleans) moga miec dwie wartosci logiczne: True lub False.
+Mozemy je tworzyc porownujac wartosci, na przyklad za pomoca operatora rownosci ==. Na przyklad:
+my_boolean = True;
+print(my_boolean)
+print(2 == 3)
+print("hello" == "hello")
+Rezultat:
+True
+False
+True
+
+2) Pamietaj azeby uwazac zeby nie mylic operatora przypisania (=) z operatorem porownania (==)
+
+3) Wymien Dwie wartosci ktore moze przyjmowac zmienna typu boolean (czyt. buljan):
+Odpowiedz: True, False.
+Dygresja: Pamietaj ze zmienna boolean nie przyjmuje wartosci True i False z malych liter, czyli napisanie true, false, z malych liter jest bledem.
+
+4) Jednak nie tylko operator podwojnej rownosci tworzy zmienne wartosci logiczne (True, False). Mozesz uzyc dowolnego operatora porownania (gdyz jest ich kilka), zatem by porownac wartosci i utworzyc wartosc logiczna mozemy sie posluzyc dodatkowymi operatorami takimi jak:
+!=, oznaczajace "rozne"
+>, oznaczajace "wieksze niz"
+<, oznaczajace "mniejsze niz"
+>=, oznaczajace "wieksze lub rowne"
+<=, oznaczajace "mniejsze badz rowne"
+Spojrzmy teraz na pare przykladow, dam Ci po nich jeszcze jeden bys sobie przecwiczyl samemu.
+x = 7
+print(x != 8)
+print(x > 5)
+print(x < 2)
+print(x >= 7)
+print(x <= 7)
+
+5) Operatory porownania, przypomnijmy je sobie: ==, >, >=, <=, <, !=, nazywamy rowniez operatorami relacyjnymi, niektorzy programisci chcac zablysnac moga sie posluzyc ta nazwa a wtedy ty musisz to wiedziec zeby nie wyjsc na idiote ;)
+
+6) Cwiczenie dla Ciebie:
+Podaj wartosc zwrocona przez ponizszy kod.
+1. print(7 != 9)
+2. print(5 == 3)
+3. print(0 > -1)
+4. print(-5678 >= 45055)
+5. print(1020.3394291 < -9012839.1234321)
+Rezultat:
+True
+False
+True
+False
+False
+
+7) Ok, zatem nasze porownanie logiczne ustalilo, czy nasze stwierdzenie jest prawdziwe lub falszywe. Teraz mozemy uzyc instrukcji "if" do uruchomienia kodu w oparciu o okreslony warunek. Powiedzmy jesli wartosc logiczna ma wartosc True (pamietaj z duzej litery, mozeCi sie to mylic z jezykiem C++, gdyz tam bylo z malej).
+W przypadku instrukjci "if", jesli warunek ma wartosc True, instrukcje sa wykonywane. W przeciwnym razie nie sa przeprowadzane.
+Schemat uzycia instrukcji "if" wyglada nastepujaco:
+if condition:
+   statements
+
+8) Python uzywa wciec - pustej spacji na poczatku wiersza do rozgraniczenia blokow kodu. W zaleznosci od logiki programu wciecia moga byc obowiazkowe. Jak widac stwierdzenia w "if" powinny byc wciete odpowiednio do condition, czyli naszego warunku.
+
+9) Pytanie. Jaka czesc instrukcji if powinna byc wcieta?
+Odpowiedz: Wcieta powinna byc deklaracja ktora znajduje sie nizej warunku. (statement)
+
+10) Pokazmy jakies inny przyklad z uzycia instrukcji if:
+x = 42
+if x > 5:
+   print("x jest wieksze od 5")
+Rezlutat: x jest wieksze od 5
+Wyjasnienie: 42 bedace wartoscia zmiennej x jest wieksze od 5 zatem wyrazenie przyjmuje wartosc logiczna True, przez co instrukcja if jest wykonywana.
+Dwukropek na koncu warunku jest niezwykle istotny, pameitaj aby go nigdy nie pomijac!
+
+11) Podaj rezultat ponizszego kodu, przeanalizuj go samodzielnie.
+spam = 7
+if spam > 5:
+   print("five")
+if spam > 8:
+print("eight")
+Rezultat: five, zauwaz wartosc zmiennej typu integer spam jest rowna 7. Dalej mamy jezeli spam, czyli nasze 7 jest wieksze od 5 to wtkonaj instrukcje pint("five"), widzimy zatem ze warunek logiczny 7 > 5 ma wartosc True zatem ta instrukcja sie wykona, druga juz nie gdyz 7 < 8.
+
+12) Czasami bedziemy musieli przeprowadzic duzo bardziej zlozone warunki, jednak to zaden problem poniewaz instrukcje if moga byc zagniezdzone jedna w drugiej.
+Oznacza to, ze wewnetrzna instrukcja if jest czescia instrukcji zewnetrznej. Jest to jeden ze sposobow sprawdzenia, czy spelnionych jest wiele warunkow. Przyklad:
+num = 12
+if num > 5:
+   print("Bigger than 5")
+   if num <= 47:
+      print("Beetwen 5 and 47")
+Rezultat: 
+Bigger than 5
+Beetwen 5 and 47
+Wyjasnienie: Poniewaz 12 > 5 to wykonana zostanie instrukcja print("Bigger than 5"), natomiast jak ona sie wykona sprawdzana jest kolejna instrukcja if num <= 47, widac ze 12 <= 47, zatem wyraznie przyjmie wartosc True zatem instrukcja if sie wykona.
+
+13) Podaj rezultat kodu:
+num = 7
+if num > 3:
+print("3")
+if num < 5:
+print("5")
+if num == 7:
+print("7")
+Rezultat: 3
+Wyjasnienie: Wykona sie instrukcja if pierwsza gdyz 7 > 3, nastepnie nie wykona sie instrukcja druga if, gdyz 5 jest mniejsze od 7, przez co nie wykona sie takze ostatnia instrukcja if num == 7, ktora zwrocilaby wartosc True.
+
+14) Zadanie "Czyste Zloto"
+W celu wykonania programu sprawdzajacego czystosc zlota, wyswietl ciag znakow typu string "zaakceptowany" tylko wtedy kiedy wartosc podana przez uzytkownika w funkcji "inupt()" odpowieda wartosciom 22, lub 24K.
+1.Rozwiazanie:
+czystosc = input("Podaj czystosc zlota: ")
+if czystosc = 22
+   print("zaakceptowano")
