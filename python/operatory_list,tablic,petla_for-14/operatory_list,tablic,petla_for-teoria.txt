@@ -1,0 +1,85 @@
+1) Zeby sprawdzic czy dany element zaweira sie w danej tablicy moemy uzyc operatra "in". Zwraca on wartosc logiczna 'True' jesli dany element wystapil w liscie przynajmniej raz i wartosc 'False' jesli w tablicy nie ma takiego elementu.
+Przyklad:
+words = ["spam", "egg", "spam", "sausage"]
+print("spam" in words)
+print("egg" in words)
+print("tomato" in words)
+Operator "in" jest takze uzywany w celu zdeterminowania czy dany badany ciag jest podciagniem innego ciagu.
+
+2) Podaj rezultat kodu ponizej:
+nums = [10, 9, 8, 7, 6, 5]
+nums[0] = nums[1] - 5
+if 4 in nums:
+  print(nums[3])
+else:
+  print(nums[4])
+Rezultat: 
+7
+Wyjasnienie:
+Do szufladki o indeksie = 0 w ktorej znajdowala sie cyfra '10' zapisalismy nowa liczbe = '9-5=4', poniewaz 9 jest liczba zapisana w 1 szufladce. Dalej operatrem 'in' sprawdzamy czy w danej tablicy "nums" znalazla sie co najmniej jedna liczba '4' i wypisujemy n ekran liczbe 7 jesli mialo to miejsce.
+
+3) Podobnie zeby sprawdzic czy element nie znajduje sie na liscie wystarczy ze uzyjesz operatora "not" na jeden z nastepujacych sposobow:
+nums = [1, 2, 3]
+print(not 4 in nums)
+print(4 not in nums)
+print(not 3 in nums)
+print(3 not in nums)
+Wowczas analogicznie jezeli elementu nie bedzie na liscie otrzymamy wartosc "True".
+
+4) Uzupelnij luki w celu wydrukowania na ekran "tak" jesli w tablicy zawiera sie znak 'z'.
+letters = ['a', 'b', 'z']
+... "z" ... letters:
+  print("tak")
+Rozwiazanie:
+letters = ['a', 'b', 'z']
+if "z" in letters:
+  print("tak")
+
+5) Wprowadzimy teraz nowa petle. Petla "for" sluzy do iteracji po okreslonej sekwencji, takiej jak listy lub ciagi.
+Ponizszy kod wyswietla kazda pozycje na liscie i dodaje na koncu wykrzyknik.
+Przyklad:
+words = ["hello","world","spam","eggs"]
+for word in words:
+  print(word + "!")
+W powyzszym kodzie word jest zmienna reprezentujaca odpowiedni element listy w kazdej iteracji petli, tkz. zmienna iterujaca, moze miec ona dowolna nazwe. Podczas pierwszej iteracji slowo jest rowne "hello", podczas drugiej iteracji jest rowne "world" itd...
+
+6) Wypelnij ponizszy kod tak zeby otrzymac prawidlowo napisana petle "for".
+letters = ['a', 'b', 'c']
+... words ... letters:
+ print(words)
+Rozwiazanie:
+letters = ['a', 'b', 'c']
+for words in letters:
+ print(words)
+
+7) Petla "for" moze byc uzyta do iterowania po ciagach.
+Przyklad:
+str = "testing for loops"
+count = 0
+for x in str:
+  if(x == 't'):
+    count += 1
+print(count)
+Powyzszy kod definiuje zmienna count, iteruje po lancuchui oblicza w nim liczbe liter 't'. Podczas kazdej iteracji zmienna 'x' reprezentuje biezaca litere w ciagu.
+Zmienna count jest zwiekszana za kazdym razem, gdy zostanie znaleziona litera 't', wiec na koncu petli reprezentuje liczbe liter 't' w ciagu.
+Podobvnie jak do petli "while" operatory continue i break moga byc uzywane zeby zatrzymac iteracje lub zeby przeskoczyc do kolejnej.
+
+8) Podaj rezultat kodu ponizej:
+list = [2, 3, 4, 5, 6, 7]
+for x in list:
+if(x % 2 == 1 and x > 4):
+  print(x)
+  break
+Rezultat:
+5
+Wyjasnienie:
+Poniewaz zmienna iteracyjna przeskakuje sobie od przez kolejne elementy tablicy to my szukamy takiej liczby ktorej reszta z dzielenia przez 2 jest = 1 a ponadto ta liczba musi byc wieksza od 4.
+
+9) Zarowno petli for jak i while mozemy uzyc do wielokrotnego wykonania bloku kodu. zaem czego uzywamy i kiedy? Zwykle uzywamy petli for gdy liczb aiteracji jest ustalona. na przyklad iteracja po ustalonej liscie pozycji na liscie zakupow. petla while jest przydatna w przypadkach kiedy nie jest znana liczba iteracji i zalezy od pewnych obliczen i warunkow w bloku kodu petli. Na przyklad  zakonczenie petli, gdy uzytkownik wprowadzi okreslone dane wejsciowe w programie kalkulatora.
+Pamietac jednak nalezy ze petla for ma znacznie krotsza i czytelniejsza dla programistow skladnie zatem nalezy z reguly uzywac wlasnie tej funkcji.
+
+10) Jaki konstrukt moze byc uzyty do iterowania przez listy?
+odpowiedz: petle
+
+9) Zadanie "Poszopujmy!"
+Stworz program ktory doda znizke do Twojego towaru, a nastepnie wyswietli ostateczna cene tego towaru.

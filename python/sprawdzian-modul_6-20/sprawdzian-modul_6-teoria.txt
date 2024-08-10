@@ -1,0 +1,56 @@
+1) Uzupelnij luki tak zeby zdefiniowac funkcje ktora bieze dwie liczby jako argumenty i zwraca mniejsza z liczb:
+... min(x, y)...
+  if x <= y...
+    return x
+  else:
+    ... y
+Rozwiazanie:
+def min(x, y):
+  if x <= y:
+    return x
+  else:
+    return y
+
+2) Uloz podane fragmenty kodu w takiej kolejnosci zeby zdefiniowac funkcje kalkulujaca sume wszystkich liczb od zera do jej argumentu.
+def sum(x):
+  res = 0
+  for i in range(x):
+    res += i
+  return res
+
+3) Podaj najwieksza wartosc liczbowa zwrocona przez ponizszy kod:
+def print_nums(x):
+  for i in range(x):
+    print(i)
+    return
+print_nums(10)
+Odpowiedz: 0
+Wyjasnienie: Zaraz po wykonaniu pierwszego obiegu, petla sie zatrzymuje z powodu return i konczy sie dzialanie funkcji.
+
+4) Podaj rezultat ponizszego kodu:
+def func(x):
+  res = 0
+  for i in range(x):
+    res += i
+  return res
+print(func(4))
+Rezultat: 6
+Wyjasnienie: Wykona sie dla 0, 1, 2, 3 czyli dla liczb z zakresu = 4. jezeli tego nie rozumiesz powinienes sie wrocic do fragmentu, gdzie omawialismy dzialanie petli while, for, ewentualnie do tablic/list.
+
+5) ZADANIE KONCOWE "Search Engine"
+Pracujesz nad wyszukiwarka. Twoj kod ma za zadanie brac slowo i znak dany przez uzytkownika i przepuscic je przez funckje search(). Funckja ta powinna zwrocic "Word found" jesli dane slowo jest obecne w tekscie lub word not found jesli w tekscie nie ma danego slowa.
+Sample input:
+"This is awesome"
+"awesome"
+Sample output:
+Word found
+1) Rozwiazanie:
+text = input("Podaj fraze oddzielona spacjami: ")
+word = input("Podaj pojedyncze slowo lub znak: ")
+def search(arg_1, arg_2):
+  appear = arg_1.count(arg_2)
+  if appear > 0:
+    print("Word found")
+  else:
+    print("Word not found")
+search(text, word)

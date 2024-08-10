@@ -1,0 +1,66 @@
+1) Szukasz bardziej zaawansowanego pobieranai wartosci z listy?Wystarczy ze odniesiesz sie do tkz fragmengow listy. Najbardziej standardowy podziall listy polega naq indeksowaniu listy za pomoca dwoch liczby calkowitych oddzielonych dwukropkiem. Spowoduje to zwrocenie nowej listy zawierajacej wszystkie wartosci ze starej listy miedzy indeksami.
+Przykad:
+sqares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[2:6])
+print(squares[3:8])
+print(squares[0:1])
+Rezultat:
+[4, 9, 16, 25]
+[9, 16, 25, 36, 49]
+[0]
+Podobnie jak argumenty do zakresu pierwszy indeks podany w fragmencie jest uwzgledniony w wyniku, ale drugi nie.
+
+2) POdaj rezultat kodu:
+sqa = [0, 1, 4, 9, 16, 25, 36, 49, 64]
+print(sqa[4:7])
+Wynik:
+[16, 25, 36]
+
+3) Pamietaj o tymze jesli pominieto pierwsza liczbe w plasterku przyjmuje sie ze jest to poczatek listy. Jesli druga liczba zostanie pominieta, uwaza sie ja a koniec.
+Przyklad:
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[:7])
+print(squares[7:])
+Wynik:
+[0, 1, 4, 9, 16, 25, 36]
+[49, 64, 81]
+Fragmentowanie "slicing" mozna takze wykonac na krotkach.
+
+4) Wypelnij kod tak zeby pobralo dwa pierwsze elementy listy, tj. dwa poczatkowe:
+list = ['a', 'b', 'c', 'd']
+a = list[0:2]
+
+5) Podobnie jak w wypadku zakresow wycinki listy moga zawierac trzecia liczbe reprezentujaca krok, aby uwzglednic w wycince tylko alternatywne wartosci, na przyklad:
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[::2])
+print(squares[2:8:3])
+Wynik:
+[0, 4, 16, 36, 64]
+[4,25]
+Podany Przyklad zawiera elementy zaczynajace sie od 2 indeksu do 8 z interwalem 3.
+
+6) Podaj rezultat kodu:
+sqs = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(sqs[1::4])
+wynik:
+[1, 25, 81]
+
+7) Wartosci ujemne moga rowniez byc uzywane w dzieleniu listy, jak rowniez w normalnym indeksowaniu. Oznacza to ze gdy wartosci ujemne sa uzywane dla pierwszej i drugiej licby w fragmencie licza sie one od konca listy. Na przyklad:
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares[1:-1])
+Wynik:
+[1, 4, 9, 16, 25, 36, 49, 64]
+Jesli dla interwalu zostanie uzyta wartosc ujemna wycinek zostanie wykonany od tylu. Uzywanie [::-1] jako wycinka jest powszechnym i idiomatycznym sposobem odwrocenia listy.
+
+8) Podaj wynik kodu:
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(sqs[7:5:-1])
+Wynik: [49, 36]
+Zaczynamy numerowanie od 7 indeksu nasteonie przesuwamy sie do 5 wykonujac interwal = -1.
+
+9) Zadanie "Odwroc typ string!"
+Na poczatku programu podany jest ciag znakow jako input a jako output jego odwrotnosc. Pamietaj ze string jest lista znakow i ze mozesz odrocic lancuch w taki sam sposob w jaki odrocilbys liste.
+Rozwiazanie:
+word = input("Please give sample word: ")
+rev_word = word[::-1]
+print(rev_word)

@@ -1,0 +1,92 @@
+1) Porozmawiajmy w dzisiejszej lekcji o operatorach miejsca w jezyku Python. Operatory miejsca w Pythonbie umozliwiaja bardziej zwiezle pisanie kodu, takiego jak: x = x + 3, jako po prostu: x += 3. Zauwaz jezeli tylko sudiowalaes jezyk C++ ze jest to to samo co operatory miejsca w jezyku C++. Pozwala to oszczedzic sporo czasu, co prawda nie na jednej linijce lecz na caly programie wykonujacym tego typu operacje.
+Przyklad uzycia:
+x = 2
+print(x)
+x += 3
+print(x)
+Rezultat:
+2
+5
+Wyjasnienie: Najpierw do zmiennej x przypisujemy wartosc 2, nastepnie moze nastapic niejasnosc - do starej zmiennej x, nie do wartosc, przypisujemy nowa wartosc x = x + 3, gdzie stare x = 2 zatem powstanie nam: x = 2 + 3.
+
+2) Zauwaz ze moglibysmy ta sama operacje wykonac z uzyciem innych operatorow takich jak: -, * /, %. Przykladowo:
+x *= 2
+x %= 5
+x /= 11
+x -= 6
+
+3) Podaj rezultat nastepujacego kodu:
+x = 4
+x *= 3
+print(x)
+Rezultat: x = 4 * 3 = 12
+
+4) Tych samych operatorow miejsc mozesz takze uzyc w stosunku do typu string. Przyklad:
+x = "spam"
+print(x)
+x += "eggs"
+print(x)
+Rezultat:
+spam
+spameggs
+Jak widzisz nastapila zwyczajna konkatenacja wedlug wzoru: x += string => x = staryX + string.
+
+5) Operacje miejsca moga byc uzyte do obojetnie jakiej operacji matematycznej (numerical operation), czyli przykladowo tych mozesz uzyc: %, +, -, /, //, **.
+
+6) Napisz kod zwracajacy w wyniku "aaa", w wyniku operacji mnozenia, uzyj operatorow miejsc.
+x = "a"
+x *= 3
+print(x)
+Wyjasnienie: Zauwaz ze wykorzystujemy operacje mnozenia stringu przez liczbe, zdaje sie ze nie ma w tym nic skomplikowanego wystarczylo wpasc na pomysl :)
+
+7) Podaj rezultat kodu:
+spam = "7"
+spam = spam + "0"
+eggs = int(spam) + 3
+print(float(eggs))
+Rezultat: 73.0
+Wyjasnienie: Konkatenacja -> zamiana na typ int -> zamiana na typ float.
+
+8) Podaj rezultat kodu w wypadku jesli uzytkownik poda wartosc 42 w funkcji input().
+age = int(input)
+print(age + 8)
+Rezultat: 50
+Wyjasnienie: Jezli nie rozumiesz zasady dzialania funkcji input() wroc do po[przedniej lekcji.
+
+9) Podaj rezultat kodu:
+x = 5
+y = x + 3
+y = int(str(y) + "2")
+print(y)
+Rezultat: 82
+
+10) Napisz kod przypisujacy do zmiennej x wartosc 4, nastepnie dodajacy do zmiennej 5 i wyswietlajacy zmienna x koncowa na ekran monitora.
+Rozwiazanie:
+x = 4
+x += 5
+print(x)
+
+11) Podaj rezultat kodu:
+x = 3
+num = 17
+print(num % x)
+Rozwiazanie: 2
+Wyjasnienie: Zwracany wynik jest reszta z dzielenia 17/3, jezli nie rozmuiesz tego operatora wroc sie do poprzedniej lekcji i przerob tamte przyklady (Najlepiej wszystkie, gdyz jest to bardzo wazny operator).
+
+12) Napisz kod pobierajay imie od uzytkownika (Przy okazji zadaj pytanie do uzytkownika o to imie) i przypisujacy to imie do zmiennej name, i zwracajacy wiadomosc: "Witam imie".
+Rozwianie:
+name = input("Prosze podaj swoje imie: ")
+print("Witaj " + name)
+Wyjasnienie: Jezli nie rozumiesz zasady dzialania funkcji input() wroc do po[przedniej lekcji. Wiadomosc przy funkcji input prosi o podanie przez uzytkownika jego imienia, wsyztsko co w funkcji input() zostanie zworocone jako typ string.
+
+13) Zadanie "Kalkulator napiwka"
+Kiedy idziesz cos zjesc zawsze zostawiasz 10% z zaplaconej ceny jedzenia na napiwek dla kucharza. Postanowiles jednak ze przyspieszysz ten proces obliczania napiwka i napiszesz program zeby to zrobil za ciebie.
+Twoj program ma za zadanie wziac wartosc jedzenia i zwrocic koncowa wartosc napiwku jako zmienna typu float.
+Przykladowy input: 50
+Przykladowy output: 5
+Rozwiazanie:
+bill = int(input())
+percent = 0.1
+tip = float(percent * bill)
+print(tip)
+Wyjasnienie: wartosc procentu jest stala i wynosi 10%. Wartosc napiwku mielismy zwrocic w postaci zmiennej typu float tak tez robimy zamieniajac wartosc mnozenia bill * percent funkcja float(). Na koncu "drukujemy" wartosc na ekran.

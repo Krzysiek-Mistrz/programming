@@ -1,0 +1,69 @@
+1) Aby uzyskac dane wejsciowe od uzytkownika w jezyku Python uzyjemy funkcji wejsciowej "input", nazwa jak widac odwoluje sie do wlasciwosci tej funkcji co pokazuje prostote i piekno tego jezyka.
+Przykladowo gra moze poprosic o imie i wiek uzytkownika jako dane wejsciowe, a nastepnie uyc ich w grze. Funkcja "input" prosi uzytkownika o wprowadzenie danych i zwraca wprowadzony ciag znakow, przykladowo:
+x = input()
+print(x)
+Rezultat: To co uzytkownik poda jako wartosc "x".
+Nawet jezeli uzytkownik poda numer w funkcji "input" to i tak ta liczba zostanie przetworzona na typ string.
+
+2) Stworz program pobierajacy dane wejsciowe od uzytkownika. Przypisz te dane do zmiennej "text", nastepnie wyswietl te dane na ekran.
+text = input()
+print(text)
+
+3) Aby instrukcja input() dzialala poprawnie nalezy umiescic po niej nawiasy. Powinines rozpoznac te zasade od funkcji print - ktora omawialismy we wszystkich poprzednich lekcjach.
+Mozesz podac ciag znakow (string) miedzy nawiasami co spowoduje wyswietlenie komunikatu.
+WAZNY PRZYKLAD:
+name = input("ENTER YOUR NAME: ")
+print("HELLO, " + name)
+Komunikat mowi uzytkownikowi o tym co nalezy wpisac do programu, zatem istotnym jest zeby wiadomosc byla jasna i klarowna.
+
+4) Stworz instrukcje, ktora zapyta uzytkownika o imie i przypisze to imie do zmiennej name.
+Rozwiazanie: name = input('What\'s your name?')
+Wyjsnienie: Jak widzisz dodatkowo uzylismy znaku ucieczki, gdyz "repetitorium mater studiorum est", do zmiennej name przypisalismy dane wejsciowe wprowadzone przez uzytkownika.
+
+5) Zadanie "Dostan powiadomienie"
+Pracujesz nad systemem notyfikacji (powiadomien) i musisz sprawic by powiadomienia "przyciagaly oko" ("eye catching"). Stworz program, ktory do zmiennej "text" przypisze dane tekstowe wprowadzone przez uzytkownika, nastepnie dopisze na poczatku i na koncu tych danych "***", trzy gwiazdki dla "eye catching". Nie musisz dawac komunikatu uzytkownikowi przy pobieraniu danych.
+Rozwiazanie:
+text = input()
+print("*** " + text + " ***")
+Wyjasnienie: Stosuje konkatenacje - klejenie wartosci typow string, zmienna text jest typem string (funkcja input konwertuje obojetnie co user wpisze na typ string).
+
+6) Wiemy juz, ze funkcja input() zwrac aciag. Ale co jesli potrzebujemy czegos innego, na przyklad liczby? Nie ma z tyk problemu, zalozmy ze jako dana wejsciowa od uzytkownika pobralismy wiek, wowczas do przekonwertowania typu string na liczbe typu int uzyjemy funkcji int().
+age = int(input())
+print(age)
+Rezultat: To co uzytkownik poda jako swoj wiek.
+To zmieni zmienna age z typu string na liczbe calkowita typu int.
+Mozemy jednak tej samej operacji dokonac w odwrotnj kolejnosci i przekonwertowac liczbe na lancuch, ale tym razem musimy uzyc funckji str(). Taka operacja moze Ci sie przydac jesli musisz uzyc liczby w konkatenacji ciagow znakow, dla przykladu:
+age = 42
+print("His age is " + str(age))
+Mozesz takze do zamiany danej wartosci na typ float uzyc funkcji "float()"
+
+7) Co bedzie rezultatem kodu:
+x = "2"
+y = "4"
+z = int(x) + int(y)
+print(z)
+Rezultat: 6
+Wyjasnienie: zmienne x i y sa zapisane jako wartosci typu string, nastepnie konwertowane sa funkcja int() na wartosci typu integer, zatem ostateczny wynik bedzie typu integer.
+
+8) Ostatnia rzecza, o ktorej nalezy wspomniec jest to, ze mozesz uzyc funkcji input() wiele razy, aby pobrac wiele danych wejsciowych od uzytkownika. Przyklad:
+name = input()
+age = input()
+print(name + " is " + age)
+Rezultat: "imie" is "wiek", gdzie wiek i imie to wartosci jakie uzytkownik podal do programu. 
+Po wykonaniu funckji input() dzialanie programu zatrzymuje sie dopoki uzytkownik nie wprowadzi jakiejs wartosci.
+
+9) Napisz program pobierajacy wartosci liczbowe integer x i y od uzytkownika do programu, nastepnie dodaj te dwie zmienne do siebie.
+Rozwiazanie:
+x = int(input())
+y = int(input())
+print(x + y)
+Wyjasnienie: Przekonwertowujemy input() podany przez uzytwkonika na wartosc typu integer (int).
+
+10) Zadanie "Karta Tozsamosci"
+Napisz program pobierajacy imie, nazwisko, ulice i wiek od uzytkownika, nastepie uzyj tych danych do wyswietlenia: "Witaj (imie), masz (wiek) lat, mieszkasz na ulicy (ulica)". W komunikatach funckji input, zadaj konkretne pytania do kazdego wariantu odpowiedzi.
+Rozwiazanie:
+imie = input("Podaj imie: ")
+nazwisko = input("Podaj nazwisko: ")
+wiek = int(input("Podaj wiek: "))
+ulica = input("Podaj ulice: ")
+print("Witaj " + imie + " " + nazwisko + ", masz " + wiek + " lat, mieszkasz na ulicy " + ulica)

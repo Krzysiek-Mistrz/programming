@@ -1,0 +1,66 @@
+1) Stringi poznalismy w jednych z pierwszych tematow, jednak teraz czas na blizsze przyjrzenie sie im.
+Mowiac najprosciej, azeby uzywac tekstu w jezyku Python musisz uzyc typu "string". Jednak w tym zdaniu kryje sie o wiele wiecej, jak zaraz sie przekonasz.
+
+2) Typ string mozemy utworzyc, wypisujaca tekst miedzy dwoma pojedynczymi lub podwojnymi cudzyslowiami (czyli miedzy cudzyslowia lub miedzy apostrofy), przykladowo:
+print("Python is fun")
+print('Always look on the bright side of life')
+Ogranicznik (" lub ') uzywany do typu string w zaden sposob nie wplywa na jego zachowanie.
+
+3) Stworz program wypisujacy na ekranie "Hi there".
+print('Hi there')
+
+4) Jednak co w wypadku jesli chcesz umiescic pojedynczy cudzyslow w danym napisie - ciagu znakow z cudzyslowiamy ograniczajacymi dany typ string (Lob apostrof w ciagu ograniczony przez apostrofy z obu stron)? Normalnie bez odpowiedniego uwzglednienia takie zachowanie zmyliloby Pythona. Caly problem da sie jednak obejsc stosujac "\" - backslash, popatrz na przyklady ponizej:
+print(Brian\'s mother: He\'s not an angel. He\'s very naughty boy!')
+Lewe ukosniki, ktorych uzywamy do wyswietlenia apostrofow lub cudzyslowiow w kodzie nie zostaja wyswietlone razem z output-em. Znak "\" - backslash nazywamy znakiem ucieczki z ang. escape character.
+
+5) Dokoncz kod tak zeby wyswietlal ciag znakow zawierajacy apostrof.
+Rozwiazanie: print('I\'m learning Python')
+
+6) Zadanie "inteligentna rozmowa"
+Napisz program wypisujacy na ekranie "He said "hello", then Pieter's Dad ask him what's his name. He couldn't answer, he was to nervous", pamietaj o zastosowaniu apostrofow i cudzyslowiow w swoim kodzie.
+1. Rozwiazanie: 
+print('He said "hello", then Pieter\'s dad ask him what\'s his name. He couldn\'t answer, he was to nervous.')
+Poniewaz apostrof jest mocniejszy od cudzyslowie to nie musimy dodatkowo przed cudzylowiem dawac backslesh-a, jedynie przed apostrofami.
+
+7) Zajmijmy sie teraz nowymi liniami. Potrafimy juz wygenerowac tekst, jednak i tak ciezko byloby czytac, jesli wszystko byloby w jednej linijce.
+do stworzenia nowej linii uzyjemy \n. Dzieki znakowi \n mozemy stworzyc nowa linie. Dzieki temu mozemy stworzyc wieloliniowe rozwiazanie (output), przyklad:
+print('One \nTwo \nThree')
+Wynik:
+One
+Two
+Three
+(W trzech kolejnych liniach)
+
+8) Do uwzgledniania znaku tabulacji posluzymy sie natomiast znakiem (character) "\t".
+
+9) Ktore z podanych opcji skutkuje wyswietleniem w wyniku "dokladnie" dwoch linijek?
+print("Hello world")
+print("Hello \n World")
+print("one \ntwo \nthree")
+print('one\nbig bum \nbum \bum \badambabum')
+Rozwiazanie: print("Hello \n World")
+
+10) \n jest przydatne, ale moze byc troche klopotliwe, jesli probujemy sformatowac duzo tekstu wielowierszowego. Jest jednak inny sposob. Znaki nowej linii sa dodawane automatycznie dla ciagow uwtworzonych przy uzyciu trzech cudzyslowow.
+Zobaczmy na przyklad:
+print("""this
+is a
+multiline
+text""")
+Wynik:
+this
+is a
+multiline
+text
+(W kolejnych liniach)
+Ulatwia to formatowanie dlugich, wielowierszowych tekstow bez koniecznosci jawnego wstawiania "\n" dla lamania wierszy.
+
+11) Jak duzo linii bedzie mial podany nizej kod?
+print("Hi")
+print("""This
+is
+great""")
+Odpowiedz: "4" - Hi zostanie wyswietlone w pierwszej linii, nastepnie w kolejnej linii zostanie wyswietlone this i pozostale nizej...
+
+12) Zadanie "dosiegnij gwiazd"
+Napisz progra wypisujacy w kolejnych 4-ech liniach o jedna gwiazdke - "*" wiecej. uzyj znaku "\n" usun wszystkie zbedne spacje z ciagu znakow.
+Rozwiazanie: print('*\n**\n***\n****')

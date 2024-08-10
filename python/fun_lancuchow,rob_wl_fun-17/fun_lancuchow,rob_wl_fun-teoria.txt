@@ -1,0 +1,84 @@
+1) Ciagi maja funkcje format() ktora umozliwia osadzanie w nich wartosci za pomoca symboli zastepczych.
+nums = [4, 5, 6]
+msg = "Numbers: {0} {1} {2}".format(nums[0])
+print(msg)
+Rezultat: Numbers: 4 5 6
+Kazdy argument funkcj format jest umieszczany w ciagu w odpowedniej pozycji, ktora jest okreslana za pomoca nawiasow klamrowych{}.
+
+2) Podaj rezultat kodu:
+print("{0}{1}{0}".format("abra, "cad"))
+Rezultat: abracadabra
+
+3) Mozesz rowniez nazwac symbole zastepcze zamiast dawac numer indeksu.
+a = "{x}, {y}".format(x = 5, y = 12)
+print(a)
+
+4) Podaj reultat kodu:
+str = "{c},{b},{a}".format(a = 5, b = 9, c = 7)
+prin(str)
+Rezultat:
+7,9,5
+
+5) Oto kilka pozostalych przydatnych funckji dla ciagow:
+join() - laczy liste napisow  innym napisem jako separatorem.
+replace() - zastepuje jeden podciag w innym ciagu.
+startswith() i endswith() - Okresla czy podciag znajduje sie odpowiednio na poczatku cy na koncu danego lancucha.
+lower() i upper() - Zmieniaja wielkosc znakow wewnatrz lancucha.
+split() - przeciwienstwo funckji join() zamienia lancuch na okreslony separator w liscie.
+Przyklad:
+print(", ".join(["spam", "eggs", "ham"]))
+#wyswietla: "spam, eggs, ham"
+print("Hello ME".replace("ME", "world"))
+#wyswietla: "Hello world"
+print("This is a sentence.".startswith("This"))
+#wyswietla: "True"
+print("This is a sentence.".endswith("sentence."))
+#wyswietla: "True"
+print("This is a sentence.".upper())
+#wyswietla: "THIS IS A SENTENCE"
+print("THIS IS A SENTENCE.".lower())
+#wyswietla: "This is a sentence"
+print("spam", eggs, ham".split(", "))
+#wyswietla: "['spam', 'eggs', 'ham']"
+
+6) Zadanie "Krzyczacy tekst"
+Napisz Program Ktory konwertuje wielkie litery na male litery. Twoj przyjaciel wysyla wiadomosc tekstowa jednak jego caps lock jest zepsuty i cala wiadomosc jest duzymi literami zapisana, napisz program do zmainay tego tekstu na male litery.
+tekst = input("Podaj swoj napis: ")
+print(tekst.lower())
+
+7) Uzupelnij luke tak zeby zamienic elementy lanucha na wielkie litery.
+a = "Spam"
+b = a.upper()
+
+8) Jednak co w wypadku jesli te predefiniowane funckje Ci nie wystarcza? Bardzo sluszne pyatnie wowczas musisz niestety wynalezc wlasna funckje a zeby to zrobic musisz nznac jej budowe i po prostu weidziec jak ja samemu mozesz zbudowac.
+Funckje mozesz stworzyc za pomoca instrukcji def.
+Oto przyklad funkcji o nazwie my_func.NIe przyjmuje zadnych argumentow i trzykrotnie drukuje "spam". Jest zdefiniowana, a nastepnie wywolywana. Instrukcje w funkcji sa wykonywane tylko wtedy kiedy funkcja jest wywolywana.
+def my_func()
+  print("spam")
+  print("spam")
+  print("spam")
+my_func()
+Blok kodu w kazdej funkcji zaczyna sie od dwukropka (:) i jest wciety. Tzn. yk tylko jeden raz stawiasz dwukropek po nazwie funkcji jak tworzysz, pozniej juz nie.
+
+9) Uzupelnij luki tak zeby zdefiniowac funckje o nazwie hello:
+...hello()...
+  print("Hello!")
+Rozwiazanie:
+def hello():
+  print("Hello!")
+
+10) Po zdefiniowaniu swojej funkcji mozesz jaj wywolac wiele razy w swoim kodzie:
+def hello():
+  print("hello")
+hello()
+hello()
+hello()
+
+11) Uporzadkuj kod tak zeby zadeklarowac i zdefiniowac funkcje sayHi() i wywolac ja:
+print("Hi!")
+def sayHi():
+sayHi()
+Rozwiazanie:
+def sayHi():
+  print("Hi!")
+sayHi()

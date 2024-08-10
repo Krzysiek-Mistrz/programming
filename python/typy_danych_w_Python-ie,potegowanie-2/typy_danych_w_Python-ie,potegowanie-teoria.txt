@@ -1,0 +1,42 @@
+1) Zanim pojdziemy dalej dobrym pomyslem byloby przedstawienie glownych typow danych w Python-ie. Kazda wartosc w Python-ie, podobnie jak w C++ ma swoj wlasny typ danych do ktorego nalezy.
+
+2) Przykladowo tekst taki jak "Hello World" nalezy do typu danych "string". Cyfry zas naleza do typu danych "integers". Natomiast cyfry z przecinkiem, wartoscia ulamkowa naleza do typu danych "floats". Przykladem cyfr reprezentowanych przez typ "float" sa: 0.5, -7.6713789.
+
+3) Ktora z wartosci bedzie przechowywana jao typ float?
+A) 42
+B) "hey"
+C) 7.4
+Odpowiedz prawidlowa: 7.4
+
+4) Wiemy wiec juz jak wygladaja liczby typu float, jednak jak mozemy takie liczbvy stworzyc? Otoz nic prostszego... Wystarczy podzielic dwie liczby typu "integer". Ewentualnie mozemy zrobic operacje matematyczna (dodawanie, odejmowanie, mnozenie, dzielenie) na dwoch liczbach typu "float" lub na loiczbie typu "integer" i typu "float".
+Liczba typu float moze byc automatycznie dodana do liczby typu integer, gdyz Python jako jezyk automatycznie conwertuje liczbe typu integer na liczbe typu float.
+print(8 / 2)
+print(6 * 7.0)
+print(4 + 1.65)
+
+5) Napisac rezultat kodu ponizej:
+print(1 + 2 + 3 + 4.0 + 5)
+rezultat: 15.0
+
+6) Czas zajac sie teraz potegowaniem z racji iz podstawowe operacje matematyczne mamy juz za soba... Otoz potegowanie jest to podnoszenie danej iczby - podstawy potegi do ustalonej potegi - wykladnika potegowego.
+
+7) Do wykonania operacji potegowanie w jezyku Python uzywamy operatora podwojnej gwiazdki "**" (asterisks = operator potegowania - prawie jak asteriks i obeliks...). Przyklad uzycia operacji potegowania:
+print(2 ** 5)
+Rezultat: 2^5 = 32
+
+8) Uzupelnij luke tak zeby rezultataem wykonanej operacji potegowania byl wynik rowny 125:
+print(5 ... 3)
+Rozwiazanie: w miejsce kropek nalezy podstawic operator "**", otrzymamy wowczas: print(5**3).
+
+9) Za łatwo? tak przypuszczalem. Powiedzmy sobie zatem teraz o czyms trudniejszym. Mozemy wykonac dzialanie potegowania na liczbach typu "float", przyklad? Nie ma sprawy, spojrz ponizej:
+print(9 ** (1/2))
+Wynikiem tego dzialania bedzie pierwiastek kwadratowy z liczby 9. Zatem bedzie to liczba postaci: "3.0". Widzimy zatem ze rezultataem tego typu dzialania jest wartosc typu "float".
+
+10) Podaj rezultat operacji: print(8 ** (1/3)).
+Wynik: 8^(1/3)=sqr(3) z 8 zatem wynikiem bedzie liczba: "2.0", gdyz 2 do potegi trzeciej daje w wyniku liczbe "8.0".
+
+11) Problem bakterii:
+Komorka ma 500 bakterii, co godzine podwaja sie ich liczba, czyli zachodzi rownosc: 500 * 2 = 1000, 1000 * 2 = 2000, .... Napisz proram w jezyku Python, ktory wyswietli liczbe bakterii po 24 godzinach.
+Rozwiazanie:
+print(500 * 2 ** 24)
+Wynik: 8.288608e9 (e = exponential, czyli do * 10^9), wyjasnienie: 500 * 2 - po jednej godzinie, 500 * 2 * 2 - po dwoch godzinach, 500 * 2 * 2 * 2 - po trzech godzinach. Zauwazam wiec ze 2 moge podniesc do potegi takiej ile bedzie godzin - czyli do potegi 24.
