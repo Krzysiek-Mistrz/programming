@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tasmociag")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d28ea0b014f321452a2deb9bd8cb0336db06f75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+226cb82ef338eee686c85d88783a9819f85a1ed3")]
 [assembly: System.Reflection.AssemblyProductAttribute("tasmociag")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tasmociag")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

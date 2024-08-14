@@ -1,0 +1,12 @@
+Pytanie 1?
+Odpowiedź A
+Odpowiedź B
+Odpowiedź C
+Odpowiedź D
+A
+Pytanie 2?
+Odpowiedź A
+Odpowiedź B
+Odpowiedź C
+Odpowiedź D
+B
