@@ -1,0 +1,11 @@
+from neurapy.robot import Robot
+r = Robot()
+print(r.robot_name)
+print(r.dof)
+print(r.platform)
+print(r.payload)
+print(r.kURL)
+print(r.robot_urdf_path)
+print(r.current_tool)
+print(r.connection)
+print(r.version)
