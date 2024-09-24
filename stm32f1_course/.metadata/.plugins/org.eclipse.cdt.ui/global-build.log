@@ -1,0 +1,120 @@
+17:17:54 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:18:27 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:20:05 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:23:25 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\User\Home\Programowanie\stm32f1_course\stm32f1_uart_comm\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/HAL_Driver/Inc/Legacy" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/inc" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/CMSIS/device" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/CMSIS/core" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/HAL_Driver/Inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: stm32f1_uart_comm.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32f1_uart_comm.elf" @"objects.list"   -lm
+Finished building target: stm32f1_uart_comm.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "stm32f1_uart_comm.elf" "stm32f1_uart_comm.bin"
+arm-none-eabi-size "stm32f1_uart_comm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4072	   1096	   1156	   6324	   18b4	stm32f1_uart_comm.elf
+ 
+17:36:52 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\User\Home\Programowanie\stm32f1_course\stm32f1_uart_comm\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/HAL_Driver/Inc/Legacy" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/inc" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/CMSIS/device" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/CMSIS/core" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/HAL_Driver/Inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: stm32f1_uart_comm.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32f1_uart_comm.elf" @"objects.list"   -lm
+Finished building target: stm32f1_uart_comm.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "stm32f1_uart_comm.elf" "stm32f1_uart_comm.bin"
+arm-none-eabi-size "stm32f1_uart_comm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4072	   1096	   1156	   6324	   18b4	stm32f1_uart_comm.elf
+ 
+17:55:43 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\User\Home\Programowanie\stm32f1_course\stm32f1_uart_comm\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/HAL_Driver/Inc/Legacy" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/inc" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/CMSIS/device" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/CMSIS/core" -I"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/HAL_Driver/Inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: stm32f1_uart_comm.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"C:/Users/User/Home/Programowanie/stm32f1_course/stm32f1_uart_comm/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32f1_uart_comm.elf" @"objects.list"   -lm
+Finished building target: stm32f1_uart_comm.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "stm32f1_uart_comm.elf" "stm32f1_uart_comm.bin"
+arm-none-eabi-size "stm32f1_uart_comm.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4072	   1096	   1156	   6324	   18b4	stm32f1_uart_comm.elf
+ 
+17:59:32 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:04:15 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:06:43 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:07:56 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:08:36 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:10:00 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:11:00 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:11:49 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:14:08 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:18:08 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:23:17 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:26:46 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:27:28 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:27:49 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:28:17 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:33:20 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:34:06 **** Incremental Build of configuration Debug for project stm32f1_uart_comm ****
+make -j4 all 
+make: Nothing to be done for 'all'.
